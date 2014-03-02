@@ -89,12 +89,12 @@ function ontouch(el, callback){
         if (Math.abs(distX) > Math.abs(distY)){ // if distance traveled horizontally is greater than vertically, consider this a horizontal movement
             dir = (distX < 0)? 'left' : 'right'
             handletouch(e, dir, 'move', swipeType, distX) // fire callback function with params dir="left|right", phase="move", swipetype="none" etc
+            e.preventDefault() // prevent scrolling when inside DIV
         }
         else{ // else consider this a vertical movement
             dir = (distY < 0)? 'up' : 'down'
             handletouch(e, dir, 'move', swipeType, distY) // fire callback function with params dir="up|down", phase="move", swipetype="none" etc
         }
-        e.preventDefault() // prevent scrolling when inside DIV
     }, false)
 
     touchsurface.addEventListener('touchend', function(e){
@@ -170,32 +170,32 @@ var app = {
         back.onclick = function(){
             back_element(elemets_banner);
         };
-        // ontouch(slider, function(evt, dir, phase, swipetype, distance){
-        //     if (phase == 'end') {
-        //         if (dir == 'left'){
-        //             forward_element(elemets_banner);
-        //             event.stopPropagation();
-        //         };
-        //         if (dir == 'right') {
-        //             back_element(elemets_banner);
-        //             event.stopPropagation();
-        //         };
-        //     };
-        // });
-        // ontouch(document.body, function(evt, dir, phase, swipetype, distance){
-        //     if (phase == 'end') {
-        //         if (dir == 'left'){
-        //             if (is_open_menu) {
-        //                 closeMenu();
-        //             };
-        //         };
-        //         if (dir == 'right') {
-        //             if (!is_open_menu) {
-        //                 openMenu();
-        //             };
-        //         };
-        //     };
-        // });
+        ontouch(slider, function(evt, dir, phase, swipetype, distance){
+            if (phase == 'end') {
+                if (dir == 'left'){
+                    forward_element(elemets_banner);
+                    event.stopPropagation();
+                };
+                if (dir == 'right') {
+                    back_element(elemets_banner);
+                    event.stopPropagation();
+                };
+            };
+        });
+        ontouch(document.body, function(evt, dir, phase, swipetype, distance){
+            if (phase == 'end') {
+                if (dir == 'left'){
+                    if (is_open_menu) {
+                        closeMenu();
+                    };
+                };
+                if (dir == 'right') {
+                    if (!is_open_menu) {
+                        openMenu();
+                    };
+                };
+            };
+        });
     }
 };
 
