@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html ng-app>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/menu.css" />
+        <title>Planeta Brasil</title>
+    </head>
+    <body>
+        <nav ng-controller="LeftMenu" id="nav-left">
+            <ul>
+                <li ng-repeat="item in itens" class="{{item.status}}"><a href="{{item.href}}" class="transition-page" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+            </ul>
+        </nav>
+        <header>
+            <a href="#" class="openMenu" id="sidebar-toggle">MENU</a>
+            <h1>Planeta Brasil</h1>
+        </header>
+        <div id="content">
+            <div id="page1" class="page">
+
+                <article id="slider">
+                    <input class="input_checked" checked type=radio name="slider" id="slide1"/>
+                    <input class="input_checked" type=radio name="slider" id="slide2"/>
+                    <input class="input_checked" type=radio name="slider" id="slide3"/>
+                    <input class="input_checked" type=radio name="slider" id="slide4"/>
+                    <input class="input_checked" type=radio name="slider" id="slide5"/>
+                    <div id="slides">
+                        <div id="overflow">
+                            <div class="inner">
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ratione, illum nesciunt recusandae aut molestias nisi repellendus commodi quae error natus perferendis hic possimus pariatur optio inventore voluptatum quod doloremque.</p>
+                                </article>
+                                
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ratione, illum nesciunt recusandae aut molestias nisi repellendus commodi quae error natus perferendis hic possimus pariatur optio inventore voluptatum quod doloremque.</p>
+                                </article>
+                                
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ratione, illum nesciunt recusandae aut molestias nisi repellendus commodi quae error natus perferendis hic possimus pariatur optio inventore voluptatum quod doloremque.</p>
+                                </article>
+                                
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ratione, illum nesciunt recusandae aut molestias nisi repellendus commodi quae error natus perferendis hic possimus pariatur optio inventore voluptatum quod doloremque.</p>
+                                </article>
+                                
+                                <article>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ratione, illum nesciunt recusandae aut molestias nisi repellendus commodi quae error natus perferendis hic possimus pariatur optio inventore voluptatum quod doloremque.</p>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="arrows">
+                            <div class="arrow back" id="back"></div>
+                            <div class="arrow forward" id="forward"></div>
+                        </div>
+                    </div>
+                    <div id="active">
+                        <label for="slide1"></label>
+                        <label for="slide2"></label>
+                        <label for="slide3"></label>
+                        <label for="slide4"></label>
+                        <label for="slide5"></label>
+                    </div>
+                </article>
+
+                <h2>Page 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, magni, molestias, praesentium, ratione est exercitationem quibusdam repudiandae necessitatibus ullam accusantium voluptates ipsa vitae suscipit eveniet cumque totam recusandae cum unde.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, similique hic voluptas eligendi consectetur repellendus ut modi harum cum esse. Dolorem, quasi, numquam cumque rerum aperiam aspernatur non dicta ducimus!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam, necessitatibus numquam dolorem maiores distinctio reiciendis at vero sed. Facere, in optio accusamus quidem eum temporibus fugiat totam voluptates magnam debitis.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, nihil, quam voluptatem eius maiores dolore quidem nam voluptates accusamus cum dignissimos autem! Itaque, blanditiis cum totam facere rem dolorem beatae?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, dolore libero quas non ducimus tempora aut mollitia. Explicabo, repellat, vitae ipsa accusantium impedit hic reiciendis delectus dignissimos ut tenetur nam.</p>
+
+            </div>
+            <div id="page2" class="page">
+                <h2>Page 2</h2>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, ipsum, vel, quo aut porro sequi quisquam perspiciatis fugiat sapiente commodi veniam ea assumenda doloribus officiis voluptates harum fuga vitae magni!</p> 
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, qui excepturi illo. Eius, rem, neque quo laborum deleniti culpa voluptatem iure quis placeat ullam nam odit qui adipisci quas distinctio.</p>
+
+            </div>
+            <div id="page3" class="page">
+                <h2>Page 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum, incidunt, ea earum harum facilis voluptas mollitia consequuntur quis! Omnis, animi, doloribus aspernatur ratione officiis temporibus sint eaque corporis vero blanditiis.</p>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script type="text/javascript" src="js/controller.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

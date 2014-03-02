@@ -1,0 +1,102 @@
+html, body {
+    min-height: 100%;
+    height: auto;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background: orange;
+    padding: 0;
+    margin: 0;
+}
+body.opened, body.opened header, body.opened #content{
+    left: 260px;
+}
+
+body.opened #content {
+    position: fixed;
+    overflow-y: auto;
+}
+nav.opened {
+    left: 0;
+}
+
+body, body.opened, nav, nav.opened{
+    -webkit-transition: all 0.1s ease-in-out;
+     transition: all 0.1s ease-in-out;
+}
+
+body.opened #content{
+    overflow-x: hidden;
+}
+
+nav{
+    position: fixed;
+    left: -260px;
+    top:0;
+    background: grey;
+    width: 260px;
+    z-index: 99999;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+a.openMenu{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: white;
+    z-index: 9999;
+    line-height: 60px;
+}
+
+ul{
+    list-style: none;
+    position: fixed;
+}
+
+nav ul li a{
+    color: white;
+}
+p{
+    padding: 0;
+    margin: 0;
+    line-height: 1em;
+} 
+
+header{
+    height: 60px;
+    position: fixed;
+    background: red;
+    width: 100%;
+    padding-left: 80px;
+    z-index: 999;
+}
+h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+}
+#content {
+    padding: 0;
+    margin: 0;
+    padding-top: 60px;
+    width: 100%;
+}
+.page {
+    -webkit-transition: opacity 0.5s ease-out;
+    opacity: 0; 
+    height: 0;
+    overflow: hidden;
+}
+
+.page.show-page {
+    -webkit-transition: opacity 0.5s ease-out;
+    opacity: 1;
+    height: 100%;
+    overflow: auto;
+}
