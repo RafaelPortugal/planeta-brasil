@@ -1,13 +1,9 @@
 function openMenu() {
-    body.classList.add('opened');
-    nav.classList.add('opened');
-    is_open_menu = true;
+    body.className = "menu-active";
 }
 
 function closeMenu() {
-    body.classList.remove('opened');
-    nav.classList.remove('opened');
-    is_open_menu = false;
+    body.className = "";
 }
 
 function show(elementID) {
@@ -117,8 +113,10 @@ function ontouch(el, callback){
 var slider = function(element) {
     forward = element.getElementsByClassName('forward')[0];
     back = element.getElementsByClassName('back')[0];
+    alert(forward);
+    alert(back);
     elements_banner = element.getElementsByClassName('element_banner');
-    
+    alert(element_banner);
     forward.addEventListener("click", function(e) {
         forward_element(elements_banner);
         e.preventDefault();
@@ -147,15 +145,29 @@ var swipe_menu = function(){
     ontouch(document.body, function(evt, dir, phase, swipetype, distance){
         if (phase == 'end') {
             if (dir == 'left'){
-                if (is_open_menu) {
-                    closeMenu();
+                if (body.classList.length != 0) {
+                    body.className = "";
                 };
             };
             if (dir == 'right') {
-                if (!is_open_menu) {
-                    openMenu();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
                 };
             };
         };
     });
 }
+
+
+var fadeOut = function(idElement){
+    s = document.getElementById(idElement).style;
+    s.opacity = 1;
+    (function fade(){(s.opacity-=0.1)<=0.2?s.display="none":setTimeout(fade,40)})();
+};
+
+var fadeIn = function(idElement){
+    s = document.getElementById(idElement).style;
+    s.opacity = 0;
+    s.display="block";
+    (function fade(){(s.opacity+=0.1)<1?s.opacity=1:setTimeout(fade,40)})();
+};

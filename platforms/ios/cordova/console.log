@@ -271,3 +271,128 @@
 2014-03-02 20:31:36.382 HelloWorld[58088:80b] Failed to load webpage with error: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
 2014-03-02 20:31:36.383 HelloWorld[58088:80b] Resetting plugins due to page load.
 2014-03-02 20:31:38.693 HelloWorld[58088:80b] Finished load of: https://accounts.google.com/ServiceLogin?hl=pt-BR&continue=https://www.google.com.br/
+2014-03-02 20:46:53.821 HelloWorld[59244:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-02 20:46:53.884 HelloWorld[59244:80b] Unlimited access to network resources
+2014-03-02 20:46:54.784 HelloWorld[59244:80b] Resetting plugins due to page load.
+2014-03-02 20:46:55.594 HelloWorld[59244:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-02 20:49:50.252 HelloWorld[59927:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-02 20:49:50.311 HelloWorld[59927:80b] Unlimited access to network resources
+2014-03-02 20:49:50.724 HelloWorld[59927:80b] Resetting plugins due to page load.
+2014-03-02 20:49:51.009 HelloWorld[59927:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-02 20:53:51.780 HelloWorld[61583:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-02 20:53:51.796 HelloWorld[61583:80b] Unlimited access to network resources
+2014-03-02 20:53:52.201 HelloWorld[61583:80b] Resetting plugins due to page load.
+2014-03-02 20:53:52.445 HelloWorld[61583:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 12:28:41.575 HelloWorld[65020:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 12:28:41.627 HelloWorld[65020:80b] Unlimited access to network resources
+2014-03-03 12:28:42.747 HelloWorld[65020:80b] Resetting plugins due to page load.
+2014-03-03 12:28:55.514 HelloWorld[65020:3f03] void SendDelegateMessage(NSInvocation *): delegate (webView:runJavaScriptAlertPanelWithMessage:initiatedByFrame:) failed to return after waiting 10 seconds. main run loop mode: kCFRunLoopDefaultMode
+2014-03-03 12:28:57.522 HelloWorld[65020:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 12:31:30.286 HelloWorld[65702:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 12:31:30.298 HelloWorld[65702:80b] Unlimited access to network resources
+2014-03-03 12:31:30.588 HelloWorld[65702:80b] Resetting plugins due to page load.
+2014-03-03 12:31:30.824 HelloWorld[65702:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 12:34:04.366 HelloWorld[66377:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 12:34:04.381 HelloWorld[66377:80b] Unlimited access to network resources
+2014-03-03 12:34:04.672 HelloWorld[66377:80b] Resetting plugins due to page load.
+2014-03-03 12:34:04.973 HelloWorld[66377:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 12:47:16.245 HelloWorld[67209:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 12:47:16.270 HelloWorld[67209:80b] Unlimited access to network resources
+2014-03-03 12:47:16.821 HelloWorld[67209:80b] Resetting plugins due to page load.
+2014-03-03 12:47:17.191 HelloWorld[67209:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 12:48:23.611 HelloWorld[67852:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 12:48:23.635 HelloWorld[67852:80b] Unlimited access to network resources
+2014-03-03 12:48:24.146 HelloWorld[67852:80b] Resetting plugins due to page load.
+2014-03-03 12:48:24.556 HelloWorld[67852:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 12:50:29.093 HelloWorld[68518:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 12:50:29.118 HelloWorld[68518:80b] Unlimited access to network resources
+2014-03-03 12:50:29.653 HelloWorld[68518:80b] Resetting plugins due to page load.
+2014-03-03 12:50:30.430 HelloWorld[68518:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 12:57:54.370 HelloWorld[69311:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 12:57:54.409 HelloWorld[69311:80b] Unlimited access to network resources
+2014-03-03 12:57:55.363 HelloWorld[69311:80b] Resetting plugins due to page load.
+2014-03-03 12:57:56.480 HelloWorld[69311:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:01:53.315 HelloWorld[70195:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:01:53.372 HelloWorld[70195:80b] Unlimited access to network resources
+2014-03-03 13:01:54.745 HelloWorld[70195:80b] Resetting plugins due to page load.
+2014-03-03 13:01:56.995 HelloWorld[70195:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:02:30.818 HelloWorld[70745:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:02:30.831 HelloWorld[70745:80b] Unlimited access to network resources
+2014-03-03 13:02:31.132 HelloWorld[70745:80b] Resetting plugins due to page load.
+2014-03-03 13:02:31.309 HelloWorld[70745:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:17:47.243 HelloWorld[71613:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:17:47.257 HelloWorld[71613:80b] Unlimited access to network resources
+2014-03-03 13:17:47.734 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:48.133 HelloWorld[71613:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:17:50.430 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:50.437 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:51.564 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:51.566 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:52.250 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:52.253 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:52.507 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:52.508 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:53.185 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:53.187 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:54.912 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:54.913 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:55.446 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:55.448 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:55.698 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:55.699 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:55.894 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:55.896 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:57.519 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:57.521 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:58.604 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:58.606 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:17:59.295 HelloWorld[71613:80b] Resetting plugins due to page load.
+2014-03-03 13:17:59.298 HelloWorld[71613:80b] Failed to load webpage with error: The requested URL was not found on this server.
+2014-03-03 13:18:49.265 HelloWorld[72260:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:18:49.280 HelloWorld[72260:80b] Unlimited access to network resources
+2014-03-03 13:18:49.722 HelloWorld[72260:80b] Resetting plugins due to page load.
+2014-03-03 13:18:49.986 HelloWorld[72260:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:19:59.351 HelloWorld[72901:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:19:59.367 HelloWorld[72901:80b] Unlimited access to network resources
+2014-03-03 13:19:59.703 HelloWorld[72901:80b] Resetting plugins due to page load.
+2014-03-03 13:19:59.912 HelloWorld[72901:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:21:56.790 HelloWorld[73558:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:21:56.803 HelloWorld[73558:80b] Unlimited access to network resources
+2014-03-03 13:21:57.079 HelloWorld[73558:80b] Resetting plugins due to page load.
+2014-03-03 13:21:57.381 HelloWorld[73558:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:22:49.732 HelloWorld[74194:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:22:49.745 HelloWorld[74194:80b] Unlimited access to network resources
+2014-03-03 13:22:50.151 HelloWorld[74194:80b] Resetting plugins due to page load.
+2014-03-03 13:22:50.362 HelloWorld[74194:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:24:48.519 HelloWorld[74853:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:24:48.532 HelloWorld[74853:80b] Unlimited access to network resources
+2014-03-03 13:24:48.811 HelloWorld[74853:80b] Resetting plugins due to page load.
+2014-03-03 13:24:49.029 HelloWorld[74853:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 13:25:46.986 HelloWorld[75494:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 13:25:46.999 HelloWorld[75494:80b] Unlimited access to network resources
+2014-03-03 13:25:47.280 HelloWorld[75494:80b] Resetting plugins due to page load.
+2014-03-03 13:25:47.604 HelloWorld[75494:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 15:40:35.985 HelloWorld[76280:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 15:40:36.005 HelloWorld[76280:80b] Unlimited access to network resources
+2014-03-03 15:40:36.318 HelloWorld[76280:80b] Resetting plugins due to page load.
+2014-03-03 15:40:36.587 HelloWorld[76280:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 15:43:41.393 HelloWorld[76963:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 15:43:41.407 HelloWorld[76963:80b] Unlimited access to network resources
+2014-03-03 15:43:41.635 HelloWorld[76963:80b] Resetting plugins due to page load.
+2014-03-03 15:43:42.755 HelloWorld[76963:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 15:45:15.091 HelloWorld[77943:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 15:45:15.111 HelloWorld[77943:80b] Unlimited access to network resources
+2014-03-03 15:45:15.390 HelloWorld[77943:80b] Resetting plugins due to page load.
+2014-03-03 15:45:15.611 HelloWorld[77943:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 15:46:08.018 HelloWorld[78580:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 15:46:08.036 HelloWorld[78580:80b] Unlimited access to network resources
+2014-03-03 15:46:08.407 HelloWorld[78580:80b] Resetting plugins due to page load.
+2014-03-03 15:46:08.698 HelloWorld[78580:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 15:47:37.783 HelloWorld[79231:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 15:47:37.796 HelloWorld[79231:80b] Unlimited access to network resources
+2014-03-03 15:47:38.088 HelloWorld[79231:80b] Resetting plugins due to page load.
+2014-03-03 15:47:38.410 HelloWorld[79231:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home
+2014-03-03 15:49:00.532 HelloWorld[79874:80b] Multi-tasking -> Device: YES, App: YES
+2014-03-03 15:49:00.552 HelloWorld[79874:80b] Unlimited access to network resources
+2014-03-03 15:49:00.676 HelloWorld[79874:80b] Resetting plugins due to page load.
+2014-03-03 15:49:00.925 HelloWorld[79874:80b] Finished load of: file:///Users/rafael/Library/Application%20Support/iPhone%20Simulator/7.0.3/Applications/ACDE5C7F-0EBF-461E-960D-7E436F42044F/HelloWorld.app/www/index.html#/home

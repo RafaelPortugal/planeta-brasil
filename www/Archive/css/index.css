@@ -33,7 +33,7 @@ body.opened #content{
     overflow-x: hidden;
 }
 
-nav{
+nav {
     position: fixed;
     left: -260px;
     top:0;
@@ -56,13 +56,32 @@ a.openMenu{
 
 ul{
     list-style: none;
+}
+
+nav ul {
+    width: 260px;
     position: fixed;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid #000;
+}
+
+nav ul li.active {
+    background: blue;
 }
 
 nav ul li a{
     color: white;
+    display: inline-block;
+    width: 95%;
+    line-height: 2em;
+    padding: 5%;
 }
-p{
+
+p {
     padding: 0;
     margin: 0;
     line-height: 1em;

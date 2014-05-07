@@ -6,19 +6,29 @@ var planetaBrasilApp = angular.module('planetaBrasilApp', [
 planetaBrasilApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
+      when('/language', {
+        templateUrl: 'templates/language.html',
+        controller: 'LanguageCtrl'
+      }).
+      when('/login', {
+        templateUrl: 'templates/login.html',
+        controller: 'LoginCtrl'
+      }).
+      when('/loading', {
+        templateUrl: 'templates/loading.html',
+        controller: 'LoadingCtrl'
+      }).
       when('/home', {
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl'
       }).
-      when('/news', {
-        templateUrl: 'templates/news.html',
-        controller: 'NewsListCtrl'
-      }).
-      when('/news/:NewsId', {
-        templateUrl: 'templates/phone-detail.html',
-        controller: 'NewsDetailCtrl'
-      }).
       otherwise({
-        redirectTo: '/home'
+        redirectTo: function() {
+          if (window.localStorage.getItem('language')){
+              return '/loading';
+          }else {
+              return '/language';
+          };
+        }
       });
   }]);
