@@ -1,15 +1,16 @@
-@font-face {
+/*@font-face {
 font-family: 'Myriad Pro Regular';
 font-style: normal;
 font-weight: normal;
 src: local('Myriad Pro Regular'), url('MYRIADPRO-REGULAR.woff') format('woff');
-}
+}*/
 
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family:'Myriad Pro Regular';
+    font-family: 'Lato', sans-serif;
+    /*font-family:'Myriad Pro Regular';*/
     font-weight:normal;
     font-size: 10px;
 }
@@ -349,24 +350,164 @@ header h1 {
     background: #e2e2c7;
     padding-top: 30px;
 }
+.section .bronw {
+    background: #e2e2c7;
+    padding-bottom: 20px;
+}
+
+
+.section .matches,.section .last-matches {
+    padding-bottom: 20px;
+}
+.section .matches .border, .section .last-matches .border{
+    border: #00a84f 1px solid;
+    border-top: 0;
+}
+.section .matches h2, .section .last-matches h2 {
+    position: relative;
+    padding: 0 0 0.3em 0 !important;
+    font-size: 3em;
+    text-align: center;
+    color: #00a74e;
+    text-transform: uppercase;
+}
+.section .matches h2 .border, .section .last-matches h2 .border{
+    border-top: #00a84f 1px solid;
+    position: absolute;
+    height: 50%;
+    border-bottom: 0;
+    width: 40px;
+    bottom: 0;
+}
+.section .matches h2 .border-left, .section .last-matches h2 .border-left{
+    border-right: 0;
+    left: 0;
+}
+.section .matches h2 .border-right, .section .last-matches h2 .border-right{
+    border-left: 0;
+    right: 0;
+}
+.section .matches ul {
+    font-size: 3.5em;
+    text-align: center;
+    line-height: 51px;
+}
+.section .matches ul img {
+    height: 51px;
+    vertical-align: middle;
+}
+.section .matches ul i {
+    display: inline-block;
+    width: 40%;
+}
+.section .matches ul i.home {
+    text-align: right;
+}
+.section .matches ul i.visited {
+    text-align: left;
+}
+.section ul .vs {
+    width: 10%;
+    display: inline-block;
+    text-align: center;
+}
+.section .matches ul p {
+    padding: 0;
+    margin: 0;
+}
+.section .matches ul p.local {
+    color: #686859;
+    font-weight: lighter;
+}
+
+.section .matches ul .footer-matches{
+    background: #c2e7c7;
+    margin: 5px;
+    font-size: 0.7em;
+    color: #00a74e;
+    overflow: hidden;
+    line-height: 1.8em;
+}
+.section .matches ul .footer-matches .datetime {
+    float: left;
+    margin-left: 5px;
+}
+.section .matches ul .footer-matches .type {
+    float: right;
+    margin-right: 5px;
+}
+
+.section .last-matches ul {
+    font-size: 2.3em;
+}.section .last-matches li {
+    border-bottom: 1px solid #666659;
+    margin: 0 20px;
+}
+
+.section .last-matches ul li.last {
+    border-bottom: 0;
+    margin: 0 20px 20px;
+}
+.section .last-matches ul span.result {
+    font-size: 2.3em;
+    width: 13%;
+    display: inline-block;
+    color: #676759;
+    text-align: center
+}
+.section .last-matches ul img {
+    height: 21px;
+    vertical-align: middle;
+}
+.section .last-matches ul i {
+    font-size: 21px;
+    line-height: 2.3em;
+    display: inline-block;
+    width: 30%;
+}
+.section .last-matches ul i.home {
+    text-align: right;
+}
+.section .last-matches ul i.visited {
+    text-align: left;
+}
+
 .page .content-home .section{
     width: 86%;
     margin: 0 auto;
 }
 
 .page .content-home .section h2{
-    background: url("../images/bg-separator.gif") #F0F0E1;
     padding: 0.9em 0;
     margin: 0;
 }
 
+.section .last-matches ul .footer-matches {
+    text-align: center;
+    background: #c2e7c7;
+    margin: 5px;
+    font-size: 1.2em;
+    color: #00a74e;
+    overflow: hidden;
+    line-height: 1.8em;
+}
+.section .last-matches ul .footer-matches a {
+    color: #00a74e;
+    text-transform: none;
+    text-decoration: none;
+    display: block;
+}
+.page .content-home .section .bronw h2{
+    background: url("../images/bg-separator.gif") #F0F0E1;
+}
 .page .content-home .section h2 .text-title{
-    background: url("../images/bg-title.gif") #F0F0E1 no-repeat;
     background-size: 99%;
+    background: url("../images/bg-title.gif") #F0F0E1 no-repeat;
     background-position: 0 50%;
     color: #003e66;
     font-size: 1.2em;
-    padding: 0.4em 1.6em 0.1em 1.5em;
+    /*padding: 0.4em 1.6em 0.1em 1.5em;*/
+    line-height: 1.7em;
     text-align: center;
 }
 
@@ -375,6 +516,7 @@ header h1 {
     color: #686859;
     border-left: 14px solid #686859;
     overflow: auto;
+    background: #e2e2c7;
 }
 
 .page .content-home .section .news-block h3{
@@ -535,8 +677,8 @@ menu {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 0.2em 0 0;
     border-top: 3px solid #003f66;
-    font-size: 3em;
+    font-size: 28px;
+    line-height: 40px;
     z-index: 2000;
 }
