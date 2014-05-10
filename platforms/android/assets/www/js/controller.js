@@ -29,12 +29,20 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
     function ($scope, $http ) {
+        if (window.localStorage.getItem('language') == 2) {
+            $scope.passaport = "passaport";
+            $scope.login = "Login";
+            $scope.advance = "Next";
+            $scope.skip = "Skip this step";
+            $scope.or = "or";
+        }else {
+            $scope.passaport = "Passaporte";
+            $scope.login = "Identifique-se";
+            $scope.advance = "Avançar";
+            $scope.skip = "Pular essa etapa";
+            $scope.or = "ou";
+        };
         $scope.$on('$viewContentLoaded', function() {
-            if (window.localStorage.getItem('language')){
-                alert("Salvou o language");
-            }else {
-                alert("Não tinha language");
-            };
         });
     }]
 );
@@ -42,9 +50,17 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        if (window.localStorage.getItem('language') == 2) {
+            message = "Wait, we are carrying the information of your city."
+        }else {
+            message = "Aguarde, estamos carregando as informações da sua cidade.";
+        }
+
+        $scope.message = message;
         $scope.$on('$viewContentLoaded', function() {
-            alert('Get json home');
-            window.location.href = "#home";
+            setTimeout(function(){
+                window.location.href = "#home";
+            },4000);
         });
     }]
 );

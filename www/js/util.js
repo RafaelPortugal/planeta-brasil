@@ -144,6 +144,8 @@ var slider = function(element) {
 var swipe_menu = function(){
     ontouch(document.body, function(evt, dir, phase, swipetype, distance){
         if (phase == 'end') {
+            var pages = {language: 0, loading: 1, login: 2};
+            var page = window.location.href.split('/')[(window.location.href.split('/').length)-1];
             if (dir == 'left'){
                 if (body.classList.length != 0) {
                     body.className = "";
@@ -157,6 +159,45 @@ var swipe_menu = function(){
         };
     });
 }
+
+
+var swipe_element_1 = function(){
+    ontouch(document.getElementById('swipe1'), function(evt, dir, phase, swipetype, distance){
+        event.stopPropagation();
+        if (phase == 'end') {
+            if (dir == 'left'){
+                if (body.classList.length != 0) {
+                    body.className = "";
+                };
+            };
+            if (dir == 'right') {
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                };
+            };
+        };
+    });
+}
+
+
+var swipe_element_2 = function(){
+    ontouch(document.getElementById('swipe2'), function(evt, dir, phase, swipetype, distance){
+        if (phase == 'end') {
+            if (dir == 'left'){
+                if (body.classList.length != 0) {
+                    body.className = "";
+                };
+            };
+            if (dir == 'right') {
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                };
+            };
+        };
+    });
+}
+
+
 
 
 var fadeOut = function(idElement){

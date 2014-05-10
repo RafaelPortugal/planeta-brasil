@@ -168,6 +168,7 @@ article img {
     top: 50%;
     height: 32px;
     width: 32px;
+    z-index: 9999;
 }
 .arrow.back {
     background-image: url('../img/arrow_back.png');

@@ -19,7 +19,20 @@ var app = {
     receivedEvent: function(id) {
         swipe_menu();
         body = document.body;
-        width = body.offsetWidth
+        forward = document.getElementById("forward");
+        forward.addEventListener("click", function(e) {
+            alert('Frente');
+            forward_element(elemets_banner);
+            e.preventDefault();
+        });
+        
+        back = document.getElementById("back");
+        back.addEventListener("click", function(e) {
+            alert('Back');
+            back_element(elemets_banner);
+            e.preventDefault();
+        });
+
         menuAchor = document.getElementsByClassName('menu')[0];
         menuAchor.addEventListener("click", function(e) {
             e.preventDefault();
@@ -27,6 +40,18 @@ var app = {
                 body.className = "menu-active";
             }else {
                 body.className = "";
+            };
+        });
+        ontouch(slider, function(evt, dir, phase, swipetype, distance){
+            if (phase == 'end') {
+                if (dir == 'left'){
+                    forward_element(elemets_banner);
+                    event.stopPropagation();
+                };
+                if (dir == 'right') {
+                    back_element(elemets_banner);
+                    event.stopPropagation();
+                };
             };
         });
         // document.getElementById('sidebar-toggle').onclick = function(){
