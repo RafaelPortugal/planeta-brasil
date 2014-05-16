@@ -25,6 +25,17 @@ html, body {
     height: 100%;
     width: 100%;
 }
+
+.bg-internas {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.bg-internas img {
+    width: 100%;
+}
+
 #wrapper {
     height: auto !important;
     min-height: 100%;
@@ -314,7 +325,7 @@ header h1 {
     position: initial;
     color: #003E66;
 }
-.element_banner {
+#slider .element_banner {
     position: relative;
     background: #003E66;
     color: #fff;
@@ -635,7 +646,7 @@ menu {
     transition: all .25s linear;
 }
 
-#wrapper, header, #footer-fixed {
+#wrapper, header, #footer-fixed, .left-menu {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
     -ms-transform: translateX(0);
@@ -656,7 +667,7 @@ menu {
     transform: translateX(0);
 }
 
-.menu-active #wrapper, .menu-active header, .menu-active #footer-fixed{
+.menu-active #wrapper, .menu-active header, .menu-active #footer-fixed, .menu-active .left-menu{
     -webkit-transform: translateX(220px);
     -moz-transform: translateX(220px);
     -ms-transform: translateX(220px);
@@ -678,7 +689,7 @@ menu {
     bottom: 0;
     width: 100%;
     border-top: 3px solid #003f66;
-    font-size: 28px;
+    font-size: 2.8em;
     line-height: 40px;
     z-index: 2000;
 }

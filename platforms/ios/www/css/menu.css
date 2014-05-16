@@ -2,6 +2,7 @@
     text-align: center;
     margin: 0 auto;
     padding: 0;
+    padding-top: 52px;
 }
 
 input[type="radio"] {
@@ -49,21 +50,19 @@ article img {
 }
 
 #active {
-    margin: 23% 0 0;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    margin-left: -25px;
-    margin-top: -40px;
+	right: 20px;
+	bottom: 70px;
+	position: absolute;
 }
 
 #active label {
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
     display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: #bbb;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    margin-right: 5px;
 }
 
 #active label:hover {
@@ -98,13 +97,18 @@ article img {
     display: block;
 }
 
-#slide1:checked ~ #active label:nth-child(1),
-#slide2:checked ~ #active label:nth-child(2),
-#slide3:checked ~ #active label:nth-child(3),
-#slide4:checked ~ #active label:nth-child(4),
-#slide5:checked ~ #active label:nth-child(5) {
-    background: #333;
-    border-color: #333 !important;
+#slide1:checked ~ #active label:nth-child(1) .marked,
+#slide2:checked ~ #active label:nth-child(2) .marked,
+#slide3:checked ~ #active label:nth-child(3) .marked,
+#slide4:checked ~ #active label:nth-child(4) .marked,
+#slide5:checked ~ #active label:nth-child(5) .marked {
+    background: #facb11;
+    border-color: #facb11 !important;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    line-height: 20px;
+    margin: 5px;
 }
 
 /* Slider Styling */
@@ -156,6 +160,7 @@ article img {
     -webkit-transform: translateZ(0);
     -webkit-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
+    padding: 0;
 }
 .arrow {
     position: absolute;
@@ -163,6 +168,7 @@ article img {
     top: 50%;
     height: 32px;
     width: 32px;
+    z-index: 9999;
 }
 .arrow.back {
     background-image: url('../img/arrow_back.png');
@@ -172,129 +178,3 @@ article img {
     background-image: url('../img/arrow_forward.png');
     right: 10px;
 }
-
-
-/* Tablet */
-
-/*#tablet:checked ~ #slider #controls {
-    margin: -25% 0 0 12%;
-    width: 76%;
-    height: 50px;
-}
-
-#tablet:checked ~ #slider #controls label {
-    -moz-transform: scale(0.8);
-    -webkit-transform: scale(0.8);
-    -o-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
-}
-
-#tablet:checked  ~ #slider #slides, #mobile:checked  ~ #slider #slides {
-    padding: 1% 0;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
-}
-
-#tablet:checked ~ #slider #active {
-    margin: 22% 0 0;
-}
-
-@media only screen and (max-width: 850px) and (min-width: 450px) {
-
-    #slider #controls {
-        margin: -25% 0 0 15%;
-        width: 70%;
-        height: 50px;
-    }
-
-    #slider #controls label {
-        -moz-transform: scale(0.8);
-        -webkit-transform: scale(0.8);
-        -o-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-    }
-
-    #slider #slides {
-        padding: 1% 0;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-    }
-
-    #slider #active {
-        margin: 22% 0 0;
-    }
-
-}*/
-
-/* Mobile */
-/*
-#mobile:checked ~ #slider #controls {
-    margin: -28% 0 0 24%;
-    width: 50%;
-    height: 50px;
-}
-
-#mobile:checked ~ #slider #active {
-    margin: 23% 0 0;
-}
-
-#mobile:checked ~ #slider #slides .info {
-    opacity: 0 !important;
-}
-
-#mobile:checked ~ #slider #controls label {
-    -moz-transform: scale(0.6);
-    -webkit-transform: scale(0.6);
-    -o-transform: scale(0.6);
-    -ms-transform: scale(0.6);
-    transform: scale(0.6);
-}
-
-
-@media only screen and (max-width: 450px) {
-
-    #slider #controls {
-        margin: -28% 0 0 24%;
-        width: 50%;
-        height: 50px;
-    }
-
-    #slider #active {
-        margin: 23% 0 0;
-    }
-
-    #slider #slides {
-        padding: 1% 0;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        border-radius: 0px;
-    }
-
-    #slider #slides .info {
-        opacity: 0 !important;
-    }
-
-    #slider #controls label {
-        -moz-transform: scale(0.6);
-        -webkit-transform: scale(0.6);
-        -o-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-        transform: scale(0.6);
-    }
-
-}
-
-#active {
-
-}
-
-@media only screen and (min-width: 850px) {
-
-    body {
-        padding: 0 80px;
-    }
-}*/

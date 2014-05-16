@@ -22,6 +22,34 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl'
       }).
+      when('/curiosity', {
+        templateUrl: 'templates/curiosity.html',
+        controller: 'CuriosityCtrl'
+      }).
+      when('/photo-fans', {
+        templateUrl: 'templates/photo_fans.html',
+        controller: 'PhotoFansCtrl'
+      }).
+      when('/players-by-team', {
+        templateUrl: 'templates/players_by_team.html',
+        controller: 'PlayersByTeamCtrl'
+      }).
+      when('/show-news', {
+        templateUrl: 'templates/show-news.html',
+        controller: 'ShowNewsCtrl'
+      }).
+      when('/table-games', {
+        templateUrl: 'templates/table_games.html',
+        controller: 'TableGamesCtrl'
+      }).
+      when('/team-per-group', {
+        templateUrl: 'templates/team_per_group.html',
+        controller: 'TeamPerGroupCtrl'
+      }).
+      when('/world-championship', {
+        templateUrl: 'templates/world_championship.html',
+        controller: 'WorldChampionshipCtrl'
+      }).
       otherwise({
         redirectTo: function() {
           if (window.localStorage.getItem('language')){

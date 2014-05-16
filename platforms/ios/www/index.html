@@ -1,78 +1,34 @@
-<!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<!doctype html>
+<html lang="en" ng-app="planetaBrasilApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
-    http://www.apache.org/licenses/LICENSE-2.0
+	<!-- <meta http-equiv="refresh" content="1;"> -->
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html ng-app="planetaBrasilApp">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/menu.css" />
-        <title>Planeta Brasil</title>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/util.js"></script>
-        <script type="text/javascript" src="js/angular.min.js"></script>
-        <script type="text/javascript" src="js/angular-route.js"></script>
-        <script type="text/javascript" src="js/app.js"></script>
-        <script type="text/javascript" src="js/controller.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </head>
-    <body>
-        <nav ng-controller="LeftMenu" id="nav-left">
-            <ul>
-                <li ng-repeat="item in itens" class="{{item.status}}" data-href="{{item.href}}"><a href="{{item.href}}" class="transition-page">{{ item.title }}</a></li>
-            </ul>
-        </nav>
-        <header>
-            <a href="#" class="openMenu" id="sidebar-toggle">MENU</a>
-            <h1>Planeta Brasil</h1>
-        </header>
-        <div ng-view id="content">
 
-        </div>
-
-        <script>
+	<title>Planeta Brasil</title>
+    <link href='css/lato/font.css' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+	<link rel="stylesheet" href="css/menu.css">
+    <!--
+    -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-route.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</head>
+<body>
+    <div ng-view id="view-angular">
         
-        forward.addEventListener("click", function(e) {
-            forward_element(elemets_banner);
-            e.preventDefault();
-        });
-        back.addEventListener("click", function(e) {
-            back_element(elemets_banner);
-            e.preventDefault();
-        });
-
-        ontouch(slider, function(evt, dir, phase, swipetype, distance){
-            if (phase == 'end') {
-                if (dir == 'left'){
-                    forward_element(elemets_banner);
-                    event.stopPropagation();
-                };
-                if (dir == 'right') {
-                    back_element(elemets_banner);
-                    event.stopPropagation();
-                };
-            };
-        });
-        </script>
-    </body>
+    </div>
+</body>
 </html>

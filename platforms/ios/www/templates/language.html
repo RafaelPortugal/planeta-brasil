@@ -1,0 +1,30 @@
+<style>
+	html {
+		overflow: hidden !important;
+	}
+</style>
+
+<div class="bg"><img src="images/bg.png" alt="Bacground"></div>
+<div id="wrapper">
+	<div class="relative">
+		<h1><img src="images/logo.png" alt="Logo Planeta Brasil"><span class="uppercase beyond">Brasil Beyond Brazil</span></h1>
+		<div class="content">
+			<b class="greeting">Olá!</b>
+			<h2 class="welcome">Seja bem-vindo.<span class="en italic">Welcome.</span></h2>
+
+			<form action="#" method="POST">
+				<ul class="choose-language">
+					<p>Escolha seu idioma. <span class="en italic">Choose your language</span></p>
+					<li>
+						<input type="radio" name="language" value="1">
+						<label ng-click="chooseLanguage(1)"><img src="images/language-br.png" alt="Bandeira do brasil"></label>
+					</li>
+					<li>
+						<input type="radio" name="language" value="2">
+						<label ng-click="chooseLanguage(2)"><img src="images/language-en.png" alt="Bandeira dos EUA"></label>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</div>
+</div>

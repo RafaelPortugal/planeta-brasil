@@ -2,16 +2,6 @@ function LeftMenu($scope) {
     $scope.itens = [
         {href: '#/home', title: 'Home', status: 'active', language: 1},
         {href: '#/news', title: 'News', status: 'deactive', language: 1},
-        {href: '#/next-matches', title: 'Proximas Partidas', status: 'deactive', language: 1},
-        {href: '#/matches-results', title: 'Resultados das Partidas', status: 'deactive', language: 1},
-        {href: '#/groups', title: 'Fase de Grupos', status: 'deactive', language: 1},
-        {href: '#/finals', title: 'Fase Final', status: 'deactive', language: 1},
-        {href: '#/photos', title: 'Fotos', status: 'deactive', language: 1},
-        {href: '#/videos', title: 'Videos', status: 'deactive', language: 1},
-        {href: '#/guess', title: 'Palpite', status: 'deactive', language: 1},
-        {href: 'http://www.google.com.br', title: 'aguia-verde', status: 'deactive', language: 1},
-        {href: '#/estadiums', title: 'Estadios', status: 'deactive', language: 1},
-        {href: '#/places', title: 'Pontos turísticos', status: 'deactive', language: 1},
     ];
     $scope.activeMenu = function(item) {
     	angular.forEach($scope.itens, function(i) {
@@ -23,89 +13,73 @@ function LeftMenu($scope) {
 
 
 var planetaBrasilControllers = angular.module('planetaBrasilControllers', []);
- 
 
-planetaBrasilControllers.controller('LanguageCrtl', ['$scope',
-    function($scope) {
-        
+planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+    // $http.get('templates/phones.json').success(function(data) {
+    //   $scope.phones = data;
+    // });
+        $scope.chooseLanguage = function(id_language) {
+            window.localStorage.setItem('language', id_language);
+            window.location.href = "#login";
+        }
+       
     }]
 );
 
-planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-       $scope.$on('$viewContentLoaded', function() {
-            forward = document.getElementById("forward");
-            back = document.getElementById("back");
-            forward.addEventListener("click", function(e) {
-                forward_element(elemets_banner);
-                e.preventDefault();
-            });
-            back.addEventListener("click", function(e) {
-                back_element(elemets_banner);
-                e.preventDefault();
-            });
+planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        if (window.localStorage.getItem('language') == 2) {
+            $scope.passaport = "passaport";
+            $scope.login = "Login";
+            $scope.advance = "Next";
+            $scope.skip = "Skip this step";
+            $scope.or = "or";
+        }else {
+            $scope.passaport = "Passaporte";
+            $scope.login = "Identifique-se";
+            $scope.advance = "Avançar";
+            $scope.skip = "Pular essa etapa";
+            $scope.or = "ou";
+        };
+        $scope.$on('$viewContentLoaded', function() {
         });
     }]
 );
 
-planetaBrasilControllers.controller('NewsListCtrl', ['$scope', '$http',
-    function ($scope, $http) {
+
+planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        if (window.localStorage.getItem('language') == 2) {
+            message = "Wait, we are carrying the information of your city."
+        }else {
+            message = "Aguarde, estamos carregando as informações da sua cidade.";
+        }
+
+        $scope.message = message;
+        $scope.$on('$viewContentLoaded', function() {
+            setTimeout(function(){
+                window.location.href = "#home";
+            },4000);
+        });
     }]
 );
 
-
-planetaBrasilControllers.controller('NextMatchesCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-
-planetaBrasilControllers.controller('MatchesResultsCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-
-planetaBrasilControllers.controller('GroupsCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-
-planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-
-planetaBrasilControllers.controller('PhotosCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-
-planetaBrasilControllers.controller('VideosCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-
-planetaBrasilControllers.controller('GuessCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-planetaBrasilControllers.controller('AguiaVerdeCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
-    function ($scope, $http) {
-    }]
-);
-
-planetaBrasilControllers.controller('PlacesCtrl', ['$scope', '$http',
-    function ($scope, $http) {
+planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        $scope.$on('$viewContentLoaded', function() {
+            
+            body = document.body;
+            width = body.offsetWidth
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
     }]
 );

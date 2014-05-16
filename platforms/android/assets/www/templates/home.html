@@ -1,13 +1,9 @@
 
-	<menu>
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">Home</a></li>
-		</ul>
-	</menu>
+    <menu id="nav-left">
+        <ul>
+            <li ng-repeat="item in items" class="{{item.status}}"><a href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+        </ul>
+    </menu>
 
 	<header>
 		<button class="menu"></button>
