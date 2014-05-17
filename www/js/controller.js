@@ -3,7 +3,6 @@ function Menu(language) {
 
 }
 
-
 var planetaBrasilControllers = angular.module('planetaBrasilControllers', []);
 
 planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
@@ -320,6 +319,8 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
+        $scope.teams = teamPerGroup
+        $scope.language = window.localStorage.getItem('language');
         $scope.$on('$viewContentLoaded', function() {
             elemets_banner = document.getElementsByClassName('input_checked');
             ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
