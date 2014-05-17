@@ -1,4 +1,4 @@
-/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/gen/com/phonegap/helloworld/R.java \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/gen/com/phonegap/planetabrasil/R.java \
  : /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/res/drawable/icon.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/res/drawable-hdpi/icon.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/res/drawable-ldpi/icon.png \

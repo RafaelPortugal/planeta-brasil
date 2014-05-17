@@ -22,7 +22,7 @@ input[type="radio"] {
 a, div {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-article img {
+#slides article img {
     width: 100%;
 }
 
@@ -205,7 +205,7 @@ input[type="radio"] {
 a, div {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
-article img {
+#curiositys article img {
     width: 100%;
 }
 

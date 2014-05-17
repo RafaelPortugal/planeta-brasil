@@ -1,3 +1,9 @@
+function Menu(language) {
+    this.language = language
+
+}
+
+
 var planetaBrasilControllers = angular.module('planetaBrasilControllers', []);
 
 planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
@@ -45,10 +51,11 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
         $scope.message = message;
         $scope.$on('$viewContentLoaded', function() {
             $rootScope.items = [
-                {href: '#/home', title: 'Home', status: 'active', language: 1},
+                {href: '#/home', title: 'Home', status: 'deactive', language: 1},
                 {href: '#/curiosity', title: 'Curiosidade', status: 'deactive', language: 1},
                 {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive', language: 1},
-                {href: '#/players-by-team', title: 'Jogadores', status: 'deactive', language: 1},
+                {href: '#/team-per-group', title: 'Jogadores', status: 'deactive', language: 1},
+                {href: '#/photo-fans', title: 'Fotos', status: 'deactive', language: 1},
             ];
             setTimeout(function(){
                 window.location.href = "#home";
@@ -61,6 +68,20 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('slider'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -71,7 +92,6 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                     body.className = "";
                 };
             });
-            elemets_banner = document.getElementsByClassName('input_checked');
             forward = document.getElementById("forward");
             forward.addEventListener("click", function(e) {
                 forward_element(elemets_banner);
@@ -101,6 +121,20 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
             // alert($rootScope.items);
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('curiosity'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -124,15 +158,6 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
-    function ($scope, $http ) {
-        $scope.$on('$viewContentLoaded', function() {
-            
-        });
-    }]
-);
-
-
-planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
@@ -158,6 +183,24 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http',
 );
 
 
+planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+    }]
+);
+
+
 planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
     function ($scope, $http ) {
         $scope.$on('$viewContentLoaded', function() {
@@ -177,10 +220,41 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
-    function ($scope, $http ) {
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
             
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
         });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
     }]
 );
 

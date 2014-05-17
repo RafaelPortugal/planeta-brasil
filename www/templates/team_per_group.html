@@ -19,7 +19,6 @@
 	}
 	.group {
 		text-align: center;
-		margin-bottom: 25px;
 	}
 	.group span {
 		display: inline-block;
@@ -61,8 +60,10 @@
 		font-weight: lighter;
 	}
 	.teams ul{
-		padding: 3em 5em;
+		padding: 20px 4em 0;
+		overflow: hidden;
 	}
+	
 	.teams li span{
 		color: #fff;
 		text-decoration: none;
@@ -73,9 +74,11 @@
 		float: left;
 		width: 50%;
 		text-align: center;
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 	}
-
+	.teams ul li:nth-child(3),.teams ul li:nth-child(4){
+		margin-bottom: 0;
+	}
 	.teams a {
 		text-decoration: none;
 	}
@@ -136,7 +139,7 @@
 	    bottom: initial;
 	    position: initial;
 	    width: 100%;
-	    margin-top: 30px;
+	    margin-top: 20px;
 	}
 
 	#team-per-group #active label {

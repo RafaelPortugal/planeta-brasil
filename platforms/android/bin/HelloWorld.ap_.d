@@ -151,6 +151,7 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/css/lato/qIIYRU-oROkIk8vfvxw6QvesZW2xOQ-xsNqO47m55DA.woff \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/css/lato/qdgUG4U09HnJwhYI-uK18wLUuEpTyoUstqEm5AMlJo4.woff \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/480 \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/banner.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/banner.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bg-separator.gif \
@@ -162,6 +163,7 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/campeoes-mundiais.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/curiosidades.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/desktop.ini \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/exemplo-torcida.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/fotos-torcida.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/gps.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/interna-lista-jogadores.jpg \
@@ -176,6 +178,72 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/480/language-br.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/480/language-en.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/480/logo.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r10_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r10_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r10_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r10_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r10_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r11_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c1.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r1_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c1.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r3_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r5_c1.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r5_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r5_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r5_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r6_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r6_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r6_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r6_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r9_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r9_c2.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r11_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c1.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r1_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r2_c3.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c1.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r3_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r5_c1.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r5_c11.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r5_c13.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r5_c9.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r6_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r6_c17.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r6_c5.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r6_c7.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r9_c15.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r9_c2.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/media/thumb-1.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/img/arrow_back.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/img/arrow_forward.png \
@@ -262,7 +330,7 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/language.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/loading.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/login.html \
-/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/photos_fans.html \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/photo_fans.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/players_by_team.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/show_news.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/table_games.html \

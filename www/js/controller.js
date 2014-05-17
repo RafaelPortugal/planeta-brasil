@@ -1,3 +1,9 @@
+function Menu(language) {
+    this.language = language
+
+}
+
+
 var planetaBrasilControllers = angular.module('planetaBrasilControllers', []);
 
 planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
@@ -62,6 +68,20 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('slider'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -72,7 +92,6 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                     body.className = "";
                 };
             });
-            elemets_banner = document.getElementsByClassName('input_checked');
             forward = document.getElementById("forward");
             forward.addEventListener("click", function(e) {
                 forward_element(elemets_banner);
@@ -102,6 +121,20 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
             // alert($rootScope.items);
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('curiosity'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -153,7 +186,16 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http',
     function ($scope, $http ) {
         $scope.$on('$viewContentLoaded', function() {
-            
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
         });
     }]
 );
@@ -181,6 +223,20 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+            
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {

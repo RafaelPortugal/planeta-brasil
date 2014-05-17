@@ -4,6 +4,8 @@ function openMenu() {
 
 function closeMenu() {
     body.className = "";
+    // header = getElementsByTagName('header')[0];
+    // header.
 }
 
 function show(elementID) {
