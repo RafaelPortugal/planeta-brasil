@@ -1,0 +1,103 @@
+<style>
+	.image img {
+		width: 100%;
+	}
+	body {
+		background: #f0f0e1;
+	}
+	.news {
+		padding: 0 10%;
+		width: 80%;
+	}
+	.date {
+		position: relative;
+		overflow: hidden;
+	}
+	.date .line {
+		position: absolute;
+		border-top: 1px solid #003e66;
+		width: 80%;
+		height: 43%;
+		bottom: 0;
+		display: block;
+	}
+	.date .day {
+		float: right;
+		line-height: 1.2em;
+		color: #00a84f;
+		font-size: 1.5em;
+	}
+	h2 {
+		border-bottom: 1px solid #003e66;
+		color: #003e66;
+		font-size: 2.6em;
+		margin-top: 0;
+		padding: 5px 0 10px;
+	}
+	p{
+		color: #89897b;
+		line-height: 1.2em;
+		font-size: 1.5em;
+	}
+	.back {
+		padding-bottom: 60px;
+		text-align: center;
+	}
+	.back button, .back a {
+		display: inline-block;
+		background: #f9cb11;
+		border: 0;
+		border-radius: 15px;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1.2em;
+		color: #003e66;
+		margin-top: 30px;
+	}
+	.back button {
+		margin-right: 20px;
+	}
+</style>
+<menu id="nav-left">
+    <ul>
+        <li ng-repeat="item in items" class="{{item.status}}"><a href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+    </ul>
+</menu>
+<header>
+	<button class="menu"></button>
+	<h1>Planeta Brasil</h1>
+	<div class="logo_header">
+		<img src="images/logo.png" alt="Logotipo">
+	</div>
+	<button class="btn-gps"></button>
+</header>
+<div id="wrapper">
+	<div class="relative page">
+		<div class="image">
+			<img src="images/banner.png" alt="Imagem">
+		</div>
+		<div class="news">
+			<div class="date">
+				<span class="line"></span>
+				<span class="day">14/05</span>
+			</div>
+			<h2>
+				O Rio de Janeiro está pronto para receber os jogos mundiais.
+			</h2>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>
+			<div class="back">
+				<button onclick="window.history.back()">Voltar</button> 
+				<a href="#">Compartilhar</a>
+			</div>
+
+		</div>
+	</div>
+</div>
+<div id="footer-fixed">
+	<span>BRASIL BEYOND BRAZIL</span>
+</div>

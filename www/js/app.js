@@ -30,12 +30,12 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/photo_fans.html',
         controller: 'PhotoFansCtrl'
       }).
-      when('/players-by-team', {
+      when('/players-by-team/:teamId', {
         templateUrl: 'templates/players_by_team.html',
         controller: 'PlayersByTeamCtrl'
       }).
-      when('/show-news', {
-        templateUrl: 'templates/show-news.html',
+      when('/show-news/:newsId', {
+        templateUrl: 'templates/show_news.html',
         controller: 'ShowNewsCtrl'
       }).
       when('/table-games', {
