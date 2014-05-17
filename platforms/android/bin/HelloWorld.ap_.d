@@ -163,6 +163,8 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/campeoes-mundiais.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/curiosidades.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/desktop.ini \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/estadios-1.jpg \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/estadios.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/exemplo-torcida.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/fotos-torcida.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/gps.png \
@@ -170,8 +172,10 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/language-br.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/language-en.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/logo-around.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/logo-stadium.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/logo.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/media \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/minerao.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/rj.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/tabela-de-jogos.jpg \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/480/bg.png \
@@ -211,6 +215,7 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r6_c7.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r9_c15.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/icones-bandeiras_r9_c2.png \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/logo-stadium.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c11.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c17.png \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/images/bandeiras/Nova pasta/icones-bandeiras_r10_c5.png \
@@ -333,6 +338,8 @@
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/photo_fans.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/players_by_team.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/show_news.html \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/stadium.html \
+/Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/stadiums.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/table_games.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/team_per_group.html \
 /Users/rafael/planeta-brasil/planeta-brasil-2/platforms/android/assets/www/templates/world_championship.html \

@@ -34,6 +34,14 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/players_by_team.html',
         controller: 'PlayersByTeamCtrl'
       }).
+      when('/stadiums', {
+        templateUrl: 'templates/stadiums.html',
+        controller: 'StadiumsCtrl'
+      }).
+      when('/stadium/:stadiumId', {
+        templateUrl: 'templates/stadium.html',
+        controller: 'StadiumCtrl'
+      }).
       when('/show-news/:newsId', {
         templateUrl: 'templates/show_news.html',
         controller: 'ShowNewsCtrl'
