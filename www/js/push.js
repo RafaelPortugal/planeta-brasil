@@ -18,7 +18,7 @@ function pushErrorHandler (error) {
 function pushTokenHandler (result) {
     // Your iOS push server needs to know the token before it can push to this device
     // here is where you might want to send it the token for later use.
-    alert('device token = ' + result);
+    //console.log('device token = ' + result);
 };
 
 
@@ -49,7 +49,7 @@ function onNotificationGCM(e) {
     switch( e.event ) {
         case 'registered':
             if ( e.regid.length > 0 ) {
-                alert('<li>REGISTERED -> REGID:' + e.regid + "</li>");
+                //alert('<li>REGISTERED -> REGID:' + e.regid + "</li>");
                 sendPushRegisterId(e.regid, 'android');
                 // Your GCM push server needs to know the regID before it can push to this device
                 // here is where you might want to send it the regID for later use.
@@ -60,31 +60,28 @@ function onNotificationGCM(e) {
             // if this flag is set, this notification happened while we were in the foreground.
             // you might want to play a sound to get the user's attention, throw up a dialog, etc.
             if ( e.foreground ) {
-                alert('<li>--INLINE NOTIFICATION--' + '</li>');
-
                 // if the notification contains a soundname, play it.
                 var my_media = new Media("/android_asset/www/"+e.soundname);
                 my_media.play();
             } else {  
                 // otherwise we were launched because the user touched a notification in the notification tray.
                 if ( e.coldstart ) {
-                    alert('<li>--COLDSTART NOTIFICATION--' + '</li>');
+                    //alert('<li>--COLDSTART NOTIFICATION--' + '</li>');
                 } else {
-                alert('<li>--BACKGROUND NOTIFICATION--' + '</li>');
+                  //alert('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             };
 
-            alert('<li>MESSAGE -> MSG: ' + e.payload.message + '</li>');
-            alert('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
+            alert(e.payload.message);
+            //alert('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
             break;
         case 'error':
-            alert('<li>ERROR -> MSG:' + e.msg + '</li>');
+            console.log('<li>ERROR -> MSG:' + e.msg + '</li>');
             break;
 
         default:
-            alert('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+            console.log('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
             break;
         }
 }
 
-alert("rodei o push.js inteiro");
