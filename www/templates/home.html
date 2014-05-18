@@ -28,51 +28,17 @@
 			    <div id="slides">
 			        <div id="overflow">
 			            <div class="inner">
-			                <article class="element_banner" data-id="1">
+
+			            	<article ng-repeat="n in home.news" class="element_banner" data-id="{{n.id}}">
 			                    <div class="date-banner">
-				                   	<span>16/03</span>
+				                   	<span>{{n.day}}</span>
 				                </div>
-			                   	<a href="#/show-news/1"><img src="images/banner.png" alt="Imagem da noticia"></a>
+			                   	<a href="#/show-news/{{n.id}}"><img src="{{n.img}}" alt="Imagem da noticia"></a>
 			                   	<div class="text-banner">
-			                   		<p>exercitationem molestias qui est. Aspernatur, saepe?</p>
+			                   		<p>{{n.title}}</p>
 			                  	</div>
 			                </article>
-			                <article class="element_banner" data-id="1">
-			                    <div class="date-banner">
-				                   	<span>16/03</span>
-				                </div>
-			                   	<a href="#/show-news/1"><img src="images/banner.png" alt="Imagem da noticia"></a>
-			                   	<div class="text-banner">
-			                   		<p>exercitationem molestias qui est. Aspernatur, saepe?</p>
-			                  	</div>
-			                </article>
-			                <article class="element_banner" data-id="1">
-			                    <div class="date-banner">
-				                   	<span>16/03</span>
-				                </div>
-			                   	<a href="#/show-news/1"><img src="images/banner.png" alt="Imagem da noticia"></a>
-			                   	<div class="text-banner">
-			                   		<p>exercitationem molestias qui est. Aspernatur, saepe?</p>
-			                  	</div>
-			                </article>
-			                <article class="element_banner" data-id="1">
-			                    <div class="date-banner">
-				                   	<span>16/03</span>
-				                </div>
-			                   	<a href="#/show-news/1"><img src="images/banner.png" alt="Imagem da noticia"></a>
-			                   	<div class="text-banner">
-			                   		<p>exercitationem molestias qui est. Aspernatur, saepe?</p>
-			                  	</div>
-			                </article>
-			                <article class="element_banner" data-id="1">
-			                    <div class="date-banner">
-				                   	<span>16/03</span>
-				                </div>
-			                   	<a href="#/show-news/1"><img src="images/banner.png" alt="Imagem da noticia"></a>
-			                   	<div class="text-banner">
-			                   		<p>exercitationem molestias qui est. Aspernatur, saepe?</p>
-			                  	</div>
-			                </article>
+
 			            </div>
 			        </div>
 			        <div class="arrows">
@@ -105,50 +71,39 @@
 						<h2><div class="text-title">PROGRAMAÇÃO CULTURAL</div></h2>
 						
 						<div class="news-block">
-							<h3>OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.</h3>
-							<img src="images/media/thumb-1.png">
-							<p>Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.</p>
+							<h3>{{home.culturalProgramming.title}}</h3>
+							<img src="{{home.culturalProgramming.img}}">
+							<p>{{home.culturalProgramming.describ}}</p>
 						</div>
 					</div>
 
 					<div class="matches">
 						<h2><div class="border border-left"></div> Próximos jogos <div class="border border-right"></h2>
 						<ul class="border">
-							<li>
-								<i class="home"><span>BRA</span> <img src="images/language-en.png" alt="Brasil"></i>
+							<li ng-repeat="match in home.nextMatches">
+								<i class="home"><span>{{match.abbr_home}}</span> <img src="{{match.img_home}}" alt="Brasil"></i>
 								<span class="vs">X</span>
-								<i class="visited"><img src="images/language-en.png" alt="Brasil"><span>USA</span></i>
-								<p class="local">Maracanã</p>
+								<i class="visited"><img src="{{match.img_visited}}" alt="{{match.visited}}"><span>{{match.abbr_visited}}</span></i>
+								<p class="local">{{match.local}}</p>
 								<div class="footer-matches">
-									<p class="datetime">Quarta 04/06</p>
-									<p class="type">Amistoso</p>
+								    <p class="datetime">{{match.date}}</p>
+								    <p class="type">{{match.type}}</p>
 								</div>
 							</li>
 
 						</ul>
 					</div>
 
-
 					<div class="last-matches">
 						<h2><div class="border border-left"></div> Últimos jogos <div class="border border-right"></h2>
 						<ul class="border">
-							<li>
-								<i class="home"><span>BRA</span> <img src="images/language-en.png" alt="Brasil"> </i>
-								<span class="result home">3</span><span class="vs"> X </span><span class="result visited">3</span>
-								<i class="visited"><img src="images/language-en.png" alt="Brasil"><span>USA</span></i>
-							</li>
-							<li>
-								<i class="home"><span>BRA</span> <img src="images/language-en.png" alt="Brasil"> </i>
-								<span class="result home">3</span><span class="vs"> X </span><span class="result visited">3</span>
-								<i class="visited"><img src="images/language-en.png" alt="Brasil"><span>USA</span></i>
-							</li>
-							<li class="last">
-								<i class="home"><span>BRA</span> <img src="images/language-en.png" alt="Brasil"> </i>
-								<span class="result home">3</span><span class="vs"> X </span><span class="result visited">3</span>
-								<i class="visited"><img src="images/language-en.png" alt="Brasil"><span>USA</span></i>
+							<li ng-repeat="game in home.lastGames">
+							    <i class="home"><span>{{ game.abbr_home}}</span> <img src="{{ game.img_home}}" alt="{{ game.home}}"> </i>
+							    <span class="result home">{{ game.gols_home}}</span><span class="vs"> X </span><span class="result visited">{{ game.gols_visited}}</span>
+							    <i class="visited"><img src="{{ game.img_visited}}" alt="{{ game.visited}}"><span>{{ game.abbr_visited}}</span></i>
 							</li>
 							<div class="footer-matches">
-								<a href="#">Tabela de resultados</a>
+								<a href="#/results">Tabela de resultados</a>
 							</div>
 						</ul>
 					</div>

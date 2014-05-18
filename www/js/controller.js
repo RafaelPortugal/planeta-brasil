@@ -71,6 +71,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
 
         $scope.items = $rootScope.items;
+        $scope.home = home;
         $scope.$on('$viewContentLoaded', function() {
             banner = document.getElementsByClassName('element_banner');
             elemets_banner = document.getElementsByClassName('input_checked');

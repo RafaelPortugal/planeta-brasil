@@ -636,7 +636,8 @@ menu = {
     1: [
         {href: '#/home', title: 'Início', status: 'deactive'},
         {href: '#', title: 'Notícias', status: 'deactive'},
-        {href: '#/table-games', title: 'Tabela de Jogos', status: 'deactive'},
+        {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
+        {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jogadores', status: 'deactive'},
         {href: '#/stadiums', title: 'Estádios', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
@@ -646,7 +647,8 @@ menu = {
     2: [
         {href: '#/home', title: 'Home', status: 'deactive'},
         {href: '#', title: 'News', status: 'deactive'},
-        {href: '#/table-games', title: 'Matches', status: 'deactive'},
+        {href: '#/table-games', title: '1ª Phase', status: 'deactive'},
+        {href: '#/finals', title: 'Phase final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Players', status: 'deactive'},
         {href: '#/stadiums', title: 'Stadiums', status: 'deactive'},
         {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
@@ -656,7 +658,8 @@ menu = {
     3: [
         {href: '#/home', title: 'Inicio', status: 'deactive'},
         {href: '#', title: 'Noticias', status: 'deactive'},
-        {href: '#/table-games', title: 'Juegos', status: 'deactive'},
+        {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
+        {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jugadores', status: 'deactive'},
         {href: '#/stadiums', title: 'Estadios', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
@@ -666,6 +669,11 @@ menu = {
 }
 
 
+// ########################################################################################
+// ##############################                            ##############################
+// ############################## Abaixo os exemplos de json ##############################
+// ##############################                            ##############################
+// ########################################################################################
 
 matches = {
     'a': [
@@ -733,3 +741,97 @@ matches = {
             {'day':'12/06', 'home': 'Brasil', 'visited': 'Croacia', 'result': '5 x 3'},
         ]
 }
+
+
+
+home = {
+    "news": [
+        {
+            'day': '16/04',
+            'id': '1',
+            'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            'img': 'images/banner.png'
+        },
+        {
+            'day': '16/04',
+            'id': '1',
+            'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            'img': 'images/banner.png'
+        },
+        {
+            'day': '16/04',
+            'id': '1',
+            'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            'img': 'images/banner.png'
+        },
+        {
+            'day': '16/04',
+            'id': '1',
+            'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            'img': 'images/banner.png'
+        },
+        {
+            'day': '16/04',
+            'id': '1',
+            'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+            'img': 'images/banner.png'
+        }
+    ],
+    "culturalProgramming": {
+        "id": 1,
+        "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+        "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+        "img": "images/media/thumb-1.png"
+    },
+    "nextMatches": [
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+    ],
+    "lastGames": [
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+    ]
+}
+
+
+
