@@ -10,11 +10,14 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
     // $http.get('templates/phones.json').success(function(data) {
     //   $scope.phones = data;
     // });
+        $scope.$on('$viewContentLoaded', function() {
+            alert('entrou');
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        });
         $scope.chooseLanguage = function(id_language) {
             window.localStorage.setItem('language', id_language);
             window.location.href = "#login";
         }
-       
     }]
 );
 

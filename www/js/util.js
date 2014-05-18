@@ -233,3 +233,17 @@ var fadeIn = function(idElement){
     s.display="block";
     (function fade(){(s.opacity+=0.1)<1?s.opacity=1:setTimeout(fade,40)})();
 };
+
+
+
+var onSuccess = function(position) {
+    alert(position.coords.latitude);
+    window.localStorage.setItem('lat', position.coords.latitude);
+    window.localStorage.setItem('lng', position.coords.latitude);
+
+}
+
+function onError(error) {
+    alert('error');
+    window.localStorage.setItem('is_national', true);
+}
