@@ -10,6 +10,7 @@
 	}
 	#wrapper {
 		width: 100%;
+		padding-top: 30em;
 	}
 
 	input[type="radio"] {
@@ -17,7 +18,6 @@
 	}
 	
 	.team-per-group {
-		top: 30em;
 		position: relative;
 	}
 	th img {
@@ -284,6 +284,7 @@
 
 .table-blue thead th:first-child{
     border-right:2px solid #C3D4DC;
+    text-transform: uppercase;
 }
 
 .table-blue thead th:last-child{
@@ -384,7 +385,7 @@
 								<table class="table-blue">
 					    			<thead>
 					    				<tr>
-					    					<th class="gradient-blue-dark">DIA DO JOGO</th>
+					    					<th class="gradient-blue-dark">{{th_match}}</th>
 					    					<th><img src="images/bandeiras/{{key}}1.png" alt="Grupo {{key}}"></th>
 					    					<th><img src="images/bandeiras/{{key}}2.png" alt="Grupo {{key}}"></th>
 					    					<th><img src="images/bandeiras/{{key}}3.png" alt="Grupo {{key}}"></th>

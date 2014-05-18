@@ -332,7 +332,15 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
-    function ($scope, $rootScope,  $routeParams, $http ) {
+    function ($scope, $rootScope, $http ) {
+        language = window.localStorage.getItem('language');
+        if (language == 2) {
+            $scope.th_match = "Game day";
+        }else if (language == 3) {
+            $scope.th_match = "DÍA DEL JUEGO";
+        }else {
+            $scope.th_match = "DIA DO JOGO";
+        }
         $scope.items = $rootScope.items;
         $scope.matches = matches;
         $scope.$on('$viewContentLoaded', function() {
