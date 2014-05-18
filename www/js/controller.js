@@ -71,6 +71,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
 
         $scope.items = $rootScope.items;
+        $scope.home = home;
         $scope.$on('$viewContentLoaded', function() {
             banner = document.getElementsByClassName('element_banner');
             elemets_banner = document.getElementsByClassName('input_checked');
@@ -85,6 +86,19 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                     };
                 };
             });
+            elemets_match = document.getElementsByClassName('input_checked_match');
+            ontouch(document.getElementById('next-macth'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_match);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_match);
+                    };
+                };
+            });
+
             swipe_menu();
 
             body = document.body;
