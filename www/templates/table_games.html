@@ -21,8 +21,7 @@
 		position: relative;
 	}
 	th img {
-		width: 3.5em;
-		margin: 5px;
+		width: 2.5em;
 	}
 	table {
 		width: 100%;
@@ -31,7 +30,13 @@
 		width: 80%;
 		padding: 0 10%;
 	}
-	
+	@media all and (max-height: 550px){
+
+		.bg-internas {
+		    top: 30px;
+		}
+	}
+
 	#team-per-group1:checked ~ #team-per-groups .inner { margin-left:0; }
 	#team-per-group2:checked ~ #team-per-groups .inner { margin-left:-100%; }
 	#team-per-group3:checked ~ #team-per-groups .inner { margin-left:-200%; }
@@ -77,7 +82,7 @@
 	    bottom: initial;
 	    position: initial;
 	    width: 100%;
-	    margin-top: 30px;
+	    text-align: center;
 	}
 
 	#team-per-group #active label {
@@ -190,6 +195,159 @@
 	    padding: 0;
 	}
 
+	
+#table-games{
+    background: url('../images/bg-campo.png') no-repeat #35570A;
+    background-size: 100%;
+    width: 100%;
+    min-height: 100%;
+    font-family: Arial;
+    position: absolute;
+}
+
+#table-games h1{
+    width: 246px;
+    height: 140px;
+    text-align: center;
+    margin: auto;
+    position: initial;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 4em;
+    font-weight: normal;
+    background: url('../images/bola.png') no-repeat;
+    background-position: 123px 1.2em;
+}
+
+#table-games h1 span.black{
+    color: #000;
+    font-weight: bold;
+    font-size: 70px;
+    display: block;
+    text-align: left;
+}
+
+#table-games h1 span.letter-end{
+    float: right;
+}
+
+.table-blue{
+    margin: auto;
+    margin-top: 10px;
+    width: 95%;
+    background: #C3D4DC;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table-blue td.small{
+    width: 16%;
+}
+.table-blue thead{
+    color: #FFFFFF;
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.table-blue thead th{
+    line-height: 16px;
+    width: 17%;
+    background-image: -webkit-gradient(linear, left top,left bottom, color-stop(0, #C0D2DA), color-stop(1, #6994A7));
+    background-image: -o-linear-gradient(bottom, #C0D2DA 0%, #6994A7 100%);
+    background-image: -moz-linear-gradient(bottom, #C0D2DA 0%, #6994A7 100%);
+    background-image: -webkit-linear-gradient(bottom, #C0D2DA 0%, #6994A7 100%);
+    background-image: -ms-linear-gradient(bottom, #C0D2DA 0%, #6994A7 100%);
+    background-image: linear-gradient(to bottom, #C0D2DA 0%, #6994A7 100%);
+}
+
+.table-blue thead th.gradient-blue-dark{
+    width: 16%;
+    padding: 5px;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #C0D2DA), color-stop(1, #105572));
+    background-image: -o-linear-gradient(bottom, #C0D2DA 0%, #105572 100%);
+    background-image: -moz-linear-gradient(bottom, #C0D2DA 0%, #105572 100%);
+    background-image: -webkit-linear-gradient(bottom, #C0D2DA 0%, #105572 100%);
+    background-image: -ms-linear-gradient(bottom, #C0D2DA 0%, #105572 100%);
+    background-image: linear-gradient(to bottom, #C0D2DA 0%, #105572 100%);
+}
+
+.table-blue thead th:first-child{
+    border-right:2px solid #C3D4DC;
+}
+
+.table-blue thead th:last-child{
+    border-left:2px solid #C3D4DC;
+}
+
+.table-blue thead th.letter-group{
+    font-size: 2.8em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.table-blue tbody{
+    color: #125774;
+    font-size: 1.6em;
+    text-align: left;
+}
+
+.table-blue tbody td:first-child, .table-blue tbody td:last-child{
+    text-align: center;
+    font-weight: bold;
+}
+
+.table-blue tbody td:first-child{
+    border-left: none;
+}
+
+.table-blue tbody td{
+    padding: 5px;
+    border-left: 1px solid #729AAC;
+}
+
+.table-blue tbody tr{
+    border-top: 1px dashed #729AAC;
+}
+
+.table-blue tbody tr:first-child{
+    border-top: none;
+}
+
+.menu-carrousel-ball{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+    list-style: none;
+}
+
+.menu-carrousel-ball li{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #666666;
+    margin: 3px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.menu-carrousel-ball .current{
+    background-color: #FACB11;
+}
+
+
 </style>
 <menu id="nav-left">
     <ul>
@@ -222,89 +380,28 @@
 	    		<div id="team-per-groups">
 	        		<div id="overflow">
 	            		<div class="inner">
-							<article class="element_banner">
-								<div class="padding">
-									<table>
-										<thead>
-											<tr>
-												<th>Dia do jogo</th>
-												<th colspan="2">
-													<img src="images/bandeiras/icones-bandeiras_r1_c1.png" alt="Brasil">
-													<img src="images/bandeiras/icones-bandeiras_r1_c1.png" alt="Brasil">
-													<img src="images/bandeiras/icones-bandeiras_r1_c1.png" alt="Brasil">
-													<img src="images/bandeiras/icones-bandeiras_r1_c1.png" alt="Brasil">
-												</th>
-												<th class="group">
-													A
-												</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>12/06</td>
-												<td>Brasil</td>
-												<td>Croácia</td>
-												<td>3x2</td>
-											</tr>
-											<tr>
-												<td>12/06</td>
-												<td>Brasil</td>
-												<td>Croácia</td>
-												<td>3x2</td>
-											</tr>
-											<tr>
-												<td>12/06</td>
-												<td>Brasil</td>
-												<td>Croácia</td>
-												<td>3x2</td>
-											</tr>
-											<tr>
-												<td>12/06</td>
-												<td>Brasil</td>
-												<td>Croácia</td>
-												<td>3x2</td>
-											</tr>
-											<tr>
-												<td>12/06</td>
-												<td>Brasil</td>
-												<td>Croácia</td>
-												<td>3x2</td>
-											</tr>
-											<tr>
-												<td>12/06</td>
-												<td>Brasil</td>
-												<td>Croácia</td>
-												<td>3x2</td>
-											</tr>
-
-										</tbody>
-									</table>
-								</div>
-
-			                </article>
-							<article class="element_banner">
-								
-			                </article>
-							<article class="element_banner">
-								
-			                </article>
-							<article class="element_banner">
-								
-			                </article>
-							<article class="element_banner">
-								
-			                </article>
-							<article class="element_banner">
-								
-			                </article>
-							<article class="element_banner">
-								
-			                </article>
-							<article class="element_banner">
-								
-			                </article>
-							
-			                
+							<article class="element_banner" ng-repeat="(key, value) in matches">
+								<table class="table-blue">
+					    			<thead>
+					    				<tr>
+					    					<th class="gradient-blue-dark">DIA DO JOGO</th>
+					    					<th><img src="images/bandeiras/{{key}}1.png" alt="Grupo {{key}}"></th>
+					    					<th><img src="images/bandeiras/{{key}}2.png" alt="Grupo {{key}}"></th>
+					    					<th><img src="images/bandeiras/{{key}}3.png" alt="Grupo {{key}}"></th>
+					    					<th><img src="images/bandeiras/{{key}}4.png" alt="Grupo {{key}}"></th>
+					    					<th class="letter-group gradient-blue-dark">{{key}}</th>
+					    				</tr>
+					    			</thead>
+					    			<tbody>
+					    				<tr ng-repeat="matche in value">
+					    					<td>{{matche.day}}</td>
+					    					<td colspan="2">{{matche.home}}</td>
+					    					<td colspan="2">{{matche.visited}}</td>
+					    					<td>{{matche.result}}</td>
+					    				</tr>
+					    			</tbody>
+					    		</table>
+					    	</article>
 			            </div>
 			        </div>
 			    </div>

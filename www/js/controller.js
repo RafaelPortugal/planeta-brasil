@@ -334,6 +334,7 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
     function ($scope, $rootScope,  $routeParams, $http ) {
         $scope.items = $rootScope.items;
+        $scope.matches = matches;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
