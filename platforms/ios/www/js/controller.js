@@ -10,10 +10,6 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
     // $http.get('templates/phones.json').success(function(data) {
     //   $scope.phones = data;
     // });
-        $scope.$on('$viewContentLoaded', function() {
-            alert('entrou');
-            navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        });
         $scope.chooseLanguage = function(id_language) {
             window.localStorage.setItem('language', id_language);
             window.location.href = "#login";
@@ -75,6 +71,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
 
         $scope.items = $rootScope.items;
+        $scope.home = home;
         $scope.$on('$viewContentLoaded', function() {
             banner = document.getElementsByClassName('element_banner');
             elemets_banner = document.getElementsByClassName('input_checked');
@@ -89,6 +86,19 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                     };
                 };
             });
+            elemets_match = document.getElementsByClassName('input_checked_match');
+            ontouch(document.getElementById('next-macth'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_match);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_match);
+                    };
+                };
+            });
+
             swipe_menu();
 
             body = document.body;

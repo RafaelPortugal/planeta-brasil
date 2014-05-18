@@ -86,6 +86,19 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                     };
                 };
             });
+            elemets_match = document.getElementsByClassName('input_checked_match');
+            ontouch(document.getElementById('next-macth'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_match);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_match);
+                    };
+                };
+            });
+
             swipe_menu();
 
             body = document.body;

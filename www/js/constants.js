@@ -795,6 +795,83 @@ home = {
             "date": "Quarta 04/06",
             "type": "Amistoso"
         },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
     ],
     "lastGames": [
         {
