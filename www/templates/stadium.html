@@ -22,8 +22,17 @@
 		border-top: 2px dotted #04a852;
 		border-bottom: 2px dotted #04a852;
 	}
+	#wrapper {
+		width: 100%;
+	}
+	.position-stadium {
+		position: absolute;
+		width: 100%;
+		top: 110px;
+		padding-bottom: 60px;
+	}
 	.logo {
-		margin-top: 110px;
+		/*margin-top: 110px;*/
 		text-align: center;
 		width: 100%;
 		margin-bottom: 25px;
@@ -79,22 +88,20 @@
 </div>
 <div id="wrapper">
 	<div class="relative page">
-		<div class="logo">
-			<h2>Estádios</h2>
-		</div>
-
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
-				<p><strong>Capacidade:</strong> 58.000</p>
-				<p class="descrition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, cupiditate explicabo adipisci pariatur eveniet illo consequuntur nobis odio quos quam commodi recusandae debitis illum minima voluptatum quisquam harum reprehenderit voluptatem.
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, nihil, culpa, accusantium, ea perferendis repellendus consectetur veniam et numquam optio ab inventore placeat deleniti corrupti ipsam ad harum est beatae!</p>
+		<div class="position-stadium">
+			<div class="logo">
+				<h2>{{lang_stadium}}</h2>
 			</div>
-		</div>
+
+			<div class="stadium">
+				<div>
+					<img src="{{stadium.feature_img}}" alt="{{stadium.name}}">
+					<p class="city">{{stadium.district}}</p>
+					<h3>{{stadium.name}}</h3>
+					<p class="descrition" ng-repeat="describ in stadium.description[language]">{{describ}}</p>
+				</div>
+			</div>
+		</div>	
 	</div>
 </div>
 <div id="footer-fixed">

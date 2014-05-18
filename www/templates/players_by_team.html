@@ -80,62 +80,15 @@
 	<div class="relative page">
 		<div class="players-by-team">
 			<div class="team">
-				<span class="Group">Grupo A</span>
-				<h2><img src="images/bandeiras/icones-bandeiras_r1_c1.png" alt="Brasil"></h2>
+				<span class="Group">{{group}} {{letter_group}}</span>
+				<h2><img src="{{img}}" alt="{{team_name}}"></h2>
 				<button onclick="window.history.back()">Voltar</button>
 			</div>
 
-			<div class="group-players">
-				<h3>Goleiros</h3>
+			<div ng-repeat="player in players" class="group-players">
+				<h3>{{player[0]}}</h3>
 				<ul>
-					<li>jogador 1</li>
-					<li>jogador 2</li>
-					<li>jogador 3</li>
-				</ul>
-			</div>
-			<div class="group-players">
-				<h3>Laterais</h3>
-				<ul>
-					<li>jogador 4</li>
-					<li>jogador 5</li>
-					<li>jogador 6</li>
-					<li>jogador 7</li>
-				</ul>
-			</div>
-			<div class="group-players">
-				<h3>Zagueiros</h3>
-				<ul>
-					<li>jogador 8</li>
-					<li>jogador 9</li>
-					<li>jogador 10</li>
-					<li>jogador 11</li>
-				</ul>
-			</div>
-			<div class="group-players">
-				<h3>Meio campistas</h3>
-				<ul>
-					<li>jogador 12</li>
-					<li>jogador 13</li>
-					<li>jogador 14</li>
-					<li>jogador 15</li>
-				</ul>
-			</div>
-			<div class="group-players">
-				<h3>Médios Atacantes</h3>
-				<ul>
-					<li>jogador 16</li>
-					<li>jogador 17</li>
-					<li>jogador 18</li>
-					<li>jogador 19</li>
-				</ul>
-			</div>
-			<div class="group-players">
-				<h3>Atacantes</h3>
-				<ul>
-					<li>jogador 20</li>
-					<li>jogador 21</li>
-					<li>jogador 22</li>
-					<li>jogador 23</li>
+					<li ng-repeat="p in player[1]">{{p}}</li>
 				</ul>
 			</div>
 		</div>

@@ -188,6 +188,16 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        var language = window.localStorage.getItem('language');
+        if (language == 2) {
+            $scope.lang_stadium = "Stadiums";
+            
+        }else if (language == 3) {
+            $scope.lang_stadium = "Estadios";
+        }else {
+            $scope.lang_stadium = "Estádios";
+        }
+        $scope.stadiums = stadiums;
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -212,8 +222,19 @@ planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
 );
 
 
-planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
+planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http', '$routeParams',
+    function ($scope, $rootScope, $routeParams, $http ) {
+        var language = window.localStorage.getItem('language');
+        if (language == 2) {
+            $scope.lang_stadium = "Stadiums";
+            
+        }else if (language == 3) {
+            $scope.lang_stadium = "Estadios";
+        }else {
+            $scope.lang_stadium = "Estádios";
+        }
+        $scope.language = language;
+        $scope.stadium = stadiums[$routeParams.stadiumId];
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -238,9 +259,26 @@ planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http',
 );
 
 
-planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
+planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$routeParams',
+    function ($scope, $rootScope, $routeParams, $http ) {
+        var letter_group = $routeParams.teamId[0];
+        var position_team = $routeParams.teamId[1];
+        var language = window.localStorage.getItem('language');
+        
         $scope.items = $rootScope.items;
+        $scope.letter_group = letter_group;
+        $scope.position_team = position_team;
+        team_object = teamPerGroup[letter_group][position_team];
+        $scope.img = team_object.img;
+        $scope.team_name = team_object[language];
+        $scope.players = team_object['players'];
+        $scope.language = language;
+        if (language == 2) {
+            $scope.group = "Group";
+        }else {
+            $scope.group = "Grupo";
+        }
+
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -291,7 +329,7 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
+    function ($scope, $rootScope,  $routeParams, $http ) {
         $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -320,7 +358,13 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
         $scope.teams = teamPerGroup
-        $scope.language = window.localStorage.getItem('language');
+        var language = window.localStorage.getItem('language');
+        $scope.language = language
+        if (language == 2) {
+            $scope.group = "Group";
+        }else {
+            $scope.group = "Grupo";
+        }
         $scope.$on('$viewContentLoaded', function() {
             elemets_banner = document.getElementsByClassName('input_checked');
             ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){

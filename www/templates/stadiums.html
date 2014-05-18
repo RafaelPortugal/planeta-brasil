@@ -8,6 +8,9 @@
 	body {
 		background: #081600;
 	}
+	#wrapper {
+		width: 100%;
+	}
 	h2 {
 		background: url('images/logo-stadium.png') no-repeat;
 		background-position: 5px 20px;
@@ -22,8 +25,13 @@
 		border-top: 2px dotted #04a852;
 		border-bottom: 2px dotted #04a852;
 	}
+	.position-stadium {
+		position: absolute;
+		width: 100%;
+		top: 110px;
+		padding-bottom: 60px;
+	}
 	.logo {
-		margin-top: 110px;
 		text-align: center;
 		width: 100%;
 		margin-bottom: 25px;
@@ -51,7 +59,7 @@
 		margin-left: 20px;
 	}
 	.stadium h3 {
-		font-size: 3.5em;
+		font-size: 3em;
 		margin-top: 0;
 		margin-bottom: 10px;
 		margin-left: 20px;
@@ -75,74 +83,21 @@
 </div>
 <div id="wrapper">
 	<div class="relative page">
-		<div class="logo">
-			<h2>Estádios</h2>
-		</div>
+		<div class="position-stadium">
+			<div class="logo">
+				<h2>{{lang_stadium}}</h2>
+			</div>
 
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
+			<div class="stadium" ng-repeat="(key, stadium) in stadiums">
+				<div>
+					<a href="#/stadium/{{key}}">
+						<img src="{{stadium.feature_img}}" alt="Minerao">
+					</a>
+					<p class="city">{{stadium.district}}</p>
+					<h3>{{stadium.name}}</h3>
+				</div>
 			</div>
 		</div>
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
-			</div>
-		</div>
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
-			</div>
-		</div>
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
-			</div>
-		</div>
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
-			</div>
-		</div>
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
-			</div>
-		</div>
-		<div class="stadium">
-			<div>
-				<a href="#/stadium/1">
-					<img src="images/minerao.jpg" alt="Minerao">
-				</a>
-				<p class="city">Belo Horizonte</p>
-				<h3>Minerao</h3>
-			</div>
-		</div>
-
 	</div>
 </div>
 <div id="footer-fixed">
