@@ -26,7 +26,13 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
             $scope.advance = "Next";
             $scope.skip = "Skip this step";
             $scope.or = "or";
-        }else {
+        } else if(window.localStorage.getItem('language') == 3) {
+            $scope.passaport = "pasaporte";
+            $scope.login = "Login";
+            $scope.advance = "Próximo";
+            $scope.skip = "Omitir este paso";
+            $scope.or = "o";
+        } else {
             $scope.passaport = "Passaporte";
             $scope.login = "Identifique-se";
             $scope.advance = "Avançar";
@@ -41,23 +47,20 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
-        if (window.localStorage.getItem('language') == 2) {
-            message = "Wait, we are carrying the information of your city."
-        }else {
+        var language = window.localStorage.getItem('language');
+        if (language == 2) {
+            message = "Wait, we are carrying the information of your city.";
+        }else if (language == 3) {
+            message = "Por favor, espere un momento mientras cargamos la información de tu ciudad.";
+        }
+        else {
             message = "Aguarde, estamos carregando as informações da sua cidade.";
         }
 
         $scope.message = message;
         $scope.$on('$viewContentLoaded', function() {
-            $rootScope.items = [
-                {href: '#/home', title: 'Home', status: 'deactive', language: 1},
-                {href: '#', title: 'Notícias', status: 'deactive', language: 1},
-                {href: '#/team-per-group', title: 'Jogadores', status: 'deactive', language: 1},
-                {href: '#/stadiums', title: 'Estádios', status: 'deactive', language: 1},
-                {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive', language: 1},
-                {href: '#/curiosity', title: 'Curiosidade', status: 'deactive', language: 1},
-                {href: '#/photo-fans', title: 'Fotos', status: 'deactive', language: 1},
-            ];
+            var language = window.localStorage.getItem('language');
+            $rootScope.items = menu[language];
             setTimeout(function(){
                 window.location.href = "#home";
             },4000);

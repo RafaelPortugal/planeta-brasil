@@ -191,7 +191,7 @@ input[type=radio] + label {
     color: #004b72;
     margin: 0;
     padding: 0;
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
 
@@ -205,7 +205,7 @@ input[type=radio] + label {
 }
 
 .choose-language li img {
-    height: 3em;
+    height: 2.5em;
 }
 
 /* Ended page 2 */
@@ -591,7 +591,7 @@ h1 img {
 @media all and (max-height: 450px){
 
 body {
-    font-size: 6px;
+    font-size: 5.5px;
 }
 h1 {
     top: 6em;

@@ -506,3 +506,37 @@ stadiums = {
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
 }
+
+
+menu = {
+    1: [
+        {href: '#/home', title: 'Início', status: 'deactive'},
+        {href: '#', title: 'Notícias', status: 'deactive'},
+        {href: '#/table-games', title: 'Tabela de Jogos', status: 'deactive'},
+        {href: '#/team-per-group', title: 'Jogadores', status: 'deactive'},
+        {href: '#/stadiums', title: 'Estádios', status: 'deactive'},
+        {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
+        {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
+        {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
+    ],
+    2: [
+        {href: '#/home', title: 'Home', status: 'deactive'},
+        {href: '#', title: 'News', status: 'deactive'},
+        {href: '#/table-games', title: 'Matches', status: 'deactive'},
+        {href: '#/team-per-group', title: 'Players', status: 'deactive'},
+        {href: '#/stadiums', title: 'Stadiums', status: 'deactive'},
+        {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
+        {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
+        {href: '#/photo-fans', title: 'Photos', status: 'deactive'},
+    ],
+    3: [
+        {href: '#/home', title: 'Inicio', status: 'deactive'},
+        {href: '#', title: 'Noticias', status: 'deactive'},
+        {href: '#/table-games', title: 'Juegos', status: 'deactive'},
+        {href: '#/team-per-group', title: 'Jugadores', status: 'deactive'},
+        {href: '#/stadiums', title: 'Estadios', status: 'deactive'},
+        {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
+        {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
+        {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
+    ],
+}
