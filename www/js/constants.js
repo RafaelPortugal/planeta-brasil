@@ -18,18 +18,39 @@ teamPerGroup = {
             2: 'Croatia',
             3: 'Croacia',
             'img': 'images/bandeiras/a2.png',
+            "players": [
+                ["goleiros", ["Stipe Pletikosa", "Danijel Subasic", "Oliver Zelenika"]],
+                ["defensores", ["Dario Srna", "Dejan Lovren", "Vedran Corluka", "Gordon Schildenfeld", "Danijel Pranjic", "John Strinic", "Domagoj Vida", "Sime Vrsaljko", "Igor Bubnjic"]],
+                ["meio-campistas", ["Luka Modric", "Ivan Rakitic", "Niko Kranjcar", "Ognjen Vukojevic", "Ivan Perisic", "Mateo Kovacic", "Milan Badelj", "Ivo Ilicevic Marcelo Brozovic", "Ivan Mocinic", "Mario Pasalic" , "Sammir"]], 
+                ["atacantes", ["Mario Mandzukic" , "Ivica Olic", "Eduardo da Silva" , "Nikica Jelavic", "Ante Rebic", "Duje Cop"]], 
+                ["técnico", ["Niko Kovac"]]
+            ]
         },
         {
             1: 'México',
             2: 'Mexico',
             3: 'Mexico',
             'img': 'images/bandeiras/a3.png',
+            "players": [
+                ["goleiros", ["Jesús Corona" , "Guillermo Ochoa" , "Alfredo Talavera"]], 
+                ["defensores", ["Rafael Márquez" , "Diego Reyes" , "Héctor Moreno" , "Paul Aguilar" , "Miguel Layún" , "Carlos Salcido" , "Francisco Maza Rodríguez", "Andrés Guardado"]],
+                ["meio-campistas", ["José Juan Vázquez" , "Juan Carlos Medina" , "Héctor Herrera" , "Carlos Peña" , "Luis Montes" , "Marco Fabián"  , "Isaac Brizuela"]],
+                ["atacantes", ["Oribe Peralta" , "Javier Hernández" , "Raúl Jiménez" , "Alan Pulido"  , "Giovani dos Santos"]],
+                ["técnico", ["Miguel Herrera"]]
+            ]
         },
         {
             1: 'Camarões',
             2: 'Cameroon',
             3: 'Camerún',
             'img': 'images/bandeiras/a4.png',
+            "players": [
+                ["goleiros", ["Charles Itange" , "Roland Ndy Assembe" , "Sammy Ndjock"  , "Loic Feudjou"]],
+                ["defensores", ["Allan Nyom" , "Dany Nounkeu" , "Cédric Djeugoue" , "Aurelien Chedjou" , "Nicolas Nkoulou" , "Biyick Kana Armel" , "Henri Bedimo" , "Benoît Assou-Ekotto"  , "Gaetang Bong"]], 
+                ["meio-campistas", ["Eyong Enoh" , "Jean II Makoun" , "Joel Matip" , "Stéphane Mbia" , "Landry Nguemo" , "Alexandre Song" , "Cedric Loe"  , "Edgar Sally"]],
+                ["atacantes", ["Samuel Eto’o" , "Eric Choupo Moting" , "Benjamin Moukandjo" , "Vincent Aboubakar", "Achille Webo" , "Mohamadou Idrissou" , "Fabrice Olinga"]], 
+                ["técnico", ["Volker Finke"]]
+            ]
         },
     ],
     'b': [
@@ -38,24 +59,53 @@ teamPerGroup = {
             2: 'Spain',
             3: 'España',
             'img': 'images/bandeiras/b1.png',
+            "players": [
+                ["goleiros", ["Iker Casillas" , "Pepe Reina"  , "David de Gea"]],
+                ["defensores", ["Sergio Ramos" , "Gerard Piqué" , "Raul Albiol" , "Juanfran Torres" , "Jordi Alba" , "César Azpilicueta" , "Daniel Carvajal"  , "Alberto Moreno"]],
+                ["meio-campistas", ["Javi Martínez" , "Xavi Hernández" , "Xabi Alonso" , "Andrés Iniesta" , "Koke Resurrección" , "Sergio Busquets" , "Santi Cazorla" , "Ander Iturraspe" , "Fàbregas" , "Thiago Alcântara" , "Juan Mata" , "David Silva"]], 
+                ["atacantes", ["Pedro Rodríguez" , "Jesús Navas" , "Diego Costa" , "David Villa" , "Fernando Torres" , "Álvaro Negredo" , "Fernando Llorente"]],
+                ["técnico", ["Vicente del Bosque"]],
+            ]
         },
         {
             1: 'Holanda',
             2: 'Netherlands',
             3: 'Holanda',
             'img': 'images/bandeiras/b2.png',
+            "players": [
+                ["goleiros", ["Jasper Cillessen", "Tim Krul" , "Jeroen Zoet"  , "Michel Vorm"]], 
+                ["defensores", ["Daryl Janmaat" , "Paul Verhaegh" , "Daley Blind"  , "Van Aanholt" , "Stefan de Vrij" , "Bruno Martins Indi" , "Ron Vlaar" , "Joel Veltman" , "Karim Rekik"  , "Terence Kongolo" ]],
+                ["meio-campistas", ["Nigel de Jong" , "Leroy Fer" , "Jordy Clasie" , "Georginio Wijnaldum" , "Jonathan de Guzman" , "Rafael van der Vaart" , "Tonny Trindade de Vilhena"  , "Wesley Sneijder"]],
+                ["atacantes", ["Dirk Kuyt" , "Arjen Robben" , "Jeremain Lens" , "Jean-Paul Boëtius" , "Quincy Promes" , "Klass Jan Huntelaar" , "Robin Van Persie"  , "Memphis Depay"]],
+                ["técnico", ["Louis van Gaal"]],
+            ]
         },
         {
             1: 'Chile',
             2: 'Chile',
             3: 'Chile',
             'img': 'images/bandeiras/b3.png',
+            "players": [
+                ["goleiros", ["Claudio Bravo" , "Cristopher Toselli", "Johnny Herrera",  "Paulo Garcés"]],
+                ["defensores", ["Gonzalo Jara" , "Enzo Andía" , "José Rojas" , "Marcos González" , "Gary Medel" , "Mauricio Isla" , "Eugenio Mena"  , "Miiko Albornoz"]],
+                ["meio-campistas", ["Francisco Silva" , "Felipe Gutiérrez" , "José Pedro Fuenzalida" , "Pablo Hernández" , "Marcelo Díaz" , "Arturo Vidal" , "Carlos Carmona" , "Charles Aránguiz" , "Jean Beausejour" , "Matías Fernández" , "Jorge Valdivia", "Rodrigo Millar"]],
+                ["atacantes", ["Esteban Paredes" , "Gustavo Canales" , "Eduardo Vargas" , "Alexis Sánchez" , "Fabián Orellana"  , "Mauricio Pinilla"]],
+                ["Técnico", ["Jorge Sampaoli"]]
+            ]
+
         },
         {
             1: 'Austrália',
             2: 'Australia',
             3: 'Australia',
             'img': 'images/bandeiras/b4.png',
+            "players": [
+                ["goleiros", ["Mark Birighitti" , "Eugene Galekovic" , "Mitchell Langerak",  "Mat Ryan"]], 
+                ["defensores", ["Jason Davidson" , "Ivan Franjic" , "Curtis Good" , "Ryan McGowan" , "Matthew Spiranovic" , "Alex Wilkinson" , "Luke Wilkshire"  , "Bailey Wright"]],
+                ["meio-campistas", ["Oliver Bozanic" , "Mark Bresciano" , "Joshua Brillante" , "James Holland" , "Mile Jedinak" , "Massimo Luongo" , "Matthew McKay" , "Mark MIlligan" , "Tommy Oar" , "Tommy Rogic" , "Adam Sarota" , "James Troisi"  , "Dario Vidosic"]],
+                ["atacantes", ["Tim Cahill" , "Ben Halloran" , "Josh Kennedy" , "Matthew Leckie",   "Adam Taggart"]],
+                ["Técnico", ["Ange Postecoglou"]],
+            ]
         },
     ],
     'c': [
@@ -64,24 +114,53 @@ teamPerGroup = {
             2: 'Colombian',
             3: 'Colombia',
             'img': 'images/bandeiras/c1.png',
+            "players": [
+                ["goleiros", ["David Ospina", "Faryd Mondragón" , "Camilo Vargas"]],
+                ["defensores", ["Mario Yepes", "Cristian Zapata", "Pablo Armero", "Santiago Arias", "Éder Álvarez Balant", "Aquivaldo Mosquera", "Amaranto Perea", "Carlos Valdés", "Camilo Zúñiga"]],
+                ["meio-campistas", ["Fredy Guarín", "Alex Mejía", "Juan Guillermo Cuadrado", "Víctor Ibarbo", "James Rodríguez", "Abel Aguilar", "Macenlly Torres", "Juan Fernando Quintero", "Carlos Sánchez", "Aldo Leao Ramíre", "Edwin Valencia" , "Elkin Soto"]],
+                ["atacantes", ["Luis Fernando Muriel", "Jackson Martínez", "Carlos Bacca", "Adrián Ramos", "Teófilo Gutiérrez", "Falcao García"]],
+                ["Técnico", ["José Pékerman"]]
+            ]
         },
         {
             1: 'Grécia',
             2: 'Greece',
             3: 'Grecia',
             'img': 'images/bandeiras/c2.png',
+            "players": [
+                ["goleiros", ["Alexandros Tzorvas" ,  "Orestis Karnezis" , "Panaglotis Glykos"  , "Stefanos Kapino"]], 
+                ["defensores", ["Avraam Papadopoulos" , "Dimitris Siovas" , "Kostas Manolas" , "Giannis Maniatis", "Jose Holebas" , "Sokratis Papastathopoulos" , "Giorgios Tzavellas" , "Loukas Vyntra" , "Vasilis Torosidis"]],
+                ["meio-campistas", ["Alexandros Tziolis" , "Andreas Samaris" , "Kostas Katsouranis" , "Giorgos Karagounis" , "Panagiotis Tachtsidis" , "Sotiris Ninis" , "Ioannis Fetfatzidis" , "Kostas Fortounis" , "Lazaros Christodoulopoulos" , "Panagiotis Kone"]],
+                ["atacantes", ["Dimitris Papadopoulos" , "Dimitris Salpingidis" , "Giorgios Samaras" , "Konstantinos Mitroglou"  , "Theofanis Gekas"]], 
+                ["técnico", ["Fernando Santos"]]
+            ]
+
         },
         {
             1: 'Costa do Marfim',
             2: 'Ivory Coast',
             3: 'Costa de Marfil',
             'img': 'images/bandeiras/c3.png',
+            "players": [
+                ["goleiros", ["Boubacar Barry" , "Sylvain Gbohouo" , "Sayouba Mandé",  "Badra Ali Sangare"]],
+                ["defensores", ["Serge Aurier", "Benjamin Angoua" , "Brice Dja Djedje", "Jean-Daniel Akpa-Akpro" , "Didier Zokora", "Kolo Touré" , "Souleman Bamba" , "Arthur Boka" , "Constant Djakpa" , "Ousmane Viera"]], 
+                ["meio-campistas", ["Cheik Tioté" , "Serey Die" , "Ismael Diomande" , "Didier Ya Konan" , "Yaya Touré" , "Max Gradel" , "Jean Jacques Gosso" , "Mathis Bolly" , "Romaric"]],
+                ["atacantes", ["Didier Drogba" , "Wilfried Bony" , "Gervinho" , "Salomon Kalou" , "Lacina Traore" , "Giovanni Sio"  , "Seydou Doumbia"]],
+                ["técnico", ["Sabri Lamouchi"]]
+            ]
         },
         {
             1: 'Japão',
             2: 'Japan',
             3: 'Japón',
             'img': 'images/bandeiras/c4.png',
+            "players": [
+                ["goleiros", ["Eiji Kawashima" , "Shusaku Nishikawa"  , "huichi Gonda"]], 
+                ["defensores", ["Atsuto Uchida" , "Yuto Nagatomo" , "Hiroki Sakai"  , "Gotoku Sakai" , "Masahiko Inoha" , "Yasuyuki Konno" , "Masato Morishige" , "Maya Yoshida"]],
+                ["meio-campistas", ["Yasuhito Endo" , "Makoto Hasebe" , "Yoshihiro Aoyama"  , "Hotaru Yamaguchi" ,  "Honda" , "Shinji Kagawa" , "Hiroshi Kiyotake"  , "Manabu Saito"]], 
+                ["atacantes", ["Yoshito Okubo" , "Shinji Okazaki" , "Yoichiro Kakitani"  , "Yuya Osako"]],
+                ["técnico", ["Alberto Zaccheroni"]],
+            ]
         },
     ],
     'd': [
@@ -90,18 +169,40 @@ teamPerGroup = {
             2: 'Uruguay',
             3: 'Uruguay',
             'img': 'images/bandeiras/d1.png',
+            "players": [
+                ["goleiros", ["Fernando Muslera" , "Martín Silva"  , "Rodrigo Muñoz"]], 
+                ["defensores", ["Diego Lugano" , "Diego Godín" , "José María Giménez" , "Martín Cáceres", "Maxi Pereira" , "Jorge Fucile"  , "Sebástian Coates"]],
+                ["meio-campistas", ["Arévalo Ríos" , "Walter Gargano" , "Alejandro Silva" , "Gastón Ramírez" , "Cristian Rodríguez", "Nicolás Lodeiro" , "Sebastián Eguren" , "Álvaro González"  , "Álvaro Pereira"]],
+                ["atacantes", ["Edinson Cavani" , "Luis Suárez" , "Diego Forlán" , "Abel Hernández"  , "Cristian Stuani"]],
+                ["técnico", ["Óscar Tabárez"]]
+            ]
+
         },
         {
             1: 'Costa Rica',
             2: 'Costa Rica',
             3: 'Costa Rica',
             'img': 'images/bandeiras/d2.png',
+            "players": [
+                ["goleiros", ["Keylor Navas" , "Patrick Pemberton" , "Daniel Cambronero"  , "Esteban Alvarado"]] , 
+                ["defensores", ["Johnny Acosta" , "Giancarlo González" , "Michael Umaña" , "Oscar Duarte" , "Waylon Francis" , "Heiner Mora" , "Junior Díaz" , "Christian Gamboa" , "Roy Miller"  , "Kendall Waston"]], 
+                ["meio-campistas", ["Celso Borges" , "Christian Bolaños" , "Oscar Esteban Granados" , "Michael Barrantes" , "Yeltsin Tejeda", "Diego Calvo" , "José Miguel Cubero" , "Carlos Hernández" , "Ariel Rodríguez" ,  "Hansell Arauz"]],
+                ["atacantes", ["Álvaro Saborío", "Bryan Ruiz" , "Joel Campbell" , "Randall Brenes" , "Marco Ureña"  , "Jairo Arrieta"]], 
+                ["técnico", ["Jorge Luis Pinto"]]
+            ]
         },
         {
             1: 'Inglaterra',
             2: 'England',
             3: 'Inglaterra',
             'img': 'images/bandeiras/d3.png',
+            "players": [
+                ["goleiros", ["Fraser Forster" , "Joe Hart"  , "Ben Foster"]],
+                ["defensores", ["Leighton Baines" , "Phil Jagielka" , "Gary Cahill" , "Glen Johnson" , "Phil Jones" , "Chris Smalling",   "Luke Shaw"]], 
+                ["meio-campistas", ["Ross Barkley" , "Steven Gerrard" , "Jordan Henderson" , "Adam Lallana" , "Frank Lampard" , "James Milner", "Alex Oxlade-Chamberlain" , "Jack Wilshere"  , "Raheem Sterling"]],
+                ["atacantes", ["Rickie Lambert" , "Wayne Rooney" , "Daniel Welbeck"  , "Daniel Sturridge"]] , 
+                ["técnico", ["Roy Hodgson"]]
+            ]
         },
         {
             1: 'Itália',
