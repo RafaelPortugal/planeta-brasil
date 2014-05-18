@@ -11,11 +11,18 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
+    
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
     </feature>
+    
+    <gap:plugin name="com.phonegap.plugins.pushplugin" />
+
+    <gap:plugin name="org.apache.cordova.device" />
+    
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="portrait" />
+    
+    <!-- preference name="orientation" value="portrait" / -->
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
