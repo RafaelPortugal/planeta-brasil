@@ -1,0 +1,105 @@
+<style>
+	
+	@media all and (max-width: 359px){
+		.relative {
+			top: 300px;
+		}
+	}
+	body {
+		background: #081600;
+	}
+	#wrapper {
+		width: 100%;
+	}
+	h2 {
+		background: url('images/logo-stadium.png') no-repeat;
+		background-position: 5px 20px;
+		line-height: 68px;
+		padding: 20px 0 20px 65px;
+		display: inline-block;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 50px;
+		font-weight: bold;
+		margin: 15px 0;
+		border-top: 2px dotted #04a852;
+		border-bottom: 2px dotted #04a852;
+	}
+	.position-stadium {
+		position: absolute;
+		width: 100%;
+		top: 110px;
+		padding-bottom: 60px;
+	}
+	.logo {
+		text-align: center;
+		width: 100%;
+		margin-bottom: 25px;
+	}
+	.stadium {
+		padding: 0 10%;
+		margin-bottom: 25px;
+	}
+	.stadium a {
+		text-decoration: none;
+
+	}
+	.stadium div {
+		background: #fff;
+		border: 4px solid #fff;
+	}
+	.stadium div img {
+		width: 100%;
+	}
+	.stadium .city {
+		font-size: 2.5em;
+		font-weight: lighter;
+		margin-top: 15px;
+		margin-bottom: 5px;
+		margin-left: 20px;
+	}
+	.stadium h3 {
+		font-size: 3em;
+		margin-top: 0;
+		margin-bottom: 10px;
+		margin-left: 20px;
+	}
+</style>
+<menu id="nav-left">
+    <ul>
+        <li ng-repeat="item in items" class="{{item.status}}"><a href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+    </ul>
+</menu>
+<header>
+	<button class="menu"></button>
+	<h1>Planeta Brasil</h1>
+	<div class="logo_header">
+		<img src="images/logo.png" alt="Logotipo">
+	</div>
+	<button class="btn-gps"></button>
+</header>
+<div class="bg-internas left-menu">
+		<img src="images/estadios-1.jpg" alt="Bacground">
+</div>
+<div id="wrapper">
+	<div class="relative page">
+		<div class="position-stadium">
+			<div class="logo">
+				<h2>{{lang_stadium}}</h2>
+			</div>
+
+			<div class="stadium" ng-repeat="(key, stadium) in stadiums">
+				<div>
+					<a href="#/stadium/{{key}}">
+						<img src="{{stadium.feature_img}}" alt="Minerao">
+					</a>
+					<p class="city">{{stadium.district}}</p>
+					<h3>{{stadium.name}}</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer-fixed">
+	<span>BRASIL BEYOND BRAZIL</span>
+</div>
