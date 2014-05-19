@@ -22,6 +22,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/home.html',
         controller: 'HomeCtrl'
       }).
+      when('/results/:offset', {
+        templateUrl: 'templates/last_games.html',
+        controller: 'LastGamesCtrl'
+      }).
       when('/curiosity', {
         templateUrl: 'templates/curiosity.html',
         controller: 'CuriosityCtrl'

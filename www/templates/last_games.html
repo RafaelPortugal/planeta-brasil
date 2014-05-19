@@ -1,0 +1,88 @@
+<style>
+	body {
+		background: #e2e2c7;
+	}
+	#wrapper {
+		width: 100%;
+	}
+	.content-home {
+		padding-top: 80px;
+		padding-bottom: 60px;
+	}
+	ul.paginate {
+		text-align: center;
+	}
+	ul.paginate li {
+		font-size: 0.3em;
+		padding: 0;
+		margin: 0 5px !important;
+		display: inline-block;
+		border: 0 !important;
+	}
+	ul.paginate li {
+		display: inline-block;
+		padding: 5px;
+		text-transform: none;
+		color: #000;
+		text-decoration: none;
+	}
+	ul.paginate li a {
+		text-decoration: none;
+		color: #000;
+	}
+	ul.paginate li a.true {
+		font-weight: bold;
+	}
+	ul.paginate li a.false {
+		font-weight: lighter;
+	}
+</style>
+
+<menu id="nav-left">
+    <ul>
+        <li ng-repeat="item in items" class="{{item.status}}"><a href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+    </ul>
+</menu>
+
+<header>
+	<button class="menu"></button>
+	<h1>Planeta Brasil</h1>
+	<div class="logo_header">
+		<img src="images/logo.png" alt="Logotipo">
+	</div>
+	<button class="btn-gps"></button>
+</header>
+
+<div id="wrapper">
+	<div class="relative page">
+		<div class="content-home">
+			<div class="section">
+				<div class="last-matches">
+					<h2><div class="border border-left"></div> Últimos jogos <div class="border border-right"></h2>
+					<ul class="border">
+						<li ng-repeat="game in last_games.items">
+						    <i class="home"><span>{{ game.abbr_home}}</span> <img src="{{ game.img_home}}" alt="{{ game.home}}"> </i>
+						    <span class="result home">{{ game.gols_home}}</span><span class="vs"> X </span><span class="result visited">{{ game.gols_visited}}</span>
+						    <i class="visited"><img src="{{ game.img_visited}}" alt="{{ game.visited}}"><span>{{ game.abbr_visited}}</span></i>
+						</li>
+						
+						<ul class="paginate">
+							<li ng-repeat="p in paginate">
+								<a href="#/results/{{p.id}}" class="{{p.active}}">{{p.num}}</a>
+							</li>
+						</ul>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+<div id="footer-fixed">
+	<span>BRASIL BEYOND BRAZIL</span>
+</div>
+
+<script type="text/javascript">
+
+</script>

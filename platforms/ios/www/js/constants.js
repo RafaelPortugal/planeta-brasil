@@ -910,5 +910,138 @@ home = {
     ]
 }
 
+lastGames = {
+    'items': [
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        }
+    ],
+    'offset': 0,
+    'total': 11,
+}
 
+lastGames_10 = {
+    'items': [
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        }
+    ],
+    'offset': 0,
+    'total': 11,
+}
 

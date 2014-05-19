@@ -133,7 +133,46 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     }]
 );
 
+planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$routeParams',
+    function ($scope, $rootScope, $rootParams, $http ) {
 
+        offset = $rootParams.offset;
+        $scope.items = $rootScope.items;
+        if (offset == 0) {
+            $scope.last_games = lastGames;
+        }else {
+            $scope.last_games = lastGames_10;
+        }
+        paginate = parseInt(lastGames.total / 10);
+        rest = lastGames.total % 10;
+        if (paginate > 0 && rest != 0) {
+            paginate += 1;
+        }
+        $scope.paginate = Array.apply(null, Array(paginate)).map(function (_, i) {return {"num": i+1, "id": i*10, "active": i*10 == offset};});
+
+        $scope.$on('$viewContentLoaded', function() {
+            swipe_menu();
+
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.item, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       }
+    }]
+);
 
 planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
