@@ -669,6 +669,105 @@ menu = {
 }
 
 
+curiosities = {
+    1: [
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        }
+    ],
+    2: [
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        }
+    ],
+    3: [
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        }
+    ]
+}
+
 // ########################################################################################
 // ##############################                            ##############################
 // ############################## Abaixo os exemplos de json ##############################
@@ -1041,7 +1140,104 @@ lastGames_10 = {
             "date": "Quarta 04/06"
         }
     ],
-    'offset': 0,
+    'offset': 10,
     'total': 11,
 }
 
+
+guess = {
+    1: [
+        {
+            'team': 'Brasil',
+            'percent': '55%'
+        },
+        {
+            'team': 'Espanha',
+            'percent': '23%'
+        },
+        {
+            'team': 'Alemanha',
+            'percent':'12%',
+        },
+        {
+            'team': 'Inglaterra',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentina',
+            'percent':'4%',
+        },
+    ],
+    2: [
+        {
+            'team': 'Brazil',
+            'percent': '55%'
+        },
+        {
+            'team': 'Spain',
+            'percent': '23%'
+        },
+        {
+            'team': 'Germany',
+            'percent':'12%',
+        },
+        {
+            'team': 'England',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentine',
+            'percent':'4%',
+        },
+    ],
+    3: [
+        {
+            'team': 'Brasil',
+            'percent': '55%'
+        },
+        {
+            'team': 'España',
+            'percent': '23%'
+        },
+        {
+            'team': 'Alemanha',
+            'percent':'12%',
+        },
+        {
+            'team': 'Inglaterra',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentina',
+            'percent':'4%',
+        }
+    ]  
+}
+
+
+photos = [
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    }
+]
