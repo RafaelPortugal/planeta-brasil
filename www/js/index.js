@@ -14,32 +14,7 @@ var app = {
         forward = document.getElementById("forward");
         slider = document.getElementById('slider');
         back = document.getElementById("back");
-        app.setupPushPlugin();
         app.receivedEvent('deviceready');
-    },
-
-    // Setup Phonegap Build Push Plugin
-    setupPushPlugin: function(){
-        pushNotification = window.plugins.pushNotification;
-
-        if ( device.platform == 'android' || device.platform == 'Android' ) {
-            pushNotification.register(
-                pushSuccessHandler,
-                pushErrorHandler, {
-                    'senderID': PUSH_GCM_SENDER_ID,
-                    'ecb': 'onNotificationGCM'
-                });
-        }
-        else {
-            pushNotification.register(
-                pushTokenHandler,
-                pushErrorHandler, {
-                    "badge":"true",
-                    "sound":"true",
-                    "alert":"true",
-                    "ecb":'onNotificationAPN'
-                });
-        };
     },
 
     receivedEvent: function(id) {
@@ -114,5 +89,3 @@ var app = {
         // swipe_menu();
     }
 };
-
-

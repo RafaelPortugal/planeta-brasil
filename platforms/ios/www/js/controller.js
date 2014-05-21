@@ -12,6 +12,7 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
     // });
         $scope.chooseLanguage = function(id_language) {
             window.localStorage.setItem('language', id_language);
+            setup_push_plugin();
             window.location.href = "#login";
         }
     }]

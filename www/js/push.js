@@ -32,8 +32,13 @@ function onNotificationAPN (event) {
 
 
 function sendPushRegisterId(reg_id, device_type){
+    // Envia a chave para nosso servidor após registrar no GCM
     var url = SERVER_URL + 'api-copa/register-push-device/';
-    var data = 'reg_id=' + reg_id + '&device_type=' + device_type;
+
+    var data = 'reg_id=' + reg_id;
+    data += '&device_type=' + device_type;
+    data += '&language=' + window.localStorage.getItem('language', '1');
+    
     var request = new XMLHttpRequest();
     request.open('POST', url, true);
     request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -43,13 +48,9 @@ function sendPushRegisterId(reg_id, device_type){
 
 // Called on Android Push Message
 function onNotificationGCM(e) {
-    alert(e);
-    alert('<li>EVENT -> RECEIVED:' + e.event + '</li>');
-
     switch( e.event ) {
         case 'registered':
             if ( e.regid.length > 0 ) {
-                //alert('<li>REGISTERED -> REGID:' + e.regid + "</li>");
                 sendPushRegisterId(e.regid, 'android');
                 // Your GCM push server needs to know the regID before it can push to this device
                 // here is where you might want to send it the regID for later use.
@@ -71,17 +72,41 @@ function onNotificationGCM(e) {
                   //alert('<li>--BACKGROUND NOTIFICATION--' + '</li>');
                 }
             };
-
             alert(e.payload.message);
             //alert('<li>MESSAGE -> MSGCNT: ' + e.payload.msgcnt + '</li>');
             break;
         case 'error':
-            console.log('<li>ERROR -> MSG:' + e.msg + '</li>');
+            console.log('ERROR -> MSG:' + e.msg);
             break;
 
         default:
-            console.log('<li>EVENT -> Unknown, an event was received and we do not know what it is</li>');
+            console.log('Unknown event' + e.event);
             break;
         }
-}
+};
 
+
+
+
+var setup_push_plugin =  function(){
+    pushNotification = window.plugins.pushNotification;
+    
+    if ( device.platform == 'android' || device.platform == 'Android' ) {
+        pushNotification.register(
+                pushSuccessHandler,
+                pushErrorHandler, {
+                    'senderID': PUSH_GCM_SENDER_ID,
+                    'ecb': 'onNotificationGCM'
+                });
+        }
+        else {
+            pushNotification.register(
+                pushTokenHandler,
+                pushErrorHandler, {
+                    "badge":"true",
+                    "sound":"true",
+                    "alert":"true",
+                    "ecb":'onNotificationAPN'
+                });
+        };
+    };
