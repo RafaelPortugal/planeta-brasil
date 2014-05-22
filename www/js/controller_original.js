@@ -218,33 +218,6 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
 );
 
 
-planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $scope.items = $rootScope.items;
-        $scope.photos = photos;
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-    }]
-);
-
-
 planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         var language = window.localStorage.getItem('language');
@@ -510,9 +483,10 @@ elemets_banner = document.getElementsByClassName('input_checked');
 // Palpites
 planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
         $scope.items = $rootScope.items;
         language = localStorage.getItem('language');
-        
+        //$scope.guess = guess[language];        
 
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -528,8 +502,14 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
         });
 
         document.getElementById('guess_id').onchange = function() {
-            alert('Fazer o post nesse change');
+            this.disabled = true;
+            var data = 'country=' + this.value;
+            var request = new XMLHttpRequest();
+            request.open('POST', API_ROOT_URL + '/api/guesses/', true);
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.send(data);
         };
+        
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.items, function(i) {
                 i.status = 'deactive';
@@ -538,6 +518,7 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
             body.className = "";
        };
 
+       var api_url = API_ROOT_URL + '/api/guesses/' + '?lang=' + window.localStorage.getItem('language', '1');
         $http({method: 'GET', url: API_ROOT_URL + '/api/guesses/'}).
             success(function(data, status, headers, config) {
             
@@ -551,4 +532,49 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
 
     }]
 );
+
+
+// Fotos
+planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
+        $scope.items = $rootScope.items;
+        //$scope.photos = photos;
+        
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                } else {
+                    body.className = "";
+                };
+            });
+        });
+
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+      var api_url = API_ROOT_URL + '/api/photos/' + '?lang=' + window.localStorage.getItem('language', '1');
+      $http({method: 'GET', url: api_url}).
+          success(function(data, status, headers, config) {
+              $scope.photos = data;
+      
+      }).error(function(data, status, headers, config) {
+      
+              alert('Ocorreu um erro. Tente novamente.')
+      
+      });
+
+    }]
+);
+
+
 
