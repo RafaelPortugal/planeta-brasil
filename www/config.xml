@@ -20,7 +20,18 @@
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
     </feature>
+
+    <!-- Camera -->
+    <gap:plugin name="org.apache.cordova.core.camera" />
+    <feature name="Camera">
+        <param name="ios-package" value="CDVCamera" />
+    </feature>
+
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     
+
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
     

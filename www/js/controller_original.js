@@ -540,7 +540,7 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
         $http = $rootScope;
         $scope.items = $rootScope.items;
         //$scope.photos = photos;
-        
+
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
