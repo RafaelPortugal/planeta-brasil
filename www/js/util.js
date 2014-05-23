@@ -168,14 +168,18 @@ var swipe_menu = function(){
             var pages = {language: 0, loading: 1, login: 2};
             var page = window.location.href.split('/')[(window.location.href.split('/').length)-1];
             if (dir == 'left'){
-                if (body.classList.length != 0) {
-                    body.className = "";
-                };
+                if (distance < -150) {
+                    if (body.classList.length != 0) {
+                        body.className = "";
+                    };
+                }
             };
             if (dir == 'right') {
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                };
+                if (distance > 150) {
+                    if (body.classList.length == 0) {
+                        body.className = "menu-active";
+                    };
+                }
             };
         };
     });
