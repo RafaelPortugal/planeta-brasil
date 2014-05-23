@@ -69,22 +69,9 @@
 <div id="wrapper">
 	<div class="relative page">
 		<ul class="photos">
-			<li>
-				<img src="images/exemplo-torcida.png" alt="Torcida">
+			<li ng-repeat="photo in photos">
+				<img src="{{photo.img}}" alt="{{photo.name}}">
 			</li>
-			<li>
-				<img src="images/exemplo-torcida.png" alt="Torcida">
-			</li>
-			<li>
-				<img src="images/exemplo-torcida.png" alt="Torcida">
-			</li>
-			<li>
-				<img src="images/exemplo-torcida.png" alt="Torcida">
-			</li>
-			<li>
-				<img src="images/exemplo-torcida.png" alt="Torcida">
-			</li>
-
 		</ul>
 	</div>
 </div>

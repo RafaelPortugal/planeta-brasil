@@ -205,9 +205,6 @@
 				</tr>
 				<tr>
 					<td class="year">2014</td>
-					<!--
-					<td class="guess">Dê seu palpite</td>
-					-->
 					<td>
 						<select name="guess" id="guess_id">
 							<option value="">Dê seu palpite</option>
@@ -230,44 +227,12 @@
 				</th>
 			</thead>
 			<tbody>
-				<tr>
+				<tr ng-repeat="guess in guess">
 					<td class="percent">
-						59%
+						{{guess.percent}}
 					</td>
 					<td class="team">
-						Brasil
-					</td>
-				</tr>
-				<tr>
-					<td class="percent">
-						59%
-					</td>
-					<td class="team">
-						Inglaterra
-					</td>
-				</tr>
-				<tr>
-					<td class="percent">
-						59%
-					</td>
-					<td class="team">
-						Brasil
-					</td>
-				</tr>
-				<tr>
-					<td class="percent">
-						59%
-					</td>
-					<td class="team">
-						Brasil
-					</td>
-				</tr>
-				<tr>
-					<td class="percent">
-						59%
-					</td>
-					<td class="team">
-						Brasil
+						{{guess.team}}
 					</td>
 				</tr>
 			</tbody>

@@ -50,9 +50,9 @@ a, div {
 }
 
 #active {
-	right: 20px;
-	bottom: 70px;
-	position: absolute;
+    right: 20px;
+    bottom: 70px;
+    position: absolute;
 }
 
 #active label {
@@ -185,7 +185,7 @@ a, div {
     margin: 0 auto;
     padding: 0;
     position: absolute;
-    bottom: 53px;
+    bottom: 80px;
 }
 
 input[type="radio"] {
@@ -211,7 +211,6 @@ a, div {
 
 #curiositys .inner {
     width: 500%;
-    height: 150px;
 }
 
 #curiositys article {
@@ -237,7 +236,7 @@ a, div {
     bottom: initial;
     position: initial;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #curiosity #active label {

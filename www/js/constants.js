@@ -468,13 +468,13 @@ stadiums = {
                 "A atmosfera e a empolgação no estádio em dias de jogo do \"Galo\" e da \"Raposa\" são contagiantes, assim como quando a Seleção entra em campo,  inclusive em duas edições recentes do superclássico Brasil x Argentina (em 2004 e 2008, pelas eliminatórias para a Copa do Mundo da FIFA™). Grandes atacantes como Ronaldo, Tostão, Reinaldo e Dario já tiveram o estádio como sua vitrine."
                 ],
             2: ["The modernization project included the lowering of the field, improvement in accessibility and other issues, always guided by principles of sustainability - taking into account, for example, the reuse of rainwater with a storage capacity of up to 6.27 million liters.",
-    "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
-                "Located in the Pampulha neighborhood and opened on December 5, 1965, the stadium belongs to the state government of Minas Gerais, with the official name Estádio Governador Magalhães Pinto.But what is certain is that for 'Mineirão' that fans will ask during the tournament.",
+    "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
+                "Located in the Pampulha neighborhood and opened on December 5, 1965, the stadium belongs to the state government of Minas Gerais, with the official name Estádio Governador Magalhães Pinto.But what is certain is that for 'Mineirão' that fans will ask during the tournament.",
     "The atmosphere and excitement in the stadium on the day of 'Rooster' and 'Fox' game are contagious, just like when the squad takes the field, including two recent editions of Superderby Brazil x Argentina ( in 2004 and 2008, by qualifying for the FIFA World Cup ™ ).Great strikers like Ronaldo, Penny, Reinaldo and Dario have had the stadium as its showcase."],
             3: ["El proyecto de modernización incluye la reducción del campo, la mejora de la accesibilidad y de otros temas, siempre guiados por los principios de la sostenibilidad - teniendo en cuenta, por ejemplo, la reutilización de las aguas pluviales con una capacidad de almacenamiento de hasta 6.270.000 de litros.",
-                "Uno de los templos del fútbol brasileño, los multicampeões caseros nacionales Atlético Mineiro y Cruzeiro, la arena, con capacidad para 57.483 espectadores, se ha redecorado completamente para recibir seis partidos de la Copa Mundial de la FIFA Brasil 2014 ™, incluyendo un enfrentamiento semifinal.",
-                "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
-                "La atmósfera y la emoción en el estadio el día del 'Gallo' y el juego de 'Fox' son contagiosos, al igual que cuando el equipo sale al campo, incluyendo dos ediciones recientes del Superclásico Brasil x Argentina (en 2004 y 2008, al calificar para la Copa Mundial de la FIFA ™). Grandes delanteros como Ronaldo, Penny, Reinaldo y Darío han tenido el estadio como su escaparate ."]},
+                "Uno de los templos del fútbol brasileño, los multicampeões caseros nacionales Atlético Mineiro y Cruzeiro, la arena, con capacidad para 57.483 espectadores, se ha redecorado completamente para recibir seis partidos de la Copa Mundial de la FIFA Brasil 2014 ™, incluyendo un enfrentamiento semifinal.",
+                "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
+                "La atmósfera y la emoción en el estadio el día del 'Gallo' y el juego de 'Fox' son contagiosos, al igual que cuando el equipo sale al campo, incluyendo dos ediciones recientes del Superclásico Brasil x Argentina (en 2004 y 2008, al calificar para la Copa Mundial de la FIFA ™). Grandes delanteros como Ronaldo, Penny, Reinaldo y Darío han tenido el estadio como su escaparate ."]},
         "district": "Belo Horizonte",
         "feature_img": "images/minerao.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"], 
@@ -668,6 +668,105 @@ menu = {
     ],
 }
 
+
+curiosities = {
+    1: [
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldine',
+            'team': '(Itália, 1990-2002)'
+        }
+    ],
+    2: [
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        }
+    ],
+    3: [
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jugado',
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        }
+    ]
+}
 
 // ########################################################################################
 // ##############################                            ##############################
@@ -910,5 +1009,235 @@ home = {
     ]
 }
 
+lastGames = {
+    'items': [
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        },
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        }
+    ],
+    'offset': 0,
+    'total': 11,
+}
+
+lastGames_10 = {
+    'items': [
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        }
+    ],
+    'offset': 10,
+    'total': 11,
+}
 
 
+guess = {
+    1: [
+        {
+            'team': 'Brasil',
+            'percent': '55%'
+        },
+        {
+            'team': 'Espanha',
+            'percent': '23%'
+        },
+        {
+            'team': 'Alemanha',
+            'percent':'12%',
+        },
+        {
+            'team': 'Inglaterra',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentina',
+            'percent':'4%',
+        },
+    ],
+    2: [
+        {
+            'team': 'Brazil',
+            'percent': '55%'
+        },
+        {
+            'team': 'Spain',
+            'percent': '23%'
+        },
+        {
+            'team': 'Germany',
+            'percent':'12%',
+        },
+        {
+            'team': 'England',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentine',
+            'percent':'4%',
+        },
+    ],
+    3: [
+        {
+            'team': 'Brasil',
+            'percent': '55%'
+        },
+        {
+            'team': 'España',
+            'percent': '23%'
+        },
+        {
+            'team': 'Alemanha',
+            'percent':'12%',
+        },
+        {
+            'team': 'Inglaterra',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentina',
+            'percent':'4%',
+        }
+    ]  
+}
+
+
+photos = [
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    }
+]

@@ -10,9 +10,9 @@
 	}
 	#wrapper {
 		width: 100%;
-		padding-top: 30em;
+		padding-top: 26em;
+		padding-bottom: 43px;
 	}
-
 	input[type="radio"] {
 	    display: none;
 	}
@@ -30,10 +30,18 @@
 		width: 80%;
 		padding: 0 10%;
 	}
-	@media all and (max-height: 550px){
+	@media all and (max-height: 700px){
+		#wrapper {
+			padding-top: 28em;
+		}
 
+	}
+	@media all and (max-height: 550px){
+		#wrapper {
+			padding-top: 26em;
+		}
 		.bg-internas {
-		    top: 30px;
+		    top: 0;
 		}
 	}
 
@@ -365,7 +373,7 @@
 </header>
 <div class="bg-internas left-menu"><img src="images/tabela-de-jogos.jpg" alt="Bacground"></div>
 <div id="wrapper">
-	<div class="relative page">
+	<div class="page">
 		<div class="team-per-group">
 			<article id="team-per-group" class="left-menu">
 	    

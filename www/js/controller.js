@@ -133,13 +133,54 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     }]
 );
 
+planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$routeParams',
+    function ($scope, $rootScope, $rootParams, $http ) {
 
+        offset = $rootParams.offset;
+        $scope.items = $rootScope.items;
+        if (offset == 0) {
+            $scope.last_games = lastGames;
+        }else {
+            $scope.last_games = lastGames_10;
+        }
+        paginate = parseInt(lastGames.total / 10);
+        rest = lastGames.total % 10;
+        if (paginate > 0 && rest != 0) {
+            paginate += 1;
+        }
+        $scope.paginate = Array.apply(null, Array(paginate)).map(function (_, i) {return {"num": i+1, "id": i*10, "active": i*10 == offset};});
+
+        $scope.$on('$viewContentLoaded', function() {
+            swipe_menu();
+
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.item, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       }
+    }]
+);
 
 planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
+        $scope.curiosities = curiosities[language];
         $scope.$on('$viewContentLoaded', function() {
-            // alert($rootScope.items);
+
             elemets_banner = document.getElementsByClassName('input_checked');
             ontouch(document.getElementById('curiosity'), function(evt, dir, phase, swipetype, distance){
                 if (phase == 'end') {
@@ -179,6 +220,7 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
+        $scope.photos = photos;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -357,6 +399,20 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
         $scope.items = $rootScope.items;
         $scope.matches = matches;
         $scope.$on('$viewContentLoaded', function() {
+elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+            
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -430,6 +486,9 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
+        language = localStorage.getItem('language');
+        $scope.guess = guess[language];
+
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -442,6 +501,9 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
                 };
             });
         });
+        document.getElementById('guess_id').onchange = function() {
+            alert('Fazer o post nesse change');
+        };
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.items, function(i) {
                 i.status = 'deactive';
