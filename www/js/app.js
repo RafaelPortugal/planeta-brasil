@@ -50,6 +50,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/show_news.html',
         controller: 'ShowNewsCtrl'
       }).
+      when('/news/', {
+        templateUrl: 'templates/news.html',
+        controller: 'NewsCtrl'
+      }).
       when('/table-games', {
         templateUrl: 'templates/table_games.html',
         controller: 'TableGamesCtrl'

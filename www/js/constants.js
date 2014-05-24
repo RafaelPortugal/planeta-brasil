@@ -635,7 +635,7 @@ stadiums = {
 menu = {
     1: [
         {href: '#/home', title: 'Início', status: 'deactive'},
-        {href: '#', title: 'Notícias', status: 'deactive'},
+        {href: '#/news', title: 'Notícias', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jogadores', status: 'deactive'},
@@ -646,7 +646,7 @@ menu = {
     ],
     2: [
         {href: '#/home', title: 'Home', status: 'deactive'},
-        {href: '#', title: 'News', status: 'deactive'},
+        {href: '#/news', title: 'News', status: 'deactive'},
         {href: '#/table-games', title: '1ª Phase', status: 'deactive'},
         {href: '#/finals', title: 'Phase final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Players', status: 'deactive'},
@@ -657,7 +657,7 @@ menu = {
     ],
     3: [
         {href: '#/home', title: 'Inicio', status: 'deactive'},
-        {href: '#', title: 'Noticias', status: 'deactive'},
+        {href: '#/news', title: 'Noticias', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jugadores', status: 'deactive'},
@@ -1239,5 +1239,39 @@ photos = [
     {
         'img': 'images/exemplo-torcida.png',
         'name': 'Torcida'
+    }
+]
+
+
+news = [
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
     }
 ]
