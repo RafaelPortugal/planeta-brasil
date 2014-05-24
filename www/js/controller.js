@@ -269,6 +269,33 @@ planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',
     }]
 );
 
+planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
+        language = localStorage.getItem('language');
+        $scope.finals = finals[language];
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
 
 planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {

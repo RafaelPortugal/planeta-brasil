@@ -1275,3 +1275,230 @@ news = [
         'img': 'images/banner.png'
     }
 ]
+
+
+finals = {
+    1: [
+        {
+            'title': '8ª de Final',
+            'games': [
+                {
+                    "home": "1º grupo A",
+                    "abbr_home": "1º A",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo B",
+                    "gols_visited": '',
+                    "abbr_visited": "2º B",
+                    "img_visited": "",
+                    "date": "Sábado 28/06",
+                    "local": 'Minerão - Belo Horizonte'
+                },
+                {
+                    "home": "1º grupo C",
+                    "abbr_home": "1º C",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo D",
+                    "gols_visited": '',
+                    "abbr_visited": "2º D",
+                    "img_visited": "",
+                    "date": "Sábado 28/06",
+                    "local": "Maracanã - Rio de Janeiro"
+                },
+                {
+                    "home": "1º grupo B",
+                    "abbr_home": "1º B",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo A",
+                    "gols_visited": '',
+                    "abbr_visited": "2º A",
+                    "img_visited": "",
+                    "date": "Domingo 29/06",
+                    "local": "Castelão - Fortaleza"
+                },
+                {
+                    "home": "1º grupo D",
+                    "abbr_home": "1º D",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo C",
+                    "gols_visited": '',
+                    "abbr_visited": "2º C",
+                    "img_visited": "",
+                    "date": "Domingo 29/06",
+                    "local": "Arena Pernanbuco - Recife"
+                },
+                {
+                    "home": "1º grupo E",
+                    "abbr_home": "1º E",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo F",
+                    "gols_visited": '',
+                    "abbr_visited": "2º F",
+                    "img_visited": "",
+                    "date": "Segunda-feira 30/06",
+                    "local": "Nacional de Brasília - Brasília"
+                },
+                {
+                    "home": "1º grupo G",
+                    "abbr_home": "1º G",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo H",
+                    "gols_visited": '',
+                    "abbr_visited": "2º H",
+                    "img_visited": "",
+                    "date": "Segunda-feira 30/06",
+                    "local": "Beira Rio - Porto Alegre"
+                },
+                {
+                    "home": "1º grupo F",
+                    "abbr_home": "1º F",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo E",
+                    "gols_visited": '',
+                    "abbr_visited": "2º E",
+                    "img_visited": "",
+                    "date": "Terça-feira 01/07",
+                    "local": "Arena São Paulo - São Paulo"
+                },
+                {
+                    "home": "1º grupo H",
+                    "abbr_home": "1º H",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo G",
+                    "gols_visited": '',
+                    "abbr_visited": "2º G",
+                    "img_visited": "",
+                    "date": "Terça-feira 01/07",
+                    "local": "Fonte Nova - Salvador"
+                },
+            ]
+        },
+        {
+            'title': '4ª de Final',
+            'games': [
+                {
+                    "home": "1º classificado",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Sexta-feira 04/07 ",
+                    "local": 'Castelão - Fortaleza'
+                },
+                {
+                    "home": "3º classificado",
+                    "abbr_home": "3",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "4º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "4",
+                    "img_visited": "",
+                    "date": "Sexta-feira 04/07 ",
+                    "local": "Maracanã - Rio de Janeiro"
+                },
+                {
+                    "home": "5º classificado",
+                    "abbr_home": "5",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "6º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "6",
+                    "img_visited": "",
+                    "date": "Sábado 05/07",
+                    "local": "Fonte Nova - Salvador"
+                },
+                {
+                    "home": "7º classificado",
+                    "abbr_home": "7",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "8º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "8",
+                    "img_visited": "",
+                    "date": "Sábado 05/07",
+                    "local": "Nacional de Brasília - Brasília"
+                },
+            ]
+        },
+        {
+            'title': 'Semi-final',
+            'games': [
+                {
+                    "home": "1º classificado",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Terça-feira 08/07",
+                    "local": 'Minerão - Belo Horizonte'
+                },
+                {
+                    "home": "3º classificado",
+                    "abbr_home": "3",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "4º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "4",
+                    "img_visited": "",
+                    "date": "Quarta-feira 09/07 ",
+                    "local": "Arena São Paulo - São Paulo"
+                },
+            ]
+        },
+        {
+            'title': '3º Lugar',
+            'games': [
+                {
+                    "home": "Perdedor 1",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "Perdedor 2",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Sábado 12/07",
+                    "local": 'Nacional de Brasília - Brasília'
+                },
+            ]
+        },
+        {
+            'title': 'Final',
+            'games': [
+                {
+                    "home": "Ganhador 1",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "Ganhador 2",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Domingo 13/07",
+                    "local": 'Maracanã - Rio de Janeiro'
+                },
+            ]
+        }
+    ],
+    2: [
+    ],
+    3: [
+    ]
+}
