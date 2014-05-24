@@ -17,7 +17,7 @@
     
     <gap:plugin name="com.phonegap.plugin.statusbar" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="EnableViewportScale" value="true"/>
+    <preference name="EnableViewportScale" value="false"/>
 
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
