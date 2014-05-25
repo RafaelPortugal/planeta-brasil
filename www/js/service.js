@@ -6,13 +6,49 @@ var parse_json = function(raw_json){
 };
 
 
+function win(r) 
+{ 
+    alert("Foto enviada com sucesso!");
+    //alert("Sent = " + r.bytesSent); 
+};
+
+function fail(error) 
+{ 
+    switch (error.code) 
+    {  
+     case FileTransferError.FILE_NOT_FOUND_ERR: 
+      alert("Arquivo não encontrado"); 
+      break; 
+     case FileTransferError.INVALID_URL_ERR: 
+      alert("Url inválida"); 
+      break; 
+     case FileTransferError.CONNECTION_ERR: 
+      alert("Erro na conexão"); 
+      break; 
+    } 
+
+    alert("Ocorreu um erro: Code = " + error.code); 
+};
+
 var camera_onSuccess = function(imageURI) {
-    var data = 'image_b64=' + imageURI;
+    /*var data = 'image_b64=' + imageURI;
     var request = new XMLHttpRequest();
     request.open('POST', API_ROOT_URL + '/api/photos/', true);
     request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     request.send(data);
-    alert("Foto enviada com sucesso!");
+    */
+
+    var options = new FileUploadOptions(); 
+    options.chunkedMode = false;
+    options.fileKey = "recFile"; 
+    var imagefilename = imageURI; 
+    options.fileName = imagefilename; 
+    options.mimeType = "image/jpeg"; 
+    var ft = new FileTransfer(); 
+    
+    //alert(API_ROOT_URL + '/api/photos/');
+    ft.upload(imageURI, API_ROOT_URL + '/api/photos/', win, fail, options); 
+
 }
 
 var camera_onFail = function(message) {
@@ -25,9 +61,9 @@ var take_picture = function(){
         quality: 50,
         encodingType: Camera.EncodingType.JPEG,
         sourceType : Camera.PictureSourceType.PHOTOLIBRARY,
-        destinationType: Camera.DestinationType.DATA_URL
+        destinationType: Camera.DestinationType.FILE_URI
         //sourceType : Camera.PictureSourceType.CAMERA,
-        //destinationType: Camera.DestinationType.FILE_URI
+        //destinationType: Camera.DestinationType.DATA_URL
       });
 };
 
