@@ -1,5 +1,6 @@
 var PUSH_GCM_SENDER_ID='36357833183';
-var SERVER_URL = 'http://192.168.25.25:8000/';
+//var API_ROOT_URL = 'http://192.168.25.25:8000';
+var API_ROOT_URL = 'http://planeta-brasil.herokuapp.com/';
 
 
 /*
@@ -16,9 +17,7 @@ function pushErrorHandler (error) {
 };
 
 function pushTokenHandler (result) {
-    // Your iOS push server needs to know the token before it can push to this device
-    // here is where you might want to send it the token for later use.
-    //console.log('device token = ' + result);
+    sendPushRegisterId(result, 'ios');
 };
 
 
@@ -32,8 +31,9 @@ function onNotificationAPN (event) {
 
 
 function sendPushRegisterId(reg_id, device_type){
-    // Envia a chave para nosso servidor após registrar no GCM
-    var url = SERVER_URL + 'api-copa/register-push-device/';
+    // Envia a chave para nosso servidor após registrar no GCM ou APN
+    //alert('mandando');
+    var url = API_ROOT_URL + '/api-copa/register-push-device/';
 
     var data = 'reg_id=' + reg_id;
     data += '&device_type=' + device_type;
@@ -43,6 +43,7 @@ function sendPushRegisterId(reg_id, device_type){
     request.open('POST', url, true);
     request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     request.send(data);
+    //alert('mandou');
 };
 
 
@@ -52,14 +53,10 @@ function onNotificationGCM(e) {
         case 'registered':
             if ( e.regid.length > 0 ) {
                 sendPushRegisterId(e.regid, 'android');
-                // Your GCM push server needs to know the regID before it can push to this device
-                // here is where you might want to send it the regID for later use.
                 console.log("regID = " + e.regid);
             }
             break;
         case 'message':
-            // if this flag is set, this notification happened while we were in the foreground.
-            // you might want to play a sound to get the user's attention, throw up a dialog, etc.
             if ( e.foreground ) {
                 // if the notification contains a soundname, play it.
                 var my_media = new Media("/android_asset/www/"+e.soundname);
@@ -84,8 +81,6 @@ function onNotificationGCM(e) {
             break;
         }
 };
-
-
 
 
 var setup_push_plugin =  function(){
