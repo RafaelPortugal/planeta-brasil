@@ -1,4 +1,4 @@
-var API_ROOT_URL = 'http://192.168.25.25:8000'
+var API_ROOT_URL = 'http://192.168.25.25:8000';
 
 var parse_json = function(raw_json){
 	return eval("(function(){return " + raw_json + ";})()");
@@ -32,10 +32,19 @@ var take_picture = function(){
 
 //http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg
 var share_facebook = function(){
-  window.plugins.socialsharing.shareViaFacebook('Mensagem', 'http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg', null, 
+  
+  // com essa da pra colocar o intent certo, para ios o com.apple.social.facebook funciona
+  window.plugins.socialsharing.shareVia('facebook', 
+      'Message via FB', null, null, null, 
+      function(){console.log('share ok')}, 
+      function(msg) {alert('error: ' + msg)}
+    );
+
+
+  /*window.plugins.socialsharing.shareViaFacebook('Mensagem', 'http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg', null, 
       function() {
           alert('share ok')
       }, function(errormsg){
           alert(errormsg)
-      });
+      });*/
 };
