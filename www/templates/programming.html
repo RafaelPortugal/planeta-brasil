@@ -1,4 +1,7 @@
 <style>
+	.image {
+		padding-top: 52px;
+	}
 	.image img {
 		width: 100%;
 	}
@@ -56,7 +59,7 @@
 		color: #003e66;
 		margin-top: 30px;
 	}
-	.back button {
+	.back .link_home {
 		margin-right: 20px;
 	}
 </style>
@@ -77,19 +80,19 @@
 	<div class="relative page">
 
 		<div class="image">
-		    <img src="{{show_news.img}}" alt="Imagem">
+		    <img src="{{programming.img}}" alt="Imagem">
 		</div>
 		<div class="news">
 		    <div class="date">
 		        <span class="line"></span>
-		        <span class="day">{{show_news.date}}</span>
+		        <span class="day">{{programming.date}}</span>
 		    </div>
 		    <h2>
-		          {{show_news.title}}
+		          {{programming.title}}
 		    </h2>
-		    <div ng-bind-html="show_news.message"></div>
+		    <div ng-bind-html="programming.message"></div>
 		    <div class="back">
-		        <button onclick="window.history.back()">Voltar</button> 
+		        <a class="link_home" href="#/home">Voltar</a> 
 		        <a href="#">Compartilhar</a>
 		    </div>
 		</div>

@@ -876,12 +876,38 @@ home = {
             'img': 'images/banner.png'
         }
     ],
-    "culturalProgramming": {
-        "id": 1,
-        "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
-        "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
-        "img": "images/media/thumb-1.png"
-    },
+    "culturalProgramming": [
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        }
+    ],
     "nextMatches": [
         {
             "home": "Brasil",
@@ -1502,3 +1528,24 @@ finals = {
     3: [
     ]
 }
+
+show_news = {
+    'id': 1,
+    'img': 'images/banner.png',
+    'title_img': 'Imagem',
+    'date': '14/05',
+    'title': 'O Rio de Janeiro está pronto para receber os jogos mundiais.',
+    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
+}
+
+programming = {
+    'id': 1,
+    'img': 'images/media/thumb-1.png',
+    'title_img': 'Imagem',
+    'date': '14/05',
+    'title': 'OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.',
+    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
+}
+
+
+

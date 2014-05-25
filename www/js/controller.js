@@ -3,8 +3,8 @@ function Menu(language) {
 
 }
 
-var planetaBrasilControllers = angular.module('planetaBrasilControllers', []);
 
+var planetaBrasilControllers = angular.module('planetaBrasilControllers', ['ngSanitize']);
 planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
     function ($scope, $http ) {
     // $http.get('templates/phones.json').success(function(data) {
@@ -98,6 +98,18 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                     };
                 };
             });
+            elemets_programming = document.getElementsByClassName('input_checked_programming');
+            ontouch(document.getElementById('cultural-programming'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_programming);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_programming);
+                    };
+                };
+            });
 
             swipe_menu();
 
@@ -123,6 +135,9 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                 e.preventDefault();
             });
         });
+        $scope.showProgramming = function(id_programming) {
+            window.location.href = "#programming/" + id_programming;
+        }
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.item, function(i) {
                 i.status = 'deactive';
@@ -428,6 +443,7 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
 planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
+        $scope.show_news = show_news;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -449,6 +465,34 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
        };
     }]
 );
+
+
+planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
+        $scope.programming = programming;
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
 
 
 planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
