@@ -68,7 +68,7 @@ var take_picture = function(){
 };
 
 //http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg
-var share_facebook = function(){
+var share_facebook = function(url){
   
   /* com essa da pra colocar o intent certo, para ios o com.apple.social.facebook funciona
   window.plugins.socialsharing.shareVia('facebook', 
@@ -78,7 +78,8 @@ var share_facebook = function(){
     );*/
 
   // Funciona redondo para links e imagens, mas não dá para customizar o texto
-  window.plugins.socialsharing.shareViaFacebook('Mensagem', 'http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg', null, 
+  //http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg
+  window.plugins.socialsharing.shareViaFacebook('Planeta Brasil', url, null, 
       function() {
           alert('share ok')
       }, function(errormsg){
