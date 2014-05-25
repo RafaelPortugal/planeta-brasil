@@ -448,58 +448,6 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http',
 
 
 
-planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        language = window.localStorage.getItem('language');
-        if (language == 2) {
-            $scope.th_match = "Game day";
-            $scope.bg_img = "tabela-de-jogos_en.jpg"
-        }else if (language == 3) {
-            $scope.th_match = "DÍA DEL JUEGO";
-            $scope.bg_img = "tabela-de-jogos_es.jpg"
-        }else {
-            $scope.th_match = "DIA DO JOGO";
-            $scope.bg_img = "tabela-de-jogos.jpg"
-        }
-        $scope.items = $rootScope.items;
-        $scope.matches = matches;
-        $scope.$on('$viewContentLoaded', function() {
-elemets_banner = document.getElementsByClassName('input_checked');
-            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
-                if (phase == 'end') {
-                    event.stopPropagation();
-                    if (dir == 'left'){
-                        forward_element(elemets_banner);
-                    };
-                    if (dir == 'right') {
-                        back_element(elemets_banner);
-                    };
-                };
-            });
-            swipe_menu();
-            
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-    }]
-);
-
-
 planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
@@ -723,6 +671,74 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $scope.show_news = data;
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+
+    }]
+);
+
+
+
+
+planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
+        //$scope.matches = matches;
+        language = window.localStorage.getItem('language');
+        
+        if (language == 2) {
+            $scope.th_match = "Game day";
+            $scope.bg_img = "tabela-de-jogos_en.jpg"
+        }else if (language == 3) {
+            $scope.th_match = "DÍA DEL JUEGO";
+            $scope.bg_img = "tabela-de-jogos_es.jpg"
+        }else {
+            $scope.th_match = "DIA DO JOGO";
+            $scope.bg_img = "tabela-de-jogos.jpg"
+        }
+        $scope.items = $rootScope.items;
+        
+        $scope.$on('$viewContentLoaded', function() {
+elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+            
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+       
+      var api_url = API_ROOT_URL + '/api/matches_by_groups/' + '?lang=' + language;
+      $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.matches = data;
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')
