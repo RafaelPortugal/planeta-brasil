@@ -177,6 +177,13 @@ planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$route
 planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         language = localStorage.getItem('language');
+        if (language == 2) {
+            $scope.bg_img = "curiosidades_en.jpg";
+        }else if (language == 3) {
+            $scope.bg_img = "curiosidades_es.jpg";
+        }else {
+            $scope.bg_img = "curiosidades.jpg";
+        }
         $scope.items = $rootScope.items;
         $scope.curiosities = curiosities[language];
         $scope.$on('$viewContentLoaded', function() {
@@ -386,8 +393,13 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
         $scope.language = language;
         if (language == 2) {
             $scope.group = "Group";
+            $scope.bg_img = "interna-lista-jogadores_en.jpg";
+        }else if (language == 3) {
+            $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores_es.jpg";
         }else {
             $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores.jpg";
         }
 
         $scope.$on('$viewContentLoaded', function() {
@@ -444,10 +456,13 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
         language = window.localStorage.getItem('language');
         if (language == 2) {
             $scope.th_match = "Game day";
+            $scope.bg_img = "tabela-de-jogos_en.jpg"
         }else if (language == 3) {
             $scope.th_match = "DÍA DEL JUEGO";
+            $scope.bg_img = "tabela-de-jogos_es.jpg"
         }else {
             $scope.th_match = "DIA DO JOGO";
+            $scope.bg_img = "tabela-de-jogos.jpg"
         }
         $scope.items = $rootScope.items;
         $scope.matches = matches;
@@ -496,8 +511,13 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
         $scope.language = language
         if (language == 2) {
             $scope.group = "Group";
+            $scope.bg_img = "interna-lista-jogadores_en.jpg";
+        }else if (language == 3){
+            $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores_es.jpg";
         }else {
             $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores.jpg";
         }
         $scope.$on('$viewContentLoaded', function() {
             elemets_banner = document.getElementsByClassName('input_checked');
