@@ -1302,12 +1302,7 @@ news = [
     }
 ]
 
-
-finals = {
-    1: [
-        {
-            'title': '8ª de Final',
-            'games': [
+OITAVAS = [
                 {
                     "home": "1º grupo A",
                     "abbr_home": "1º A",
@@ -1403,12 +1398,9 @@ finals = {
                     "img_visited": "",
                     "date": "Terça-feira 01/07",
                     "local": "Fonte Nova - Salvador"
-                },
+                }
             ]
-        },
-        {
-            'title': '4ª de Final',
-            'games': [
+QUARTAS = [
                 {
                     "home": "1º classificado",
                     "abbr_home": "1",
@@ -1456,41 +1448,35 @@ finals = {
                     "img_visited": "",
                     "date": "Sábado 05/07",
                     "local": "Nacional de Brasília - Brasília"
-                },
+                }
             ]
-        },
-        {
-            'title': 'Semi-final',
-            'games': [
-                {
-                    "home": "1º classificado",
-                    "abbr_home": "1",
-                    "gols_home": '',
-                    "img_home": "",
-                    "visited": "2º classificado",
-                    "gols_visited": '',
-                    "abbr_visited": "2",
-                    "img_visited": "",
-                    "date": "Terça-feira 08/07",
-                    "local": 'Minerão - Belo Horizonte'
-                },
-                {
-                    "home": "3º classificado",
-                    "abbr_home": "3",
-                    "gols_home": '',
-                    "img_home": "",
-                    "visited": "4º classificado",
-                    "gols_visited": '',
-                    "abbr_visited": "4",
-                    "img_visited": "",
-                    "date": "Quarta-feira 09/07 ",
-                    "local": "Arena São Paulo - São Paulo"
-                },
-            ]
-        },
-        {
-            'title': '3º Lugar',
-            'games': [
+SEMI = [
+            {
+                "home": "1º classificado",
+                "abbr_home": "1",
+                "gols_home": '',
+                "img_home": "",
+                "visited": "2º classificado",
+                "gols_visited": '',
+                "abbr_visited": "2",
+                "img_visited": "",
+                "date": "Terça-feira 08/07",
+                "local": 'Minerão - Belo Horizonte'
+            },
+            {
+                "home": "3º classificado",
+                "abbr_home": "3",
+                "gols_home": '',
+                "img_home": "",
+                "visited": "4º classificado",
+                "gols_visited": '',
+                "abbr_visited": "4",
+                "img_visited": "",
+                "date": "Quarta-feira 09/07 ",
+                "local": "Arena São Paulo - São Paulo"
+            }
+        ]
+FINAL = [
                 {
                     "home": "Perdedor 1",
                     "abbr_home": "1",
@@ -1503,11 +1489,6 @@ finals = {
                     "date": "Sábado 12/07",
                     "local": 'Nacional de Brasília - Brasília'
                 },
-            ]
-        },
-        {
-            'title': 'Final',
-            'games': [
                 {
                     "home": "Ganhador 1",
                     "abbr_home": "1",
@@ -1519,14 +1500,27 @@ finals = {
                     "img_visited": "",
                     "date": "Domingo 13/07",
                     "local": 'Maracanã - Rio de Janeiro'
-                },
+                }
             ]
-        }
-    ],
-    2: [
-    ],
-    3: [
-    ]
+finals = {
+    1: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+    2: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+    3: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
 }
 
 show_news = {

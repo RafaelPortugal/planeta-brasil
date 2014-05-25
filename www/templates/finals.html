@@ -1,8 +1,6 @@
+<link rel="stylesheet" href="css/dropdown.css">
 <style>
-	html {
-		overflow: hidden;
-	}
-	.bg-internas {
+		.bg-internas {
 		top: 50px;
 	}
 	body {
@@ -13,12 +11,55 @@
 		padding-top: 26em;
 		padding-bottom: 43px;
 	}
-	.section {
-		padding: 0 10px;
+	.dropdown {
+		font-size: 1.5em;
 	}
-	h2 {
-		margin-bottom: 0;
+	.dropdown table {
+		border-collapse: collapse;
+		border-color: #CCC;
+		width: 100%;
+		background: #fff;
 	}
+	.dropdown table th {
+		background: gray;
+		padding: 5px;
+		font-weight: lighter;
+	}
+	.dropdown table th .date{
+		float: left;
+	}
+	.dropdown table th .local{
+		float: right;
+	}
+	.dropdown table tr td{
+		padding: 5px;
+		vertical-align: top;
+		font-size: 1.5em;
+	}
+	.dropdown table tr td .logo{
+		display: inline-block;
+		margin-right: 10px;
+		width: 32px;
+		height: 32px;
+		border-radius: 16px;
+		background: #eee
+	}
+
+	@media all and (max-height: 700px){
+		#wrapper {
+			padding-top: 28em;
+		}
+
+	}
+	@media all and (max-height: 550px){
+		#wrapper {
+			padding-top: 26em;
+		}
+		.bg-internas {
+		    top: 0;
+		}
+	}
+
 </style>
 <menu id="nav-left">
     <ul>
@@ -37,19 +78,147 @@
 <div id="wrapper">
 	<div class="page">
 		<div class="section">
-			<div class="last-matches" ng-repeat="games in finals">
-				<h2><div class="border border-left"></div> {{games.title}} <div class="border border-right"></h2>
-				<ul class="border">
-					<li ng-repeat="g in games.games" ng-class="{'last':$last}">
-					    <i class="home"><span>{{ g.abbr_home}}</span>
-					    <img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}"> </i>
-					    <span class="result home">{{ g.gols_home}}</span><span class="vs"> X </span><span class="result visited">{{ g.gols_visited}}</span>
-					    <i class="visited">
-					    <img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}"><span>{{ g.abbr_visited}}</span></i>
-					</li>
-				</ul>
+
+			<div class="container">
+			  <ul>
+			    <li class="dropdown">
+			      <a href="#" data-toggle="dropdown">8ª de finais <i class="icon-arrow"></i></a>
+			      <ul class="dropdown-menu">
+			      	<li ng-repeat="g in finals.oitavas">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>
+											<span class="date">{{g.date}}</span>
+											<span class="local">{{g.local}}</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
+											<span ng-if="g.img_home == ''" class="local">
+											{{g.home}}
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
+											<span ng-if="g.img_visited == ''" class="local">
+											{{g.visited}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+			      </ul>
+			    </li>
+			    <li class="dropdown">
+			      <a href="#" data-toggle="dropdown">4ª de finais <i class="icon-arrow"></i></a>
+			      <ul class="dropdown-menu">
+			      	<li ng-repeat="g in finals.quartas">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>
+											<span class="date">{{g.date}}</span>
+											<span class="local">{{g.local}}</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
+											<span ng-if="g.img_home == ''" class="local">
+											{{g.home}}
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
+											<span ng-if="g.img_visited == ''" class="local">
+											{{g.visited}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+			      </ul>
+			    </li>
+			    <li class="dropdown">
+			      <a href="#" data-toggle="dropdown">Semi final <i class="icon-arrow"></i></a>
+			      <ul class="dropdown-menu">
+			      	<li ng-repeat="g in finals.semi">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>
+											<span class="date">{{g.date}}</span>
+											<span class="local">{{g.local}}</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
+											<span ng-if="g.img_home == ''" class="local">
+											{{g.home}}
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
+											<span ng-if="g.img_visited == ''" class="local">
+											{{g.visited}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+			      </ul>
+			    </li>
+			    <li class="dropdown">
+			      <a href="#" data-toggle="dropdown">Final <i class="icon-arrow"></i></a>
+			      <ul class="dropdown-menu">
+			      	<li ng-repeat="g in finals.final">
+							<table border="1">
+								<thead>
+									<tr>
+										<th>
+											<span class="date">{{g.date}}</span>
+											<span class="local">{{g.local}}</span>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
+											<span ng-if="g.img_home == ''" class="local">
+											{{g.home}}
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
+											<span ng-if="g.img_visited == ''" class="local">
+											{{g.visited}}
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</li>
+			      </ul>
+			    </li>
+			    
+			  </ul>
 			</div>
-		</div class="section">
+
+
+		</div>
 
 
 	</div>
@@ -57,3 +226,31 @@
 <div id="footer-fixed">
 	<span>BRASIL BEYOND BRAZIL</span>
 </div>
+
+<script>
+        var dropdown = document.querySelectorAll('.dropdown');
+        var dropdownArray = Array.prototype.slice.call(dropdown,0);
+        dropdownArray.forEach(function(el){
+            var button = el.querySelector('a[data-toggle="dropdown"]'),
+                    menu = el.querySelector('.dropdown-menu'),
+                    arrow = button.querySelector('i.icon-arrow');
+            button.addEventListener("click", function(e) {
+                alert('clique');
+                if(!menu.hasClass('show')) {
+                    menu.classList.add('show');
+                    menu.classList.remove('hide');
+                    arrow.classList.add('open');
+                    arrow.classList.remove('close');
+                    event.preventDefault();
+                }
+                else {
+                    menu.classList.remove('show');
+                    menu.classList.add('hide');
+                    arrow.classList.remove('open');
+                    arrow.classList.add('close');
+                    event.preventDefault();
+                }
+                e.preventDefault();
+            });
+        })
+</script>
