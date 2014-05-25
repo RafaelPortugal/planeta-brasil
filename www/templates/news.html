@@ -2,6 +2,7 @@
 	.relative {
 		top: 52px;
 		padding: 0 10px;
+		padding-bottom: 60px;
 	}
 
 	h2 {
@@ -16,12 +17,29 @@
 		color: #fff;
 		margin-bottom: 20px;
 		position: relative;
+		overflow: hidden;
+	}
+
+	article a {
+		width: 100%;
 	}
 	article img {
-		width: 100%;
+		width: 50%;
+		float: left;
+	}
+	article.element_banner .text-banner {
+		width: 45%;
+		float: right;
+		height: auto !important;
+		font-size: 1.5em;
 	}
 	body {
 		background: #e2e2c7;
+	}
+	.element_banner .date-banner {
+		font-size: 2em;
+		left: 0;
+		top: 0;
 	}
 </style>
     <menu id="nav-left">
@@ -46,10 +64,12 @@
                 <div class="date-banner">
                    	<span>{{n.day}}</span>
                 </div>
-               	<a href="#/show-news/{{n.id}}"><img src="{{n.img}}" alt="Imagem da noticia"></a>
-               	<div class="text-banner">
-               		<p>{{n.title}}</p>
-              	</div>
+               	<a href="#/show-news/{{n.id}}">
+               		<img src="{{n.img}}" alt="Imagem da noticia">
+	               	<div class="text-banner">
+	               		<p>{{n.title}}</p>
+	              	</div>
+               	</a>
             </article>
 
 		</div>
