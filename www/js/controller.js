@@ -204,62 +204,6 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
 );
 
 
-planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $scope.items = $rootScope.items;
-        language = localStorage.getItem('language');
-        $scope.finals = finals[language];
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        var dropdown = document.querySelectorAll('.dropdown');
-        var dropdownArray = Array.prototype.slice.call(dropdown,0);
-        dropdownArray.forEach(function(el){
-            var button = el.querySelector('a[data-toggle="dropdown"]'),
-                    menu = el.querySelector('.dropdown-menu'),
-                    arrow = button.querySelector('i.icon-arrow');
-            button.addEventListener("click", function(e) {
-                if(!menu.hasClass('show')) {
-                    menu.classList.add('show');
-                    menu.classList.remove('hide');
-                    arrow.classList.add('open');
-                    arrow.classList.remove('close');
-                    event.preventDefault();
-                }
-                else {
-                    menu.classList.remove('show');
-                    menu.classList.add('hide');
-                    arrow.classList.remove('open');
-                    arrow.classList.add('close');
-                    event.preventDefault();
-                }
-                e.preventDefault();
-            });
-        })
-
-        Element.prototype.hasClass = function(className) {
-            return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
-        };
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-    }]
-);
-
-
 planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         var language = window.localStorage.getItem('language');
@@ -774,5 +718,75 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
             alert('Ocorreu um erro. Tente novamente.')
         });
 
+    }]
+);
+
+
+
+
+
+planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
+        $scope.items = $rootScope.items;
+        language = localStorage.getItem('language');
+        //$scope.finals = finals[language];
+
+        var api_url = API_ROOT_URL + '/api/finals/' + '?lang=' + language;
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.finals = data[language];
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+        
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        var dropdown = document.querySelectorAll('.dropdown');
+        var dropdownArray = Array.prototype.slice.call(dropdown,0);
+        dropdownArray.forEach(function(el){
+            var button = el.querySelector('a[data-toggle="dropdown"]'),
+                    menu = el.querySelector('.dropdown-menu'),
+                    arrow = button.querySelector('i.icon-arrow');
+            button.addEventListener("click", function(e) {
+                if(!menu.hasClass('show')) {
+                    menu.classList.add('show');
+                    menu.classList.remove('hide');
+                    arrow.classList.add('open');
+                    arrow.classList.remove('close');
+                    event.preventDefault();
+                }
+                else {
+                    menu.classList.remove('show');
+                    menu.classList.add('hide');
+                    arrow.classList.remove('open');
+                    arrow.classList.add('close');
+                    event.preventDefault();
+                }
+                e.preventDefault();
+            });
+        })
+
+        Element.prototype.hasClass = function(className) {
+            return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+        };
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
     }]
 );
