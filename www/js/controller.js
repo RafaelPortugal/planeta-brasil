@@ -381,32 +381,6 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
 );
 
 
-planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $scope.items = $rootScope.items;
-        $scope.programming = programming;
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-    }]
-);
-
 
 
 planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
@@ -465,7 +439,9 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
 
 
 
-/** COM API **/
+/** 
+***       COM API 
+***/
 
 planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
@@ -758,3 +734,45 @@ planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$route
     }]
 );
 
+
+
+
+planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$location',
+    function ($scope, $rootScope, $location ) {
+        var $http = $rootScope;
+        language = window.localStorage.getItem('language');
+        $scope.items = $rootScope.items;
+        //$scope.programming = programming;
+        
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+      var pk = $location.path().split('/')[2];
+      var api_url = API_ROOT_URL + '/api/venue/' + pk +'/?lang=' + language;
+      $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.programming = data;
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+
+    }]
+);

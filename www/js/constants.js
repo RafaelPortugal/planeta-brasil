@@ -1502,6 +1502,7 @@ FINAL = [
                     "local": 'Maracanã - Rio de Janeiro'
                 }
             ]
+
 finals = {
     1: {
         'oitavas': OITAVAS,
