@@ -4,11 +4,6 @@ var parse_json = function(raw_json){
 	return eval("(function(){return " + raw_json + ";})()");
 };
 
-var fetch_matches = function(){
-	var url = API_ROOT_URL + '/api/matches_by_groups/';
-};
-
-
 
 var camera_onSuccess = function(imageURI) {
     var data = 'image_b64=' + imageURI;
@@ -32,5 +27,15 @@ var take_picture = function(){
         destinationType: Camera.DestinationType.DATA_URL
         //sourceType : Camera.PictureSourceType.CAMERA,
         //destinationType: Camera.DestinationType.FILE_URI
+      });
+};
+
+//http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg
+var share_facebook = function(){
+  window.plugins.socialsharing.shareViaFacebook('Mensagem', 'http://bluebus.s3.amazonaws.com/wp-content/uploads/2013/05/copa-do-mundo-brasil-2014.jpg', null, 
+      function() {
+          alert('share ok')
+      }, function(errormsg){
+          alert(errormsg)
       });
 };
