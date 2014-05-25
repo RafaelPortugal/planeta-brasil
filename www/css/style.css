@@ -525,7 +525,7 @@ header h1 {
     text-align: center;
 }
 
-.page .content-home .section .news-block{
+.page .content-home .section #news-block{
     font-weight: lighter;
     color: #686859;
     border-left: 14px solid #686859;
@@ -533,7 +533,7 @@ header h1 {
     background: #e2e2c7;
 }
 
-.page .content-home .section .news-block h3{
+.page .content-home .section #news-block h3{
     font-weight: lighter;
     font-size: 2.6em;
     padding-left: 0.5em;
@@ -541,17 +541,18 @@ header h1 {
     margin-bottom: 0.3em;
 }
 
-.page .content-home .section .news-block img{
+.page .content-home .section #news-block img{
     width: 54%;
     float: left;
 }
-.page .content-home .section .news-block p{
-    font-size: 2em;
+.page .content-home .section #news-block p{
+    font-size: 1.5em;
     padding-left: 0.5em;
     line-height: 0.9em;
     float: left;
     width: 41%;
-    margin-top: 0.6em;
+    margin-top: 0em;
+    margin-bottom: 0em;
 }
 
 /* Ended page 4 */

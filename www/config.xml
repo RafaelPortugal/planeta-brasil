@@ -35,6 +35,9 @@
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
     
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+
     <preference name="permissions" value="none" />
 
     <access origin="*" />
@@ -53,7 +56,7 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-    
+
     <icon src="icon.png" />
     
     <!-- Icones e Splash Android -->
@@ -61,20 +64,25 @@
     <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
     <icon gap:density="hdpi" gap:platform="android" src="res/icon/android/icon-72-hdpi.png" />
     <icon gap:density="xhdpi" gap:platform="android" src="res/icon/android/icon-96-xhdpi.png" />
-    <gap:splash gap:density="ldpi" gap:platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:density="mdpi" gap:platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:density="xhdpi" gap:platform="android" src="res/screen/android/screen-xhdpi-portrait.png" />
 
-    
-    <!-- Icones e Splash iOS -->
+
     <icon gap:platform="ios" height="57" src="res/icon/ios/icon-57.png" width="57" />
     <icon gap:platform="ios" height="72" src="res/icon/ios/icon-72.png" width="72" />
     <icon gap:platform="ios" height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
     <icon gap:platform="ios" height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
-    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
+
+    <gap:splash gap:density="ldpi" gap:platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:density="mdpi" gap:platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/screen-hdpi-portrait.jpg" />
+    <gap:splash gap:density="xhdpi" gap:platform="android" src="res/screen/android/screen-xhdpi-portrait.jpg" />
+    
+    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/320_480.png" width="320" />
+    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/iphone_640_960.png" width="640" />
+    <gap:splash width="640" height="1136" src="res/screen/ios/640_1136.png" gap:platform="ios" />
+
     <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
 
+
+    <access origin="http://127.0.0.1*" />
 </widget>

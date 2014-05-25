@@ -1,0 +1,83 @@
+<style>
+	.relative {
+		top: 52px;
+		padding: 0 10px;
+		padding-bottom: 60px;
+	}
+
+	h2 {
+		padding: 20px;
+		font-size: 4em;
+		font-weight: lighter;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	article {
+		background: #003E66;
+		color: #fff;
+		margin-bottom: 20px;
+		position: relative;
+		overflow: hidden;
+	}
+
+	article a {
+		width: 100%;
+	}
+	article img {
+		width: 50%;
+		float: left;
+	}
+	article.element_banner .text-banner {
+		width: 45%;
+		float: right;
+		height: auto !important;
+		font-size: 1.5em;
+	}
+	body {
+		background: #e2e2c7;
+	}
+	.element_banner .date-banner {
+		font-size: 2em;
+		left: 0;
+		top: 0;
+	}
+</style>
+    <menu id="nav-left">
+        <ul>
+            <li ng-repeat="item in items" class="{{item.status}}"><a href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+        </ul>
+    </menu>
+
+	<header>
+		<button class="menu"></button>
+		<h1>Planeta Brasil</h1>
+		<div class="logo_header">
+			<img src="images/logo.png" alt="Logotipo">
+		</div>
+		<button class="btn-gps"></button>
+	</header>
+
+    <div id="wrapper">
+    	<div class="relative page">
+	    	<h2>Notícias</h2>
+        	<article ng-repeat="n in news" class="element_banner" data-id="{{n.id}}">
+                <div class="date-banner">
+                   	<span>{{n.day}}</span>
+                </div>
+               	<a href="#/show-news/{{n.id}}">
+               		<img src="{{n.img}}" alt="Imagem da noticia">
+	               	<div class="text-banner">
+	               		<p>{{n.title}}</p>
+	              	</div>
+               	</a>
+            </article>
+
+		</div>
+	</div>
+	<div id="footer-fixed">
+		<span>BRASIL BEYOND BRAZIL</span>
+	</div>
+
+<script type="text/javascript">
+	
+</script>

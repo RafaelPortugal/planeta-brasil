@@ -468,13 +468,13 @@ stadiums = {
                 "A atmosfera e a empolgação no estádio em dias de jogo do \"Galo\" e da \"Raposa\" são contagiantes, assim como quando a Seleção entra em campo,  inclusive em duas edições recentes do superclássico Brasil x Argentina (em 2004 e 2008, pelas eliminatórias para a Copa do Mundo da FIFA™). Grandes atacantes como Ronaldo, Tostão, Reinaldo e Dario já tiveram o estádio como sua vitrine."
                 ],
             2: ["The modernization project included the lowering of the field, improvement in accessibility and other issues, always guided by principles of sustainability - taking into account, for example, the reuse of rainwater with a storage capacity of up to 6.27 million liters.",
-    "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
-                "Located in the Pampulha neighborhood and opened on December 5, 1965, the stadium belongs to the state government of Minas Gerais, with the official name Estádio Governador Magalhães Pinto.But what is certain is that for 'Mineirão' that fans will ask during the tournament.",
+    "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
+                "Located in the Pampulha neighborhood and opened on December 5, 1965, the stadium belongs to the state government of Minas Gerais, with the official name Estádio Governador Magalhães Pinto.But what is certain is that for 'Mineirão' that fans will ask during the tournament.",
     "The atmosphere and excitement in the stadium on the day of 'Rooster' and 'Fox' game are contagious, just like when the squad takes the field, including two recent editions of Superderby Brazil x Argentina ( in 2004 and 2008, by qualifying for the FIFA World Cup ™ ).Great strikers like Ronaldo, Penny, Reinaldo and Dario have had the stadium as its showcase."],
             3: ["El proyecto de modernización incluye la reducción del campo, la mejora de la accesibilidad y de otros temas, siempre guiados por los principios de la sostenibilidad - teniendo en cuenta, por ejemplo, la reutilización de las aguas pluviales con una capacidad de almacenamiento de hasta 6.270.000 de litros.",
-                "Uno de los templos del fútbol brasileño, los multicampeões caseros nacionales Atlético Mineiro y Cruzeiro, la arena, con capacidad para 57.483 espectadores, se ha redecorado completamente para recibir seis partidos de la Copa Mundial de la FIFA Brasil 2014 ™, incluyendo un enfrentamiento semifinal.",
-                "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
-                "La atmósfera y la emoción en el estadio el día del 'Gallo' y el juego de 'Fox' son contagiosos, al igual que cuando el equipo sale al campo, incluyendo dos ediciones recientes del Superclásico Brasil x Argentina (en 2004 y 2008, al calificar para la Copa Mundial de la FIFA ™). Grandes delanteros como Ronaldo, Penny, Reinaldo y Darío han tenido el estadio como su escaparate ."]},
+                "Uno de los templos del fútbol brasileño, los multicampeões caseros nacionales Atlético Mineiro y Cruzeiro, la arena, con capacidad para 57.483 espectadores, se ha redecorado completamente para recibir seis partidos de la Copa Mundial de la FIFA Brasil 2014 ™, incluyendo un enfrentamiento semifinal.",
+                "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
+                "La atmósfera y la emoción en el estadio el día del 'Gallo' y el juego de 'Fox' son contagiosos, al igual que cuando el equipo sale al campo, incluyendo dos ediciones recientes del Superclásico Brasil x Argentina (en 2004 y 2008, al calificar para la Copa Mundial de la FIFA ™). Grandes delanteros como Ronaldo, Penny, Reinaldo y Darío han tenido el estadio como su escaparate ."]},
         "district": "Belo Horizonte",
         "feature_img": "images/minerao.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"], 
@@ -635,7 +635,7 @@ stadiums = {
 menu = {
     1: [
         {href: '#/home', title: 'Início', status: 'deactive'},
-        {href: '#', title: 'Notícias', status: 'deactive'},
+        {href: '#/news', title: 'Notícias', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jogadores', status: 'deactive'},
@@ -646,7 +646,7 @@ menu = {
     ],
     2: [
         {href: '#/home', title: 'Home', status: 'deactive'},
-        {href: '#', title: 'News', status: 'deactive'},
+        {href: '#/news', title: 'News', status: 'deactive'},
         {href: '#/table-games', title: '1ª Phase', status: 'deactive'},
         {href: '#/finals', title: 'Phase final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Players', status: 'deactive'},
@@ -657,7 +657,7 @@ menu = {
     ],
     3: [
         {href: '#/home', title: 'Inicio', status: 'deactive'},
-        {href: '#', title: 'Noticias', status: 'deactive'},
+        {href: '#/news', title: 'Noticias', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jugadores', status: 'deactive'},
@@ -876,12 +876,38 @@ home = {
             'img': 'images/banner.png'
         }
     ],
-    "culturalProgramming": {
-        "id": 1,
-        "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
-        "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
-        "img": "images/media/thumb-1.png"
-    },
+    "culturalProgramming": [
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        }
+    ],
     "nextMatches": [
         {
             "home": "Brasil",
@@ -1125,6 +1151,396 @@ lastGames = {
     'offset': 0,
     'total': 11,
 }
+
+lastGames_10 = {
+    'items': [
+        {
+            "home": "Brasil",
+            "abbr_home": "BRA",
+            "gols_home": 2,
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "gols_visited": 1,
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "date": "Quarta 04/06"
+        }
+    ],
+    'offset': 10,
+    'total': 11,
+}
+
+
+guess = {
+    1: [
+        {
+            'team': 'Brasil',
+            'percent': '55%'
+        },
+        {
+            'team': 'Espanha',
+            'percent': '23%'
+        },
+        {
+            'team': 'Alemanha',
+            'percent':'12%',
+        },
+        {
+            'team': 'Inglaterra',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentina',
+            'percent':'4%',
+        },
+    ],
+    2: [
+        {
+            'team': 'Brazil',
+            'percent': '55%'
+        },
+        {
+            'team': 'Spain',
+            'percent': '23%'
+        },
+        {
+            'team': 'Germany',
+            'percent':'12%',
+        },
+        {
+            'team': 'England',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentine',
+            'percent':'4%',
+        },
+    ],
+    3: [
+        {
+            'team': 'Brasil',
+            'percent': '55%'
+        },
+        {
+            'team': 'España',
+            'percent': '23%'
+        },
+        {
+            'team': 'Alemanha',
+            'percent':'12%',
+        },
+        {
+            'team': 'Inglaterra',
+            'percent':'6%',
+        },
+        {
+            'team': 'Argentina',
+            'percent':'4%',
+        }
+    ]  
+}
+
+
+photos = [
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    },
+    {
+        'img': 'images/exemplo-torcida.png',
+        'name': 'Torcida'
+    }
+]
+
+
+news = [
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    }
+]
+
+OITAVAS = [
+                {
+                    "home": "1º grupo A",
+                    "abbr_home": "1º A",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo B",
+                    "gols_visited": '',
+                    "abbr_visited": "2º B",
+                    "img_visited": "",
+                    "date": "Sábado 28/06",
+                    "local": 'Minerão - Belo Horizonte'
+                },
+                {
+                    "home": "1º grupo C",
+                    "abbr_home": "1º C",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo D",
+                    "gols_visited": '',
+                    "abbr_visited": "2º D",
+                    "img_visited": "",
+                    "date": "Sábado 28/06",
+                    "local": "Maracanã - Rio de Janeiro"
+                },
+                {
+                    "home": "1º grupo B",
+                    "abbr_home": "1º B",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo A",
+                    "gols_visited": '',
+                    "abbr_visited": "2º A",
+                    "img_visited": "",
+                    "date": "Domingo 29/06",
+                    "local": "Castelão - Fortaleza"
+                },
+                {
+                    "home": "1º grupo D",
+                    "abbr_home": "1º D",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo C",
+                    "gols_visited": '',
+                    "abbr_visited": "2º C",
+                    "img_visited": "",
+                    "date": "Domingo 29/06",
+                    "local": "Arena Pernanbuco - Recife"
+                },
+                {
+                    "home": "1º grupo E",
+                    "abbr_home": "1º E",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo F",
+                    "gols_visited": '',
+                    "abbr_visited": "2º F",
+                    "img_visited": "",
+                    "date": "Segunda-feira 30/06",
+                    "local": "Nacional de Brasília - Brasília"
+                },
+                {
+                    "home": "1º grupo G",
+                    "abbr_home": "1º G",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo H",
+                    "gols_visited": '',
+                    "abbr_visited": "2º H",
+                    "img_visited": "",
+                    "date": "Segunda-feira 30/06",
+                    "local": "Beira Rio - Porto Alegre"
+                },
+                {
+                    "home": "1º grupo F",
+                    "abbr_home": "1º F",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo E",
+                    "gols_visited": '',
+                    "abbr_visited": "2º E",
+                    "img_visited": "",
+                    "date": "Terça-feira 01/07",
+                    "local": "Arena São Paulo - São Paulo"
+                },
+                {
+                    "home": "1º grupo H",
+                    "abbr_home": "1º H",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo G",
+                    "gols_visited": '',
+                    "abbr_visited": "2º G",
+                    "img_visited": "",
+                    "date": "Terça-feira 01/07",
+                    "local": "Fonte Nova - Salvador"
+                }
+            ]
+QUARTAS = [
+                {
+                    "home": "1º classificado",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Sexta-feira 04/07 ",
+                    "local": 'Castelão - Fortaleza'
+                },
+                {
+                    "home": "3º classificado",
+                    "abbr_home": "3",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "4º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "4",
+                    "img_visited": "",
+                    "date": "Sexta-feira 04/07 ",
+                    "local": "Maracanã - Rio de Janeiro"
+                },
+                {
+                    "home": "5º classificado",
+                    "abbr_home": "5",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "6º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "6",
+                    "img_visited": "",
+                    "date": "Sábado 05/07",
+                    "local": "Fonte Nova - Salvador"
+                },
+                {
+                    "home": "7º classificado",
+                    "abbr_home": "7",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "8º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "8",
+                    "img_visited": "",
+                    "date": "Sábado 05/07",
+                    "local": "Nacional de Brasília - Brasília"
+                }
+            ]
+SEMI = [
+            {
+                "home": "1º classificado",
+                "abbr_home": "1",
+                "gols_home": '',
+                "img_home": "",
+                "visited": "2º classificado",
+                "gols_visited": '',
+                "abbr_visited": "2",
+                "img_visited": "",
+                "date": "Terça-feira 08/07",
+                "local": 'Minerão - Belo Horizonte'
+            },
+            {
+                "home": "3º classificado",
+                "abbr_home": "3",
+                "gols_home": '',
+                "img_home": "",
+                "visited": "4º classificado",
+                "gols_visited": '',
+                "abbr_visited": "4",
+                "img_visited": "",
+                "date": "Quarta-feira 09/07 ",
+                "local": "Arena São Paulo - São Paulo"
+            }
+        ]
+FINAL = [
+                {
+                    "home": "Perdedor 1",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "Perdedor 2",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Sábado 12/07",
+                    "local": 'Nacional de Brasília - Brasília'
+                },
+                {
+                    "home": "Ganhador 1",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "Ganhador 2",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Domingo 13/07",
+                    "local": 'Maracanã - Rio de Janeiro'
+                }
+            ]
+finals = {
+    1: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+    2: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+    3: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+}
+
+show_news = {
+    'id': 1,
+    'img': 'images/banner.png',
+    'title_img': 'Imagem',
+    'date': '14/05',
+    'title': 'O Rio de Janeiro está pronto para receber os jogos mundiais.',
+    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
+}
+
+programming = {
+    'id': 1,
+    'img': 'images/media/thumb-1.png',
+    'title_img': 'Imagem',
+    'date': '14/05',
+    'title': 'OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.',
+    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
+}
+
 
 lastGames_10 = {
     'items': [

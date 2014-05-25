@@ -50,9 +50,9 @@ a, div {
 }
 
 #active {
-	right: 20px;
-	bottom: 70px;
-	position: absolute;
+    right: 20px;
+    bottom: 70px;
+    position: absolute;
 }
 
 #active label {

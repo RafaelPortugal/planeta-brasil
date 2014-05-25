@@ -3,8 +3,8 @@ function Menu(language) {
 
 }
 
-var planetaBrasilControllers = angular.module('planetaBrasilControllers', []);
 
+var planetaBrasilControllers = angular.module('planetaBrasilControllers', ['ngSanitize']);
 planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
     function ($scope, $http ) {
     // $http.get('templates/phones.json').success(function(data) {
@@ -12,7 +12,6 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
     // });
         $scope.chooseLanguage = function(id_language) {
             window.localStorage.setItem('language', id_language);
-            setup_push_plugin();
             window.location.href = "#login";
         }
     }]
@@ -30,7 +29,7 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
             $scope.passaport = "pasaporte";
             $scope.login = "Login";
             $scope.advance = "Próximo";
-            $scope.skip = "Omitir este passo";
+            $scope.skip = "Omitir este paso";
             $scope.or = "o";
         } else {
             $scope.passaport = "Passaporte";
@@ -99,6 +98,18 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                     };
                 };
             });
+            elemets_programming = document.getElementsByClassName('input_checked_programming');
+            ontouch(document.getElementById('cultural-programming'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_programming);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_programming);
+                    };
+                };
+            });
 
             swipe_menu();
 
@@ -124,6 +135,9 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                 e.preventDefault();
             });
         });
+        $scope.showProgramming = function(id_programming) {
+            window.location.href = "#programming/" + id_programming;
+        }
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.item, function(i) {
                 i.status = 'deactive';
@@ -178,6 +192,13 @@ planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$route
 planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         language = localStorage.getItem('language');
+        if (language == 2) {
+            $scope.bg_img = "curiosidades_en.jpg";
+        }else if (language == 3) {
+            $scope.bg_img = "curiosidades_es.jpg";
+        }else {
+            $scope.bg_img = "curiosidades.jpg";
+        }
         $scope.items = $rootScope.items;
         $scope.curiosities = curiosities[language];
         $scope.$on('$viewContentLoaded', function() {
@@ -234,6 +255,87 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
                 };
             });
         });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
+planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
+        $scope.news = news;
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
+planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
+        language = localStorage.getItem('language');
+        $scope.finals = finals[language];
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        var dropdown = document.querySelectorAll('.dropdown');
+        var dropdownArray = Array.prototype.slice.call(dropdown,0);
+        dropdownArray.forEach(function(el){
+            var button = el.querySelector('a[data-toggle="dropdown"]'),
+                    menu = el.querySelector('.dropdown-menu'),
+                    arrow = button.querySelector('i.icon-arrow');
+            button.addEventListener("click", function(e) {
+                if(!menu.hasClass('show')) {
+                    menu.classList.add('show');
+                    menu.classList.remove('hide');
+                    arrow.classList.add('open');
+                    arrow.classList.remove('close');
+                    event.preventDefault();
+                }
+                else {
+                    menu.classList.remove('show');
+                    menu.classList.add('hide');
+                    arrow.classList.remove('open');
+                    arrow.classList.add('close');
+                    event.preventDefault();
+                }
+                e.preventDefault();
+            });
+        })
+
+        Element.prototype.hasClass = function(className) {
+            return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+        };
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.items, function(i) {
                 i.status = 'deactive';
@@ -334,8 +436,13 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
         $scope.language = language;
         if (language == 2) {
             $scope.group = "Group";
+            $scope.bg_img = "interna-lista-jogadores_en.jpg";
+        }else if (language == 3) {
+            $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores_es.jpg";
         }else {
             $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores.jpg";
         }
 
         $scope.$on('$viewContentLoaded', function() {
@@ -364,6 +471,34 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
 planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
+        $scope.show_news = show_news;
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
+
+planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
+        $scope.programming = programming;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -388,6 +523,58 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http',
 
 
 
+planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        language = window.localStorage.getItem('language');
+        if (language == 2) {
+            $scope.th_match = "Game day";
+            $scope.bg_img = "tabela-de-jogos_en.jpg"
+        }else if (language == 3) {
+            $scope.th_match = "DÍA DEL JUEGO";
+            $scope.bg_img = "tabela-de-jogos_es.jpg"
+        }else {
+            $scope.th_match = "DIA DO JOGO";
+            $scope.bg_img = "tabela-de-jogos.jpg"
+        }
+        $scope.items = $rootScope.items;
+        $scope.matches = matches;
+        $scope.$on('$viewContentLoaded', function() {
+elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+            
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
+
 planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
@@ -396,8 +583,13 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
         $scope.language = language
         if (language == 2) {
             $scope.group = "Group";
+            $scope.bg_img = "interna-lista-jogadores_en.jpg";
+        }else if (language == 3){
+            $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores_es.jpg";
         }else {
             $scope.group = "Grupo";
+            $scope.bg_img = "interna-lista-jogadores.jpg";
         }
         $scope.$on('$viewContentLoaded', function() {
             elemets_banner = document.getElementsByClassName('input_checked');
@@ -436,84 +628,11 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
 );
 
 
-
-/**
- **   Controllers que usam API externa
- **/
-
- //1a Fase
-planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
-
-        language = window.localStorage.getItem('language');
-        if (language == 2) {
-            $scope.th_match = "Game day";
-        }else if (language == 3) {
-            $scope.th_match = "DÍA DEL JUEGO";
-        }else {
-            $scope.th_match = "DIA DO JOGO";
-        }
-        $scope.items = $rootScope.items;
-        
-        //$scope.matches = matches;
-        
-        $scope.$on('$viewContentLoaded', function() {
-elemets_banner = document.getElementsByClassName('input_checked');
-            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
-                if (phase == 'end') {
-                    event.stopPropagation();
-                    if (dir == 'left'){
-                        forward_element(elemets_banner);
-                    };
-                    if (dir == 'right') {
-                        back_element(elemets_banner);
-                    };
-                };
-            });
-            swipe_menu();
-            
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-        $http({method: 'GET', url: API_ROOT_URL + '/api/matches_by_groups/'}).
-            success(function(data, status, headers, config) {
-            //alert(data);
-            $scope.matches = data;
-
-          }).
-          error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-
-    }]
-);
-
-
-
-// Palpites
 planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
         $scope.items = $rootScope.items;
         language = localStorage.getItem('language');
-        //$scope.guess = guess[language];        
+        $scope.guess = guess[language];
 
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -527,16 +646,9 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
                 };
             });
         });
-
         document.getElementById('guess_id').onchange = function() {
-            this.disabled = true;
-            var data = 'country=' + this.value;
-            var request = new XMLHttpRequest();
-            request.open('POST', API_ROOT_URL + '/api/guesses/', true);
-            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            request.send(data);
+            alert('Fazer o post nesse change');
         };
-        
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.items, function(i) {
                 i.status = 'deactive';
@@ -544,18 +656,5 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
             item.status = 'active';
             body.className = "";
        };
-
-        $http({method: 'GET', url: API_ROOT_URL + '/api/guesses/'}).
-            success(function(data, status, headers, config) {
-            
-            $scope.guess = data[language];
-
-          }).
-          error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-
-
     }]
 );
-
