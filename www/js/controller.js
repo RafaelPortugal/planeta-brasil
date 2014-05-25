@@ -71,7 +71,11 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
 
         $scope.items = $rootScope.items;
+        
+
         $scope.home = home;
+        
+
         $scope.$on('$viewContentLoaded', function() {
             banner = document.getElementsByClassName('element_banner');
             elemets_banner = document.getElementsByClassName('input_checked');
@@ -239,31 +243,7 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
 );
 
 
-planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $scope.items = $rootScope.items;
-        $scope.photos = photos;
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-    }]
-);
+
 
 planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
@@ -656,5 +636,48 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
             item.status = 'active';
             body.className = "";
        };
+    }]
+);
+
+
+
+/** COM API **/
+
+planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope
+        $scope.items = $rootScope.items;
+
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+      var api_url = API_ROOT_URL + '/api/photos/' + '?lang=' + window.localStorage.getItem('language', '1');
+      $http({method: 'GET', url: api_url}).
+          success(function(data, status, headers, config) {
+              $scope.photos = data;
+      
+      }).error(function(data, status, headers, config) {
+      
+              alert('Ocorreu um erro. Tente novamente.')
+      
+      });
+    
     }]
 );
