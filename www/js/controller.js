@@ -67,91 +67,6 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
     }]
 );
 
-planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-
-        $scope.items = $rootScope.items;
-        
-
-        $scope.home = home;
-        
-
-        $scope.$on('$viewContentLoaded', function() {
-            banner = document.getElementsByClassName('element_banner');
-            elemets_banner = document.getElementsByClassName('input_checked');
-            ontouch(document.getElementById('slider'), function(evt, dir, phase, swipetype, distance){
-                if (phase == 'end') {
-                    event.stopPropagation();
-                    if (dir == 'left'){
-                        forward_element(elemets_banner);
-                    };
-                    if (dir == 'right') {
-                        back_element(elemets_banner);
-                    };
-                };
-            });
-            elemets_match = document.getElementsByClassName('input_checked_match');
-            ontouch(document.getElementById('next-macth'), function(evt, dir, phase, swipetype, distance){
-                if (phase == 'end') {
-                    event.stopPropagation();
-                    if (dir == 'left'){
-                        forward_element(elemets_match);
-                    };
-                    if (dir == 'right') {
-                        back_element(elemets_match);
-                    };
-                };
-            });
-            elemets_programming = document.getElementsByClassName('input_checked_programming');
-            ontouch(document.getElementById('cultural-programming'), function(evt, dir, phase, swipetype, distance){
-                if (phase == 'end') {
-                    event.stopPropagation();
-                    if (dir == 'left'){
-                        forward_element(elemets_programming);
-                    };
-                    if (dir == 'right') {
-                        back_element(elemets_programming);
-                    };
-                };
-            });
-
-            swipe_menu();
-
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-            forward = document.getElementById("forward");
-            forward.addEventListener("click", function(e) {
-                forward_element(elemets_banner);
-                e.preventDefault();
-            });
-            
-            back = document.getElementById("back");
-            back.addEventListener("click", function(e) {
-                back_element(elemets_banner);
-                e.preventDefault();
-            });
-        });
-        $scope.showProgramming = function(id_programming) {
-            window.location.href = "#programming/" + id_programming;
-        }
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.item, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       }
-    }]
-);
-
 
 
 planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
@@ -788,5 +703,104 @@ planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
             item.status = 'active';
             body.className = "";
        };
+    }]
+);
+
+
+
+
+
+planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
+        language = localStorage.getItem('language');
+        $scope.items = $rootScope.items;
+        //$scope.home = home;
+
+        var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.home = data;
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+        
+
+        $scope.$on('$viewContentLoaded', function() {
+            banner = document.getElementsByClassName('element_banner');
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('slider'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            elemets_match = document.getElementsByClassName('input_checked_match');
+            ontouch(document.getElementById('next-macth'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_match);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_match);
+                    };
+                };
+            });
+            elemets_programming = document.getElementsByClassName('input_checked_programming');
+            ontouch(document.getElementById('cultural-programming'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_programming);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_programming);
+                    };
+                };
+            });
+
+            swipe_menu();
+
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+            forward = document.getElementById("forward");
+            forward.addEventListener("click", function(e) {
+                forward_element(elemets_banner);
+                e.preventDefault();
+            });
+            
+            back = document.getElementById("back");
+            back.addEventListener("click", function(e) {
+                back_element(elemets_banner);
+                e.preventDefault();
+            });
+        });
+        
+        $scope.showProgramming = function(id_programming) {
+            window.location.href = "#programming/" + id_programming;
+        }
+        
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.item, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       }
     }]
 );
