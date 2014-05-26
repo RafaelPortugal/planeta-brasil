@@ -455,7 +455,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Rio de Janeiro",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/maracana.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     2: {
@@ -476,7 +476,7 @@ stadiums = {
                 "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
                 "La atmósfera y la emoción en el estadio el día del 'Gallo' y el juego de 'Fox' son contagiosos, al igual que cuando el equipo sale al campo, incluyendo dos ediciones recientes del Superclásico Brasil x Argentina (en 2004 y 2008, al calificar para la Copa Mundial de la FIFA ™). Grandes delanteros como Ronaldo, Penny, Reinaldo y Darío han tenido el estadio como su escaparate ."]},
         "district": "Belo Horizonte",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/mineirao.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"], 
     },
     3: {
@@ -492,8 +492,8 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Manaus",
-        "feature_img": "images/minerao.jpg",
-        "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
+        "feature_img": "images/estadios/manaus.jpg",
+        "images": ["images/estadios/manaus.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     4: {
         "name": "Arena da Baixada",
@@ -507,7 +507,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Curitiba",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/coritiba.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     5: {
@@ -523,7 +523,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "São Paulo",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/saopaulo.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     6: {
@@ -538,7 +538,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Salvador",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/salvador.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     7: {
@@ -553,7 +553,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Cuiabá",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/cuiaba.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     8: {
@@ -568,7 +568,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Recife",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/recife.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     9: {
@@ -582,7 +582,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Porto Alegre",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/portoalegre.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     10: {
@@ -597,7 +597,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Fortaleza",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/fortaleza.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     11: {
@@ -611,7 +611,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Natal",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/natal.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     12: {
@@ -626,7 +626,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Brasília",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/brasilia.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
 }
@@ -668,104 +668,287 @@ menu = {
     ],
 }
 
-
 curiosities = {
     1: [
         {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
+            'number': 19,
+            'type': 'Mais participações',
+            'player': 'Brasil',
+            'team': ''
+        },
+        {
+            'number': 3,
+            'type': 'Mais vitórias',
+            'player': 'Pelé',
+            'team': 'Brasil, 1958/1962/1970)'
+        },
+        {
+            'number': '17 anos',
+            'type': 'Jogador mais novo',
+            'player': 'Norman Whiteside',
+            'team': '(Northen Ireland vs Jugoslavija, 1982)'
+        },
+        {
+            'number': '11 segundos',
+            'type': 'Gol mais rápido em patida',
+            'player': 'Hakan Sukur',
+            'team': '(Turkia vs Korea, 2002)'
+        },
+        {
+            'number': 13,
+            'type': 'Mais gols em um torneio',
+            'player': 'Just Fontaine',
             'team': '(Itália, 1990-2002)'
         },
+
+        {
+            'number': 42,
+            'type': 'Jogador mais velho',
+            'player': 'Roger Milla',
+            'team': 'Camarões vs Russia'
+        },
+        {
+            'number': 15,
+            'type': 'Mais gols',
+            'player': 'Ronaldo',
+            'team': 'Brasil, 1998-2006'
+        },
+
+        {
+            'number': 5,
+            'type': 'Mais gols em uma partida',
+            'player': 'Oleg Salenko',
+            'team': 'Camarões vs Russia, 1994'
+        },
+        {
+            'number': 12,
+            'type': 'Mais gols em uma partida',
+            'player': 'Osterreich vs Switzerland, 7-5, 1954',
+            'team': ''
+        },
+
+        {
+            'number': '10-1',
+            'type': 'Maior vitória',
+            'player': 'Magyarország vs El Salvador, 1982',
+            'team': ''
+        },
+        {
+            'number': 15,
+            'type': 'Mais gols',
+            'player': 'Ronaldo',
+            'team': 'Brasil, 1998-2006'
+        },
+
+        {
+            'number': 5,
+            'type': 'Mais vitórias',
+            'player': 'Brasil',
+            'team': ''
+        },
+
         {
             'number': 2217,
             'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
+            'player': 'Paolo Maldini',
+            'team': 'Itália, 1990-2002'
         },
+
         {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
+            'number': 25,
+            'type': 'Atuação em partidas',
+            'player': 'Lothar Matthaus',
+            'team': 'Alemanha, 1982-1988'
         }
     ],
     2: [
         {
+            'number': 19,
+            'type': 'Most appearances',
+            'player': 'Brasil',
+            'team': ''
+        },
+        {
+            'number': 3,
+            'type': 'Most wins',
+            'player': 'Pelé',
+            'team': 'Brazil, 1958/1962/1970'
+        },
+        {
+            'number': '17 years',
+            'type': 'Youngest player',
+            'player': 'Norman Whiteside',
+            'team': 'Northen Ireland vs Jugoslavija, 1982'
+        },
+        {
+            'number': '11 seconds',
+            'type': 'Fatest goal from kickof',
+            'player': 'Hakan Sukur',
+            'team': '(Turkie vs Korea Republic, 2002)'
+        },
+        {
+            'number': 13,
+            'type': 'Most goals in a tournament',
+            'player': 'Justin Fontaine',
+            'team': '(France, 1958)'
+        },
+
+         {
+            'number': '42 years',
+            'type': 'Oldest player',
+            'player': 'Roger Milla',
+            'team': '(Cameroun vs Russia, 1954)'
+        },
+
+         {
+            'number': 15,
+            'type': 'Most goals',
+            'player': 'Ronaldo',
+            'team': '(Brazil, 1998-2006)'
+        },
+
+         {
+            'number': 5,
+            'type': 'Most goals scored in a match',
+            'player': 'Oleg Salenko',
+            'team': '(Russia vs Cameroun, 1994)'
+        },
+
+         {
+            'number': 12,
+            'type': 'Most goal scored in a match',
+            'player': '(Osterreich vs Switzerland 7-5, 1954)',
+            'team': ''
+        },
+
+         {
+            'number': '10-1',
+            'type': 'Biggest Victory',
+            'player': '(Magyarország vs El Salvador), 1982',
+            'team': ''
+        },
+        {
+            'number': 15,
+            'type': 'More Goals',
+            'player': 'Ronaldo',
+            'team': 'Brazil, 1998-2006'
+        },
+
+         {
+            'number': 5,
+            'type': 'Most wins',
+            'player': 'Brazil',
+            'team': ''
+        },
+
+         {
             'number': 2217,
             'type': 'minutes played',
             'player': 'Paolo Maldine',
             'team': '(Italy, 1990-2002)'
         },
-        {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
+
+         {
+            'number': 25,
+            'type': 'Most matches played',
+            'player': 'Lothar Matthaus',
+            'team': '(Deutschland, 1982-1988)'
         }
     ],
-    3: [
+   
+   3 : [
+        {
+            "number": 19 ,
+            'type': ' La mayoría de las apariencias',
+            'player': 'Brasil',
+            'team ':''
+        },
+        {
+            "number" : 3,
+            'type' : 'La mayoría de las victorias',
+            'player': 'Pelé',
+            'team': 'Brasil , 1958/1962/1970'
+        },
+        {
+            "number" : 17 ,
+            'type': 'player más joven',
+            'player': 'Norman Whiteside',
+            'team': 'Northen Ireland vs Jugoslavija , 1982'
+        },
+        {
+            'number' : '11 segundos',
+            'type': 'meta fatest de kickof',
+            'player': 'Hakan Sukur',
+            'team': '( Turkie vs República de Corea , 2002 )'
+        },
+        {
+            "number" : 13,
+            'type': 'La mayoría de los goles en el torneo',
+            'player': 'Justin Fontaine',
+            'team': '(Francia, 1958 )'
+        },
+
+         {
+            'number' : '42 años',
+            'type': 'player más veterano',
+            'player': 'Roger Milla',
+            'team ': '( Camerún vs Rusia, 1954 )'
+        },
+
+         {
+            "number" : 15 ,
+            'type' : 'La mayoría de las metas',
+            'player' : 'Ronaldo',
+            'team': '(Brasil, 1998-2006)'
+        },
+
+         {
+            "number" : 5 ,
+            'type' : 'mayor number de goles en un partido' ,
+            'player': 'Oleg Salenko',
+            'team': '(Rusia vs Camerún, 1994 )'
+        },
+
+         {
+            "number" : 12,
+            'type': 'meta más anotados en un partido' ,
+            'player': '( Osterreich vs Suiza 7-5, 1954 )' ,
+            'team':''
+        },
+
+         {
+            "number" : '10-1',
+            'type' : 'La victoria más grande',
+            'player': '(Magyarország vs El Salvador, 1982)', 
+            'team':''
+        },
         {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
+            'number': 15,
+            'type': 'Más gols',
+            'player': 'Ronaldo',
+            'team': 'Brasil, 1998-2006'
         },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        }
-    ]
+         {
+            "number" : 5 ,
+            'type' : 'La mayoría de las victorias',
+            'player': 'Brasil',
+            'team':''
+        },
+
+         {
+            "number" : 2217,
+            'type': 'minutos jugo', 
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+
+         {
+            "number" : 25 ,
+            'type': 'La mayoría de los partidos por jugadores',
+            'player':'Lothar Matthaus',
+            'team': '(Alemanha, 1982-1988)'
+        }
+    ]
 }
 
 // ########################################################################################

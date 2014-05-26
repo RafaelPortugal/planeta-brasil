@@ -49,7 +49,7 @@
 
     <access origin="*" />
     
-    <!-- preference name="orientation" value="portrait" / -->
+    <preference name="orientation" value="portrait" / >
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
