@@ -671,16 +671,10 @@ menu = {
 curiosities = {
     1: [
         {
-            'number': 19,
-            'type': 'Mais participações',
-            'player': 'Brasil',
-            'team': ''
-        },
-        {
             'number': 3,
             'type': 'Mais vitórias',
             'player': 'Pelé',
-            'team': 'Brasil, 1958/1962/1970)'
+            'team': '(Brasil, 1958/1962/1970)'
         },
         {
             'number': '17 anos',
@@ -721,6 +715,30 @@ curiosities = {
             'team': 'Camarões vs Russia, 1994'
         },
         {
+            'number': 15,
+            'type': 'Mais gols',
+            'player': 'Ronaldo',
+            'team': 'Brasil, 1998-2006'
+        },
+        {
+            'number': 2217,
+            'type': 'Minutos jogados',
+            'player': 'Paolo Maldini',
+            'team': 'Itália, 1990-2002'
+        },
+        {
+            'number': 25,
+            'type': 'Atuação em partidas',
+            'player': 'Lothar Matthaus',
+            'team': 'Alemanha, 1982-1988'
+        },
+        {
+            'number': 19,
+            'type': 'Mais participações',
+            'player': 'Brasil',
+            'team': ''
+        },
+        {
             'number': 12,
             'type': 'Mais gols em uma partida',
             'player': 'Osterreich vs Switzerland, 7-5, 1954',
@@ -734,45 +752,18 @@ curiosities = {
             'team': ''
         },
         {
-            'number': 15,
-            'type': 'Mais gols',
-            'player': 'Ronaldo',
-            'team': 'Brasil, 1998-2006'
-        },
-
-        {
             'number': 5,
             'type': 'Mais vitórias',
             'player': 'Brasil',
             'team': ''
-        },
-
-        {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldini',
-            'team': 'Itália, 1990-2002'
-        },
-
-        {
-            'number': 25,
-            'type': 'Atuação em partidas',
-            'player': 'Lothar Matthaus',
-            'team': 'Alemanha, 1982-1988'
         }
     ],
     2: [
         {
-            'number': 19,
-            'type': 'Most appearances',
-            'player': 'Brasil',
-            'team': ''
-        },
-        {
             'number': 3,
             'type': 'Most wins',
             'player': 'Pelé',
-            'team': 'Brazil, 1958/1962/1970'
+            'team': '(Brazil, 1958/1962/1970'
         },
         {
             'number': '17 years',
@@ -813,7 +804,30 @@ curiosities = {
             'player': 'Oleg Salenko',
             'team': '(Russia vs Cameroun, 1994)'
         },
-
+        {
+            'number': 15,
+            'type': 'More Goals',
+            'player': 'Ronaldo',
+            'team': 'Brazil, 1998-2006'
+        },
+         {
+            'number': 2217,
+            'type': 'minutes played',
+            'player': 'Paolo Maldine',
+            'team': '(Italy, 1990-2002)'
+        },
+         {
+            'number': 25,
+            'type': 'Most matches played',
+            'player': 'Lothar Matthaus',
+            'team': '(Deutschland, 1982-1988)'
+        },
+        {
+            'number': 19,
+            'type': 'Most appearances',
+            'player': 'Brasil',
+            'team': ''
+        },
          {
             'number': 12,
             'type': 'Most goal scored in a match',
@@ -827,47 +841,23 @@ curiosities = {
             'player': '(Magyarország vs El Salvador), 1982',
             'team': ''
         },
-        {
-            'number': 15,
-            'type': 'More Goals',
-            'player': 'Ronaldo',
-            'team': 'Brazil, 1998-2006'
-        },
 
          {
             'number': 5,
             'type': 'Most wins',
             'player': 'Brazil',
             'team': ''
-        },
-
-         {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
-        },
-
-         {
-            'number': 25,
-            'type': 'Most matches played',
-            'player': 'Lothar Matthaus',
-            'team': '(Deutschland, 1982-1988)'
         }
+
+
     ],
    
    3 : [
         {
-            "number": 19 ,
-            'type': ' La mayoría de las apariencias',
-            'player': 'Brasil',
-            'team ':''
-        },
-        {
             "number" : 3,
             'type' : 'La mayoría de las victorias',
             'player': 'Pelé',
-            'team': 'Brasil , 1958/1962/1970'
+            'team': '(Brasil, 1958/1962/1970'
         },
         {
             "number" : 17 ,
@@ -908,7 +898,26 @@ curiosities = {
             'player': 'Oleg Salenko',
             'team': '(Rusia vs Camerún, 1994 )'
         },
+         {
+            "number" : 2217,
+            'type': 'minutos jugo', 
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
 
+         {
+            "number" : 25 ,
+            'type': 'La mayoría de los partidos por jugadores',
+            'player':'Lothar Matthaus',
+            'team': '(Alemanha, 1982-1988)'
+        },
+
+        {
+            "number": 19 ,
+            'type': ' La mayoría de las apariencias',
+            'player': 'Brasil',
+            'team ':''
+        },
          {
             "number" : 12,
             'type': 'meta más anotados en un partido' ,
@@ -933,21 +942,8 @@ curiosities = {
             'type' : 'La mayoría de las victorias',
             'player': 'Brasil',
             'team':''
-        },
-
-         {
-            "number" : 2217,
-            'type': 'minutos jugo', 
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        },
-
-         {
-            "number" : 25 ,
-            'type': 'La mayoría de los partidos por jugadores',
-            'player':'Lothar Matthaus',
-            'team': '(Alemanha, 1982-1988)'
         }
+
     ]
 }
 
