@@ -23,12 +23,16 @@ planetaBrasilApp.config(['$routeProvider',
         controller: 'HomeCtrl'
       }).
       when('/results/:offset', {
-        templateUrl: 'templates/last_games.html',
-        controller: 'LastGamesCtrl'
+         templateUrl: 'templates/last_games.html',
+         controller: 'LastGamesCtrl'
       }).
       when('/curiosity', {
         templateUrl: 'templates/curiosity.html',
         controller: 'CuriosityCtrl'
+      }).
+      when('/planeta-game', {
+        templateUrl: 'templates/game.html',
+        controller: 'GameCtrl'
       }).
       when('/photo-fans', {
         templateUrl: 'templates/photo_fans.html',
@@ -50,9 +54,21 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/show_news.html',
         controller: 'ShowNewsCtrl'
       }).
+      when('/programming/:programmingId', {
+        templateUrl: 'templates/programming.html',
+        controller: 'ProgrammingCtrl'
+      }).
+      when('/news', {
+        templateUrl: 'templates/news.html',
+        controller: 'NewsCtrl'
+      }).
       when('/table-games', {
         templateUrl: 'templates/table_games.html',
         controller: 'TableGamesCtrl'
+      }).
+      when('/finals', {
+        templateUrl: 'templates/finals.html',
+        controller: 'FinalsCtrl'
       }).
       when('/team-per-group', {
         templateUrl: 'templates/team_per_group.html',

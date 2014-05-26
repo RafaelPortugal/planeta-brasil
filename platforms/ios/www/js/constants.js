@@ -455,7 +455,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Rio de Janeiro",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/maracana.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     2: {
@@ -468,15 +468,15 @@ stadiums = {
                 "A atmosfera e a empolgação no estádio em dias de jogo do \"Galo\" e da \"Raposa\" são contagiantes, assim como quando a Seleção entra em campo,  inclusive em duas edições recentes do superclássico Brasil x Argentina (em 2004 e 2008, pelas eliminatórias para a Copa do Mundo da FIFA™). Grandes atacantes como Ronaldo, Tostão, Reinaldo e Dario já tiveram o estádio como sua vitrine."
                 ],
             2: ["The modernization project included the lowering of the field, improvement in accessibility and other issues, always guided by principles of sustainability - taking into account, for example, the reuse of rainwater with a storage capacity of up to 6.27 million liters.",
-    "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
-                "Located in the Pampulha neighborhood and opened on December 5, 1965, the stadium belongs to the state government of Minas Gerais, with the official name Estádio Governador Magalhães Pinto.But what is certain is that for 'Mineirão' that fans will ask during the tournament.",
+    "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
+                "Located in the Pampulha neighborhood and opened on December 5, 1965, the stadium belongs to the state government of Minas Gerais, with the official name Estádio Governador Magalhães Pinto.But what is certain is that for 'Mineirão' that fans will ask during the tournament.",
     "The atmosphere and excitement in the stadium on the day of 'Rooster' and 'Fox' game are contagious, just like when the squad takes the field, including two recent editions of Superderby Brazil x Argentina ( in 2004 and 2008, by qualifying for the FIFA World Cup ™ ).Great strikers like Ronaldo, Penny, Reinaldo and Dario have had the stadium as its showcase."],
             3: ["El proyecto de modernización incluye la reducción del campo, la mejora de la accesibilidad y de otros temas, siempre guiados por los principios de la sostenibilidad - teniendo en cuenta, por ejemplo, la reutilización de las aguas pluviales con una capacidad de almacenamiento de hasta 6.270.000 de litros.",
-                "Uno de los templos del fútbol brasileño, los multicampeões caseros nacionales Atlético Mineiro y Cruzeiro, la arena, con capacidad para 57.483 espectadores, se ha redecorado completamente para recibir seis partidos de la Copa Mundial de la FIFA Brasil 2014 ™, incluyendo un enfrentamiento semifinal.",
-                "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
-                "La atmósfera y la emoción en el estadio el día del 'Gallo' y el juego de 'Fox' son contagiosos, al igual que cuando el equipo sale al campo, incluyendo dos ediciones recientes del Superclásico Brasil x Argentina (en 2004 y 2008, al calificar para la Copa Mundial de la FIFA ™). Grandes delanteros como Ronaldo, Penny, Reinaldo y Darío han tenido el estadio como su escaparate ."]},
+                "Uno de los templos del fútbol brasileño, los multicampeões caseros nacionales Atlético Mineiro y Cruzeiro, la arena, con capacidad para 57.483 espectadores, se ha redecorado completamente para recibir seis partidos de la Copa Mundial de la FIFA Brasil 2014 ™, incluyendo un enfrentamiento semifinal.",
+                "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
+                "La atmósfera y la emoción en el estadio el día del 'Gallo' y el juego de 'Fox' son contagiosos, al igual que cuando el equipo sale al campo, incluyendo dos ediciones recientes del Superclásico Brasil x Argentina (en 2004 y 2008, al calificar para la Copa Mundial de la FIFA ™). Grandes delanteros como Ronaldo, Penny, Reinaldo y Darío han tenido el estadio como su escaparate ."]},
         "district": "Belo Horizonte",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/mineirao.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"], 
     },
     3: {
@@ -492,8 +492,8 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Manaus",
-        "feature_img": "images/minerao.jpg",
-        "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
+        "feature_img": "images/estadios/manaus.jpg",
+        "images": ["images/estadios/manaus.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     4: {
         "name": "Arena da Baixada",
@@ -507,7 +507,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Curitiba",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/coritiba.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     5: {
@@ -523,7 +523,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "São Paulo",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/saopaulo.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     6: {
@@ -538,7 +538,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Salvador",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/salvador.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     7: {
@@ -553,7 +553,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Cuiabá",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/cuiaba.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     8: {
@@ -568,7 +568,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Recife",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/recife.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     9: {
@@ -582,7 +582,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Porto Alegre",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/portoalegre.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     10: {
@@ -597,7 +597,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Fortaleza",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/fortaleza.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     11: {
@@ -611,7 +611,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Natal",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/natal.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
     12: {
@@ -626,7 +626,7 @@ stadiums = {
             3: ["Falta traduzir"],
     },
         "district": "Brasília",
-        "feature_img": "images/minerao.jpg",
+        "feature_img": "images/estadios/brasilia.jpg",
         "images": ["images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg", "images/minerao.jpg"],
     },
 }
@@ -635,7 +635,7 @@ stadiums = {
 menu = {
     1: [
         {href: '#/home', title: 'Início', status: 'deactive'},
-        {href: '#', title: 'Notícias', status: 'deactive'},
+        {href: '#/news', title: 'Notícias', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jogadores', status: 'deactive'},
@@ -643,10 +643,11 @@ menu = {
         {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
         {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
     2: [
         {href: '#/home', title: 'Home', status: 'deactive'},
-        {href: '#', title: 'News', status: 'deactive'},
+        {href: '#/news', title: 'News', status: 'deactive'},
         {href: '#/table-games', title: '1ª Phase', status: 'deactive'},
         {href: '#/finals', title: 'Phase final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Players', status: 'deactive'},
@@ -654,10 +655,11 @@ menu = {
         {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
         {href: '#/photo-fans', title: 'Photos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
     3: [
         {href: '#/home', title: 'Inicio', status: 'deactive'},
-        {href: '#', title: 'Noticias', status: 'deactive'},
+        {href: '#/news', title: 'Noticias', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jugadores', status: 'deactive'},
@@ -665,107 +667,287 @@ menu = {
         {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
         {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
 }
-
 
 curiosities = {
     1: [
         {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
+            'number': 3,
+            'type': 'Mais vitórias',
+            'player': 'Pelé',
+            'team': '(Brasil, 1958/1962/1970)'
+        },
+        {
+            'number': '17 anos',
+            'type': 'Jogador mais novo',
+            'player': 'Norman Whiteside',
+            'team': '(Northen Ireland vs Jugoslavija, 1982)'
+        },
+        {
+            'number': '11 segundos',
+            'type': 'Gol mais rápido em patida',
+            'player': 'Hakan Sukur',
+            'team': '(Turkia vs Korea, 2002)'
+        },
+        {
+            'number': 13,
+            'type': 'Mais gols em um torneio',
+            'player': 'Just Fontaine',
             'team': '(Itália, 1990-2002)'
+        },
+
+        {
+            'number': 42,
+            'type': 'Jogador mais velho',
+            'player': 'Roger Milla',
+            'team': 'Camarões vs Russia'
+        },
+        {
+            'number': 15,
+            'type': 'Mais gols',
+            'player': 'Ronaldo',
+            'team': 'Brasil, 1998-2006'
+        },
+
+        {
+            'number': 5,
+            'type': 'Mais gols em uma partida',
+            'player': 'Oleg Salenko',
+            'team': 'Camarões vs Russia, 1994'
+        },
+        {
+            'number': 15,
+            'type': 'Mais gols',
+            'player': 'Ronaldo',
+            'team': 'Brasil, 1998-2006'
         },
         {
             'number': 2217,
             'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
+            'player': 'Paolo Maldini',
+            'team': 'Itália, 1990-2002'
         },
         {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
+            'number': 25,
+            'type': 'Atuação em partidas',
+            'player': 'Lothar Matthaus',
+            'team': 'Alemanha, 1982-1988'
         },
         {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
+            'number': 19,
+            'type': 'Mais participações',
+            'player': 'Brasil',
+            'team': ''
         },
         {
-            'number': 2217,
-            'type': 'Minutos jogados',
-            'player': 'Paolo Maldine',
-            'team': '(Itália, 1990-2002)'
+            'number': 12,
+            'type': 'Mais gols em uma partida',
+            'player': 'Osterreich vs Switzerland, 7-5, 1954',
+            'team': ''
+        },
+
+        {
+            'number': '10-1',
+            'type': 'Maior vitória',
+            'player': 'Magyarország vs El Salvador, 1982',
+            'team': ''
+        },
+        {
+            'number': 5,
+            'type': 'Mais vitórias',
+            'player': 'Brasil',
+            'team': ''
         }
     ],
     2: [
         {
+            'number': 3,
+            'type': 'Most wins',
+            'player': 'Pelé',
+            'team': '(Brazil, 1958/1962/1970'
+        },
+        {
+            'number': '17 years',
+            'type': 'Youngest player',
+            'player': 'Norman Whiteside',
+            'team': 'Northen Ireland vs Jugoslavija, 1982'
+        },
+        {
+            'number': '11 seconds',
+            'type': 'Fatest goal from kickof',
+            'player': 'Hakan Sukur',
+            'team': '(Turkie vs Korea Republic, 2002)'
+        },
+        {
+            'number': 13,
+            'type': 'Most goals in a tournament',
+            'player': 'Justin Fontaine',
+            'team': '(France, 1958)'
+        },
+
+         {
+            'number': '42 years',
+            'type': 'Oldest player',
+            'player': 'Roger Milla',
+            'team': '(Cameroun vs Russia, 1954)'
+        },
+
+         {
+            'number': 15,
+            'type': 'Most goals',
+            'player': 'Ronaldo',
+            'team': '(Brazil, 1998-2006)'
+        },
+
+         {
+            'number': 5,
+            'type': 'Most goals scored in a match',
+            'player': 'Oleg Salenko',
+            'team': '(Russia vs Cameroun, 1994)'
+        },
+        {
+            'number': 15,
+            'type': 'More Goals',
+            'player': 'Ronaldo',
+            'team': 'Brazil, 1998-2006'
+        },
+         {
             'number': 2217,
             'type': 'minutes played',
             'player': 'Paolo Maldine',
             'team': '(Italy, 1990-2002)'
         },
-        {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
+         {
+            'number': 25,
+            'type': 'Most matches played',
+            'player': 'Lothar Matthaus',
+            'team': '(Deutschland, 1982-1988)'
         },
         {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
+            'number': 19,
+            'type': 'Most appearances',
+            'player': 'Brasil',
+            'team': ''
         },
-        {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
+         {
+            'number': 12,
+            'type': 'Most goal scored in a match',
+            'player': '(Osterreich vs Switzerland 7-5, 1954)',
+            'team': ''
         },
-        {
-            'number': 2217,
-            'type': 'minutes played',
-            'player': 'Paolo Maldine',
-            'team': '(Italy, 1990-2002)'
+
+         {
+            'number': '10-1',
+            'type': 'Biggest Victory',
+            'player': '(Magyarország vs El Salvador), 1982',
+            'team': ''
+        },
+
+         {
+            'number': 5,
+            'type': 'Most wins',
+            'player': 'Brazil',
+            'team': ''
         }
+
+
     ],
-    3: [
+   
+   3 : [
+        {
+            "number" : 3,
+            'type' : 'La mayoría de las victorias',
+            'player': 'Pelé',
+            'team': '(Brasil, 1958/1962/1970'
+        },
+        {
+            "number" : 17 ,
+            'type': 'player más joven',
+            'player': 'Norman Whiteside',
+            'team': 'Northen Ireland vs Jugoslavija , 1982'
+        },
+        {
+            'number' : '11 segundos',
+            'type': 'meta fatest de kickof',
+            'player': 'Hakan Sukur',
+            'team': '( Turkie vs República de Corea , 2002 )'
+        },
+        {
+            "number" : 13,
+            'type': 'La mayoría de los goles en el torneo',
+            'player': 'Justin Fontaine',
+            'team': '(Francia, 1958 )'
+        },
+
+         {
+            'number' : '42 años',
+            'type': 'player más veterano',
+            'player': 'Roger Milla',
+            'team ': '( Camerún vs Rusia, 1954 )'
+        },
+
+         {
+            "number" : 15 ,
+            'type' : 'La mayoría de las metas',
+            'player' : 'Ronaldo',
+            'team': '(Brasil, 1998-2006)'
+        },
+
+         {
+            "number" : 5 ,
+            'type' : 'mayor number de goles en un partido' ,
+            'player': 'Oleg Salenko',
+            'team': '(Rusia vs Camerún, 1994 )'
+        },
+         {
+            "number" : 2217,
+            'type': 'minutos jugo', 
+            'player': 'Paolo Maldine',
+            'team': '(Italia, 1990-2002)'
+        },
+
+         {
+            "number" : 25 ,
+            'type': 'La mayoría de los partidos por jugadores',
+            'player':'Lothar Matthaus',
+            'team': '(Alemanha, 1982-1988)'
+        },
+
+        {
+            "number": 19 ,
+            'type': ' La mayoría de las apariencias',
+            'player': 'Brasil',
+            'team ':''
+        },
+         {
+            "number" : 12,
+            'type': 'meta más anotados en un partido' ,
+            'player': '( Osterreich vs Suiza 7-5, 1954 )' ,
+            'team':''
+        },
+
+         {
+            "number" : '10-1',
+            'type' : 'La victoria más grande',
+            'player': '(Magyarország vs El Salvador, 1982)', 
+            'team':''
+        },
         {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
+            'number': 15,
+            'type': 'Más gols',
+            'player': 'Ronaldo',
+            'team': 'Brasil, 1998-2006'
         },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        },
-        {
-            'number': 2217,
-            'type': 'Minutos jugado',
-            'player': 'Paolo Maldine',
-            'team': '(Italia, 1990-2002)'
-        }
-    ]
+         {
+            "number" : 5 ,
+            'type' : 'La mayoría de las victorias',
+            'player': 'Brasil',
+            'team':''
+        }
+
+    ]
 }
 
 // ########################################################################################
@@ -876,12 +1058,38 @@ home = {
             'img': 'images/banner.png'
         }
     ],
-    "culturalProgramming": {
-        "id": 1,
-        "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
-        "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
-        "img": "images/media/thumb-1.png"
-    },
+    "culturalProgramming": [
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        },
+        {
+            "id": 1,
+            "title": "OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.",
+            "describ": "Som é cantando por Claudia Leitte, Pitbull e Jennifer Lopez.",
+            "img": "images/media/thumb-1.png"
+        }
+    ],
     "nextMatches": [
         {
             "home": "Brasil",
@@ -1241,3 +1449,280 @@ photos = [
         'name': 'Torcida'
     }
 ]
+
+
+news = [
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    },
+    {
+        'day': '16/04',
+        'id': '1',
+        'title': 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+        'img': 'images/banner.png'
+    }
+]
+
+OITAVAS = [
+                {
+                    "home": "1º grupo A",
+                    "abbr_home": "1º A",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo B",
+                    "gols_visited": '',
+                    "abbr_visited": "2º B",
+                    "img_visited": "",
+                    "date": "Sábado 28/06",
+                    "local": 'Minerão - Belo Horizonte'
+                },
+                {
+                    "home": "1º grupo C",
+                    "abbr_home": "1º C",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo D",
+                    "gols_visited": '',
+                    "abbr_visited": "2º D",
+                    "img_visited": "",
+                    "date": "Sábado 28/06",
+                    "local": "Maracanã - Rio de Janeiro"
+                },
+                {
+                    "home": "1º grupo B",
+                    "abbr_home": "1º B",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo A",
+                    "gols_visited": '',
+                    "abbr_visited": "2º A",
+                    "img_visited": "",
+                    "date": "Domingo 29/06",
+                    "local": "Castelão - Fortaleza"
+                },
+                {
+                    "home": "1º grupo D",
+                    "abbr_home": "1º D",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo C",
+                    "gols_visited": '',
+                    "abbr_visited": "2º C",
+                    "img_visited": "",
+                    "date": "Domingo 29/06",
+                    "local": "Arena Pernanbuco - Recife"
+                },
+                {
+                    "home": "1º grupo E",
+                    "abbr_home": "1º E",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo F",
+                    "gols_visited": '',
+                    "abbr_visited": "2º F",
+                    "img_visited": "",
+                    "date": "Segunda-feira 30/06",
+                    "local": "Nacional de Brasília - Brasília"
+                },
+                {
+                    "home": "1º grupo G",
+                    "abbr_home": "1º G",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo H",
+                    "gols_visited": '',
+                    "abbr_visited": "2º H",
+                    "img_visited": "",
+                    "date": "Segunda-feira 30/06",
+                    "local": "Beira Rio - Porto Alegre"
+                },
+                {
+                    "home": "1º grupo F",
+                    "abbr_home": "1º F",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo E",
+                    "gols_visited": '',
+                    "abbr_visited": "2º E",
+                    "img_visited": "",
+                    "date": "Terça-feira 01/07",
+                    "local": "Arena São Paulo - São Paulo"
+                },
+                {
+                    "home": "1º grupo H",
+                    "abbr_home": "1º H",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º grupo G",
+                    "gols_visited": '',
+                    "abbr_visited": "2º G",
+                    "img_visited": "",
+                    "date": "Terça-feira 01/07",
+                    "local": "Fonte Nova - Salvador"
+                }
+            ]
+QUARTAS = [
+                {
+                    "home": "1º classificado",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "2º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Sexta-feira 04/07 ",
+                    "local": 'Castelão - Fortaleza'
+                },
+                {
+                    "home": "3º classificado",
+                    "abbr_home": "3",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "4º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "4",
+                    "img_visited": "",
+                    "date": "Sexta-feira 04/07 ",
+                    "local": "Maracanã - Rio de Janeiro"
+                },
+                {
+                    "home": "5º classificado",
+                    "abbr_home": "5",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "6º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "6",
+                    "img_visited": "",
+                    "date": "Sábado 05/07",
+                    "local": "Fonte Nova - Salvador"
+                },
+                {
+                    "home": "7º classificado",
+                    "abbr_home": "7",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "8º classificado",
+                    "gols_visited": '',
+                    "abbr_visited": "8",
+                    "img_visited": "",
+                    "date": "Sábado 05/07",
+                    "local": "Nacional de Brasília - Brasília"
+                }
+            ]
+SEMI = [
+            {
+                "home": "1º classificado",
+                "abbr_home": "1",
+                "gols_home": '',
+                "img_home": "",
+                "visited": "2º classificado",
+                "gols_visited": '',
+                "abbr_visited": "2",
+                "img_visited": "",
+                "date": "Terça-feira 08/07",
+                "local": 'Minerão - Belo Horizonte'
+            },
+            {
+                "home": "3º classificado",
+                "abbr_home": "3",
+                "gols_home": '',
+                "img_home": "",
+                "visited": "4º classificado",
+                "gols_visited": '',
+                "abbr_visited": "4",
+                "img_visited": "",
+                "date": "Quarta-feira 09/07 ",
+                "local": "Arena São Paulo - São Paulo"
+            }
+        ]
+FINAL = [
+                {
+                    "home": "Perdedor 1",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "Perdedor 2",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Sábado 12/07",
+                    "local": 'Nacional de Brasília - Brasília'
+                },
+                {
+                    "home": "Ganhador 1",
+                    "abbr_home": "1",
+                    "gols_home": '',
+                    "img_home": "",
+                    "visited": "Ganhador 2",
+                    "gols_visited": '',
+                    "abbr_visited": "2",
+                    "img_visited": "",
+                    "date": "Domingo 13/07",
+                    "local": 'Maracanã - Rio de Janeiro'
+                }
+            ]
+            
+
+finals = {
+    1: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+    2: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+    3: {
+        'oitavas': OITAVAS,
+        'quartas': QUARTAS,
+        'semi': SEMI,
+        'final': FINAL
+        },
+}
+
+show_news = {
+    'id': 1,
+    'img': 'images/banner.png',
+    'title_img': 'Imagem',
+    'date': '14/05',
+    'title': 'O Rio de Janeiro está pronto para receber os jogos mundiais.',
+    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
+}
+
+programming = {
+    'id': 1,
+    'img': 'images/media/thumb-1.png',
+    'title_img': 'Imagem',
+    'date': '14/05',
+    'title': 'OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.',
+    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
+}
+
+

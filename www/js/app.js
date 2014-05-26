@@ -30,6 +30,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/curiosity.html',
         controller: 'CuriosityCtrl'
       }).
+      when('/planeta-game', {
+        templateUrl: 'templates/game.html',
+        controller: 'GameCtrl'
+      }).
       when('/photo-fans', {
         templateUrl: 'templates/photo_fans.html',
         controller: 'PhotoFansCtrl'

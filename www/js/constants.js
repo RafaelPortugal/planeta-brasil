@@ -643,6 +643,7 @@ menu = {
         {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
         {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
     2: [
         {href: '#/home', title: 'Home', status: 'deactive'},
@@ -654,6 +655,7 @@ menu = {
         {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
         {href: '#/photo-fans', title: 'Photos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
     3: [
         {href: '#/home', title: 'Inicio', status: 'deactive'},
@@ -665,6 +667,7 @@ menu = {
         {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
         {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
 }
 
