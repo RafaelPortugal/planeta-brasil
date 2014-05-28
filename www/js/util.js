@@ -237,3 +237,74 @@ var fadeIn = function(idElement){
     s.display="block";
     (function fade(){(s.opacity+=0.1)<1?s.opacity=1:setTimeout(fade,40)})();
 };
+
+
+function validateEmail(email) { 
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+} 
+
+
+var loading = function() {
+    var body = document.getElementsByTagName('body')[0];
+    var floatingCircles = document.createElement('div');
+    floatingCircles.id = "floatingCirclesG";
+
+    var frotateG_01 = document.createElement('div');
+    frotateG_01.className = 'f_circleG';
+    frotateG_01.id = 'frotateG_01';
+    floatingCircles.appendChild(frotateG_01);
+
+    var frotateG_02 = document.createElement('div');
+    frotateG_02.className = 'f_circleG';
+    frotateG_02.id = 'frotateG_02';
+    floatingCircles.appendChild(frotateG_02);
+
+
+    var frotateG_03 = document.createElement('div');
+    frotateG_03.className = 'f_circleG';
+    frotateG_03.id = 'frotateG_03';
+    floatingCircles.appendChild(frotateG_03);
+
+
+    var frotateG_04 = document.createElement('div');
+    frotateG_04.className = 'f_circleG';
+    frotateG_04.id = 'frotateG_04';
+    floatingCircles.appendChild(frotateG_04);
+
+
+    var frotateG_05 = document.createElement('div');
+    frotateG_05.className = 'f_circleG';
+    frotateG_05.id = 'frotateG_05';
+    floatingCircles.appendChild(frotateG_05);
+
+
+    var frotateG_06 = document.createElement('div');
+    frotateG_06.className = 'f_circleG';
+    frotateG_06.id = 'frotateG_06';
+    floatingCircles.appendChild(frotateG_06);
+
+
+    var frotateG_07 = document.createElement('div');
+    frotateG_07.className = 'f_circleG';
+    frotateG_07.id = 'frotateG_07';
+    floatingCircles.appendChild(frotateG_07);
+
+
+    var frotateG_08 = document.createElement('div');
+    frotateG_08.className = 'f_circleG';
+    frotateG_08.id = 'frotateG_08';
+    floatingCircles.appendChild(frotateG_08);
+
+    overlaySpin = document.createElement('div');
+    overlaySpin.id = 'overlay-spin';
+
+    overlaySpin.appendChild(floatingCircles);
+
+    body.insertBefore(overlaySpin, body.firstChild);
+};
+
+var hideLoading = function() {
+    var el = document.querySelector('#overlay-spin');
+    el.parentNode.removeChild( el );
+};

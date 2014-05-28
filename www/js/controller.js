@@ -20,27 +20,46 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
     function ($scope, $http ) {
+        $scope.language = window.localStorage.getItem('language');
         if (window.localStorage.getItem('language') == 2) {
             $scope.passaport = "passaport";
             $scope.login = "Login";
             $scope.advance = "Next";
-            $scope.skip = "Skip this step";
-            $scope.or = "or";
+            $scope.full_name = "Full name";
         } else if(window.localStorage.getItem('language') == 3) {
             $scope.passaport = "pasaporte";
             $scope.login = "Login";
             $scope.advance = "Próximo";
-            $scope.skip = "Omitir este paso";
-            $scope.or = "o";
+            $scope.full_name = "nombre completo";
         } else {
             $scope.passaport = "Passaporte";
             $scope.login = "Identifique-se";
             $scope.advance = "Avançar";
-            $scope.skip = "Pular essa etapa";
-            $scope.or = "ou";
+            $scope.full_name = "nome completo";
         };
-        $scope.$on('$viewContentLoaded', function() {
-        });
+        $scope.errors = {
+            '1': {
+                'full_name_short': 'O nome precisa ter mais que 5 dígitos.',
+                'full_name_long': 'O nome precisa ter menos que 20 dígitos.',
+                'email': 'Email inválido'
+            },
+            '2': {
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'email': 'Email inválido'
+            },
+            '3': {
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'email': 'Email inválido'
+            }
+        }
+        $scope.submitForm = function(){
+            window.localStorage.setItem('email', $scope.email);
+            window.localStorage.setItem('full_name', $scope.full_name_form);
+            console.log('Fazer o post com o nome e email e o id do telefone.');
+            window.location.href = "#loading";
+        };
     }]
 );
 
