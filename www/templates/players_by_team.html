@@ -61,6 +61,23 @@
 	.group-players ul{
 		font-weight: lighter;
 	}
+
+		.back {
+		text-align: center;
+	}
+	.back button, .back a {
+		display: inline-block;
+		background: #f9cb11;
+		border: 0;
+		border-radius: 15px;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1.2em;
+		color: #003e66;
+	}
+					
 </style>
 <menu id="nav-left">
     <ul>
@@ -82,7 +99,6 @@
 			<div class="team">
 				<span class="Group">{{group}} {{letter_group}}</span>
 				<h2><img src="{{img}}" alt="{{team_name}}"></h2>
-				<button onclick="window.history.back()">Voltar</button>
 			</div>
 
 			<div ng-repeat="player in players" class="group-players">
@@ -90,6 +106,9 @@
 				<ul>
 					<li ng-repeat="p in player[1]">{{p}}</li>
 				</ul>
+			</div>
+			<div class="back">
+				<button onclick="window.history.back()">Voltar</button> 
 			</div>
 		</div>
 	</div>
