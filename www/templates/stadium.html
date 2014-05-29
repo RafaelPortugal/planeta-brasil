@@ -73,6 +73,22 @@
 	.stadium .descrition {
 		margin-bottom: 20px;
 	}
+	.back {
+		text-align: center;
+	}
+	.back button, .back a {
+		display: inline-block;
+		background: #f9cb11;
+		border: 0;
+		border-radius: 15px;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1.2em;
+		color: #003e66;
+	}
+
 </style>
 <menu id="nav-left">
     <ul>
@@ -103,6 +119,9 @@
 					<p class="city">{{stadium.district}}</p>
 					<h3>{{stadium.name}}</h3>
 					<p class="descrition" ng-repeat="describ in stadium.description[language]">{{describ}}</p>
+					<div class="back">
+						<button onclick="window.history.back()">Voltar</button> 
+					</div>
 				</div>
 			</div>
 		</div>	
