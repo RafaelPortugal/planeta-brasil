@@ -451,7 +451,15 @@ stadiums = {
                 "De cara nova para o Mundial, o estádio que ficou conhecido como “Maior do Mundo” – chegou a receber 200 mil torcedores e detém vários dos maiores recordes de público da história do futebol – tem agora capacidade para 73.531 espectadores e continua sendo o maior do país. Respeitando sua concepção original, o projeto de reforma incluiu a demolição total do anel inferior para a construção de uma nova arquibancada com melhor visibilidade, a maximização das rampas monumentais e a substituição de todos os assentos, além da instalação de uma nova cobertura, que captará água da chuva para reuso. A fachada, tombada pelo Instituto do Patrimônio Histórico e Artístico Nacional, permanecerá intacta.",
 
                 "Segundo ponto turístico mais visitado do Rio de Janeiro, o Maracanã não deixou de receber apaixonados por futebol de todas as partes do mundo durante as obras. Os visitantes puderam acompanhar a movimentação dos operários da Torre de Vidro, criada especialmente para a ocasião, e até levar para casa um pedaço do estádio como lembrança."],
-            2: ["Falta traduzir"],
+            2: ["Built for the 1950 FIFA World Cup Brazil™, the Estadio Jornalista Mario Filho, better known as the Maracana, provided the venue for that year’s truly memorable decider between the host nation and Uruguay, one of the most dramatic chapters in the history of the competition.",
+
+                "The Rio de Janeiro stadium will be in the limelight once again at Brazil 2014, hosting seven games in all, more than any other venue. Among those matches will be the Final on 13 July.",
+
+                "Once the largest stadium in the world, packing in crowds of up to 200,000 – among the highest attendances ever seen in the history of the game – the Maracana now has a reduced capacity of 74,698 for Brazil 2014. It remains, nevertheless, the country\’s biggest football ground.",
+
+                "Respecting the original layout of the stadium, the project for its refurbishment included the demolition of the lower ring of seats, the construction of a new ring offering improved visibility, the expansion of the access ramps and the replacement of all seating. The stadium is also be fitted with a new roof complete with a rainwater collection system. The facade, which has been listed by the National Institute of Historical and Artistic Heritage, remains untouched.",
+
+                "Rio\’s second most popular tourist attraction, the Maracana continued to attract football fans from all over the world, even as it underwent renovation. Visitors to the stadium could watch work unfold from the Torre de Vidro (Glass Tower), built especially for the occasion, and could even take a piece of the old stadium away with them as a souvenir."],
             3: ["Falta traduzir"],
     },
         "district": "Rio de Janeiro",
@@ -468,9 +476,9 @@ stadiums = {
                 "A atmosfera e a empolgação no estádio em dias de jogo do \"Galo\" e da \"Raposa\" são contagiantes, assim como quando a Seleção entra em campo,  inclusive em duas edições recentes do superclássico Brasil x Argentina (em 2004 e 2008, pelas eliminatórias para a Copa do Mundo da FIFA™). Grandes atacantes como Ronaldo, Tostão, Reinaldo e Dario já tiveram o estádio como sua vitrine."
                 ],
             2: ["The modernization project included the lowering of the field, improvement in accessibility and other issues, always guided by principles of sustainability - taking into account, for example, the reuse of rainwater with a storage capacity of up to 6.27 million liters.",
-    "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
+                "One of the temples of Brazilian football, the national home multicampeões Atlético Mineiro and Cruzeiro, the arena, with capacity for 57,483 spectators, is completely renovated to receive six games of the FIFA World Cup Brazil 2014 ™, including a semifinal showdown.",
                 "Located in the Pampulha neighborhood and opened on December 5, 1965, the stadium belongs to the state government of Minas Gerais, with the official name Estádio Governador Magalhães Pinto.But what is certain is that for 'Mineirão' that fans will ask during the tournament.",
-    "The atmosphere and excitement in the stadium on the day of 'Rooster' and 'Fox' game are contagious, just like when the squad takes the field, including two recent editions of Superderby Brazil x Argentina ( in 2004 and 2008, by qualifying for the FIFA World Cup ™ ).Great strikers like Ronaldo, Penny, Reinaldo and Dario have had the stadium as its showcase."],
+                "The atmosphere and excitement in the stadium on the day of 'Rooster' and 'Fox' game are contagious, just like when the squad takes the field, including two recent editions of Superderby Brazil x Argentina ( in 2004 and 2008, by qualifying for the FIFA World Cup ™ ).Great strikers like Ronaldo, Penny, Reinaldo and Dario have had the stadium as its showcase."],
             3: ["El proyecto de modernización incluye la reducción del campo, la mejora de la accesibilidad y de otros temas, siempre guiados por los principios de la sostenibilidad - teniendo en cuenta, por ejemplo, la reutilización de las aguas pluviales con una capacidad de almacenamiento de hasta 6.270.000 de litros.",
                 "Uno de los templos del fútbol brasileño, los multicampeões caseros nacionales Atlético Mineiro y Cruzeiro, la arena, con capacidad para 57.483 espectadores, se ha redecorado completamente para recibir seis partidos de la Copa Mundial de la FIFA Brasil 2014 ™, incluyendo un enfrentamiento semifinal.",
                 "Situado en el barrio de Pampulha y abrió el 5 de diciembre de 1965, el estadio pertenece al gobierno del estado de Minas Gerais, con el nombre oficial Estádio Governador Magalhães Pinto. Pero lo cierto es que para 'Mineirão' que los fans van a hacer durante el torneo.",
@@ -488,7 +496,13 @@ stadiums = {
 
                 "As águas da chuva, por exemplo, serão armazenadas para uso posterior nos banheiros ou para a irrigação do gramado. Já a luz solar, abundante nesta parte do país, deverá gerar energia limpa e renovável. Por fim, algumas paredes vegetais contribuirão para a redução dos gastos de energia e, sobretudo, para o controle da temperatura dentro do estádio.",
                 "A Arena Amazônia terá 42.377 lugares, restaurantes, estacionamento subterrâneo e um acesso por meio de um corredor de ônibus e monotrilho. Ela receberá quatro jogos de primeira fase da Copa do Mundo da FIFA 2014™ e servirá posteriormente como um grande pólo de atração turística para shows e eventos na região."],
-            2: ["Falta traduzir"],
+            2: ["Though not a traditional hotbed of Brazilian football, Manaus is sure to be popular with fans attending the 2014 FIFA World Cup Brazil™ thanks to the unique character of the Arena Amazonia, formerly the Estadio Vivaldao.",
+
+                "The city is situated at the heart of the Amazon rainforest, the largest tropical rainforest in the world and the inspiration for the refurbished stadium, which will be enclosed by a metal structure designed to resemble a straw basket, a product the region is famous for.",
+
+                "This sustainable stadium project will provide an important legacy for the region and play its part in helping to preserve the diversity of the Amazonian rainforest. For example, rainwater will be collected for its subsequent use in toilets or to water the pitch, while the region’s abundant supply of sunshine will be harnessed to generate clean and renewable energy. Plant screens will also be created to keep energy costs down and, above all, to control temperatures inside the stadiums.",
+
+                "As well as seating for 39,118 spectators, the Arena Amazonia will feature restaurants and underground parking and will be served by dedicated bus and monorail services. The venue for four group-phase matches at Brazil 2014, the stadium will continue to attract tourists after the tournament by hosting concerts and cultural events."],
             3: ["Falta traduzir"],
     },
         "district": "Manaus",
@@ -503,7 +517,11 @@ stadiums = {
                 "Não foi de surpreender, portanto, que a casa do Atlético Paranaense, construída em sua versão original em 1914, estivesse entre as escolhidas para sediar a Copa do Mundo da FIFA Brasil 2014™.  ",
 
                 "Para receber o evento, o estádio passará por mais uma fase de obras – prevista para terminar em dezembro de 2012 -, durante a qual receberá uma série de adaptações e em que será construído mais um lance de arquibancadas paralelas ao campo. A capacidade será aumentada assim para 40 mil pessoas, para que o estádio possa abrigar quatro jogos do Mundial de 2014."],
-            2: ["Falta traduzir"],
+            2: ["Ever since renovation works were completed in June 1999, the historic Estadio Joaquim Americo – better known as the Arena da Baixada – has been considered one of Brazil’s most modern and best-appointed stadiums.",
+
+            "It came as no surprise, therefore, that the home ground of Atletico Paranaense, which was originally constructed back in 1914, was among those venues chosen to host games at the 2014 FIFA World Cup™.",
+
+            "Prior to welcoming the global showpiece, however, the stadium will undergo another set of renovation works which are due for completion in December 2012. Included in this process are a series of improvements in facilities and the addition of rows of extra seats parallel to the pitch. This will result in an increased capacity of 38,533, with the stadium set to welcome four matches at Brazil 2014."],
             3: ["Falta traduzir"],
     },
         "district": "Curitiba",
@@ -519,7 +537,14 @@ stadiums = {
 
                 "O projeto de construção do estádio – cujo término está previsto para o início de 2014 – prevê o fomento à Zona Leste, uma das regiões da capital paulista mais carentes de recursos, onde vivem quase 4 milhões de pessoas, e a qualificação profissional de centenas de trabalhadores. No total, cerca de seis mil pessoas devem ser empregadas direta e indiretamente ao longo do período de construção.",
                 "A Arena de São Paulo foi a escolhida para receber a partida de abertura da Copa do Mundo da FIFA Brasil 2014™, e abrigará ainda outros cinco jogos, entre os quais uma das semifinais."],
-            2: ["Falta traduzir"],
+            2: ["Of the three biggest clubs in Sao Paulo, the only one which previously did not own a stadium with the necessary size and infrastructure to host games was the city’s best-supported side: Sport Club Corinthians Paulista.",
+
+            "Yet this long-yearned for dream of the Corinthians faithful will finally come true ahead of the 2014 FIFA World Cup™ in the shape of the Arena de Sao Paulo. Under construction in the neighbourhood of Itaquera, which is in the city’s Eastern Zone and a traditional Corintianos stronghold, the project is scheduled to be completed by early 2014.",
+
+            "The stadium works are also expected to boost development in the Eastern Zone, which is one of Sao Paulo’s most deprived areas and home to nearly four million people, as well as ensuring hundreds of workers gain professional qualifications. A total of close to 6,000 people will be employed either directly or indirectly over the course of the construction process.",
+
+            "The Arena de Sao Paulo has been chosen to host the Opening Match of Brazil 2014 and will also welcome five other encounters, including one semi-final. Its capacity will be 61,606."],
+
             3: ["Falta traduzir"],
     },
         "district": "São Paulo",
@@ -534,7 +559,14 @@ stadiums = {
                 "Inaugurado em 28 de janeiro de 1951, o estádio da capital baiana foi utilizado até novembro de 2007 e três anos depois foi demolido. A novíssima Arena Fonte Nova teve as características originais mantidas e ganhou uma cobertura com estrutura metálica leve, além de um restaurante panorâmico e um museu do futebol. O complexo passará a abrigar muito mais do que partidas de futebol: prédios que comportarão estacionamento, shopping, hotéis e uma casa de shows fazem parte do projeto, que seguiu um modelo de parceria público-privada.",
 
                 "A nova estrutura certamente está à altura das partidas que serão disputadas no gramado da Fonte Nova. Três dos quatro duelos que acontecerão no estádio durante a primeira fase terão como protagonistas cabeças de chave de seus grupos. A capital baiana ainda receberá uma partida eliminatória das oitavas de final e uma das quartas de final."],
-            2: ["Falta traduzir"],
+            2: ["The first capital city in Brazil’s history, Salvador will welcome the 2014 FIFA World Cup Brazil™ at a new, purpose-built stadium with a capacity of 51,708. The new arena will host six games at the tournament and has been constructed on the site of the Fonte Nova.",
+
+            "Officially known as the Estadio Octavio Mangabeira, the Fonte Nova was opened on 28 January 1951 and was the venue for many a derby between Salavador’s Esporte Clube Bahia and Esporte Clube Vitoria. It was closed in November 2007 and subsequently demolished three years later.",
+
+            "The stadium that has risen in its place, the Arena Fonte Nova, has been modelled on its predecessor and is covered by a lightweight, metal roof. A public-private joint venture, the complex will house a panoramic restaurant, museum of football, car parks, shops, hotels and a concert hall.",
+
+            "Maintaining the proud tradition of the Fonte Nova, the new stadium will host four group matches, three of them featuring top-seeded teams, as well as a Round-of-16 match and a quarter-final tie."],
+
             3: ["Falta traduzir"],
     },
         "district": "Salvador",
@@ -549,7 +581,11 @@ stadiums = {
                 "Essa orientação está voltada para cada detalhe: a madeira usada na edificação é certificada, e os resíduos e entulhos passam por um processo de reciclagem e reaproveitamento na própria obra e em suas vias de acesso. A qualidade do ar também é constantemente monitorada, assim como a do solo. Desta forma, o apelido \"Verdão\" dificilmente vai ser esquecido. ",
 
                 "Especialmente construída para o torneio, a Arena Pantanal terá capacidade para 42.968 espectadores, ocupando o terreno em que antes estava o Estádio José Fagelli, e vai acolher quatro partidas do Brasil 2014. Esse espaço multiuso terá, no entanto, uma estrutura modelar, que poderá ser reduzida depois do Brasil 2014.  Coberta, ela poderá receber eventos diversificados, como shows, exposições e feiras. Clubes tradicionais como o Mixto e o Operário também podem aproveitar essa estrutura."],
-            2: ["Falta traduzir"],
+            2: ["Given that the stadium in Cuiaba set to host matches at the 2014 FIFA World Cup™ neighbours the flora- and fauna-rich region that is the Pantanal, it is no surprise that sustainability has been a central theme of the construction and maintenance of the new arena from the project’s very beginning.",
+
+            "This sustainable approach has been applied to every detail along the way, with the wood used in the construction coming from certified sources and the waste and rubbish produced being recycled – thus enabling them to be reused within the building project and its access routes. The site’s air and soil quality is also constantly monitored, all of which means the stadium’s nickname of \‘O Verdão\’ (The Big Green) is particularly appropriate.",
+
+            "Specially built for Brazil 2014 – when it will host four matches – the Arena Pantanal will boast a capacity of 39,859 and will occupy the site where the Estadio Jose Fragelli used to be. This multi-purpose stadium will have an adaptable structure, which can be reduced in size once Brazil 2014 is over. The covered arena is thus an ideal setting to host a variety of events such as shows, exhibitions and trade fairs, while local clubs such as Mixto and Operario may also take advantage of the new venue."],
             3: ["Falta traduzir"],
     },
         "district": "Cuiabá",
@@ -564,7 +600,12 @@ stadiums = {
                 "A arena, cercada por outros empreendimentos, fica localizada em São Lourenço da Mata, na zona metropolitana da cidade, a 19 km do Aeroporto Internacional dos Guararapes. O projeto é visto como uma alavanca econômica para a expansão da Grande Recife, em uma região considerada carente. Estima-se que o local se desenvolva em um bairro com cerca de cinco mil unidades residenciais. ",
 
                 "Com capacidade para 42.849 pessoas e construída por meio de uma parceria público-privada, a Arena Pernambuco passa a acolher partidas do Náutico, depois de acordo fechado com o clube alvirrubro em outubro de 2011."],
-            2: ["Falta traduzir"],
+            2: ["Recife, a city whose passion for the beautiful game is without question, is home to three historic Brazilian clubs in the shape of Nautico, Santa Cruz and Sport. And, having already hosted one match at the 1950 FIFA World Cup Brazil™ (Chile’s 5-2 win over USA at the Ilha do Retiro stadium), the city has gained a brand-new arena in time to host five matches at Brazil 2014.",
+
+            "The Arena Pernambuco, which is part of a complex also featuring restaurants, shopping centres and cinemas, is located in Sao Lourenco da Mata in Recife’s metropolitan zone, just 19km away from Guararapes International Airport. The project is seen as an economic catalyst for the continued expansion of Grande Recife, within an area which is considered to be economically deprived. It is also estimated that the area will expand into a neighbourhood including nearly 5,000 homes.",
+
+            "With room for 42,583 spectators and constructed by means of a partnership between the public and private sector, the Arena Pernambuco now hosts Nautico’s games – following the agreement reached with the club in October 2011."],
+
             3: ["Falta traduzir"],
     },
         "district": "Recife",
@@ -578,7 +619,12 @@ stadiums = {
 
                 "Maior estádio da região Sul do país, o “Gigante do Beira-Rio”, batizado Estádio José Pinheiro Borda, foi inaugurado em 1969 depois de quase uma década de obras em que a participação da torcida do Inter foi efetiva: os colorados contribuíram com tijolo, cimento e ferro, e alguns chegaram a deixar o Estádio dos Eucaliptos quando o time ia mal para “torcer” pelos pedreiros que trabalhavam no Beira-Rio.",
                 "O projeto de modernização do Beira-Rio, custeado pelo próprio Internacional através do programa “Gigante para Sempre”, tem como ponto alto a instalação de uma inovadora cobertura metálica que protegerá os assentos, as rampas e o acesso aos portões. O projeto modular foi adotado para garantir a agilidade da construção, dividida em etapas, e evitar a interdição do estádio durante as obras. Depois da reforma, o Beira-Rio terá capacidade para 50.287 espectadores."],
-            2: ["Falta traduzir"],
+            2: ["Located in a picture-postcard setting, on reclaimed land on the banks of the River Guaiba, the Estadio Beira-Rio is the home of Internacional, arch-rivals to their Porto Alegre neighbours Gremio. The venue of many a thrilling city derby and no fewer than four Copa Libertadores finals, the stadium is now preparing to host five games at the 2014 FIFA World Cup Brazil™, among them a Round-of-16 tie.",
+
+            "The largest football ground in the south of Brazil and nicknamed the “Gigante do Beira-Rio” (The Giant of Beira-Rio), the stadium is officially known as the Estadio Jose Pinheiro Borda and was opened in 1969. It had taken nearly a decade to build, with Inter fans lending a helping hand in its construction by donating bricks, cement and iron. So anxious were some supporters to see the ground built that they would even leave games at the club’s existing ground, Estadio dos Eucaliptos, whenever the team was losing and head to the Beira-Rio to cheer the builders on.",
+
+            "The cost of revamping the stadium is being met by the club itself through the programme \“Gigante para Sempre\” (A Giant for all time). The main feature of the project is the installation of an innovative metal roof to cover the stands, ramps and turnstile areas. The construction project has been divided into different phases, the idea being to enable its continued use during its refurbishment, at the end of which the Beira-Rio will have a capacity of 42,991."],
+
             3: ["Falta traduzir"],
     },
         "district": "Porto Alegre",
@@ -593,7 +639,16 @@ stadiums = {
                 "Construído em 1973, o Estádio Governador Plácido Castelo, conhecido popularmente como Castelão, foi inteiramente reformado para acolher confortavelmente públicos de até 58.704 pessoas. A arena ganhou um estacionamento coberto com 1.900 vagas e conta com estrutura de camarotes, área VIP, setor de imprensa, zona mista e vestiários totalmente renovados. Todos os assentos são protegidos por uma cobertura, mesmo aqueles situados no anel inferior, mais próximo ao gramado.",
                 "O que também muda no Castelão é o acesso. Com a construção de quatro corredores exclusivos de ônibus, de uma linha de VLT (Veículo Leve sobre Trilhos) e de duas estações de metrô, o torcedor tem muito mais facilidade de locomoção, tanto para os jogos como para os restaurantes, cinemas, hotel e o centro olímpico que devem fazer parte do complexo.",
                 "Tudo isso, somado à grande expectativa do torcedor, deve fazer do Castelão um dos palcos mais animados nos dois grandes eventos de 2013 e 2014. Na Copa do Mundo da FIFA™, ele será a casa da Seleção Brasileira no segundo jogo da primeira fase, com certeza de apoio maciço como o registrado em março de 2002, no jogo que marcou a volta do atacante Ronaldo aos gramados antes do Mundial do Japão/Coreia do Sul."],
-            2: ["Falta traduzir"],
+            2: ["The people of Fortaleza have a passion for the game as well as the city’s two biggest clubs, Ceara and Fortaleza. And it is an attachment that can only grow with the remodelling of the city’s main football stadium, the Castelao. ",
+
+            "Built in 1973 and officially known as the Estadio Governador Placido Castelo, the Castelao is home to both teams and has been entirely renovated to host matches at the FIFA Confederations Cup Brazil 2013 and the 2014 FIFA World Cup Brazil™.  ",
+
+            "As well as having its capacity increased to 60,348, the revamped stadium will boast an underground car park with 1,900 spaces, executive boxes, a VIP area, media centre, mixed zone and fully refurbished dressing rooms. In addition, a new roof now covers all its tiers, including the pitchside ring of seating.",
+
+            "Access to the Castelao has also been upgraded, with the creation of four exclusive bus lanes, an LRV (light rail vehicle) line and two metro stations, making it far easier for fans to reach the stadium and the complex it will form part of, which will house restaurants, cinemas, a hotel and an Olympic centre.",
+
+            "The Castelao is the venue for A Seleção’s second group match at Brazil 2014. The support the home favourites receive is sure to be every bit as fervent as it was when they ran out there for a March 2002 friendly against Yugoslavia, the game that marked Ronaldo’s long-awaited return to action in the build-up to Brazil’s triumph at the 2002 FIFA World Cup Korea/Japan."],
+
             3: ["Falta traduzir"],
     },
         "district": "Fortaleza",
@@ -607,7 +662,12 @@ stadiums = {
 
                 "Para que a capital potiguar se tornasse uma das 12 sedes da Copa do Mundo da FIFA Brasil 2014™, porém, era necessária uma estrutura maior e mais moderna. A solução encontrada foi demolir completamente tanto o Machadão quanto o ginásio anexo Humberto Nesi, conhecido como Machadinho.",
                 "O resultado é o projeto do Estádio das Dunas, cuja referência a uma das atrações naturais mais impressionantes da região de Natal não se limita ao nome, mas também à ousada construção ondulada que imita dunas de areia."],
-            2: ["Falta traduzir"],
+            2: ["Ever since it was inaugurated back in 1972, the Estadio Joao Claudio de Vasconcelos Machado – better known as the Machadão – has welcomed the biggest clashes in Natal football to the Lagoa Nova neighbourhood. The three leading teams in Natal, the capital of Rio Grande do Norte state, are ABC, Alecrim and America, who last appeared in Brazil’s top flight – Serie A – in 1985, 1986 and 2007 respectively.",
+
+            "However, in order for Natal to become one of the 12 Host Cities at the 2014 FIFA World Cup™, a bigger and more modern venue was required. The solution settled upon was to completely demolish both the Machadão and the neighbouring Humberto Nesi sports hall, known as the Machadinho.",
+
+            "Rising up on the site is the Estadio das Dunas stadium project, with its name relating to the sand dunes that are one of the most impressive natural attractions in the Natal region. Nor do the similarities end there, with the stadium’s daring undulating structure designed to imitate said dunes. Its capacity will be 38,958."],
+
             3: ["Falta traduzir"],
     },
         "district": "Natal",
@@ -622,7 +682,16 @@ stadiums = {
                 "O antigo estádio Mané Garrincha, praticamente demolido, deu lugar a uma arena que conta com uma nova fachada, com cobertura em estrutura metálica, novas arquibancadas e um gramado rebaixado para permitir uma visão completa do jogo. Com projeto de construção ecologicamente correto, voltada à emissão zero de carbono, à reciclagem e ao acesso total por meio do transporte público, ela serve para consolidar o nome da capital como referência mundial em planejamento sustentável, deixando um legado importante outros setores da economia local.",
                 "O Estádio Nacional de Brasília foi aprovado para receber a abertura da Copa das Confederações da FIFA 2013™, além de sete outras partidas da Copa do Mundo da FIFA 2014™, incluindo uma de quartas de final.",
                 "Este será o terceiro estádio da capital brasileira, somando-se ao Serejão, casa do Brasiliense, e ao Bezerrão, que foi recentemente reformado e reinaugurado em 2008. Após a Copa, a ideia é que a arena seja usada para shows e espetáculos culturais de grande porte."],
-            2: ["Falta traduzir"],
+            2: ["Few Brazilian cities can match the capital Brasilia when it comes to architecture, and the imposing Estadio Nacional Mane Garrincha is a reflection of that, an arena with seating for 69,432 spectators, making it the second largest of the stadiums hosting matches at the 2014 FIFA World Cup Brazil™.",
+
+            "The city’s Estadio Nacional has been all but demolished to make way for the stadium, which boasts a new facade, metal roof and stands, as well as a lowered pitch enabling unobstructed views from every seat.",
+
+            "Founded on carbon neutrality, recycling and complete access via public transport, this environmentally friendly construction project consolidates Brasilia’s status as a world leader in sustainable urban planning, creating a valuable legacy for other sectors of the local economy. ", 
+
+            "The Estadio Nacional will host the Opening Match at the FIFA Confederations Cup Brazil 2013 and seven games at the 2014 FIFA World Cup Brazil, one of them a quarter-final tie. ", 
+
+            "The stadium will be Brasilia\’s third, along with the Serejao, the home of Brasiliense, and the Bezerrao, which was recently refurbished and reopened in 2008. Following the world finals the arena will be used to host concerts and major cultural events."],
+
             3: ["Falta traduzir"],
     },
         "district": "Brasília",
@@ -635,39 +704,42 @@ stadiums = {
 menu = {
     1: [
         {href: '#/home', title: 'Início', status: 'deactive'},
-        {href: '#/news', title: 'Notícias', status: 'deactive'},
+        // {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/photo-fans', title: 'Torcida que vibra', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
+        {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
+        {href: '#/news', title: 'Notícias', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jogadores', status: 'deactive'},
         {href: '#/stadiums', title: 'Estádios', status: 'deactive'},
-        {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
-        {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
-        {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
-        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
     2: [
         {href: '#/home', title: 'Home', status: 'deactive'},
-        {href: '#/news', title: 'News', status: 'deactive'},
+        // {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/photo-fans', title: 'Photos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
+        {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
         {href: '#/table-games', title: '1ª Phase', status: 'deactive'},
+        {href: '#/news', title: 'News', status: 'deactive'},
         {href: '#/finals', title: 'Phase final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Players', status: 'deactive'},
         {href: '#/stadiums', title: 'Stadiums', status: 'deactive'},
-        {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
-        {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
-        {href: '#/photo-fans', title: 'Photos', status: 'deactive'},
-        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
     3: [
         {href: '#/home', title: 'Inicio', status: 'deactive'},
-        {href: '#/news', title: 'Noticias', status: 'deactive'},
+        // {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
+        {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
+        {href: '#/news', title: 'Noticias', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jugadores', status: 'deactive'},
         {href: '#/stadiums', title: 'Estadios', status: 'deactive'},
-        {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
-        {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
-        {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
-        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
     ],
 }
 

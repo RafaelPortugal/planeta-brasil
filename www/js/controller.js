@@ -138,6 +138,32 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
     }]
 );
 
+planetaBrasilControllers.controller('FacebookCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
+        $scope.$on('$viewContentLoaded', function() {
+            swipe_menu();
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
 planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
@@ -761,7 +787,19 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
         //$scope.home = home;
-
+        $scope.locals = [{
+            'title': 'Trilha da Pedra da Gavea',
+            'img': 'images/language-br.png'
+            },
+            {
+            'title': 'Trilha da Pedra da Gavea',
+            'img': 'images/language-br.png'
+            },
+            {
+            'title': 'Trilha da Pedra da Gavea',
+            'img': 'images/language-br.png'
+            },
+        ]
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
@@ -834,6 +872,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                 back_element(elemets_banner);
                 e.preventDefault();
             });
+            alert('final');
         });
         
         $scope.showProgramming = function(id_programming) {

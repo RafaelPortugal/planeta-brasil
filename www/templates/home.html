@@ -221,6 +221,26 @@
 	.menu-active #cultural-programming {
 		position: initial !important;
 	}
+	.locals {
+		background: #e2e2c7;
+	}
+	.local {
+		margin: 10px;
+		vertical-align: top;
+		font-size: 2.5em;
+		line-height: 1.2em;
+		padding-left: 60px;
+		position: relative;
+		border-bottom: 1px solid gray;
+		min-height: 60px;
+	}
+	.local img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50px;
+	}
+
 </style>
     <menu id="nav-left">
         <ul>
@@ -333,7 +353,16 @@
 						    </div>
 						</article>
 					</div>
+					
 
+					<div class="bronw">
+						<h2><div class="text-title">Locais Interessantes</div></h2>
+						<div class="locals">
+							<div class="news-block local" ng-repeat='local in locals'>
+								<h3><img src="{{local.img}}" alt="{{local.title}}"> {{local.title}}</h3>
+							</div>
+						</div>
+					</div>				
 					<div class="matches">
 						<h2><div class="border border-left"></div> Próximos jogos <div class="border border-right"></h2>
 						<article id="next-macth" class="left-menu">

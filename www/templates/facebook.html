@@ -1,0 +1,25 @@
+<style>
+	iframe {
+		overflow:hidden;
+		height:100%;
+		width:100%;
+		padding-top: 52px;
+		padding-top: 46px;
+	}
+</style>
+
+<menu id="nav-left">
+    <ul>
+        <li ng-repeat="item in items" class="{{item.status}}"><a href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+    </ul>
+</menu>
+<header>
+	<button class="menu"></button>
+	<h1>Planeta Brasil</h1>
+</header>
+<div class="base">
+	<iframe src="https://m.facebook.com/planetabrasiloficial/?output=embed" frameborder="0" height="80%"></iframe>
+</div>	
+<div id="footer-fixed">
+	<span>BRASIL BEYOND BRAZIL</span>
+</div>

@@ -66,6 +66,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/table_games.html',
         controller: 'TableGamesCtrl'
       }).
+      when('/facebook', {
+        templateUrl: 'templates/facebook.html',
+        controller: 'FacebookCtrl'
+      }).
       when('/finals', {
         templateUrl: 'templates/finals.html',
         controller: 'FinalsCtrl'

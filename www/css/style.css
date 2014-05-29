@@ -609,7 +609,7 @@ menu {
 }
 
 /*
-   Com a classe menu-active na tag HTML
+   Com ae menu-active na tag HTML
 */
 .menu-active menu {
     -webkit-transform: translateX(0);
