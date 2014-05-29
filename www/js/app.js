@@ -82,6 +82,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/world_championship.html',
         controller: 'WorldChampionshipCtrl'
       }).
+      when('/we-are', {
+        templateUrl: 'templates/we_are.html',
+        controller: 'WeAreCtrl'
+      }).
       otherwise({
         redirectTo: function() {
           if (window.localStorage.getItem('language')){

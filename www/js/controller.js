@@ -462,6 +462,45 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
 
     }]
 );
+planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
+        $scope.items = $rootScope.items;
+        language = localStorage.getItem('language');
+
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+
+       var api_url = API_ROOT_URL + '/api/we-are/' + '?lang=' + language;
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.we_are = data[language];
+          }).
+          error(function(data, status, headers, config) {
+            $scope.we_are = we_are[language];
+        });
+
+    }]
+);
 
 
 planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',

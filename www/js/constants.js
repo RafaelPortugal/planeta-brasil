@@ -764,39 +764,39 @@ stadiums = {
 menu = {
     1: [
         {href: '#/home', title: 'Início', status: 'deactive'},
-        // {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/we-are', title: 'Quem Somos', status: 'deactive'},
         {href: '#/photo-fans', title: 'Torcida que vibra', status: 'deactive'},
         {href: '#/planeta-game', title: 'Game', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
-        {href: '#/news', title: 'Notícias', status: 'deactive'},
+        // {href: '#/news', title: 'Notícias', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jogadores', status: 'deactive'},
         {href: '#/stadiums', title: 'Estádios', status: 'deactive'},
     ],
     2: [
         {href: '#/home', title: 'Home', status: 'deactive'},
-        // {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/we-are', title: 'Who we', status: 'deactive'},
         {href: '#/photo-fans', title: 'Photos', status: 'deactive'},
         {href: '#/planeta-game', title: 'Game', status: 'deactive'},
         {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
         {href: '#/table-games', title: '1ª Phase', status: 'deactive'},
-        {href: '#/news', title: 'News', status: 'deactive'},
+        // {href: '#/news', title: 'News', status: 'deactive'},
         {href: '#/finals', title: 'Phase final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Players', status: 'deactive'},
         {href: '#/stadiums', title: 'Stadiums', status: 'deactive'},
     ],
     3: [
         {href: '#/home', title: 'Inicio', status: 'deactive'},
-        // {href: '#/facebook', title: 'Facebook', status: 'deactive'},
-        {href: '#/photo-fans', title: 'Fotos', status: 'deactive'},
-        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: '#/we-are', title: 'Quiénes somos', status: 'deactive'},
+        {href: '#/photo-fans', title: 'Torcida que Vibra', status: 'deactive'},
+        {href: '#/planeta-game', title: 'Juego', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
-        {href: '#/news', title: 'Noticias', status: 'deactive'},
+        // {href: '#/news', title: 'Noticias', status: 'deactive'},
         {href: '#/finals', title: 'Fase Final', status: 'deactive'},
         {href: '#/team-per-group', title: 'Jugadores', status: 'deactive'},
         {href: '#/stadiums', title: 'Estadios', status: 'deactive'},
@@ -1857,4 +1857,17 @@ programming = {
     'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
 }
 
-
+we_are = { 
+    1: {
+        "title": "Quem somos",
+        "description": "<p>A Planeta Brasil possui uma completa estrutura de serviços em hotelaria, transporte, eventos, passeios e outros, pensados para o maior evento de 2014.</p>"
+    },
+    2: {
+        "title": "Quem somos",
+        "description": "<p>Planeta Brasil has a complete set of services in the hospitality, transportation, events and related industries specifically planned for the biggest event of 2014.</p>"
+    },
+    3: {
+        "title": "Quem somos",
+        "description": "<p>Planeta Brasil tiene una estructura de servicios integrales en las industrias de hostelería, transporte, eventos, excursiones y otros planejados especificamente</p>"
+    }
+}
