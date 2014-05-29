@@ -872,7 +872,6 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                 back_element(elemets_banner);
                 e.preventDefault();
             });
-            alert('final');
         });
         
         $scope.showProgramming = function(id_programming) {
