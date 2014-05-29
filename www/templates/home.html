@@ -241,6 +241,9 @@
 		width: 50px;
 	}
 
+	.local.last {
+		border-bottom: 0;
+	}
 </style>
     <menu id="nav-left">
         <ul>
@@ -358,7 +361,7 @@
 					<div class="bronw">
 						<h2><div class="text-title">Locais Interessantes</div></h2>
 						<div class="locals">
-							<div class="news-block local" ng-repeat='local in locals'>
+							<div class="news-block local" ng-repeat='local in locals'  ng-class="{'last':$last}">
 								<h3><img src="{{local.img}}" alt="{{local.title}}"> {{local.title}}</h3>
 							</div>
 						</div>
