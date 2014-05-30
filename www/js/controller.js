@@ -752,8 +752,16 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
 
 planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+ 
         $http = $rootScope;
         $scope.items = $rootScope.items;
+        if (language == 2) {
+            $scope.bg_img = "fases-finais_en.jpg"
+        }else if (language == 3) {
+            $scope.bg_img = "fases-finais_es.jpg"
+        }else {
+            $scope.bg_img = "fases-finais.jpg"
+        }
         language = localStorage.getItem('language');
         //$scope.finals = finals[language];
 
