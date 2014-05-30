@@ -20,27 +20,46 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
     function ($scope, $http ) {
+        $scope.language = window.localStorage.getItem('language');
         if (window.localStorage.getItem('language') == 2) {
             $scope.passaport = "passaport";
             $scope.login = "Login";
             $scope.advance = "Next";
-            $scope.skip = "Skip this step";
-            $scope.or = "or";
+            $scope.full_name = "Full name";
         } else if(window.localStorage.getItem('language') == 3) {
             $scope.passaport = "pasaporte";
             $scope.login = "Login";
             $scope.advance = "Próximo";
-            $scope.skip = "Omitir este paso";
-            $scope.or = "o";
+            $scope.full_name = "nombre completo";
         } else {
             $scope.passaport = "Passaporte";
             $scope.login = "Identifique-se";
             $scope.advance = "Avançar";
-            $scope.skip = "Pular essa etapa";
-            $scope.or = "ou";
+            $scope.full_name = "nome completo";
         };
-        $scope.$on('$viewContentLoaded', function() {
-        });
+        $scope.errors = {
+            '1': {
+                'full_name_short': 'O nome precisa ter mais que 5 dígitos.',
+                'full_name_long': 'O nome precisa ter menos que 20 dígitos.',
+                'email': 'Email inválido'
+            },
+            '2': {
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'email': 'Email inválido'
+            },
+            '3': {
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'email': 'Email inválido'
+            }
+        }
+        $scope.submitForm = function(){
+            window.localStorage.setItem('email', $scope.email);
+            window.localStorage.setItem('full_name', $scope.full_name_form);
+            console.log('Fazer o post com o nome e email e o id do telefone.');
+            window.location.href = "#loading";
+        };
     }]
 );
 
@@ -119,10 +138,36 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
     }]
 );
 
+planetaBrasilControllers.controller('FacebookCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
+        $scope.$on('$viewContentLoaded', function() {
+            swipe_menu();
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
 planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        $scope.items = $rootScope.items;
         $scope.$on('$viewContentLoaded', function() {
-
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -417,6 +462,45 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
 
     }]
 );
+planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
+        $scope.items = $rootScope.items;
+        language = localStorage.getItem('language');
+
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+
+       var api_url = API_ROOT_URL + '/api/we-are/' + '?lang=' + language;
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.we_are = data[language];
+          }).
+          error(function(data, status, headers, config) {
+            $scope.we_are = we_are[language];
+        });
+
+    }]
+);
 
 
 planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',
@@ -668,8 +752,16 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
 
 planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+ 
         $http = $rootScope;
         $scope.items = $rootScope.items;
+        if (language == 2) {
+            $scope.bg_img = "fases-finais_en.jpg"
+        }else if (language == 3) {
+            $scope.bg_img = "fases-finais_es.jpg"
+        }else {
+            $scope.bg_img = "fases-finais.jpg"
+        }
         language = localStorage.getItem('language');
         //$scope.finals = finals[language];
 
@@ -742,18 +834,33 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
         //$scope.home = home;
-
+        $scope.locals = [{
+            'title': 'Trilha da Pedra da Gavea',
+            'img': 'images/language-br.png'
+            },
+            {
+            'title': 'Trilha da Pedra da Gavea',
+            'img': 'images/language-br.png'
+            },
+            {
+            'title': 'Trilha da Pedra da Gavea',
+            'img': 'images/language-br.png'
+            },
+        ]
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $scope.home = data;
+            hideLoading();
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')
+            hideLoading();
         });
         
 
         $scope.$on('$viewContentLoaded', function() {
+            loading();
             banner = document.getElementsByClassName('element_banner');
             elemets_banner = document.getElementsByClassName('input_checked');
             ontouch(document.getElementById('slider'), function(evt, dir, phase, swipetype, distance){

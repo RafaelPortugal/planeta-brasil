@@ -66,6 +66,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/table_games.html',
         controller: 'TableGamesCtrl'
       }).
+      when('/facebook', {
+        templateUrl: 'templates/facebook.html',
+        controller: 'FacebookCtrl'
+      }).
       when('/finals', {
         templateUrl: 'templates/finals.html',
         controller: 'FinalsCtrl'
@@ -78,10 +82,20 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/world_championship.html',
         controller: 'WorldChampionshipCtrl'
       }).
+      when('/we-are', {
+        templateUrl: 'templates/we_are.html',
+        controller: 'WeAreCtrl'
+      }).
       otherwise({
         redirectTo: function() {
           if (window.localStorage.getItem('language')){
+            var full_name = window.localStorage.getItem('full_name');
+            var email = window.localStorage.getItem('email');
+            if (full_name && email) {
               return '/loading';
+            }else {
+              return '/login';
+            };
           }else {
               return '/language';
           };

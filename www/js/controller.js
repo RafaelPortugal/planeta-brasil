@@ -851,13 +851,16 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $scope.home = data;
+            hideLoading();
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')
+            hideLoading();
         });
         
 
         $scope.$on('$viewContentLoaded', function() {
+            loading();
             banner = document.getElementsByClassName('element_banner');
             elemets_banner = document.getElementsByClassName('input_checked');
             ontouch(document.getElementById('slider'), function(evt, dir, phase, swipetype, distance){
