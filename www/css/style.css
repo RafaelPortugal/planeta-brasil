@@ -402,17 +402,19 @@ header h1 {
     right: 0;
 }
 .section .matches ul {
-    font-size: 3.5em;
+    font-size: 3em;
     text-align: center;
-    line-height: 51px;
+    line-height: 45px;
 }
 .section .matches ul img {
-    height: 45px;
+    height: 40px;
     vertical-align: middle;
+}
+.section .matches ul i.visited span {
+  margin-left: 4px;
 }
 .section .matches ul i {
     display: inline-block;
-    width: 40%;
 }
 .section .matches ul i.home {
     text-align: right;

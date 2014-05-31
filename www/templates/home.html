@@ -244,6 +244,54 @@
 	.local.last {
 		border-bottom: 0;
 	}
+
+	.guess {
+		font-size: 0.6em;
+		text-transform: uppercase;
+	}
+	.guess b {
+		padding: 5px 10px;
+		background: #facb11;
+		border-radius: 15px;
+		color: #00a84f;
+	}
+	
+
+	#next-macths form input{
+		display: none;
+		opacity: 0;
+	}
+	#next-macths form.active input{
+		display: inline-block;
+		opacity: 1;
+		transition: opacity .25s ease-in-out;
+		-webkit-transition: opacity .25s ease-in-out;
+	}
+	#next-macths form input[type="number"]{
+		width: 35px;
+		height: 35px;
+		border-radius: 8px;
+		line-height: 45px;
+		font-size: 0.9em;
+	}
+	#next-macths form input[type="submit"]{
+		padding: 5px 10px;
+		background: #00a84f;
+		border-radius: 15px;
+		color: #facb11;
+		font-size: 0.6em;
+		text-transform: uppercase;
+	}
+	#next-macths .submit {
+		margin: 0;
+	}
+	#next-macths form.active .stadium, #next-macths form.active img{
+		opacity: 0;
+		display: none;
+		transition: opacity .25s ease-in-out;
+		-webkit-transition: opacity .25s ease-in-out;
+	}
+
 </style>
     <menu id="nav-left">
         <ul>
@@ -385,14 +433,23 @@
 										<article ng-repeat="match in home.nextMatches" class="element_banner">
 											<ul class="border">
 												<li>
-													<i class="home"><span>{{match.abbr_home}}</span> <img src="{{match.img_home}}" alt="Brasil"></i>
+													<form method="POST" ng-submit="guessSubmit($event, match.id)">
+														
+													<div class="guess">
+														<b ng-click="guess($event)">Dê seu palpite</b>
+													</div>
+													<i class="home"><span>{{match.abbr_home}}</span> <img src="{{match.img_home}}" alt="Brasil"><input type="number" name="home" min=0 max=9 step=1></i>
 													<span class="vs">X</span>
-													<i class="visited"><img src="{{match.img_visited}}" alt="{{match.visited}}"><span>{{match.abbr_visited}}</span></i>
+													<i class="visited"><img src="{{match.img_visited}}" alt="{{match.visited}}"><input type="number" name="visited" min=0 max=9 step=1><span>{{match.abbr_visited}}</span></i>
+													<div class="submit">
+														<input type="submit" value="Confirmar" ng-click="guessSubmit($event, 'api/match/{{macth.id}}')">
+													</div>
 													<p class="stadium">{{match.local}}</p>
 													<div class="footer-matches">
 													    <p class="datetime">{{match.date}}</p>
 													    <p class="type">{{match.type}}</p>
 													</div>
+													</form>
 												</li>
 
 											</ul>
@@ -453,5 +510,4 @@
 	</div>
 
 <script type="text/javascript">
-	
 </script>

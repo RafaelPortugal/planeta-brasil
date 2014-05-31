@@ -854,6 +854,8 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             hideLoading();
           }).
           error(function(data, status, headers, config) {
+            $scope.home = home;
+            
             alert('Ocorreu um erro. Tente novamente.')
             hideLoading();
         });
@@ -927,7 +929,28 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         $scope.showProgramming = function(id_programming) {
             window.location.href = "#programming/" + id_programming;
         }
-        
+        $scope.guess = function($event) {
+            parent = $event.toElement.parentElement.parentElement;
+            parent.className = "active";
+        };
+        $scope.guessSubmit = function($event, url) {
+            form = $event.toElement.parentElement.parentElement;
+            gols_home = parseInt(form.elements.home.value);
+            gols_visited = parseInt(form.elements.visited.value);
+            if (gols_visited == NaN && gols_home == NaN){
+                alert('Favor conferir os campos');
+                return
+            }
+            visited = "visited=" + form.elements.visited.value;
+            home = "home=" + form.elements.home.value;
+            email = "email=" + window.localStorage.getItem('email');
+            name = "name=" + window.localStorage.getItem('name');
+            data = [name, email, home, visited].join('&');
+            var request = new XMLHttpRequest();
+            request.open('POST', API_ROOT_URL + url, true);
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.send(data);
+        };
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.item, function(i) {
                 i.status = 'deactive';

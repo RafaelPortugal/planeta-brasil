@@ -100,6 +100,19 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
                 };
             });
 
+            elemets_match = document.getElementsByClassName('input_checked_programming');
+            ontouch(document.getElementById('programming'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_match);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_match);
+                    };
+                };
+            });
+
             swipe_menu();
 
             body = document.body;
@@ -130,6 +143,23 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             });
             item.status = 'active';
             body.className = "";
+       }
+       
+       $scope.clickSubmit = function(url) {
+            // home = form.elements.visited.value;
+            // visited = form.elements.visited.value;
+            // name = window.localStorage.getItem('name');
+            // email = window.localStorage.getItem('email');
+            console.log($scope.input_home);
+            console.log($scope.input_visited);
+            // console.log(name);
+            // console.log(email);
+            alert(url);
+            // var data = 'country=' + this.value;
+            // var request = new XMLHttpRequest();
+            // request.open('POST', API_ROOT_URL + '/api/guesses/', true);
+            // request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            // request.send(data);
        }
     }]
 );
