@@ -377,6 +377,7 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $http = $rootScope;
         $scope.items = $rootScope.items;
+        $scope.language = window.localStorage.getItem('language');
 
         $scope.$on('$viewContentLoaded', function() {
             loading();
@@ -481,7 +482,7 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
         $scope.items = $rootScope.items;
         
         language = localStorage.getItem('language');
-
+        
         if (language == 2) {
             $scope.title_page = "Who we are";
         }else if (language == 3) {

@@ -88,7 +88,9 @@
 </header>
 <div class="bg-internas left-menu">
 	<img src="images/fotos-torcida.jpg" alt="Bacground">
-	<h2>A <strong class="yellow">Torcida</strong> <br/><span class="blue">que</span> <strong class="green">vibra</strong></h2>
+	
+	<h2 ng-if="language != 2">A <strong class="yellow">Torcida</strong> <br/><span class="blue">que</span> <strong class="green">vibra</strong></h2>
+	<h2 ng-if="language == 2"><strong class="yellow">PHOTOS</strong></h2>
 </div>
 <div id="wrapper">
 	<div class="relative page">
