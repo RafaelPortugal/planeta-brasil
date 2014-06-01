@@ -379,6 +379,7 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
         $scope.items = $rootScope.items;
 
         $scope.$on('$viewContentLoaded', function() {
+            loading();
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -401,10 +402,11 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
       var api_url = API_ROOT_URL + '/api/photos/' + '?lang=' + window.localStorage.getItem('language', '1');
       $http({method: 'GET', url: api_url}).
           success(function(data, status, headers, config) {
+            hideLoading();
               $scope.photos = data;
       
       }).error(function(data, status, headers, config) {
-      
+            hideLoading();
               alert('Ocorreu um erro. Tente novamente.')
       
       });
@@ -469,6 +471,7 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
 
         $scope.$on('$viewContentLoaded', function() {
+            loading();
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -493,9 +496,11 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
        var api_url = API_ROOT_URL + '/api/we-are/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
+                hideLoading();
             $scope.we_are = data[language];
           }).
           error(function(data, status, headers, config) {
+                hideLoading();
             $scope.we_are = we_are[language];
         });
 
@@ -553,6 +558,7 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
         //$scope.show_news = show_news;
         
         $scope.$on('$viewContentLoaded', function() {
+            loading();
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
             menuAchor.addEventListener("click", function(e) {
@@ -576,9 +582,11 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
       var api_url = API_ROOT_URL + '/api/news/' + pk + '/?lang=' + language;
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
+                hideLoading();
             $scope.show_news = data;
           }).
           error(function(data, status, headers, config) {
+            hideLoading();
             alert('Ocorreu um erro. Tente novamente.')
         });
 
@@ -607,7 +615,8 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
         $scope.items = $rootScope.items;
         
         $scope.$on('$viewContentLoaded', function() {
-elemets_banner = document.getElementsByClassName('input_checked');
+            loading();
+            elemets_banner = document.getElementsByClassName('input_checked');
             ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
                 if (phase == 'end') {
                     event.stopPropagation();
@@ -644,12 +653,13 @@ elemets_banner = document.getElementsByClassName('input_checked');
       var api_url = API_ROOT_URL + '/api/matches_by_groups/' + '?lang=' + language;
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
-            $scope.matches = data;
-          }).
-          error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-
+                hideLoading();
+                $scope.matches = data;
+            }).
+            error(function(data, status, headers, config) {
+                hideLoading();
+                alert('Ocorreu um erro. Tente novamente.')
+            });
     }]
 );
 
@@ -666,6 +676,7 @@ planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$route
         var api_url = API_ROOT_URL + '/api/last_games/' + '?lang=' + language + '&page=' + offset;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
+                hideLoading();
                 $scope.last_games = data;
                 paginate = parseInt(data.total / 10);
                 rest = data.total % 10;
@@ -675,11 +686,13 @@ planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$route
                 $scope.paginate = Array.apply(null, Array(paginate)).map(function (_, i) {return {"num": i+1, "id": i*10, "active": i*10 == offset};});
           }).
           error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
+                hideLoading();
+                alert('Ocorreu um erro. Tente novamente.')
         });
 
 
         $scope.$on('$viewContentLoaded', function() {
+            loading();
             swipe_menu();
 
             body = document.body;
@@ -937,7 +950,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             form = $event.toElement.parentElement.parentElement;
             gols_home = parseInt(form.elements.home.value);
             gols_visited = parseInt(form.elements.visited.value);
-            if (gols_visited == NaN && gols_home == NaN){
+            if (gols_visited == NaN || gols_home == NaN){
                 alert('Favor conferir os campos');
                 return
             }

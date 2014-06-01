@@ -1,0 +1,56 @@
+
+stadiums = [
+    1: {
+        "name": "Maracanã",
+        "district": "Rio de Janeiro",
+    },
+    2: {
+        "name": "Minerão",
+        "district": "Belo Horizonte",
+        },
+    3: {
+        "name": "Arena Amazônia",
+        "district": "Manaus",
+    },
+    4: {
+        "name": "Arena da Baixada",
+        "district": "Curitiba",
+    },
+    5: {
+        "name": "Arena de São Paulo",
+        "district": "São Paulo",
+    },
+    6: {
+        "name": "Arena Fonte Nova",
+        "district": "Salvador",
+    },
+    7: {
+        "name": "Arena Pantanal",
+        "district": "Cuiabá",
+    },
+    8: {
+        "name": "Arena Pernambuco",
+        "district": "Recife",
+    },
+    9: {
+        "name": "Beira Rio",
+        "district": "Porto Alegre",
+    },
+    10: {
+        "name": "Castelão",
+        "district": "Fortaleza",
+    },
+    11: {
+        "name": "Estádio das Dunas",
+        "district": "Natal",
+    },
+    12: {
+        "name": "Nacional de Brasília",
+        "district": "Brasília",
+    }
+]
+
+Stadium.objects.create(
+    name=)
+name -> Charfield()
+city -> Charfield()
