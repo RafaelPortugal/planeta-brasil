@@ -122,124 +122,20 @@
 	</div>
 	<button class="btn-gps"></button>
 </header>
-<div class="bg-internas left-menu"><img src="images/campeoes-mundiais.jpg" alt="Bacground"></div>
+<div class="bg-internas left-menu"><img src="images/{{bg_img}}" alt="Bacground"></div>
 <div id="wrapper">
 	<div class="relative page">
 		<table class="championships">
 			<tbody>
-				<tr>
-					<td class="year">1930</td>
-					<td class="team">Uruguai</td>
-				</tr>
-				<tr>
-					<td class="year">1934</td>
-					<td class="team">Itália</td>
-				</tr>
-				<tr>
-					<td class="year">1938</td>
-					<td class="team">Itália</td>
-				</tr>
-				<tr>
-					<td class="year">1950</td>
-					<td class="team">Uruguai</td>
-				</tr>
-				<tr>
-					<td class="year">1954</td>
-					<td class="team">Alemanha</td>
-				</tr>
-				<tr>
-					<td class="year">1958</td>
-					<td class="team">Brasil</td>
-				</tr>
-				<tr>
-					<td class="year">1962</td>
-					<td class="team">Brasil</td>
-				</tr>
-				<tr>
-					<td class="year">1966</td>
-					<td class="team">Inglaterra</td>
-				</tr>
-				<tr>
-					<td class="year">1970</td>
-					<td class="team">Brasil</td>
-				</tr>
-				<tr>
-					<td class="year">1974</td>
-					<td class="team">Alemanha</td>
-				</tr>
-				<tr>
-					<td class="year">1978</td>
-					<td class="team">Argentina</td>
-				</tr>
-				<tr>
-					<td class="year">1982</td>
-					<td class="team">Itália</td>
-				</tr>
-				<tr>
-					<td class="year">1986</td>
-					<td class="team">Argentina</td>
-				</tr>
-				<tr>
-					<td class="year">1990</td>
-					<td class="team">Alemanha</td>
-				</tr>
-				<tr>
-					<td class="year">1994</td>
-					<td class="team">Brasil</td>
-				</tr>
-				<tr>
-					<td class="year">1998</td>
-					<td class="team">França</td>
-				</tr>
-				<tr>
-					<td class="year">2002</td>
-					<td class="team">Brasil</td>
-				</tr>
-				<tr>
-					<td class="year">2006</td>
-					<td class="team">Itália</td>
-				</tr>
-				<tr>
-					<td class="year">2010</td>
-					<td class="team">Espanha</td>
+				<tr ng-repeat="c in championships">
+					<td class="year">{{c.year}}</td>
+					<td class="team">{{c.team}}</td>
 				</tr>
 				<tr>
 					<td class="year">2014</td>
 					<td>
 						<select name="guess" id="guess_id">
-							<option value="">Dê seu palpite</option>
-              <option value="1">Brasil</option>
-              <option value="2">Japão</option>
-              <option value="3">Austrália</option>
-              <option value="4">Irã</option>
-              <option value="5">Coreia do Sul</option>
-              <option value="6">Holanda</option>
-              <option value="7">Itália</option>
-              <option value="8">Argentina</option>
-              <option value="9">Estados Unidos</option>
-              <option value="10">Costa Rica</option>
-              <option value="11">Alemanha</option>
-              <option value="12">Bélgica</option>
-              <option value="13">Suíça</option>
-              <option value="14">Colômbia</option>
-              <option value="15">Espanha</option>
-              <option value="16">Bósnia</option>
-              <option value="17">Rússia</option>
-              <option value="18">Inglaterra</option>
-              <option value="19">Chile</option>
-              <option value="20">Equador</option>
-              <option value="21">Honduras</option>
-              <option value="22">Nigéria</option>
-              <option value="23">Camarões</option>
-              <option value="24">Costa do Marfim</option>
-              <option value="25">Portugal</option>
-              <option value="26">França</option>
-              <option value="27">Grécia</option>
-              <option value="28">Croácia</option>
-              <option value="29">Argélia</option>
-              <option value="30">Gana</option>
-              <option value="31">México</option>
-              <option value="32">Uruguai</option>
+							<option ng-repeat="s in select_teams" value="{{s.value}}">{{s.team[language]}}</option>
 						</select>
 					</td>
 				</tr>

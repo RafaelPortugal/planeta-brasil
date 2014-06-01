@@ -420,6 +420,17 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
         $http = $rootScope;
         $scope.items = $rootScope.items;
         language = localStorage.getItem('language');
+        if (language == 2) {
+            $scope.bg_img = "campeoes-mundiais_en.jpg";
+        }else if (language == 3){
+            $scope.bg_img = "campeoes-mundiais_es.jpg";
+        }else {
+            $scope.bg_img = "campeoes-mundiais.jpg";
+        }
+        $scope.championships = world_championships[language];
+        $scope.language = language;
+        $scope.select_teams = select_championship;
+
         //$scope.guess = guess[language];
 
         $scope.$on('$viewContentLoaded', function() {
