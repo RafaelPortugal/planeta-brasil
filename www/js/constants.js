@@ -1871,3 +1871,241 @@ we_are = {
         "description": "<p>Planeta Brasil tiene una estructura de servicios integrales en las industrias de hostelería, transporte, eventos, excursiones y otros planejados especificamente</p>"
     }
 }
+
+
+world_championships = {
+    1: [
+        {
+            "year": 1930,
+            "team": "Uruguai"
+        },
+        {
+            "year": 1934,
+            "team": "Itália"
+        },
+        {
+            "year": 1938,
+            "team": "Itália"
+        },
+        {
+            "year": 1950,
+            "team": "Uruguai"
+        },
+        {
+            "year": 1954,
+            "team": "Alemanha"
+        },
+        {
+            "year": 1958,
+            "team": "Brasil"
+        },
+        {
+            "year": 1962,
+            "team": "Brasil"
+        },
+        {
+            "year": 1966,
+            "team": "Inglaterra"
+        },
+        {
+            "year": 1970,
+            "team": "Brasil"
+        },
+        {
+            "year": 1974,
+            "team": "Alemanha"
+        },
+        {
+            "year": 1978,
+            "team": "Argentina"
+        },
+        {
+            "year": 1982,
+            "team": "Itália"
+        },
+        {
+            "year": 1986,
+            "team": "Argentina"
+        },
+        {
+            "year": 1990,
+            "team": "Alemanha"
+        },
+        {
+            "year": 1994,
+            "team": "Brasil"
+        },
+        {
+            "year": 1998,
+            "team": "França"
+        },
+        {
+            "year": 2002,
+            "team": "Brasil"
+        },
+        {
+            "year": 2006,
+            "team": "Itália"
+        },
+        {
+            "year": 2010,
+            "team": "Espanha"
+        }
+    ],
+    2: [
+        {
+            "year": 1930,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1934,
+            "team": "Italy"
+        },
+        {
+            "year": 1938,
+            "team": "Italy"
+        },
+        {
+            "year": 1950,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1954,
+            "team": "Germany"
+        },
+        {
+            "year": 1958,
+            "team": "Brazil"
+        },
+        {
+            "year": 1962,
+            "team": "Brazil"
+        },
+        {
+            "year": 1966,
+            "team": "England"
+        },
+        {
+            "year": 1970,
+            "team": "Brazil"
+        },
+        {
+            "year": 1974,
+            "team": "Germany"
+        },
+        {
+            "year": 1978,
+            "team": "Argentine"
+        },
+        {
+            "year": 1982,
+            "team": "Italy"
+        },
+        {
+            "year": 1986,
+            "team": "Argentine"
+        },
+        {
+            "year": 1990,
+            "team": "Germany"
+        },
+        {
+            "year": 1994,
+            "team": "Brazil"
+        },
+        {
+            "year": 1998,
+            "team": "France"
+        },
+        {
+            "year": 2002,
+            "team": "Brazil"
+        },
+        {
+            "year": 2006,
+            "team": "Italy"
+        },
+        {
+            "year": 2010,
+            "team": "Spain"
+        }
+    ]
+    3: [
+        {
+            "year": 1930,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1934,
+            "team": "Italia"
+        },
+        {
+            "year": 1938,
+            "team": "Italia"
+        },
+        {
+            "year": 1950,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1954,
+            "team": "Alemania"
+        },
+        {
+            "year": 1958,
+            "team": "Brasil"
+        },
+        {
+            "year": 1962,
+            "team": "Brasil"
+        },
+        {
+            "year": 1966,
+            "team": "Inglaterra"
+        },
+        {
+            "year": 1970,
+            "team": "Brasil"
+        },
+        {
+            "year": 1974,
+            "team": "Alemania"
+        },
+        {
+            "year": 1978,
+            "team": "Argentina"
+        },
+        {
+            "year": 1982,
+            "team": "Italia"
+        },
+        {
+            "year": 1986,
+            "team": "Argentina"
+        },
+        {
+            "year": 1990,
+            "team": "Alemania"
+        },
+        {
+            "year": 1994,
+            "team": "Brasil"
+        },
+        {
+            "year": 1998,
+            "team": "Francia"
+        },
+        {
+            "year": 2002,
+            "team": "Brasil"
+        },
+        {
+            "year": 2006,
+            "team": "Italia"
+        },
+        {
+            "year": 2010,
+            "team": "España"
+        }
+    ],
+}

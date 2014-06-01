@@ -1,6 +1,16 @@
-function Menu(language) {
-    this.language = language
+SECOND = 1000
+MINUTE = SECOND * 60
+HOUR = MINUTE * 60
+TIMEOUT = 1 * MINUTE
 
+
+var reprocess_loading = function(){
+    var updated = new Date(window.localStorage.getItem('updated'));
+    var now = new Date();
+    if ((now - updated) > TIMEOUT) {
+        window.location.href = "#loading";
+    }
+    return
 }
 
 
@@ -65,7 +75,7 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
+    function ($scope, $http ) {
         var language = window.localStorage.getItem('language');
         if (language == 2) {
             message = "Wait, we are carrying the information of your city.";
@@ -76,21 +86,81 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
             message = "Aguarde, estamos carregando as informações da sua cidade.";
         }
 
+        updated = window.localStorage.getItem('updated');
+        if (updated) {
+            var now = new Date();
+            diff = (now - new Date(updated));
+            if (diff > TIMEOUT) {
+                var home_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
+                $http({method: 'GET', url: home_url}).
+                    success(function(data, status, headers, config) {
+                        $http.home = data;
+                });
+
+                var who_we_url = API_ROOT_URL + '/api/we-are/';
+                $http({method: 'GET', url: who_we_url}).
+                    success(function(data, status, headers, config) {
+                        alert('Sucesso We are');
+                        $http.who_we = data[language];
+                    }).
+                    error(function(data, status, headers, config){
+                        $http.who_we = we_are[language];
+                    }
+                );
+                
+                window.location.href = "#home";
+                window.localStorage.setItem('updated', new Date());
+            }else {
+                window.location.href = "#home";
+            }
+
+        }else {
+            var get_http = setInterval(function(){
+                var home_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
+                if (!$http.home) {
+                    $http({method: 'GET', url: home_url}).
+                        success(function(data, status, headers, config) {
+                            alert('Sucesso home');
+                            $http.home = data;
+                    });
+                }
+            
+                var who_we_url = API_ROOT_URL + '/api/we-are/';
+                if (!$http.who_we) {
+                    $http({method: 'GET', url: who_we_url}).
+                        success(function(data, status, headers, config) {
+                            alert('Sucesso We are');
+                            $http.who_we = data[language];
+                        }).
+                        error(function(data, status, headers, config){
+                            $http.who_we = we_are[language];
+                        });
+                }
+
+                if ($http.home && $http.who_we) {
+                    window.localStorage.setItem('updated', new Date());
+                    window.location.href = "#home";
+                    clearInterval(get_http);
+                }
+            }, 6*SECOND);
+            
+
+        }
+
         $scope.message = message;
         $scope.$on('$viewContentLoaded', function() {
             var language = window.localStorage.getItem('language');
-            $rootScope.items = menu[language];
-            setTimeout(function(){
-                window.location.href = "#home";
-            },4000);
+            $http.items = menu[language];
+            // setTimeout(function(){
+            //     window.location.href = "#home";
+            // },4000);
         });
     }]
 );
 
 
-
 planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
+    function ($scope, $http ) {
         language = localStorage.getItem('language');
         if (language == 2) {
             $scope.bg_img = "curiosidades_en.jpg";
@@ -99,7 +169,7 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
         }else {
             $scope.bg_img = "curiosidades.jpg";
         }
-        $scope.items = $rootScope.items;
+        $scope.items = $http.items;
         $scope.curiosities = curiosities[language];
         $scope.$on('$viewContentLoaded', function() {
 
@@ -129,7 +199,7 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
             });
         });
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
+            angular.forEach($http.items, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -139,8 +209,8 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
 );
 
 planetaBrasilControllers.controller('FacebookCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $scope.items = $rootScope.items;
+    function ($scope, $http ) {
+        $scope.items = $http.items;
         $scope.$on('$viewContentLoaded', function() {
             swipe_menu();
             body = document.body;
@@ -155,7 +225,7 @@ planetaBrasilControllers.controller('FacebookCtrl', ['$scope', '$http',
             });
         });
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
+            angular.forEach($http.items, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -165,8 +235,8 @@ planetaBrasilControllers.controller('FacebookCtrl', ['$scope', '$http',
 );
 
 planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $scope.items = $rootScope.items;
+    function ($scope, $http ) {
+        $scope.items = $http.items;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -180,7 +250,7 @@ planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
             });
         });
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
+            angular.forEach($http.items, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -191,7 +261,7 @@ planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
+    function ($scope, $http ) {
         var language = window.localStorage.getItem('language');
         if (language == 2) {
             $scope.lang_stadium = "Stadiums";
@@ -202,7 +272,7 @@ planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
             $scope.lang_stadium = "Estádios";
         }
         $scope.stadiums = stadiums;
-        $scope.items = $rootScope.items;
+        $scope.items = $http.items;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -216,7 +286,7 @@ planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
             });
         });
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
+            angular.forEach($http.items, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -227,7 +297,7 @@ planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http', '$routeParams',
-    function ($scope, $rootScope, $routeParams, $http ) {
+    function ($scope, $routeParams, $http ) {
         var language = window.localStorage.getItem('language');
         if (language == 2) {
             $scope.lang_stadium = "Stadiums";
@@ -239,7 +309,7 @@ planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http', '$routePa
         }
         $scope.language = language;
         $scope.stadium = stadiums[$routeParams.stadiumId];
-        $scope.items = $rootScope.items;
+        $scope.items = $http.items;
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -253,7 +323,7 @@ planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http', '$routePa
             });
         });
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
+            angular.forEach($http.items, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -264,12 +334,12 @@ planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http', '$routePa
 
 
 planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$routeParams',
-    function ($scope, $rootScope, $routeParams, $http ) {
+    function ($scope, $routeParams, $http ) {
         var letter_group = $routeParams.teamId[0];
         var position_team = $routeParams.teamId[1];
         var language = window.localStorage.getItem('language');
         
-        $scope.items = $rootScope.items;
+        $scope.items = $http.items;
         $scope.letter_group = letter_group;
         $scope.position_team = position_team;
         team_object = teamPerGroup[letter_group][position_team];
@@ -301,7 +371,7 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
             });
         });
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
+            angular.forEach($http.items, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -314,8 +384,8 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
 
 
 planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $scope.items = $rootScope.items;
+    function ($scope, $http ) {
+        $scope.items = $http.items;
         $scope.teams = teamPerGroup
         var language = window.localStorage.getItem('language');
         $scope.language = language
@@ -356,7 +426,7 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
             });
         });
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
+            angular.forEach($http.items, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -373,480 +443,18 @@ planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
 ***       COM API 
 ***/
 
-planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
-        $scope.items = $rootScope.items;
-
-        $scope.$on('$viewContentLoaded', function() {
-            loading();
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-      var api_url = API_ROOT_URL + '/api/photos/' + '?lang=' + window.localStorage.getItem('language', '1');
-      $http({method: 'GET', url: api_url}).
-          success(function(data, status, headers, config) {
-            hideLoading();
-              $scope.photos = data;
-      
-      }).error(function(data, status, headers, config) {
-            hideLoading();
-              alert('Ocorreu um erro. Tente novamente.')
-      
-      });
-    
-    }]
-);
 
 
-planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
-        $scope.items = $rootScope.items;
-        language = localStorage.getItem('language');
-        //$scope.guess = guess[language];
-
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        
-        document.getElementById('guess_id').onchange = function() {
-            this.disabled = true;
-            var data = 'country=' + this.value;
-            var request = new XMLHttpRequest();
-            request.open('POST', API_ROOT_URL + '/api/guesses/', true);
-            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-            request.send(data);
-        };
-        
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-
-       var api_url = API_ROOT_URL + '/api/guesses/' + '?lang=' + language;
-        $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-            $scope.guess = data[language];
-          }).
-          error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-
-    }]
-);
-planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
-        $scope.items = $rootScope.items;
-        language = localStorage.getItem('language');
-
-        $scope.$on('$viewContentLoaded', function() {
-            loading();
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-
-       var api_url = API_ROOT_URL + '/api/we-are/' + '?lang=' + language;
-        $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-                hideLoading();
-            $scope.we_are = data[language];
-          }).
-          error(function(data, status, headers, config) {
-                hideLoading();
-            $scope.we_are = we_are[language];
-        });
-
-    }]
-);
-
-
-planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
-        $scope.items = $rootScope.items;
-        language = localStorage.getItem('language');
-        //$scope.news = news;
-        
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-       var api_url = API_ROOT_URL + '/api/news/' + '?lang=' + language;
-      $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-            $scope.news = data;
-          }).
-          error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-
-
-
-    }]
-);
-
-
-planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$location',
-    function ($scope, $rootScope, $location ) {
-        var $http = $rootScope;
-        $scope.items = $rootScope.items;
-        language = localStorage.getItem('language');
-        //$scope.show_news = show_news;
-        
-        $scope.$on('$viewContentLoaded', function() {
-            loading();
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-      var pk = $location.path().split('/')[2];
-      var api_url = API_ROOT_URL + '/api/news/' + pk + '/?lang=' + language;
-      $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-                hideLoading();
-            $scope.show_news = data;
-          }).
-          error(function(data, status, headers, config) {
-            hideLoading();
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-
-    }]
-);
-
-
-
-
-planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
-        //$scope.matches = matches;
-        language = window.localStorage.getItem('language');
-        
-        if (language == 2) {
-            $scope.th_match = "Game day";
-            $scope.bg_img = "tabela-de-jogos_en.jpg"
-        }else if (language == 3) {
-            $scope.th_match = "DÍA DEL JUEGO";
-            $scope.bg_img = "tabela-de-jogos_es.jpg"
-        }else {
-            $scope.th_match = "DIA DO JOGO";
-            $scope.bg_img = "tabela-de-jogos.jpg"
-        }
-        $scope.items = $rootScope.items;
-        
-        $scope.$on('$viewContentLoaded', function() {
-            loading();
-            elemets_banner = document.getElementsByClassName('input_checked');
-            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
-                if (phase == 'end') {
-                    event.stopPropagation();
-                    if (dir == 'left'){
-                        forward_element(elemets_banner);
-                    };
-                    if (dir == 'right') {
-                        back_element(elemets_banner);
-                    };
-                };
-            });
-            swipe_menu();
-            
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-       
-      var api_url = API_ROOT_URL + '/api/matches_by_groups/' + '?lang=' + language;
-      $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-                hideLoading();
-                $scope.matches = data;
-            }).
-            error(function(data, status, headers, config) {
-                hideLoading();
-                alert('Ocorreu um erro. Tente novamente.')
-            });
-    }]
-);
-
-
-
-
-planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$routeParams',
-    function ($scope, $rootScope, $rootParams, $http ) {
-        $http = $rootScope;
-        language = window.localStorage.getItem('language');
-        offset = $rootParams.offset;
-        $scope.items = $rootScope.items;
-        
-        var api_url = API_ROOT_URL + '/api/last_games/' + '?lang=' + language + '&page=' + offset;
-        $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-                hideLoading();
-                $scope.last_games = data;
-                paginate = parseInt(data.total / 10);
-                rest = data.total % 10;
-                if (paginate > 0 && rest != 0) {
-                    paginate += 1;
-                }
-                $scope.paginate = Array.apply(null, Array(paginate)).map(function (_, i) {return {"num": i+1, "id": i*10, "active": i*10 == offset};});
-          }).
-          error(function(data, status, headers, config) {
-                hideLoading();
-                alert('Ocorreu um erro. Tente novamente.')
-        });
-
-
-        $scope.$on('$viewContentLoaded', function() {
-            loading();
-            swipe_menu();
-
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.item, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       }
-    }]
-);
-
-
-
-
-planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$location',
-    function ($scope, $rootScope, $location ) {
-        var $http = $rootScope;
-        language = window.localStorage.getItem('language');
-        $scope.items = $rootScope.items;
-        //$scope.programming = programming;
-        
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-
-      var pk = $location.path().split('/')[2];
-      var api_url = API_ROOT_URL + '/api/venue/' + pk +'/?lang=' + language;
-      $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-            $scope.programming = data;
-          }).
-          error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-
-    }]
-);
-
-
-
-
-
-planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
- 
-        $http = $rootScope;
-        $scope.items = $rootScope.items;
-        if (language == 2) {
-            $scope.bg_img = "fases-finais_en.jpg"
-        }else if (language == 3) {
-            $scope.bg_img = "fases-finais_es.jpg"
-        }else {
-            $scope.bg_img = "fases-finais.jpg"
-        }
-        language = localStorage.getItem('language');
-        //$scope.finals = finals[language];
-
-        var api_url = API_ROOT_URL + '/api/finals/' + '?lang=' + language;
-        $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-            $scope.finals = data[language];
-          }).
-          error(function(data, status, headers, config) {
-            alert('Ocorreu um erro. Tente novamente.')
-        });
-        
-        $scope.$on('$viewContentLoaded', function() {
-            body = document.body;
-            menuAchor = document.getElementsByClassName('menu')[0];
-            menuAchor.addEventListener("click", function(e) {
-                e.preventDefault();
-                if (body.classList.length == 0) {
-                    body.className = "menu-active";
-                }else {
-                    body.className = "";
-                };
-            });
-        });
-        var dropdown = document.querySelectorAll('.dropdown');
-        var dropdownArray = Array.prototype.slice.call(dropdown,0);
-        dropdownArray.forEach(function(el){
-            var button = el.querySelector('a[data-toggle="dropdown"]'),
-                    menu = el.querySelector('.dropdown-menu'),
-                    arrow = button.querySelector('i.icon-arrow');
-            button.addEventListener("click", function(e) {
-                if(!menu.hasClass('show')) {
-                    menu.classList.add('show');
-                    menu.classList.remove('hide');
-                    arrow.classList.add('open');
-                    arrow.classList.remove('close');
-                    event.preventDefault();
-                }
-                else {
-                    menu.classList.remove('show');
-                    menu.classList.add('hide');
-                    arrow.classList.remove('open');
-                    arrow.classList.add('close');
-                    event.preventDefault();
-                }
-                e.preventDefault();
-            });
-        })
-
-        Element.prototype.hasClass = function(className) {
-            return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
-        };
-        $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.items, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
-            body.className = "";
-       };
-    }]
-);
-
-
-
-
+/*
+#####################################################################
+############### Tem GET que será capturado no loading ###############
+#####################################################################
+*/
 
 planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
+    function ($scope, $http ) {
         language = localStorage.getItem('language');
-        $scope.items = $rootScope.items;
-        //$scope.home = home;
+        $scope.items = $http.items;
         $scope.locals = [{
             'title': 'Trilha da Pedra da Gavea',
             'img': 'images/language-br.png'
@@ -860,22 +468,9 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             'img': 'images/language-br.png'
             },
         ]
-        var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
-        $http({method: 'GET', url: api_url}).
-            success(function(data, status, headers, config) {
-            $scope.home = data;
-            hideLoading();
-          }).
-          error(function(data, status, headers, config) {
-            $scope.home = home;
-            
-            alert('Ocorreu um erro. Tente novamente.')
-            hideLoading();
-        });
-        
-
+        reprocess_loading();
         $scope.$on('$viewContentLoaded', function() {
-            loading();
+            $scope.home = $http.home;
             banner = document.getElementsByClassName('element_banner');
             elemets_banner = document.getElementsByClassName('input_checked');
             ontouch(document.getElementById('slider'), function(evt, dir, phase, swipetype, distance){
@@ -965,7 +560,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             request.send(data);
         };
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.item, function(i) {
+            angular.forEach($http.item, function(i) {
                 i.status = 'deactive';
             });
             item.status = 'active';
@@ -973,3 +568,462 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
        }
     }]
 );
+
+planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        $scope.items = $http.items;
+        language = localStorage.getItem('language');
+
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            $scope.we_are = $http.who_we;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+    }]
+);
+
+
+planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        $scope.items = $http.items;
+
+        $scope.$on('$viewContentLoaded', function() {
+            loading();
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+      var api_url = API_ROOT_URL + '/api/photos/' + '?lang=' + window.localStorage.getItem('language', '1');
+      $http({method: 'GET', url: api_url}).
+          success(function(data, status, headers, config) {
+            hideLoading();
+              $scope.photos = data;
+      
+      }).error(function(data, status, headers, config) {
+            hideLoading();
+              alert('Ocorreu um erro. Tente novamente.')
+      
+      });
+    
+    }]
+);
+
+
+planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        $scope.items = $http.items;
+        language = localStorage.getItem('language');
+        //$scope.guess = guess[language];
+
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        
+        document.getElementById('guess_id').onchange = function() {
+            this.disabled = true;
+            var data = 'country=' + this.value;
+            var request = new XMLHttpRequest();
+            request.open('POST', API_ROOT_URL + '/api/guesses/', true);
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.send(data);
+        };
+        
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+
+       var api_url = API_ROOT_URL + '/api/guesses/' + '?lang=' + language;
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.guess = data[language];
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+
+    }]
+);
+
+planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        //$scope.matches = matches;
+        language = window.localStorage.getItem('language');
+        
+        if (language == 2) {
+            $scope.th_match = "Game day";
+            $scope.bg_img = "tabela-de-jogos_en.jpg"
+        }else if (language == 3) {
+            $scope.th_match = "DÍA DEL JUEGO";
+            $scope.bg_img = "tabela-de-jogos_es.jpg"
+        }else {
+            $scope.th_match = "DIA DO JOGO";
+            $scope.bg_img = "tabela-de-jogos.jpg"
+        }
+        $scope.items = $http.items;
+        
+        $scope.$on('$viewContentLoaded', function() {
+            loading();
+            elemets_banner = document.getElementsByClassName('input_checked');
+            ontouch(document.getElementById('team-per-group'), function(evt, dir, phase, swipetype, distance){
+                if (phase == 'end') {
+                    event.stopPropagation();
+                    if (dir == 'left'){
+                        forward_element(elemets_banner);
+                    };
+                    if (dir == 'right') {
+                        back_element(elemets_banner);
+                    };
+                };
+            });
+            swipe_menu();
+            
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+       
+      var api_url = API_ROOT_URL + '/api/matches_by_groups/' + '?lang=' + language;
+      $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+                hideLoading();
+                $scope.matches = data;
+            }).
+            error(function(data, status, headers, config) {
+                hideLoading();
+                alert('Ocorreu um erro. Tente novamente.')
+            });
+    }]
+);
+
+
+planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+ 
+        $scope.items = $http.items;
+        if (language == 2) {
+            $scope.bg_img = "fases-finais_en.jpg"
+        }else if (language == 3) {
+            $scope.bg_img = "fases-finais_es.jpg"
+        }else {
+            $scope.bg_img = "fases-finais.jpg"
+        }
+        language = localStorage.getItem('language');
+        //$scope.finals = finals[language];
+
+        var api_url = API_ROOT_URL + '/api/finals/' + '?lang=' + language;
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.finals = data[language];
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+        
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        var dropdown = document.querySelectorAll('.dropdown');
+        var dropdownArray = Array.prototype.slice.call(dropdown,0);
+        dropdownArray.forEach(function(el){
+            var button = el.querySelector('a[data-toggle="dropdown"]'),
+                    menu = el.querySelector('.dropdown-menu'),
+                    arrow = button.querySelector('i.icon-arrow');
+            button.addEventListener("click", function(e) {
+                if(!menu.hasClass('show')) {
+                    menu.classList.add('show');
+                    menu.classList.remove('hide');
+                    arrow.classList.add('open');
+                    arrow.classList.remove('close');
+                    event.preventDefault();
+                }
+                else {
+                    menu.classList.remove('show');
+                    menu.classList.add('hide');
+                    arrow.classList.remove('open');
+                    arrow.classList.add('close');
+                    event.preventDefault();
+                }
+                e.preventDefault();
+            });
+        })
+
+        Element.prototype.hasClass = function(className) {
+            return this.className && new RegExp("(^|\\s)" + className + "(\\s|$)").test(this.className);
+        };
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+    }]
+);
+
+/*
+##########################################################################
+########### FINAL DAS TELAS QUE O GET FOI CAPTURADO NO LOADING ###########
+##########################################################################
+*/
+
+
+
+planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',
+    function ($scope, $http ) {
+        $scope.items = $http.items;
+        language = localStorage.getItem('language');
+        //$scope.news = news;
+        
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+       var api_url = API_ROOT_URL + '/api/news/' + '?lang=' + language;
+      $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.news = data;
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+
+
+
+    }]
+);
+
+
+planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$location',
+    function ($scope, $location ) {
+        $scope.items = $http.items;
+        language = localStorage.getItem('language');
+        //$scope.show_news = show_news;
+        
+        $scope.$on('$viewContentLoaded', function() {
+            loading();
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+      var pk = $location.path().split('/')[2];
+      var api_url = API_ROOT_URL + '/api/news/' + pk + '/?lang=' + language;
+      $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+                hideLoading();
+            $scope.show_news = data;
+          }).
+          error(function(data, status, headers, config) {
+            hideLoading();
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+
+    }]
+);
+
+
+
+
+
+
+
+
+planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$routeParams',
+    function ($scope, $rootParams, $http ) {
+        language = window.localStorage.getItem('language');
+        offset = $rootParams.offset;
+        $scope.items = $http.items;
+        
+        var api_url = API_ROOT_URL + '/api/last_games/' + '?lang=' + language + '&page=' + offset;
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+                hideLoading();
+                $scope.last_games = data;
+                paginate = parseInt(data.total / 10);
+                rest = data.total % 10;
+                if (paginate > 0 && rest != 0) {
+                    paginate += 1;
+                }
+                $scope.paginate = Array.apply(null, Array(paginate)).map(function (_, i) {return {"num": i+1, "id": i*10, "active": i*10 == offset};});
+          }).
+          error(function(data, status, headers, config) {
+                hideLoading();
+                alert('Ocorreu um erro. Tente novamente.')
+        });
+
+
+        $scope.$on('$viewContentLoaded', function() {
+            loading();
+            swipe_menu();
+
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.item, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       }
+    }]
+);
+
+
+
+
+planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$location',
+    function ($scope, $location ) {
+        language = window.localStorage.getItem('language');
+        $scope.items = $http.items;
+        //$scope.programming = programming;
+        
+        $scope.$on('$viewContentLoaded', function() {
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+        $scope.activeMenu = function(item) {
+            angular.forEach($http.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+      var pk = $location.path().split('/')[2];
+      var api_url = API_ROOT_URL + '/api/venue/' + pk +'/?lang=' + language;
+      $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $scope.programming = data;
+          }).
+          error(function(data, status, headers, config) {
+            alert('Ocorreu um erro. Tente novamente.')
+        });
+
+    }]
+);
+
+
+
+
+
+
+
+
+
