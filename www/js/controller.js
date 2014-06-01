@@ -479,8 +479,16 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $http = $rootScope;
         $scope.items = $rootScope.items;
+        
         language = localStorage.getItem('language');
 
+        if (language == 2) {
+            $scope.title_page = "Who we are";
+        }else if (language == 3) {
+            $scope.title_page = "Quienes Somos";
+        }else {
+            $scope.title_page = "Quem Somos";
+        }
         $scope.$on('$viewContentLoaded', function() {
             loading();
             body = document.body;
