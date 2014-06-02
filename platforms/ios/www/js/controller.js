@@ -533,13 +533,13 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
             $scope.we_are = data[language];
           }).
           error(function(data, status, headers, config) {
-                $http.we_are = we_are;
-                $scope.we_are = $http.we_are[language];
-                // if ($http.we_are){
-                //     $scope.we_are = $http.we_are[language];
-                // }else {
-                //     alert_connection();
-                // }
+                // $http.we_are = we_are;
+                // $scope.we_are = $http.we_are[language];
+                if ($http.we_are){
+                    $scope.we_are = $http.we_are[language];
+                }else {
+                    alert_connection();
+                }
 
                 hideLoading();
         });
