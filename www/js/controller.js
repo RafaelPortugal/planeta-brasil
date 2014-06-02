@@ -889,15 +889,15 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         //$scope.home = home;
         $scope.locals = [{
             'title': 'Trilha da Pedra da Gavea',
-            'img': 'images/language-br.png'
+            'img': 'images/bandeiras/a1.png'
             },
             {
             'title': 'Trilha da Pedra da Gavea',
-            'img': 'images/language-br.png'
+            'img': 'images/bandeiras/a1.png'
             },
             {
             'title': 'Trilha da Pedra da Gavea',
-            'img': 'images/language-br.png'
+            'img': 'images/bandeiras/a1.png'
             },
         ]
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
@@ -908,6 +908,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             hideLoading();
           }).
           error(function(data, status, headers, config) {
+            // $http.home = home;
             if ($http.home){
                 $scope.home = $http.home;
             }else {
@@ -1006,6 +1007,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             request.open('POST', API_ROOT_URL + url, true);
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.send(data);
+            alert('Palpite enviado com sucesso!');
         };
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.item, function(i) {

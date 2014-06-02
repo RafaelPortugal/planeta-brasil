@@ -807,7 +807,7 @@ curiosities = {
     1: [
         {
             'number': 3,
-            'type': 'Mais vitórias',
+            'type': 'Vitórias',
             'player': 'Pelé',
             'team': '(Brasil, 1958/1962/1970)'
         },
@@ -825,7 +825,7 @@ curiosities = {
         },
         {
             'number': 13,
-            'type': 'Mais gols em um torneio',
+            'type': 'Gols em um torneio',
             'player': 'Just Fontaine',
             'team': '(Itália, 1990-2002)'
         },
@@ -838,20 +838,20 @@ curiosities = {
         },
         {
             'number': 15,
-            'type': 'Mais gols',
+            'type': 'Gols',
             'player': 'Ronaldo',
             'team': 'Brasil, 1998-2006'
         },
 
         {
             'number': 5,
-            'type': 'Mais gols em uma partida',
+            'type': 'Gols em uma partida',
             'player': 'Oleg Salenko',
             'team': 'Camarões vs Russia, 1994'
         },
         {
             'number': 15,
-            'type': 'Mais gols',
+            'type': 'Gols',
             'player': 'Ronaldo',
             'team': 'Brasil, 1998-2006'
         },
@@ -869,13 +869,13 @@ curiosities = {
         },
         {
             'number': 19,
-            'type': 'Mais participações',
+            'type': 'Participações',
             'player': 'Brasil',
             'team': ''
         },
         {
             'number': 12,
-            'type': 'Mais gols em uma partida',
+            'type': 'Gols em uma partida',
             'player': 'Osterreich vs Switzerland, 7-5, 1954',
             'team': ''
         },
@@ -888,7 +888,7 @@ curiosities = {
         },
         {
             'number': 5,
-            'type': 'Mais vitórias',
+            'type': 'Vitórias',
             'player': 'Brasil',
             'team': ''
         }

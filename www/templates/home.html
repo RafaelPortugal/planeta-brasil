@@ -249,11 +249,15 @@
 		font-size: 0.6em;
 		text-transform: uppercase;
 	}
-	.guess b {
+	.guess b, .guess a {
 		padding: 5px 10px;
 		background: #facb11;
 		border-radius: 15px;
 		color: #00a84f;
+	}
+	.guess a {
+		text-decoration: none;
+		margin-left: 10px;
 	}
 	
 
@@ -409,7 +413,7 @@
 					<div class="bronw">
 						<h2><div class="text-title">Locais Interessantes</div></h2>
 						<div class="locals">
-							<div class="news-block local" ng-repeat='local in home.locals'  ng-class="{'last':$last}">
+							<div class="news-block local" ng-repeat='local in locals'  ng-class="{'last':$last}">
 								<h3><img src="{{local.img}}" alt="{{local.title}}"> {{local.title}}</h3>
 							</div>
 						</div>
@@ -437,6 +441,7 @@
 														
 													<div class="guess">
 														<b ng-click="guess($event)">Dê seu palpite</b>
+														<a href="#/ranking-guess">Ranking</a>
 													</div>
 													<i class="home"><span>{{match.abbr_home}}</span> <img src="{{match.img_home}}" alt="Brasil"><input type="number" name="home" min=0 max=9 step=1></i>
 													<span class="vs">X</span>

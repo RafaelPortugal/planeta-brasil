@@ -86,6 +86,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/we_are.html',
         controller: 'WeAreCtrl'
       }).
+      when('/ranking-guess', {
+        templateUrl: 'templates/ranking_guess.html',
+        controller: 'RankingGuessCtrl'
+      }).
       otherwise({
         redirectTo: function() {
           if (window.localStorage.getItem('language')){

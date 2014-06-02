@@ -39,6 +39,50 @@
 		padding: 0 20px;
 		font-size: 2.5em;
 	}
+	.div_table {
+		padding: 0 20px;
+	}
+	table {
+		width: 100%;
+		text-align: center;
+		font-size: 1.5em;
+		border-collapse: collapse;
+	}
+	.first {
+		text-align: left;
+	}
+	table tr {
+		line-height: 2em;
+	}
+	.medalha {
+		padding-left: 25px;
+		background-image: url('images/medalha.jpg');
+		background-repeat: no-repeat;
+		background-position-y: 0.5em;
+	}
+
+	.back {
+		padding-bottom: 60px;
+		text-align: center;
+	}
+	.back button, .back a {
+		display: inline-block;
+		background: #f9cb11;
+		border: 0;
+		border-radius: 15px;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 1.2em;
+		color: #003e66;
+		margin-top: 30px;
+	}
+	.back button {
+		margin-right: 20px;
+	}
+	.image img { 
+	}
 </style>
 
 <menu id="nav-left">
@@ -60,7 +104,78 @@
 			<div class="logo">
 				<h2>{{title_page}}</h2>
 			</div>
-			<div class="text" ng-bind-html="we_are.description"></div>
+			<div class="div_table">
+				
+			<table border="1" cellpadding="3">
+				<thead>
+					<tr>
+						<th class="first">Nome</th>
+						<th>Acertos</th>
+						<th>Palpites</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="first medalha">Rafael Portugal</td>
+						<td>3</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Alan Albuquerque</td>
+						<td>3</td>
+						<td>15</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Daniel Limeira</td>
+						<td>2</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Daniel Limeira</td>
+						<td>2</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Daniel Limeira</td>
+						<td>2</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Daniel Limeira</td>
+						<td>2</td>
+						<td>5</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Daniel Limeira</td>
+						<td>1</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Daniel Limeira</td>
+						<td>1</td>
+						<td>10</td>
+					</tr>
+					<tr>
+						<td class="first medalha">Daniel Limeira</td>
+						<td>1</td>
+						<td>15</td>
+					</tr>
+					<tr>
+						<td class="first">Daniel Limeira</td>
+						<td>0</td>
+						<td>8</td>
+					</tr>
+					<tr>
+						<td class="first">Daniel Limeira</td>
+						<td>0</td>
+						<td>10</td>
+					</tr>
+				</tbody>
+			</table>
+			</div>
+		    <div class="back">
+		        <button onclick="window.history.back()">Voltar</button> 
+		    </div>
 		</div>
 	</div>
 </div>
