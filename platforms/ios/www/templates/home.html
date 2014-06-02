@@ -295,7 +295,11 @@
 		transition: opacity .25s ease-in-out;
 		-webkit-transition: opacity .25s ease-in-out;
 	}
-
+	.img_absolute {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
 </style>
     <menu id="nav-left">
         <ul>
@@ -330,7 +334,10 @@
 			                    <div class="date-banner">
 				                   	<span>{{n.day}}</span>
 				                </div>
-			                   	<a href="#/show-news/{{n.id}}"><img src="{{n.img}}" alt="Imagem da noticia"></a>
+			                   	<a href="#/show-news/{{n.id}}">
+			                   		<img src="images/bg_loading.png" alt="carregando">
+			                   		<img class="img_absolute" src="{{n.img}}" alt="Imagem da noticia">
+			                   	</a>
 			                   	<div class="text-banner">
 			                   		<p>{{n.title}}</p>
 			                  	</div>
@@ -382,7 +389,10 @@
 					            		<div class="inner">
 											<article ng-repeat="culturalProgramming in home.culturalProgramming" class="element_banner" ng-click="showProgramming(culturalProgramming.id)">
 												<h3>{{culturalProgramming.title}}</h3>
-												<img src="{{culturalProgramming.img}}">
+												<div class="img">
+													<img src="images/bg_loading.png" alt="Loading">
+													<img class="img-absolute" src="{{culturalProgramming.img}}">
+												</div>
 												<p>{{culturalProgramming.describ}}</p>
 							                </article>
 							            </div>

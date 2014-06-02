@@ -544,10 +544,23 @@ header h1 {
     margin-bottom: 0.3em;
 }
 
-.page .content-home .section #news-block img{
+.page .content-home .section #news-block .img{
     width: 54%;
     float: left;
+    position: relative;
 }
+.page .content-home .section #news-block img{
+    width: 100%;
+    background-image: url('../images/loading_2.gif');
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.img-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .page .content-home .section #news-block p{
     font-size: 1.5em;
     padding-left: 0.5em;

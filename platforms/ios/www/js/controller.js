@@ -495,13 +495,6 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
         
         language = localStorage.getItem('language');
         
-        if (language == 2) {
-            $scope.title_page = "Who we are";
-        }else if (language == 3) {
-            $scope.title_page = "Quienes Somos";
-        }else {
-            $scope.title_page = "Quem Somos";
-        }
         $scope.$on('$viewContentLoaded', function() {
             loading();
             body = document.body;
@@ -529,14 +522,14 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             hideLoading();
-            $http.we_are = data
-            $scope.we_are = data[language];
+            $http.we_are = data;
+            $scope.we_are = data;
           }).
           error(function(data, status, headers, config) {
                 // $http.we_are = we_are;
                 // $scope.we_are = $http.we_are[language];
                 if ($http.we_are){
-                    $scope.we_are = $http.we_are[language];
+                    $scope.we_are = $http.we_are;
                 }else {
                     alert_connection();
                 }
@@ -908,7 +901,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             hideLoading();
           }).
           error(function(data, status, headers, config) {
-            // $http.home = home;
+            $http.home = home;
             if ($http.home){
                 $scope.home = $http.home;
             }else {
