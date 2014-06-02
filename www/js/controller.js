@@ -177,6 +177,8 @@ planetaBrasilControllers.controller('FacebookCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
+        $scope.items.height = window.screen.height - 100;
+
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -531,11 +533,14 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
             $scope.we_are = data[language];
           }).
           error(function(data, status, headers, config) {
-                if ($http.we_are){
-                    $scope.we_are = $http.we_are[language];
-                }else {
-                    alert_connection();
-                }
+                $http.we_are = we_are;
+                $scope.we_are = $http.we_are[language];
+                // if ($http.we_are){
+                //     $scope.we_are = $http.we_are[language];
+                // }else {
+                //     alert_connection();
+                // }
+
                 hideLoading();
         });
 
@@ -1009,5 +1014,61 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             item.status = 'active';
             body.className = "";
        }
+    }]
+);
+
+planetaBrasilControllers.controller('RankingGuessCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $http = $rootScope;
+        $scope.items = $rootScope.items;
+        
+        language = localStorage.getItem('language');
+        
+        if (language == 2) {
+            $scope.title_page = "Ranking Guess";
+        }else if (language == 3) {
+            $scope.title_page = "Ranking Conjecture";
+        }else {
+            $scope.title_page = "Ranking Palpites";
+        }
+        $scope.$on('$viewContentLoaded', function() {
+            // loading();
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
+
+
+       // var api_url = API_ROOT_URL + '/api/we-are/' + '?lang=' + language;
+       //  $http({method: 'GET', url: api_url}).
+       //      success(function(data, status, headers, config) {
+       //      hideLoading();
+       //      $http.we_are = data
+       //      $scope.we_are = data[language];
+       //    }).
+       //    error(function(data, status, headers, config) {
+       //          if ($http.we_are){
+       //              $scope.we_are = $http.we_are[language];
+       //          }else {
+       //              alert_connection();
+       //          }
+       //          hideLoading();
+       //  });
+
     }]
 );

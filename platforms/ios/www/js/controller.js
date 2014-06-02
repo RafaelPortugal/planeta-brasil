@@ -177,6 +177,8 @@ planetaBrasilControllers.controller('FacebookCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
+        $scope.items.height = window.screen.height - 100;
+
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
             menuAchor = document.getElementsByClassName('menu')[0];
@@ -903,9 +905,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             hideLoading();
           }).
           error(function(data, status, headers, config) {
-            alert('error');
             if ($http.home){
-                alert('Tem o home');
                 $scope.home = $http.home;
             }else {
                 alert_connection();
