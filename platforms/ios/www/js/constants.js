@@ -1871,3 +1871,510 @@ we_are = {
         "description": "<p>Planeta Brasil tiene una estructura de servicios integrales en las industrias de hostelería, transporte, eventos, excursiones y otros planejados especificamente</p>"
     }
 }
+
+
+
+world_championships = {
+    1: [
+        {
+            "year": 1930,
+            "team": "Uruguai"
+        },
+        {
+            "year": 1934,
+            "team": "Itália"
+        },
+        {
+            "year": 1938,
+            "team": "Itália"
+        },
+        {
+            "year": 1950,
+            "team": "Uruguai"
+        },
+        {
+            "year": 1954,
+            "team": "Alemanha"
+        },
+        {
+            "year": 1958,
+            "team": "Brasil"
+        },
+        {
+            "year": 1962,
+            "team": "Brasil"
+        },
+        {
+            "year": 1966,
+            "team": "Inglaterra"
+        },
+        {
+            "year": 1970,
+            "team": "Brasil"
+        },
+        {
+            "year": 1974,
+            "team": "Alemanha"
+        },
+        {
+            "year": 1978,
+            "team": "Argentina"
+        },
+        {
+            "year": 1982,
+            "team": "Itália"
+        },
+        {
+            "year": 1986,
+            "team": "Argentina"
+        },
+        {
+            "year": 1990,
+            "team": "Alemanha"
+        },
+        {
+            "year": 1994,
+            "team": "Brasil"
+        },
+        {
+            "year": 1998,
+            "team": "França"
+        },
+        {
+            "year": 2002,
+            "team": "Brasil"
+        },
+        {
+            "year": 2006,
+            "team": "Itália"
+        },
+        {
+            "year": 2010,
+            "team": "Espanha"
+        }
+    ],
+    2: [
+        {
+            "year": 1930,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1934,
+            "team": "Italy"
+        },
+        {
+            "year": 1938,
+            "team": "Italy"
+        },
+        {
+            "year": 1950,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1954,
+            "team": "Germany"
+        },
+        {
+            "year": 1958,
+            "team": "Brazil"
+        },
+        {
+            "year": 1962,
+            "team": "Brazil"
+        },
+        {
+            "year": 1966,
+            "team": "England"
+        },
+        {
+            "year": 1970,
+            "team": "Brazil"
+        },
+        {
+            "year": 1974,
+            "team": "Germany"
+        },
+        {
+            "year": 1978,
+            "team": "Argentine"
+        },
+        {
+            "year": 1982,
+            "team": "Italy"
+        },
+        {
+            "year": 1986,
+            "team": "Argentine"
+        },
+        {
+            "year": 1990,
+            "team": "Germany"
+        },
+        {
+            "year": 1994,
+            "team": "Brazil"
+        },
+        {
+            "year": 1998,
+            "team": "France"
+        },
+        {
+            "year": 2002,
+            "team": "Brazil"
+        },
+        {
+            "year": 2006,
+            "team": "Italy"
+        },
+        {
+            "year": 2010,
+            "team": "Spain"
+        }
+    ],
+    3: [
+        {
+            "year": 1930,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1934,
+            "team": "Italia"
+        },
+        {
+            "year": 1938,
+            "team": "Italia"
+        },
+        {
+            "year": 1950,
+            "team": "Uruguay"
+        },
+        {
+            "year": 1954,
+            "team": "Alemania"
+        },
+        {
+            "year": 1958,
+            "team": "Brasil"
+        },
+        {
+            "year": 1962,
+            "team": "Brasil"
+        },
+        {
+            "year": 1966,
+            "team": "Inglaterra"
+        },
+        {
+            "year": 1970,
+            "team": "Brasil"
+        },
+        {
+            "year": 1974,
+            "team": "Alemania"
+        },
+        {
+            "year": 1978,
+            "team": "Argentina"
+        },
+        {
+            "year": 1982,
+            "team": "Italia"
+        },
+        {
+            "year": 1986,
+            "team": "Argentina"
+        },
+        {
+            "year": 1990,
+            "team": "Alemania"
+        },
+        {
+            "year": 1994,
+            "team": "Brasil"
+        },
+        {
+            "year": 1998,
+            "team": "Francia"
+        },
+        {
+            "year": 2002,
+            "team": "Brasil"
+        },
+        {
+            "year": 2006,
+            "team": "Italia"
+        },
+        {
+            "year": 2010,
+            "team": "España"
+        }
+    ]
+}
+
+
+select_championship = [
+    {   
+        "value": "",
+        "team": {
+            1: "Dê seu palpite",
+            2: "Give your guess",
+            3: "Dar a su conjetura"
+        }
+    },
+    {   
+        "value": "1",
+        "team": {
+            1: "Brasil",
+            2: "Brazil",
+            3: "Brasil"
+        }
+    },
+    {   
+        "value": "2",
+        "team": {
+            1: "Japão",
+            2: "Japan",
+            3: "Japón"
+        }
+    },
+    {   
+        "value": "3",
+        "team": {
+            1: "Austrália",
+            2: "Australia",
+            3: "Australia"
+        }
+    },
+    {   
+        "value": "4",
+        "team": {
+            1: "Irã",
+            2: "Iran",
+            3: "Irán"
+        }
+    },
+    {   
+        "value": "5",
+        "team": {
+            1: "Coreia do Sul",
+            2: "South Korea",
+            3: "Corea del Sur"
+        }
+    },
+    {   
+        "value": "6",
+        "team": {
+            1: "Holanda",
+            2: "Netherlands",
+            3: "Países Bajos"
+        }
+    },
+    {   
+        "value": "7",
+        "team": {
+            1: "Itália",
+            2: "Italy",
+            3: "Italia"
+        }
+    },
+    {   
+        "value": "8",
+        "team": {
+            1: "Argentina",
+            2: "Argentine",
+            3: "Argentina"
+        }
+    },
+    {   
+        "value": "9",
+        "team": {
+            1: "EUA",
+            2: "EUA",
+            3: "EUA"
+        }
+    },
+    {   
+        "value": "10",
+        "team": {
+            1: "Costa Rica",
+            2: "Costa Rica",
+            3: "Costa Rica"
+        }
+    },
+    {   
+        "value": "11",
+        "team": {
+            1: "Alemanha",
+            2: "Germany",
+            3: "Alemania"
+        }
+    },
+    {   
+        "value": "12",
+        "team": {
+            1: "Bélgica",
+            2: "Belgium",
+            3: "Bélgica"
+        }
+    },
+    {   
+        "value": "13",
+        "team": {
+            1: "Suíça",
+            2: "Switzerland",
+            3: "Suiza"
+        }
+    },
+    {   
+        "value": "14",
+        "team": {
+            1: "Colômbia",
+            2: "Colombia",
+            3: "Colombia"
+        }
+    },
+    {   
+        "value": "15",
+        "team": {
+            1: "Espanha",
+            2: "Spain",
+            3: "España"
+        }
+    },
+    {   
+        "value": "16",
+        "team": {
+            1: "Bósnia",
+            2: "Bosnia",
+            3: "Bosnia"
+        }
+    },
+    {   
+        "value": "17",
+        "team": {
+            1: "Rússia",
+            2: "Russian",
+            3: "Rusia"
+        }
+    },
+    {   
+        "value": "18",
+        "team": {
+            1: "Inglaterra",
+            2: "England",
+            3: "Inglaterra"
+        }
+    },
+    {   
+        "value": "19",
+        "team": {
+            1: "Chile",
+            2: "Chile",
+            3: "Chile"
+        }
+    },
+    {   
+        "value": "20",
+        "team": {
+            1: "Equador",
+            2: "Ecuador",
+            3: "Ecuador"
+        }
+    },
+    {   
+        "value": "21",
+        "team": {
+            1: "Honduras",
+            2: "Honduras",
+            3: "Honduras"
+        }
+    },
+    {   
+        "value": "22",
+        "team": {
+            1: "Nigéria",
+            2: "Nigeria",
+            3: "Nigéria"
+        }
+    },
+    {   
+        "value": "23",
+        "team": {
+            1: "Camarões",
+            2: "Cameroon",
+            3: "Camerún"
+        }
+    },
+    {   
+        "value": "24",
+        "team": {
+            1: "Costa do Marfim",
+            2: "Ivory Coast",
+            3: "Costa de Marfil"
+        }
+    },
+    {   
+        "value": "25",
+        "team": {
+            1: "Portugal",
+            2: "Portugal",
+            3: "Portugal"
+        }
+    },
+    {   
+        "value": "26",
+        "team": {
+            1: "França",
+            2: "France",
+            3: "Francia"
+        }
+    },
+    {   
+        "value": "27",
+        "team": {
+            1: "Grécia",
+            2: "Greece",
+            3: "Grecia"
+        }
+    },
+    {   
+        "value": "28",
+        "team": {
+            1: "Croácia",
+            2: "Croatia",
+            3: "Croacia"
+        }
+    },
+    {   
+        "value": "29",
+        "team": {
+            1: "Argélia",
+            2: "Algeria",
+            3: "Argelia"
+        }
+    },
+    {   
+        "value": "30",
+        "team": {
+            1: "Gana",
+            2: "Ghana",
+            3: "Ghana"
+        }
+    },
+    {   
+        "value": "31",
+        "team": {
+            1: "México",
+            2: "Mexico",
+            3: "México"
+        }
+    },
+    {
+        "value": "32",
+        "team": {
+            1: "Uruguai",
+            2: "Uruguay",
+            3: "Uruguay"
+        }
+    }
+]

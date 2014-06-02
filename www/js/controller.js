@@ -3,6 +3,16 @@ function Menu(language) {
 
 }
 
+var alert_connection = function() {
+    var language = window.localStorage.getItem('language');
+    if (language == 2) {
+        alert('Check your connection. Try again later.');
+    }else if (language == 3) {
+        alert('Compruebe la conexión. Inténtelo de nuevo más tarde..');
+    }else {
+        alert('Verifique a sua conexão. Tente novamente mais tarde.');
+    };
+}
 
 var planetaBrasilControllers = angular.module('planetaBrasilControllers', ['ngSanitize']);
 planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
@@ -516,12 +526,17 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
        var api_url = API_ROOT_URL + '/api/we-are/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
-                hideLoading();
+            hideLoading();
+            $http.we_are = data
             $scope.we_are = data[language];
           }).
           error(function(data, status, headers, config) {
+                if ($http.we_are){
+                    $scope.we_are = $http.we_are[language];
+                }else {
+                    alert_connection();
+                }
                 hideLoading();
-            $scope.we_are = we_are[language];
         });
 
     }]
@@ -883,13 +898,16 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
+            $http.home = data;
             $scope.home = data;
             hideLoading();
           }).
           error(function(data, status, headers, config) {
-            $scope.home = home;
-            
-            alert('Ocorreu um erro. Tente novamente.')
+            if ($http.home){
+                $scope.home = $http.home;
+            }else {
+                alert_connection();
+            }
             hideLoading();
         });
         
