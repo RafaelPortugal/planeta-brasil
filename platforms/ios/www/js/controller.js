@@ -461,9 +461,11 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
         
         document.getElementById('guess_id').onchange = function() {
             this.disabled = true;
-            var data = 'country=' + this.value;
+            var email = 'email=' + window.localStorage.getItem('email');
+            var country = 'country=' + this.value;
+            var data = [email, country].join('&');
             var request = new XMLHttpRequest();
-            request.open('POST', API_ROOT_URL + '/api/guesses/', true);
+            request.open('POST', API_ROOT_URL + '/api/create-guesses/?lang=' + window.localStorage.getItem('language'), true);
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.send(data);
         };
@@ -480,7 +482,7 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
        var api_url = API_ROOT_URL + '/api/guesses/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
-            $scope.guess = data[language];
+            $scope.guess = data;
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')
@@ -880,19 +882,19 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
         //$scope.home = home;
-        $scope.locals = [{
-            'title': 'Trilha da Pedra da Gavea',
-            'img': 'images/bandeiras/a1.png'
-            },
-            {
-            'title': 'Trilha da Pedra da Gavea',
-            'img': 'images/bandeiras/a1.png'
-            },
-            {
-            'title': 'Trilha da Pedra da Gavea',
-            'img': 'images/bandeiras/a1.png'
-            },
-        ]
+        // $scope.locals = [{
+        //     'title': 'Trilha da Pedra da Gavea',
+        //     'img': 'images/bandeiras/a1.png'
+        //     },
+        //     {
+        //     'title': 'Trilha da Pedra da Gavea',
+        //     'img': 'images/bandeiras/a1.png'
+        //     },
+        //     {
+        //     'title': 'Trilha da Pedra da Gavea',
+        //     'img': 'images/bandeiras/a1.png'
+        //     },
+        // ]
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
@@ -901,7 +903,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             hideLoading();
           }).
           error(function(data, status, headers, config) {
-            $http.home = home;
+            // $http.home = home;
             if ($http.home){
                 $scope.home = $http.home;
             }else {
@@ -983,11 +985,13 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             parent = $event.toElement.parentElement.parentElement;
             parent.className = "active";
         };
-        $scope.guessSubmit = function($event, url) {
+        $scope.guessSubmit = function($event) {
             form = $event.toElement.parentElement.parentElement;
+            id = form.getAttribute('data-id');
+            url = API_ROOT_URL + '/api/match/' + id;
             gols_home = parseInt(form.elements.home.value);
             gols_visited = parseInt(form.elements.visited.value);
-            if (gols_visited == NaN || gols_home == NaN){
+            if (!gols_visited || !gols_home){
                 alert('Favor conferir os campos');
                 return
             }
@@ -997,7 +1001,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             name = "name=" + window.localStorage.getItem('name');
             data = [name, email, home, visited].join('&');
             var request = new XMLHttpRequest();
-            request.open('POST', API_ROOT_URL + url, true);
+            request.open('POST', url, true);
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.send(data);
             alert('Palpite enviado com sucesso!');

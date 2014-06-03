@@ -423,7 +423,7 @@
 					<div class="bronw">
 						<h2><div class="text-title">Locais Interessantes</div></h2>
 						<div class="locals">
-							<div class="news-block local" ng-repeat='local in locals'  ng-class="{'last':$last}">
+							<div class="news-block local" ng-repeat='local in home.locals'  ng-class="{'last':$last}">
 								<h3><img src="{{local.img}}" alt="{{local.title}}"> {{local.title}}</h3>
 							</div>
 						</div>
@@ -447,7 +447,7 @@
 										<article ng-repeat="match in home.nextMatches" class="element_banner">
 											<ul class="border">
 												<li>
-													<form method="POST" ng-submit="guessSubmit($event, match.id)">
+													<form method="POST" action="." data-id="{{match.id}}">
 														
 													<div class="guess">
 														<b ng-click="guess($event)">Dê seu palpite</b>
@@ -457,9 +457,9 @@
 													<span class="vs">X</span>
 													<i class="visited"><img src="{{match.img_visited}}" alt="{{match.visited}}"><input type="number" name="visited" min=0 max=9 step=1><span>{{match.abbr_visited}}</span></i>
 													<div class="submit">
-														<input type="submit" value="Confirmar" ng-click="guessSubmit($event, 'api/match/{{macth.id}}')">
+														<input type="submit" value="Confirmar" ng-click="guessSubmit($event)">
 													</div>
-													<p class="stadium">{{match.local}}</p>
+													<p class="stadium">{{match.local}} </p>
 													<div class="footer-matches">
 													    <p class="datetime">{{match.date}}</p>
 													    <p class="type">{{match.type}}</p>

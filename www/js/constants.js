@@ -1224,6 +1224,19 @@ home = {
     ],
     "nextMatches": [
         {
+            "id": "10",
+            "home": "_Brasil",
+            "abbr_home": "_BRA",
+            "img_home": "images/bandeiras/a1.png",
+            "visited": "Croacia",
+            "abbr_visited": "CRO",
+            "img_visited": "images/bandeiras/a2.png",
+            "local": "Maracanã",
+            "date": "Quarta 04/06",
+            "type": "Amistoso"
+        },
+        {
+            "id": "10",
             "home": "Brasil",
             "abbr_home": "BRA",
             "img_home": "images/bandeiras/a1.png",
@@ -1235,17 +1248,7 @@ home = {
             "type": "Amistoso"
         },
         {
-            "home": "Brasil",
-            "abbr_home": "BRA",
-            "img_home": "images/bandeiras/a1.png",
-            "visited": "Croacia",
-            "abbr_visited": "CRO",
-            "img_visited": "images/bandeiras/a2.png",
-            "local": "Maracanã",
-            "date": "Quarta 04/06",
-            "type": "Amistoso"
-        },
-        {
+            "id": "10",
             "home": "Brasil",
             "abbr_home": "BRA",
             "img_home": "images/bandeiras/a1.png",
@@ -2112,7 +2115,7 @@ world_championships = {
 }
 
 
-select_championship = [
+select_championship =  [
     {   
         "value": "",
         "team": {
@@ -2121,260 +2124,100 @@ select_championship = [
             3: "Dar a su conjetura"
         }
     },
-    {   
-        "value": "1",
-        "team": {
-            1: "Brasil",
-            2: "Brazil",
-            3: "Brasil"
-        }
-    },
-    {   
-        "value": "2",
-        "team": {
-            1: "Japão",
-            2: "Japan",
-            3: "Japón"
-        }
-    },
-    {   
-        "value": "3",
-        "team": {
-            1: "Austrália",
-            2: "Australia",
-            3: "Australia"
-        }
-    },
-    {   
-        "value": "4",
-        "team": {
-            1: "Irã",
-            2: "Iran",
-            3: "Irán"
-        }
-    },
-    {   
-        "value": "5",
-        "team": {
-            1: "Coreia do Sul",
-            2: "South Korea",
-            3: "Corea del Sur"
-        }
-    },
-    {   
-        "value": "6",
-        "team": {
-            1: "Holanda",
-            2: "Netherlands",
-            3: "Países Bajos"
-        }
-    },
-    {   
-        "value": "7",
-        "team": {
-            1: "Itália",
-            2: "Italy",
-            3: "Italia"
-        }
-    },
-    {   
-        "value": "8",
-        "team": {
-            1: "Argentina",
-            2: "Argentine",
-            3: "Argentina"
-        }
-    },
-    {   
-        "value": "9",
-        "team": {
-            1: "EUA",
-            2: "EUA",
-            3: "EUA"
-        }
-    },
-    {   
-        "value": "10",
-        "team": {
-            1: "Costa Rica",
-            2: "Costa Rica",
-            3: "Costa Rica"
-        }
-    },
-    {   
-        "value": "11",
-        "team": {
-            1: "Alemanha",
-            2: "Germany",
-            3: "Alemania"
-        }
-    },
-    {   
-        "value": "12",
-        "team": {
-            1: "Bélgica",
-            2: "Belgium",
-            3: "Bélgica"
-        }
-    },
-    {   
-        "value": "13",
-        "team": {
-            1: "Suíça",
-            2: "Switzerland",
-            3: "Suiza"
-        }
-    },
-    {   
-        "value": "14",
-        "team": {
-            1: "Colômbia",
-            2: "Colombia",
-            3: "Colombia"
-        }
-    },
-    {   
-        "value": "15",
-        "team": {
-            1: "Espanha",
-            2: "Spain",
-            3: "España"
-        }
-    },
-    {   
-        "value": "16",
-        "team": {
-            1: "Bósnia",
-            2: "Bosnia",
-            3: "Bosnia"
-        }
-    },
-    {   
-        "value": "17",
-        "team": {
-            1: "Rússia",
-            2: "Russian",
-            3: "Rusia"
-        }
-    },
-    {   
-        "value": "18",
-        "team": {
-            1: "Inglaterra",
-            2: "England",
-            3: "Inglaterra"
-        }
-    },
-    {   
-        "value": "19",
-        "team": {
-            1: "Chile",
-            2: "Chile",
-            3: "Chile"
-        }
-    },
-    {   
-        "value": "20",
-        "team": {
-            1: "Equador",
-            2: "Ecuador",
-            3: "Ecuador"
-        }
-    },
-    {   
-        "value": "21",
-        "team": {
-            1: "Honduras",
-            2: "Honduras",
-            3: "Honduras"
-        }
-    },
-    {   
-        "value": "22",
-        "team": {
-            1: "Nigéria",
-            2: "Nigeria",
-            3: "Nigéria"
-        }
-    },
-    {   
-        "value": "23",
-        "team": {
-            1: "Camarões",
-            2: "Cameroon",
-            3: "Camerún"
-        }
-    },
-    {   
-        "value": "24",
-        "team": {
-            1: "Costa do Marfim",
-            2: "Ivory Coast",
-            3: "Costa de Marfil"
-        }
-    },
-    {   
-        "value": "25",
-        "team": {
-            1: "Portugal",
-            2: "Portugal",
-            3: "Portugal"
-        }
-    },
-    {   
-        "value": "26",
-        "team": {
-            1: "França",
-            2: "France",
-            3: "Francia"
-        }
-    },
-    {   
-        "value": "27",
-        "team": {
-            1: "Grécia",
-            2: "Greece",
-            3: "Grecia"
-        }
-    },
-    {   
-        "value": "28",
-        "team": {
-            1: "Croácia",
-            2: "Croatia",
-            3: "Croacia"
-        }
-    },
-    {   
-        "value": "29",
-        "team": {
-            1: "Argélia",
-            2: "Algeria",
-            3: "Argelia"
-        }
-    },
-    {   
-        "value": "30",
-        "team": {
-            1: "Gana",
-            2: "Ghana",
-            3: "Ghana"
-        }
-    },
-    {   
-        "value": "31",
-        "team": {
-            1: "México",
-            2: "Mexico",
-            3: "México"
-        }
-    },
     {
-        "value": "32",
-        "team": {
-            1: "Uruguai",
-            2: "Uruguay",
-            3: "Uruguay"
-        }
-    }
+        "team": {1: 'Brasil', 2: 'Brazil', 3: 'Brasil'},
+        'value': 1},
+    {
+        "team": {1: 'Croácia', 2: 'Croatia', 3: 'Croacia'},
+        'value': 2},
+    {
+        "team": {1: 'México', 2: 'Mexico', 3:'Mexico'},
+        'value': 3},
+    {
+        "team": {1: 'Camarões', 2: 'Cameroon', 3: 'Camerãn'},
+        'value': 4},
+    {
+        "team": {1: 'Espanha', 2: 'Spain', 3: 'España'},
+        'value': 5},
+    {
+        "team": {1: 'Holanda', 2: 'Netherlands', 3: 'Holanda'},
+        'value': 6},
+    {
+        "team": {1: 'Chile', 2: 'Chile', 3: 'Chile'},
+        'value': 7},
+    {
+        "team": {1: 'Austrália', 2: 'Australia', 3: 'Australia'},
+        'value': 8},
+    {
+        "team": {1: 'Colômbia', 2: 'Colombian', 3: 'Colombia'},
+        'value': 9},
+    {
+        "team": {1: 'Grécia', 2: 'Greece', 3:'Grecia'},
+        'value': 10},
+    {
+        "team": {1: 'Costa do Marfim', 2: 'Ivory Coast', 3: 'Costa de Marfil'},
+        'value': 11},
+    {
+        "team": {1: 'Japão', 2: 'Japan', 3: 'Japán'},
+        'value': 12},
+    {
+        "team": {1: 'Uruguai', 2: 'Uruguay', 3: 'Uruguay'},
+        'value': 13},
+    {
+        "team": {1: 'Costa Rica', 2: 'Costa Rica', 3: 'Costa Rica'},
+        'value': 14},
+    {
+        "team": {1: 'Inglaterra', 2: 'England', 3: 'Inglaterra'},
+        'value': 15},
+    {
+        "team": {1: 'Itália', 2: 'Italy', 3: 'Italia'},
+        'value': 16},
+    {
+        "team": {1: 'Suíça', 2: 'Switzerland', 3: 'Suiza'},
+        'value': 17},
+    {
+        "team": {1: 'Equador', 2: 'Equator', 3: 'Ecuador'},
+        'value': 18},
+    {
+        "team": {1: 'França', 2: 'France', 3: 'Francia'},
+        'value': 19},
+    {
+        "team": {1: 'Honduras', 2: 'Honduras', 3: 'Honduras'},
+        'value': 20},
+    {
+        "team": {1: 'Argentina', 2: 'Argentine', 3: 'Argentina'},
+        'value': 21},
+    {
+        "team": {1: 'Bósnia', 2: 'Bosnian', 3: 'Bosnio'},
+        'value': 22},
+    {
+        "team": {1: 'Irã', 2: 'Iran', 3: 'Ir\xe1n'},
+        'value': 23},
+    {
+        "team": {1: 'Nigéria', 2: 'Nigeria', 3: 'Nigeria'},
+        'value': 24},
+    {
+        "team": {1: 'Alemanha', 2: 'Germany', 3: 'Alemania'},
+        'value': 25},
+    {
+        "team": {1: 'Portugal', 2: 'Portugal', 3: 'Portugal'},
+        'value': 26},
+    {
+        "team": {1: 'Gana', 2: 'Ghana', 3: 'Ghana'},
+        'value': 27},
+    {
+        "team": {1: 'EUA', 2: 'USA', 3: 'EUA'},
+        'value': 28},
+    {
+        "team": {1: 'Bélgica', 2: 'Belgium', 3: 'Bélgica'},
+        'value': 29},
+    {
+        "team": {1: 'Argélia', 2: 'Algeria', 3: 'Argelia'},
+        'value': 30},
+    {
+        "team": {1: 'Rússia', 2: 'Russian', 3: 'Rusia'},
+        'value': 31},
+    {
+        "team": {1: 'Coréia do Sul', 2: 'South Korea', 3:'Corea del Sur'},
+        'value': 32}
 ]
