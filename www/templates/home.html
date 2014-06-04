@@ -1,4 +1,20 @@
 <style>
+	div.message_guess {
+		font-size: .5em;
+		width: 100%;
+		line-height: 2em;
+		position: absolute;
+		top: 0px;
+		color: #00a74e;
+	}
+
+	div.message_guess span{
+		background: #c2e7c7;
+		display: inline-block;
+		width: 80%;
+		border-radius: 4em;
+	}
+
 	#next-macth {
 	    text-align: center;
 	    margin: 0 auto;
@@ -446,7 +462,7 @@
 										<article ng-repeat="match in home.nextMatches" class="element_banner">
 											<ul class="border">
 												<li>
-													<form method="POST" action="." data-id="{{match.id}}">
+													<form method="POST" action="." data-id="{{match.id}}" class="relative">
 														
 													<div class="guess">
 														<b ng-click="guess($event)">Dê seu palpite</b>

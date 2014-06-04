@@ -1000,7 +1000,8 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             request.open('POST', url, true);
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.send(data);
-            alert('Palpite enviado com sucesso!');
+            // alert('Palpite enviado com sucesso!');
+            insertMessage(form, 'Palpite enviado com sucesso!', 'message_guess');
         };
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.item, function(i) {
