@@ -985,12 +985,12 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             form = $event.toElement.parentElement.parentElement;
             id = form.getAttribute('data-id');
             url = API_ROOT_URL + '/api/match/' + id;
-            gols_home = parseInt(form.elements.home.value);
-            gols_visited = parseInt(form.elements.visited.value);
-            if (!gols_visited || !gols_home){
+            if (!form.elements.home.value || !form.elements.visited.value){
                 alert('Favor conferir os campos');
                 return
             }
+            gols_home = parseInt(form.elements.home.value);
+            gols_visited = parseInt(form.elements.visited.value);
             visited = "visited=" + form.elements.visited.value;
             home = "home=" + form.elements.home.value;
             email = "email=" + window.localStorage.getItem('email');

@@ -767,7 +767,7 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
         var $http = $rootScope;
         language = window.localStorage.getItem('language');
         $scope.items = $rootScope.items;
-        //$scope.programming = programming;
+        // $scope.programming = programming;
         
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -890,19 +890,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
         //$scope.home = home;
-        // $scope.locals = [{
-        //     'title': 'Trilha da Pedra da Gavea',
-        //     'img': 'images/bandeiras/a1.png'
-        //     },
-        //     {
-        //     'title': 'Trilha da Pedra da Gavea',
-        //     'img': 'images/bandeiras/a1.png'
-        //     },
-        //     {
-        //     'title': 'Trilha da Pedra da Gavea',
-        //     'img': 'images/bandeiras/a1.png'
-        //     },
-        // ]
+        
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
@@ -997,12 +985,12 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             form = $event.toElement.parentElement.parentElement;
             id = form.getAttribute('data-id');
             url = API_ROOT_URL + '/api/match/' + id;
-            gols_home = parseInt(form.elements.home.value);
-            gols_visited = parseInt(form.elements.visited.value);
-            if (!gols_visited || !gols_home){
+            if (!form.elements.home.value || !form.elements.visited.value){
                 alert('Favor conferir os campos');
                 return
             }
+            gols_home = parseInt(form.elements.home.value);
+            gols_visited = parseInt(form.elements.visited.value);
             visited = "visited=" + form.elements.visited.value;
             home = "home=" + form.elements.home.value;
             email = "email=" + window.localStorage.getItem('email');
