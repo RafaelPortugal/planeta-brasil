@@ -32,17 +32,17 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
     function ($scope, $http ) {
         $scope.language = window.localStorage.getItem('language');
         if (window.localStorage.getItem('language') == 2) {
-            $scope.passaport = "passaport";
+            $scope.identify_title = "Passaport or CPF";
             $scope.login = "Login";
             $scope.advance = "Next";
             $scope.full_name = "Full name";
         } else if(window.localStorage.getItem('language') == 3) {
-            $scope.passaport = "pasaporte";
+            $scope.identify_title = "pasaporte o CPF";
             $scope.login = "Login";
             $scope.advance = "Próximo";
             $scope.full_name = "nombre completo";
         } else {
-            $scope.passaport = "Passaporte";
+            $scope.identify_title = "Passaporte ou CPF";
             $scope.login = "Identifique-se";
             $scope.advance = "Avançar";
             $scope.full_name = "nome completo";
@@ -67,7 +67,15 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
         $scope.submitForm = function(){
             window.localStorage.setItem('email', $scope.email);
             window.localStorage.setItem('full_name', $scope.full_name_form);
-            console.log('Fazer o post com o nome e email e o id do telefone.');
+            window.localStorage.setItem('identify', $scope.identify);
+            email = "email=" + $scope.email;
+            name = "name=" + $scope.full_name_form;
+            identify = "identify=" + $scope.passaport;
+            data = [email, name, identify].join('&');
+            var request = new XMLHttpRequest();
+            request.open('POST', API_ROOT_URL + '/api/login/', true);
+            request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+            request.send(data);
             window.location.href = "#loading";
         };
     }]
@@ -759,7 +767,7 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
         var $http = $rootScope;
         language = window.localStorage.getItem('language');
         $scope.items = $rootScope.items;
-        //$scope.programming = programming;
+        // $scope.programming = programming;
         
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -882,19 +890,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
         //$scope.home = home;
-        // $scope.locals = [{
-        //     'title': 'Trilha da Pedra da Gavea',
-        //     'img': 'images/bandeiras/a1.png'
-        //     },
-        //     {
-        //     'title': 'Trilha da Pedra da Gavea',
-        //     'img': 'images/bandeiras/a1.png'
-        //     },
-        //     {
-        //     'title': 'Trilha da Pedra da Gavea',
-        //     'img': 'images/bandeiras/a1.png'
-        //     },
-        // ]
+        
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
@@ -1052,22 +1048,22 @@ planetaBrasilControllers.controller('RankingGuessCtrl', ['$scope', '$http',
             body.className = "";
        };
 
-
-       // var api_url = API_ROOT_URL + '/api/we-are/' + '?lang=' + language;
-       //  $http({method: 'GET', url: api_url}).
-       //      success(function(data, status, headers, config) {
-       //      hideLoading();
-       //      $http.we_are = data
-       //      $scope.we_are = data[language];
-       //    }).
-       //    error(function(data, status, headers, config) {
-       //          if ($http.we_are){
-       //              $scope.we_are = $http.we_are[language];
-       //          }else {
-       //              alert_connection();
-       //          }
-       //          hideLoading();
-       //  });
+       var api_url = API_ROOT_URL + '/api/ranking-guesses/';
+        $http({method: 'GET', url: api_url}).
+            success(function(data, status, headers, config) {
+            $http.ranking = data;
+            $scope.ranking = data;
+            hideLoading();
+          }).
+          error(function(data, status, headers, config) {
+            // $http.ranking = ranking;
+            if ($http.ranking){
+                $scope.ranking = $http.ranking;
+            }else {
+                alert_connection();
+            }
+            hideLoading();
+        });
 
     }]
 );

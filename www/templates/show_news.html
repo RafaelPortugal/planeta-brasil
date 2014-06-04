@@ -1,19 +1,14 @@
 <style>
 	.image {
-		position: relative;
-		margin-top: 52px;
-		min-height: 150px;
-	}
-	.image img {
-		width: 100%;
-		background-image:url('images/loading.gif');
-		background-repeat:no-repeat;
-		background-attachment:fixed;
-		background-position-x:center;
-		background-position-y:30px;
+		padding-top: 52px;
 	}
 	body {
 		background: #f0f0e1;
+	}
+	.img_absolute {
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 	.news {
 		padding: 0 10%;
@@ -79,17 +74,17 @@
 </menu>
 <header>
 	<button class="menu"></button>
-	<h1>Planeta Brasil</h1>
+	<h1>Menu</h1>
 	<div class="logo_header">
 		<img src="images/logo.png" alt="Logotipo">
 	</div>
-	<button class="btn-gps"></button>
 </header>
 <div id="wrapper">
 	<div class="relative page">
 
 		<div class="image">
-		    <img src="{{show_news.img}}" alt="Imagem">
+			<img class="img_loading" src="images/bg_loading.png" alt="carregando">
+       		<img class="img_absolute" src="{{show_news.img}}" alt="{{show_news.title}}">
 		</div>
 		<div class="news">
 		    <div class="date">

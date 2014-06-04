@@ -1,6 +1,6 @@
 var PUSH_GCM_SENDER_ID='36357833183';
 //var API_ROOT_URL = 'http://192.168.25.25:8000';
-var API_ROOT_URL = 'http://planeta-brasil.herokuapp.com/';
+var API_ROOT_URL = 'http://www.planetabrasilapp.com.br/';
 
 
 /*

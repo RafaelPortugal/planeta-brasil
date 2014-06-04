@@ -92,11 +92,10 @@
 </menu>
 <header>
 	<button class="menu"></button>
-	<h1>Planeta Brasil</h1>
+	<h1>Menu</h1>
 	<div class="logo_header">
 		<img src="images/logo.png" alt="Logotipo">
 	</div>
-	<button class="btn-gps"></button>
 </header>
 <div id="wrapper">
 	<div class="relative page">
@@ -115,60 +114,10 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
-						<td class="first medalha">Rafael Portugal</td>
-						<td>3</td>
-						<td>10</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Alan Albuquerque</td>
-						<td>3</td>
-						<td>15</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Daniel Limeira</td>
-						<td>2</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Daniel Limeira</td>
-						<td>2</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Daniel Limeira</td>
-						<td>2</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Daniel Limeira</td>
-						<td>2</td>
-						<td>5</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Daniel Limeira</td>
-						<td>1</td>
-						<td>6</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Daniel Limeira</td>
-						<td>1</td>
-						<td>10</td>
-					</tr>
-					<tr>
-						<td class="first medalha">Daniel Limeira</td>
-						<td>1</td>
-						<td>15</td>
-					</tr>
-					<tr>
-						<td class="first">Daniel Limeira</td>
-						<td>0</td>
-						<td>8</td>
-					</tr>
-					<tr>
-						<td class="first">Daniel Limeira</td>
-						<td>0</td>
-						<td>10</td>
+					<tr ng-repeat="r in ranking">
+						<td class="first" ng-class="{medalha: r.count_hit >= 1}">{{r.name}}</td>
+						<td>{{r.count_guesses}}</td>
+						<td>{{r.count_hit}}</td>
 					</tr>
 				</tbody>
 			</table>
