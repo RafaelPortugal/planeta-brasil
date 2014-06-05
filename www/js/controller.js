@@ -50,18 +50,18 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http', '$location'
         };
         $scope.errors = {
             '1': {
-                'full_name_short': 'O nome precisa ter mais que 5 dígitos.',
+                'full_name_short': 'O nome precisa ter mais que 3 dígitos.',
                 'full_name_long': 'O nome precisa ter menos que 20 dígitos.',
                 'email': 'Email inválido'
             },
             '2': {
-                'full_name': 'O nome precisa ter mais que 6 dígitos.',
-                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'full_name_short': 'The name must have more than 3 digits.',
+                'full_name_long': 'The name must be less than 20 digits.',
                 'email': 'Email inválido'
             },
             '3': {
-                'full_name': 'O nome precisa ter mais que 6 dígitos.',
-                'full_name': 'O nome precisa ter mais que 6 dígitos.',
+                'full_name_short': 'O nome precisa ter mais que 3 dígitos.',
+                'full_name_long': 'O nome precisa ter menos que 20 dígitos.',
                 'email': 'Email inválido'
             }
         }
@@ -934,7 +934,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
         $scope.url_local = "#/home";
-        //$scope.home = home;
+        $scope.home = home;
         if (language == 2) {
             $scope.cultural_programming = "Cultural programme";
             $scope.places = "Interesting places";
@@ -1059,7 +1059,12 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.send(data);
             // alert('Palpite enviado com sucesso!');
-            insertMessage(form, 'Palpite enviado com sucesso!', 'message_guess');
+            guess_success = {
+                1: "Palpite enviado com sucesso!",
+                2: "Guess successfully sent!",
+                3: "Palpite enviado com sucesso!"
+            }
+            var div = insertMessage(form, guess_success[language], 'message_guess');
         };
         $scope.activeMenu = function(item) {
             angular.forEach($rootScope.item, function(i) {

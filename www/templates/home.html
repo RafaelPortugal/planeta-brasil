@@ -1,18 +1,20 @@
 <style>
 	div.message_guess {
-		font-size: .5em;
+		font-size: 0.6em;
 		width: 100%;
-		line-height: 2em;
+		line-height: 45px;
 		position: absolute;
-		top: 0px;
+		top: 0;
 		color: #00a74e;
+		left: 0;
+		text-transform: uppercase;
 	}
 
 	div.message_guess span{
 		background: #c2e7c7;
 		display: inline-block;
-		width: 80%;
-		border-radius: 4em;
+		width: 90%;
+		border-radius: 30px;
 	}
 
 	#next-macth {
@@ -298,7 +300,7 @@
 		padding: 5px 10px;
 		background: #00a84f;
 		border-radius: 15px;
-		color: #facb11;
+		color: #000;
 		font-size: 0.6em;
 		text-transform: uppercase;
 	}
@@ -310,6 +312,9 @@
 		display: none;
 		transition: opacity .25s ease-in-out;
 		-webkit-transition: opacity .25s ease-in-out;
+	}
+	#next-macths form {
+		position: relative;
 	}
 	.img_absolute {
 		position: absolute;
@@ -465,7 +470,7 @@
 										<article ng-repeat="match in home.nextMatches" class="element_banner">
 											<ul class="border">
 												<li>
-													<form method="POST" action="." data-id="{{match.id}}" class="relative">
+													<form method="POST" data-id="{{match.id}}" class="relative">
 														
 													<div class="guess">
 														<b ng-click="guess($event)">{{guess_the_results}}</b>
