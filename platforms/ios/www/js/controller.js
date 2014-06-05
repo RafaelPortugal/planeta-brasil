@@ -316,12 +316,15 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
         if (language == 2) {
             $scope.group = "Group";
             $scope.bg_img = "interna-lista-jogadores_en.jpg";
+            $scope.back = "Back";
         }else if (language == 3) {
             $scope.group = "Grupo";
             $scope.bg_img = "interna-lista-jogadores_es.jpg";
+            $scope.back = "Back";
         }else {
             $scope.group = "Grupo";
             $scope.bg_img = "interna-lista-jogadores.jpg";
+            $scope.back = "Voltar";
         }
 
         $scope.$on('$viewContentLoaded', function() {
@@ -414,6 +417,12 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $http = $rootScope;
         $scope.items = $rootScope.items;
+        if (language == 2) {
+            $scope.send = "Send a picture";
+        }else {
+            $scope.send = "Enviar photo";
+        }
+
         $scope.language = window.localStorage.getItem('language');
         $scope.url_local = "#/photo-fans";
         $scope.$on('$viewContentLoaded', function() {
@@ -673,7 +682,7 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
         language = window.localStorage.getItem('language');
         $scope.url_local = "#/table-games";
         if (language == 2) {
-            $scope.th_match = "Game day";
+            $scope.th_match = "Day of the game";
             $scope.bg_img = "tabela-de-jogos_en.jpg"
         }else if (language == 3) {
             $scope.th_match = "DÍA DEL JUEGO";
@@ -926,7 +935,20 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         $scope.items = $rootScope.items;
         $scope.url_local = "#/home";
         //$scope.home = home;
-        
+        if (language == 2) {
+            $scope.cultural_programming = "Cultural programme";
+            $scope.places = "Interesting places";
+            $scope.upcoming_matches = "Upcoming matches";
+            $scope.guess_the_results = "Guess the results";
+            $scope.latest_matches = "Latest matches";
+            $scope.score_chart = "Score Chart";
+        }else {
+            $scope.cultural_programming = "Programação Cultural";
+            $scope.places = "Locais interessantes";
+            $scope.upcoming_matches = "Próximos jogos";
+            $scope.guess_the_results = "Dê seu Palpite";
+            $scope.score_chart = "Tabela de resultados";
+        }
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {

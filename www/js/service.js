@@ -1,5 +1,5 @@
-var API_ROOT_URL = 'http://127.0.0.1:8001';
-// var API_ROOT_URL = 'http://www.planetabrasilapp.com.br';
+// var API_ROOT_URL = 'http://127.0.0.1:8001';
+var API_ROOT_URL = 'http://www.planetabrasilapp.com.br';
 
 var parse_json = function(raw_json){
 	return eval("(function(){return " + raw_json + ";})()");

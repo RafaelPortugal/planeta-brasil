@@ -392,7 +392,7 @@
 				<div class="section">
 					
 					<div class="bronw">
-						<h2><div class="text-title">PROGRAMAÇÃO CULTURAL</div></h2>
+						<h2><div class="text-title">{{cultural_programming}}</div></h2>
 						<article id="cultural-programming" class="left-menu">
 
 						    <input class="input_checked_programming" checked type=radio name="cultural-programming" id="cultural-programming1"/>
@@ -439,7 +439,7 @@
 					
 
 					<div class="bronw">
-						<h2><div class="text-title">Locais Interessantes</div></h2>
+						<h2><div class="text-title">{{places}}</div></h2>
 						<div class="locals">
 							<div class="news-block local" ng-repeat='local in home.locals'  ng-class="{'last':$last}">
 								<h3><img src="{{local.img}}" alt="{{local.title}}"> {{local.title}}</h3>
@@ -447,7 +447,7 @@
 						</div>
 					</div>				
 					<div class="matches">
-						<h2><div class="border border-left"></div> Próximos jogos <div class="border border-right"></h2>
+						<h2><div class="border border-left"></div> {{upcoming_matches}} <div class="border border-right"></h2>
 						<article id="next-macth" class="left-menu">
 				    
 						    <input class="input_checked_match" checked type=radio name="next-macth" id="next-macth1"/>
@@ -468,7 +468,7 @@
 													<form method="POST" action="." data-id="{{match.id}}" class="relative">
 														
 													<div class="guess">
-														<b ng-click="guess($event)">Dê seu palpite</b>
+														<b ng-click="guess($event)">{{guess_the_results}}</b>
 														<a href="#/ranking-guess">Ranking</a>
 													</div>
 													<i class="home"><span>{{match.abbr_home}}</span> <img src="{{match.img_home}}" alt="Brasil"><input type="number" name="home" min=0 max=9 step=1></i>
@@ -521,7 +521,7 @@
 					</div>
 
 					<div class="last-matches">
-						<h2><div class="border border-left"></div> Últimos jogos <div class="border border-right"></h2>
+						<h2><div class="border border-left"></div> {{latest_matches}} <div class="border border-right"></h2>
 						<ul class="border">
 							<li ng-repeat="game in home.lastGames">
 							    <i class="home"><span>{{ game.abbr_home}}</span> <img src="{{ game.img_home}}" alt="{{ game.home}}"> </i>
@@ -529,7 +529,7 @@
 							    <i class="visited"><img src="{{ game.img_visited}}" alt="{{ game.visited}}"><span>{{ game.abbr_visited}}</span></i>
 							</li>
 							<div class="footer-matches">
-								<a href="#/results/0">Tabela de resultados</a>
+								<a href="#/results/0">{{score_chart}}</a>
 							</div>
 						</ul>
 					</div>
