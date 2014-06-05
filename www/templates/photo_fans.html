@@ -92,12 +92,12 @@
 	<img src="images/fotos-torcida.jpg" alt="Bacground">
 	
 	<h2 ng-if="language != 2">A <strong class="yellow">Torcida</strong> <br/><span class="blue">que</span> <strong class="green">vibra</strong></h2>
-	<h2 ng-if="language == 2"><strong class="yellow">PHOTOS</strong></h2>
+	<h2 ng-if="language == 2">The <strong class="yellow">Cheering</strong> <br/><span class="blue">crowd</span></h2>
 </div>
 <div id="wrapper">
 	<div class="relative page">
 		<div class="back">
-			<a onclick="take_picture();">Enviar foto</a>
+			<a onclick="take_picture();">{{send}}</a>
 		</div>
 
 		<ul class="photos">

@@ -104,13 +104,13 @@
 			</div>
 
 			<div ng-repeat="player in players" class="group-players">
-				<h3>{{player[0]}}</h3>
+				<h3>{{player[0][language]}}</h3>
 				<ul>
 					<li ng-repeat="p in player[1]">{{p}}</li>
 				</ul>
 			</div>
 			<div class="back">
-				<button onclick="window.history.back()">Voltar</button> 
+				<button onclick="window.history.back()">{{back}}</button> 
 			</div>
 		</div>
 	</div>

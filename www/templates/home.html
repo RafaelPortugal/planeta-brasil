@@ -1,18 +1,20 @@
 <style>
 	div.message_guess {
-		font-size: .5em;
+		font-size: 0.6em;
 		width: 100%;
-		line-height: 2em;
+		line-height: 45px;
 		position: absolute;
-		top: 0px;
+		top: 0;
 		color: #00a74e;
+		left: 0;
+		text-transform: uppercase;
 	}
 
 	div.message_guess span{
 		background: #c2e7c7;
 		display: inline-block;
-		width: 80%;
-		border-radius: 4em;
+		width: 90%;
+		border-radius: 30px;
 	}
 
 	#next-macth {
@@ -298,7 +300,7 @@
 		padding: 5px 10px;
 		background: #00a84f;
 		border-radius: 15px;
-		color: #facb11;
+		color: #000;
 		font-size: 0.6em;
 		text-transform: uppercase;
 	}
@@ -310,6 +312,9 @@
 		display: none;
 		transition: opacity .25s ease-in-out;
 		-webkit-transition: opacity .25s ease-in-out;
+	}
+	#next-macths form {
+		position: relative;
 	}
 	.img_absolute {
 		position: absolute;
@@ -392,7 +397,7 @@
 				<div class="section">
 					
 					<div class="bronw">
-						<h2><div class="text-title">PROGRAMAÇÃO CULTURAL</div></h2>
+						<h2><div class="text-title">{{cultural_programming}}</div></h2>
 						<article id="cultural-programming" class="left-menu">
 
 						    <input class="input_checked_programming" checked type=radio name="cultural-programming" id="cultural-programming1"/>
@@ -439,7 +444,7 @@
 					
 
 					<div class="bronw">
-						<h2><div class="text-title">Locais Interessantes</div></h2>
+						<h2><div class="text-title">{{places}}</div></h2>
 						<div class="locals">
 							<div class="news-block local" ng-repeat='local in home.locals'  ng-class="{'last':$last}">
 								<h3><img src="{{local.img}}" alt="{{local.title}}"> {{local.title}}</h3>
@@ -447,7 +452,7 @@
 						</div>
 					</div>				
 					<div class="matches">
-						<h2><div class="border border-left"></div> Próximos jogos <div class="border border-right"></h2>
+						<h2><div class="border border-left"></div> {{upcoming_matches}} <div class="border border-right"></h2>
 						<article id="next-macth" class="left-menu">
 				    
 						    <input class="input_checked_match" checked type=radio name="next-macth" id="next-macth1"/>
@@ -465,10 +470,10 @@
 										<article ng-repeat="match in home.nextMatches" class="element_banner">
 											<ul class="border">
 												<li>
-													<form method="POST" action="." data-id="{{match.id}}" class="relative">
+													<form method="POST" data-id="{{match.id}}" class="relative">
 														
 													<div class="guess">
-														<b ng-click="guess($event)">Dê seu palpite</b>
+														<b ng-click="guess($event)">{{guess_the_results}}</b>
 														<a href="#/ranking-guess">Ranking</a>
 													</div>
 													<i class="home"><span>{{match.abbr_home}}</span> <img src="{{match.img_home}}" alt="Brasil"><input type="number" name="home" min=0 max=9 step=1></i>
@@ -521,7 +526,7 @@
 					</div>
 
 					<div class="last-matches">
-						<h2><div class="border border-left"></div> Últimos jogos <div class="border border-right"></h2>
+						<h2><div class="border border-left"></div> {{latest_matches}} <div class="border border-right"></h2>
 						<ul class="border">
 							<li ng-repeat="game in home.lastGames">
 							    <i class="home"><span>{{ game.abbr_home}}</span> <img src="{{ game.img_home}}" alt="{{ game.home}}"> </i>
@@ -529,7 +534,7 @@
 							    <i class="visited"><img src="{{ game.img_visited}}" alt="{{ game.visited}}"><span>{{ game.abbr_visited}}</span></i>
 							</li>
 							<div class="footer-matches">
-								<a href="#/results/0">Tabela de resultados</a>
+								<a href="#/results/0">{{score_chart}}</a>
 							</div>
 						</ul>
 					</div>

@@ -385,7 +385,7 @@ header h1 {
 .section .matches h2, .section .last-matches h2 {
     position: relative;
     padding: 0 0 0.3em 0 !important;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     color: #00a74e;
     text-transform: uppercase;

@@ -48,15 +48,17 @@ var camera_onSuccess = function(imageURI) {
     
     //alert(API_ROOT_URL + '/api/photos/');
     ft.upload(imageURI, API_ROOT_URL + '/api/photos/', win, fail, options); 
-
+    hideLoading();
 }
 
 var camera_onFail = function(message) {
     alert('Ocorreu um erro: ' + message);
+    hideLoading();
 }
 
 
 var take_picture = function(){
+    loading();
     navigator.camera.getPicture(camera_onSuccess, camera_onFail, { 
         quality: 50,
         encodingType: Camera.EncodingType.JPEG,

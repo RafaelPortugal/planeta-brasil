@@ -250,6 +250,7 @@ var insertMessage = function(element, message, className) {
     span.textContent = message;
     div.appendChild(span);
     element.appendChild(div);
+    return div
 }
 
 var loading = function() {
