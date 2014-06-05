@@ -420,7 +420,7 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
         if (language == 2) {
             $scope.send = "Send a picture";
         }else {
-            $scope.send = "Enviar photo";
+            $scope.send = "Enviar foto";
         }
 
         $scope.language = window.localStorage.getItem('language');
