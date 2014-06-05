@@ -66,6 +66,7 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http', '$location'
             }
         }
         $scope.submitForm = function(){
+            alert('submitForm');
             window.localStorage.setItem('email', $scope.email);
             window.localStorage.setItem('full_name', $scope.full_name_form);
             window.localStorage.setItem('identify', $scope.identify);

@@ -66,6 +66,7 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http', '$location'
             }
         }
         $scope.submitForm = function(){
+            // alert('submitForm');
             window.localStorage.setItem('email', $scope.email);
             window.localStorage.setItem('full_name', $scope.full_name_form);
             window.localStorage.setItem('identify', $scope.identify);
@@ -1052,7 +1053,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             visited = "visited=" + form.elements.visited.value;
             home = "home=" + form.elements.home.value;
             email = "email=" + window.localStorage.getItem('email');
-            name = "name=" + window.localStorage.getItem('name');
+            name = "name=" + window.localStorage.getItem('full_name');
             data = [name, email, home, visited].join('&');
             var request = new XMLHttpRequest();
             request.open('POST', url, true);
