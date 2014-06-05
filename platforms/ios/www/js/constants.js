@@ -766,7 +766,8 @@ menu = {
         {href: '#/home', title: 'Início', status: 'deactive'},
         {href: '#/we-are', title: 'Quem Somos', status: 'deactive'},
         {href: '#/photo-fans', title: 'Torcida que vibra', status: 'deactive'},
-        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: 'https://www.facebook.com/planetabrasiloficial', title: 'Facebook', status: 'deactive'},
+        // {href: '#/planeta-game', title: 'Game', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
@@ -779,7 +780,8 @@ menu = {
         {href: '#/home', title: 'Home', status: 'deactive'},
         {href: '#/we-are', title: 'Who we', status: 'deactive'},
         {href: '#/photo-fans', title: 'Photos', status: 'deactive'},
-        {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: 'https://www.facebook.com/planetabrasiloficial', title: 'Facebook', status: 'deactive'},
+        // {href: '#/planeta-game', title: 'Game', status: 'deactive'},
         {href: '#/world-championship', title: 'Worlds Champions', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
         {href: '#/table-games', title: '1ª Phase', status: 'deactive'},
@@ -792,7 +794,8 @@ menu = {
         {href: '#/home', title: 'Inicio', status: 'deactive'},
         {href: '#/we-are', title: 'Quiénes somos', status: 'deactive'},
         {href: '#/photo-fans', title: 'Torcida que Vibra', status: 'deactive'},
-        {href: '#/planeta-game', title: 'Juego', status: 'deactive'},
+        {href: 'https://www.facebook.com/planetabrasiloficial', title: 'Facebook', status: 'deactive'},
+        // {href: '#/planeta-game', title: 'Juego', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
@@ -2120,7 +2123,7 @@ select_championship =  [
         "value": "",
         "team": {
             1: "Dê seu palpite",
-            2: "Give your guess",
+            2: "Guess the results",
             3: "Dar a su conjetura"
         }
     },

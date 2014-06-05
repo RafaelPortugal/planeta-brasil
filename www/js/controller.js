@@ -28,8 +28,9 @@ planetaBrasilControllers.controller('LanguageCtrl', ['$scope', '$http',
     }]
 );
 
-planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
-    function ($scope, $http ) {
+
+planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http', '$location',
+    function ($scope, $location, $http ) {
         $scope.language = window.localStorage.getItem('language');
         if (window.localStorage.getItem('language') == 2) {
             $scope.identify_title = "Passaport or CPF";
@@ -70,16 +71,17 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http',
             window.localStorage.setItem('identify', $scope.identify);
             email = "email=" + $scope.email;
             name = "name=" + $scope.full_name_form;
-            identify = "identify=" + $scope.passaport;
+            identify = "identify=" + $scope.identify;
             data = [email, name, identify].join('&');
             var request = new XMLHttpRequest();
             request.open('POST', API_ROOT_URL + '/api/login/', true);
             request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
             request.send(data);
-            window.location.href = "#loading";
+            $location.path("/loading");
         };
     }]
 );
+
 
 
 planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
@@ -215,11 +217,17 @@ planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
         var language = window.localStorage.getItem('language');
         if (language == 2) {
             $scope.lang_stadium = "Stadiums";
+            $scope.read = "Read more";
+            $scope.back = "Back";
             
         }else if (language == 3) {
             $scope.lang_stadium = "Estadios";
+            $scope.read = "Leia mais";
+            $scope.back = "Voltar";
         }else {
+            $scope.read = "Leia mais";
             $scope.lang_stadium = "Estádios";
+            $scope.back = "Voltar";
         }
         $scope.stadiums = stadiums;
         $scope.items = $rootScope.items;
@@ -251,11 +259,14 @@ planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http', '$routePa
         var language = window.localStorage.getItem('language');
         if (language == 2) {
             $scope.lang_stadium = "Stadiums";
+            $scope.back = "Back";
             
         }else if (language == 3) {
             $scope.lang_stadium = "Estadios";
+            $scope.back = "Voltar";
         }else {
             $scope.lang_stadium = "Estádios";
+            $scope.back = "Voltar";
         }
         $scope.language = language;
         $scope.stadium = stadiums[$routeParams.stadiumId];
@@ -443,10 +454,16 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         if (language == 2) {
             $scope.bg_img = "campeoes-mundiais_en.jpg";
+            $scope.guess_result = "Partial guess result";
+            $scope.back = "Back";
         }else if (language == 3){
             $scope.bg_img = "campeoes-mundiais_es.jpg";
+            $scope.guess_result = "Partial guess result";
+            $scope.back = "Back";
         }else {
             $scope.bg_img = "campeoes-mundiais.jpg";
+            $scope.guess_result = "Resultado Parcial do Palpite";
+            $scope.back = "Voltar";
         }
         $scope.championships = world_championships[language];
         $scope.language = language;
@@ -812,11 +829,17 @@ planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
         $http = $rootScope;
         $scope.items = $rootScope.items;
         if (language == 2) {
-            $scope.bg_img = "fases-finais_en.jpg"
+            $scope.bg_img = "fases-finais_en.jpg";
+            $scope.second = "Second stage";
+            $scope.quater = "Quater-final";
         }else if (language == 3) {
-            $scope.bg_img = "fases-finais_es.jpg"
+            $scope.bg_img = "fases-finais_es.jpg";
+            $scope.quater = "4ª de finais";
+            $scope.second = "8ª de finais";
         }else {
-            $scope.bg_img = "fases-finais.jpg"
+            $scope.bg_img = "fases-finais.jpg";
+            $scope.second = "8ª de finais";
+            $scope.quater = "4ª de finais";
         }
         language = localStorage.getItem('language');
         //$scope.finals = finals[language];

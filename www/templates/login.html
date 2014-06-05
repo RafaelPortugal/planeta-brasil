@@ -14,7 +14,7 @@
 		<h1><img src="images/logo.png" alt="Logo Planeta Brasil"><span class="uppercase beyond">Brasil Beyond Brazil</span></h1>
 		<div class="content">
 			<h2>{{login}}</h2>
-			<form action="." method="POST"  ng-submit="submitForm()" name="loginForm">
+			<form action="#/loading" method="POST"  ng-submit="submitForm()" name="loginForm" id="loginForm">
 				<input type="email" placeholder="email" class="shadow-top" name="email" id="id_email" ng-model="email" required>
 				<p class="errors" ng-show="loginForm.email.$invalid && !loginForm.email.$pristine" class="help-block">{{errors[language]['email']}}</p>
 				<input type="text" placeholder="{{full_name}}" class="shadow-top" pattern=".{3,20}" title="{{errors[language]['full_name']}}" maxlength="20" name="full_name" id="id_full_name" ng-model="full_name_form" ng-maxlength="20" ng-minlength="5" ng-required="true" required>
