@@ -420,7 +420,7 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
         if (language == 2) {
             $scope.send = "Send a picture";
         }else {
-            $scope.send = "Enviar photo";
+            $scope.send = "Enviar foto";
         }
 
         $scope.language = window.localStorage.getItem('language');
@@ -934,7 +934,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
         $scope.url_local = "#/home";
-        $scope.home = home;
+        // $scope.home = home;
         if (language == 2) {
             $scope.cultural_programming = "Cultural programme";
             $scope.places = "Interesting places";
