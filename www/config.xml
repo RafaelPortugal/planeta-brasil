@@ -32,6 +32,13 @@
         <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
     </feature>
     
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="CDVInAppBrowser" />
+    </feature>
+
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.InAppBrowser" />
+    </feature>
 
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
@@ -62,7 +69,6 @@
     <preference name="disable-cursor" value="false" />
     <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
-
     <icon src="icon.png" />
     
     <!-- Icones e Splash Android -->

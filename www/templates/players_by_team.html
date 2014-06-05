@@ -81,7 +81,10 @@
 </style>
 <menu id="nav-left">
     <ul>
-        <li ng-repeat="item in items" class="{{item.status}}"><a href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a></li>
+        <li ng-repeat="item in items" class="{{item.status}}">
+        	<a ng-if="item.href != '#/facebook'" href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a>
+        	<a ng-if="item.href == '#/facebook'" href="{{url_local}}" onclick="window.open('https://www.facebook.com/planetabrasiloficial', '_blank', 'location=yes');">{{ item.title }}</a>
+        </li>
     </ul>
 </menu>
 <header>

@@ -112,6 +112,7 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         language = localStorage.getItem('language');
+        $scope.url_local = "#/curiosity";
         if (language == 2) {
             $scope.bg_img = "curiosidades_en.jpg";
         }else if (language == 3) {
@@ -188,6 +189,7 @@ planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $scope.items = $rootScope.items;
         $scope.items.height = window.screen.height - 100;
+        $scope.url_local = "#/planeta-game";
 
         $scope.$on('$viewContentLoaded', function() {
             body = document.body;
@@ -214,6 +216,7 @@ planetaBrasilControllers.controller('GameCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        $scope.url_local = "#/stadiums";
         var language = window.localStorage.getItem('language');
         if (language == 2) {
             $scope.lang_stadium = "Stadiums";
@@ -256,6 +259,7 @@ planetaBrasilControllers.controller('StadiumsCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('StadiumCtrl', ['$scope', '$http', '$routeParams',
     function ($scope, $rootScope, $routeParams, $http ) {
+        $scope.url_local = "#/stadium/" + $routeParams.stadiumId;
         var language = window.localStorage.getItem('language');
         if (language == 2) {
             $scope.lang_stadium = "Stadiums";
@@ -300,6 +304,7 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
         var position_team = $routeParams.teamId[1];
         var language = window.localStorage.getItem('language');
         
+        $scope.url_local = "#/players-by-team/" + $routeParams.teamId;
         $scope.items = $rootScope.items;
         $scope.letter_group = letter_group;
         $scope.position_team = position_team;
@@ -346,6 +351,7 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
 
 planetaBrasilControllers.controller('TeamPerGroupCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        $scope.url_local = "#/team-per-group/";
         $scope.items = $rootScope.items;
         $scope.teams = teamPerGroup
         var language = window.localStorage.getItem('language');
@@ -409,7 +415,7 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
         $http = $rootScope;
         $scope.items = $rootScope.items;
         $scope.language = window.localStorage.getItem('language');
-
+        $scope.url_local = "#/photo-fans";
         $scope.$on('$viewContentLoaded', function() {
             loading();
             body = document.body;
@@ -449,6 +455,7 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        $scope.url_local = "#/world-championship";
         $http = $rootScope;
         $scope.items = $rootScope.items;
         language = localStorage.getItem('language');
@@ -518,6 +525,7 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
         $http = $rootScope;
+        $scope.url_local = "#/we-are";
         $scope.items = $rootScope.items;
         
         language = localStorage.getItem('language');
@@ -570,6 +578,7 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('NewsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        $scope.url_local = "#/news";
         $http = $rootScope;
         $scope.items = $rootScope.items;
         language = localStorage.getItem('language');
@@ -639,6 +648,7 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
        };
 
       var pk = $location.path().split('/')[2];
+      $scope.url_local = "#/show-news/" + pk;
       var api_url = API_ROOT_URL + '/api/news/' + pk + '/?lang=' + language;
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
@@ -661,7 +671,7 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
         $http = $rootScope;
         //$scope.matches = matches;
         language = window.localStorage.getItem('language');
-        
+        $scope.url_local = "#/table-games";
         if (language == 2) {
             $scope.th_match = "Game day";
             $scope.bg_img = "tabela-de-jogos_en.jpg"
@@ -729,6 +739,7 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
 planetaBrasilControllers.controller('LastGamesCtrl', ['$scope', '$http', '$routeParams',
     function ($scope, $rootScope, $rootParams, $http ) {
         $http = $rootScope;
+        $scope.url_local = "#/results/0";
         language = window.localStorage.getItem('language');
         offset = $rootParams.offset;
         $scope.items = $rootScope.items;
@@ -807,6 +818,7 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
        };
 
       var pk = $location.path().split('/')[2];
+      $scope.url_local = "#/programming/" + pk;
       var api_url = API_ROOT_URL + '/api/venue/' + pk +'/?lang=' + language;
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
@@ -825,7 +837,7 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
 
 planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
- 
+        $scope.url_local = "#/finals";
         $http = $rootScope;
         $scope.items = $rootScope.items;
         if (language == 2) {
@@ -912,6 +924,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         $http = $rootScope;
         language = localStorage.getItem('language');
         $scope.items = $rootScope.items;
+        $scope.url_local = "#/home";
         //$scope.home = home;
         
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
@@ -1038,6 +1051,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
 
 planetaBrasilControllers.controller('RankingGuessCtrl', ['$scope', '$http',
     function ($scope, $rootScope, $http ) {
+        $scope.url_local = "#/ranking-guess";
         $http = $rootScope;
         $scope.items = $rootScope.items;
         
