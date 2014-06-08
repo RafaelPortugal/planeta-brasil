@@ -7,10 +7,8 @@ var parse_json = function(raw_json){
 
 
 function win(r) 
-{ 
+{
     alert("Foto enviada com sucesso!");
-    hideLoading();
-    //alert("Sent = " + r.bytesSent); 
 };
 
 function fail(error) 
@@ -26,10 +24,8 @@ function fail(error)
      case FileTransferError.CONNECTION_ERR: 
       alert("Erro na conexão"); 
       break; 
-     default:
-      alert("Ocorreu um erro no envio da foto. Tente novamente mais tarde."); 
-    } 
-    hideLoading();
+    }
+
 };
 
 var camera_onSuccess = function(imageURI) {
@@ -48,16 +44,8 @@ var camera_onSuccess = function(imageURI) {
     options.mimeType = "image/jpeg"; 
     var ft = new FileTransfer(); 
     //alert(API_ROOT_URL + '/api/photos/');
-    ft.onprogress = function(progressEvent) {
-      if (progressEvent.lengthComputable) {
-        var progress = document.getElementsByTagName('progress')[0];
-        progress.setAttribute('value', progressEvent.loaded);
-        progress.setAttribute('max', progressEvent.total);
-      }else {
-        alert('loading');
-      }
-    };
     ft.upload(imageURI, API_ROOT_URL + '/api/photos/', win, fail, options); 
+    hideLoading();
 }
 
 var camera_onFail = function(message) {
