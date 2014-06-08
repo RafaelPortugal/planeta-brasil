@@ -475,7 +475,7 @@ stadiums = {
         "feature_img": "images/estadios/maracana.jpg"
     },
     2: {
-        "name": "Minerão",
+        "name": "Mineirão",
         "description":{
             1: [
             "O projeto de modernização incluiu o rebaixamento do campo, melhoria em sua acessibilidade e outros quesitos, sempre guiados por princípios de sustentabilidade - levando em conta, por exemplo, a reutilização da água de chuva com uma capacidade de armazenamento de até 6.270.000 litros.",
