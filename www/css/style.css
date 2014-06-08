@@ -570,7 +570,7 @@ header h1 {
 }
 
 .page .content-home .section #news-block p{
-    font-size: 1.5em;
+    font-size: 2em;
     padding-left: 0.5em;
     line-height: 0.9em;
     float: left;
@@ -879,4 +879,11 @@ h1 span {
     left: 0;
 }
 
+progress {
+  position: relative;
+  width: 120px;
+  left: 50%;
+  margin-left: -60px;
+  top: 50%;
+}
 

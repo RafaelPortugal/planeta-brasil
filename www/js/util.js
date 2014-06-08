@@ -253,6 +253,17 @@ var insertMessage = function(element, message, className) {
     return div
 }
 
+var loadingProgress = function() {
+    progress = document.createElement('progress');
+
+    overlaySpin = document.createElement('div');
+    overlaySpin.id = 'overlay-spin';
+
+    overlaySpin.appendChild(progress);
+
+    body.insertBefore(overlaySpin, body.firstChild);
+}
+
 var loading = function() {
     var body = document.getElementsByTagName('body')[0];
     var floatingCircles = document.createElement('div');
