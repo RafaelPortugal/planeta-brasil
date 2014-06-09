@@ -28,11 +28,15 @@ function forward_element(elements) {
         if (elements[i].checked){
             if (i == length) {
                 elements[0].checked = true;
-                return;
             } else {
                 elements[i+1].checked = true;
-                return;
             }
+            if (document.body.className) {
+                document.body.className = "change-dom";
+            }else {
+                document.body.className = "";
+            }
+            return
         }
     }
 }
@@ -43,11 +47,15 @@ function back_element(elements) {
         if (elements[i].checked){
             if (i == 0) {
                 elements[length].checked = true;
-                return;
             } else {
                 elements[i-1].checked = true;
-                return;
             }
+            if (document.body.className) {
+                document.body.className = "change-dom";
+            }else {
+                document.body.className = "";
+            }
+            return
         }
     }
 }
