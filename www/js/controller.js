@@ -946,6 +946,10 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             $scope.score_chart = "Tabela de resultados";
         }
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
+        reg_id = window.localStorage.getItem('reg_id');
+        if (reg_id) {
+            url = url + '&reg_id=' + reg_id;
+        }
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $http.home = data;

@@ -33,8 +33,9 @@ function onNotificationAPN (event) {
 function sendPushRegisterId(reg_id, device_type){
     // Envia a chave para nosso servidor após registrar no GCM ou APN
     //alert('mandando');
+    window.localStorage.getItem('device_type', device_type);
+    window.localStorage.getItem('reg_id', reg_id);
     var url = API_ROOT_URL + '/api-copa/register-push-device/';
-
     var data = 'reg_id=' + reg_id;
     data += '&device_type=' + device_type;
     data += '&language=' + window.localStorage.getItem('language', '1');

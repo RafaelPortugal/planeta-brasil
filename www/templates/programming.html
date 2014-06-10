@@ -35,7 +35,7 @@
 		margin-top: 0;
 		padding: 5px 0 10px;
 	}
-	p{
+	.text-message {
 		color: #89897b;
 		line-height: 1.2em;
 		font-size: 2.5em;
@@ -91,7 +91,7 @@
 		    <h2>
 		          {{programming.title}}
 		    </h2>
-		    <div ng-bind-html="programming.message"></div>
+		    <div class="text-message" ng-bind-html="programming.message"></div>
 		    <div class="back">
 		        <a class="link_home" href="#/home">Voltar</a> 
 		        <a href="#">Compartilhar</a>

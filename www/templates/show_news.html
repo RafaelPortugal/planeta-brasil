@@ -39,7 +39,7 @@
 		margin-top: 0;
 		padding: 5px 0 10px;
 	}
-	p{
+	.text-message {
 		color: #89897b;
 		line-height: 1.2em;
 		font-size: 2.5em;
@@ -97,7 +97,7 @@
 		    <h2>
 		          {{show_news.title}}
 		    </h2>
-		    <div ng-bind-html="show_news.message"></div>
+		    <div class="text-message" ng-bind-html="show_news.message"></div>
 		    <div class="back">
 		        <button onclick="window.history.back()">Voltar</button>
 		        <a onclick="share_facebook('{{show_news.img}}');">Compartilhar</a>
