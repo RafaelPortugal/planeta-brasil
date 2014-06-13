@@ -853,10 +853,10 @@ curiosities = {
             'team': 'Camarões vs Russia, 1994'
         },
         {
-            'number': 15,
-            'type': 'Gols',
-            'player': 'Ronaldo',
-            'team': 'Brasil, 1998-2006'
+            'number': 99,
+            'type': 'Partidas',
+            'player': 'Alemanha',
+            'team': '17 participações'
         },
         {
             'number': 2217,
@@ -943,10 +943,10 @@ curiosities = {
             'team': '(Russia vs Cameroun, 1994)'
         },
         {
-            'number': 15,
-            'type': 'More Goals',
-            'player': 'Ronaldo',
-            'team': 'Brazil, 1998-2006'
+            'number': 99,
+            'type': 'More Matches',
+            'player': 'Germany',
+            'team': '17 Participations'
         },
          {
             'number': 2217,
@@ -1070,10 +1070,10 @@ curiosities = {
             'team':''
         },
         {
-            'number': 15,
-            'type': 'Más gols',
-            'player': 'Ronaldo',
-            'team': 'Brasil, 1998-2006'
+            'number': 99,
+            'type': 'Más partidos',
+            'player': 'Alemania',
+            'team': '17 participaciones'
         },
          {
             "number" : 5 ,
