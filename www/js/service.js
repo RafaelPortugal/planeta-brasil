@@ -7,8 +7,9 @@ var parse_json = function(raw_json){
 
 
 function win(r) 
-{
+{ 
     alert("Foto enviada com sucesso!");
+    hideLoading();
 };
 
 function fail(error) 
@@ -24,18 +25,13 @@ function fail(error)
      case FileTransferError.CONNECTION_ERR: 
       alert("Erro na conexão"); 
       break; 
-    }
-
+     default:
+      alert("Ocorreu um erro no envio da foto. Tente novamente mais tarde."); 
+    } 
+    hideLoading();
 };
 
 var camera_onSuccess = function(imageURI) {
-    /*var data = 'image_b64=' + imageURI;
-    var request = new XMLHttpRequest();
-    request.open('POST', API_ROOT_URL + '/api/photos/', true);
-    request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-    request.send(data);
-    */
-
     var options = new FileUploadOptions(); 
     options.chunkedMode = false;
     options.fileKey = "recFile"; 
@@ -43,9 +39,16 @@ var camera_onSuccess = function(imageURI) {
     options.fileName = imagefilename; 
     options.mimeType = "image/jpeg"; 
     var ft = new FileTransfer(); 
-    //alert(API_ROOT_URL + '/api/photos/');
+    ft.onprogress = function(progressEvent) {
+      if (progressEvent.lengthComputable) {
+        var progress = document.getElementsByTagName('progress')[0];
+        progress.setAttribute('value', progressEvent.loaded);
+        progress.setAttribute('max', progressEvent.total);
+      }else {
+        alert('loading');
+      }
+    };
     ft.upload(imageURI, API_ROOT_URL + '/api/photos/', win, fail, options); 
-    hideLoading();
 }
 
 var camera_onFail = function(message) {
