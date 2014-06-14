@@ -21,8 +21,6 @@
 				<p ng-show="loginForm.full_name.$error.minlength" class="errors">{{errors[language]['full_name_short']}}</p>
         		<p ng-show="loginForm.full_name.$error.maxlength" class="errors">{{errors[language]['full_name_long']}}</p>
 
-				<input type="text" placeholder="{{identify_title}}" class="shadow-top" maxlength="14" name="identify" id="id_identify" ng-model="identify" ng-maxlength="11" ng-minlength="4">
-
 				<div class="submit">
 					<input ng-disabled="loginForm.$invalid" type="submit" value="{{advance}} &#62;">
 				</div>

@@ -100,7 +100,8 @@
 		    <div class="text-message" ng-bind-html="show_news.message"></div>
 		    <div class="back">
 		        <button onclick="window.history.back()">Voltar</button>
-		        <a onclick="share_facebook('{{show_news.img}}');">Compartilhar</a>
+		        <button ng-click="share()">Compartilhar</button>
+
 		    </div>
 		</div>
 	</div>

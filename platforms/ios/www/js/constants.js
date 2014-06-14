@@ -1845,41 +1845,6 @@ finals = {
         },
 }
 
-show_news = {
-    'id': 1,
-    'img': 'images/banner.png',
-    'title_img': 'Imagem',
-    'date': '14/05',
-    'title': 'O Rio de Janeiro está pronto para receber os jogos mundiais.',
-    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
-}
-
-programming = {
-    'id': 1,
-    'img': 'images/media/thumb-1.png',
-    'title_img': 'Imagem',
-    'date': '14/05',
-    'title': 'OUÇA A MÚSICA OFICIAL DA COPA DO MUNDO NO BRASIL 2014.',
-    'message': '<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, alias omnis nisi non! Animi, alias, quidem, odit labore tenetur asperiores quia repudiandae excepturi fugit itaque praesentium accusantium fugiat reiciendis recusandae?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ducimus, hic, corporis, eveniet fugiat voluptatem vero dignissimos accusantium minus ratione cum officiis ipsum qui rerum aliquid quo repudiandae autem recusandae.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, pariatur consequatur doloremque debitis error omnis unde dolorem corporis cum mollitia ducimus voluptates illum repellat delectus enim in soluta nisi natus.</p>',
-}
-
-we_are = { 
-    1: {
-        "title": "Quem somos",
-        "description": "<p>A Planeta Brasil possui uma completa estrutura de serviços em hotelaria, transporte, eventos, passeios e outros, pensados para o maior evento de 2014.</p>"
-    },
-    2: {
-        "title": "Quem somos",
-        "description": "<p>Planeta Brasil has a complete set of services in the hospitality, transportation, events and related industries specifically planned for the biggest event of 2014.</p>"
-    },
-    3: {
-        "title": "Quem somos",
-        "description": "<p>Planeta Brasil tiene una estructura de servicios integrales en las industrias de hostelería, transporte, eventos, excursiones y otros planejados especificamente</p>"
-    }
-}
-
-
-
 world_championships = {
     1: [
         {

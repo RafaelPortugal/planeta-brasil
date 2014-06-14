@@ -69,10 +69,8 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http', '$location'
             // alert('submitForm');
             window.localStorage.setItem('email', $scope.email);
             window.localStorage.setItem('full_name', $scope.full_name_form);
-            window.localStorage.setItem('identify', $scope.identify);
             email = "email=" + $scope.email;
             name = "name=" + $scope.full_name_form;
-            identify = "identify=" + $scope.identify;
             data = [email, name, identify].join('&');
             var request = new XMLHttpRequest();
             request.open('POST', API_ROOT_URL + '/api/login/', true);
@@ -629,7 +627,6 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
         var $http = $rootScope;
         var language = window.localStorage.getItem('language');
         $scope.items = menu[language];
-        //$scope.show_news = show_news;
         
         $scope.$on('$viewContentLoaded', function() {
             loading();
@@ -658,7 +655,10 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
                 hideLoading();
-            $scope.show_news = data;
+                $scope.show_news = data;
+                $scope.share = function(){
+                    window.plugins.socialsharing.share($scope.show_news.title, null, $scope.show_news.img, 'https://www.facebook.com/planetabrasiloficial');
+                }
           }).
           error(function(data, status, headers, config) {
             hideLoading();
@@ -828,6 +828,9 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $scope.programming = data;
+            $scope.share = function(){
+                window.plugins.socialsharing.share($scope.programming.title, null, $scope.programming.img, 'https://www.facebook.com/planetabrasiloficial');
+            }
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')
