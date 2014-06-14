@@ -928,12 +928,10 @@ planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
+    function ($scope, $http ) {
         var language = window.localStorage.getItem('language');
         $scope.items = menu[language];
         $scope.url_local = "#/home";
-        // $scope.home = home;
         if (language == 2) {
             $scope.cultural_programming = "Cultural programme";
             $scope.places = "Interesting places";
@@ -951,7 +949,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         reg_id = window.localStorage.getItem('reg_id');
         if (reg_id) {
-            url = url + '&reg_id=' + reg_id;
+            api_url = api_url + '&reg_id=' + reg_id;
         }
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {

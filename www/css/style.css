@@ -234,7 +234,7 @@ input[type=radio] + label {
     position: relative;
     margin-bottom: 2em;
     width: 230px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.7);
     color: blue;
     padding: 15px;
     border-radius: 10px;
