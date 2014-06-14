@@ -19,10 +19,10 @@ var app = {
 
     receivedEvent: function(id) {
         window.plugins.orientationLock.lock("portrait");   
-        document.addEventListener("backbutton", onBackKeyDown, false);
-        function onBackKeyDown(e) {
-          e.preventDefault();
-        }
+        // document.addEventListener("backbutton", onBackKeyDown, false);
+        // function onBackKeyDown(e) {
+        //   e.preventDefault();
+        // }
         // swipe_menu();
         // body = document.body;
         // forward = document.getElementById("forward");

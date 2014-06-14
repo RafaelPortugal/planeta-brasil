@@ -928,12 +928,10 @@ planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
-    function ($scope, $rootScope, $http ) {
-        $http = $rootScope;
+    function ($scope, $http ) {
         var language = window.localStorage.getItem('language');
         $scope.items = menu[language];
         $scope.url_local = "#/home";
-        // $scope.home = home;
         if (language == 2) {
             $scope.cultural_programming = "Cultural programme";
             $scope.places = "Interesting places";

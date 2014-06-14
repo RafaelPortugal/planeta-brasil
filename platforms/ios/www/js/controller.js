@@ -828,6 +828,9 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $scope.programming = data;
+            $scope.share = function(){
+                window.plugins.socialsharing.share($scope.programming.title, null, $scope.programming.img, 'https://www.facebook.com/planetabrasiloficial');
+            }
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')

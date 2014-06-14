@@ -44,14 +44,7 @@
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.InAppBrowser" />
     </feature>
-    <feature name="SocialSharing">
-      <param name="ios-package" value="SocialSharing" />
-      <param name="onload" value="true" />
-    </feature>
-    <feature name="SocialSharing">
-      <param name="android-package" value="nl.xservices.plugins.SocialSharing" />
-    </feature>
-
+    
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
     

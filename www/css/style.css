@@ -527,7 +527,7 @@ header h1 {
 }
 .page .content-home .section h2 .text-title{
     background-size: 99%;
-    background: url("../images/bg-title.gif") #F0F0E1 no-repeat;
+    background: #F0F0E1 no-repeat;
     background-position: 0 50%;
     color: #003e66;
     font-size: 1.2em;
