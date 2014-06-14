@@ -928,7 +928,7 @@ planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
 
 
 planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
-    function ($scope, $http ) {
+    function ($scope, $http) {
         var language = window.localStorage.getItem('language');
         $scope.items = menu[language];
         $scope.url_local = "#/home";
@@ -1068,10 +1068,6 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             var div = insertMessage(form, guess_success[language], 'message_guess');
         };
         $scope.activeMenu = function(item) {
-            angular.forEach($rootScope.item, function(i) {
-                i.status = 'deactive';
-            });
-            item.status = 'active';
             body.className = "";
        }
     }]
