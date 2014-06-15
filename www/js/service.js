@@ -35,7 +35,6 @@ var camera_onSuccess = function(imageURI) {
     request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     request.send(data);
     */
-
     var options = new FileUploadOptions(); 
     options.chunkedMode = false;
     options.fileKey = "recFile"; 

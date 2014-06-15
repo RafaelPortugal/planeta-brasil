@@ -658,7 +658,10 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
                 hideLoading();
-            $scope.show_news = data;
+                $scope.show_news = data;
+                $scope.share = function(){
+                    window.plugins.socialsharing.share($scope.show_news.title, null, $scope.show_news.img, 'https://www.facebook.com/planetabrasiloficial');
+                }
           }).
           error(function(data, status, headers, config) {
             hideLoading();
@@ -828,6 +831,9 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $scope.programming = data;
+            $scope.share = function(){
+                window.plugins.socialsharing.share($scope.show_news.title, null, $scope.show_news.img, 'https://www.facebook.com/planetabrasiloficial');
+            }
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')
@@ -948,7 +954,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         reg_id = window.localStorage.getItem('reg_id');
         if (reg_id) {
-            url = url + '&reg_id=' + reg_id;
+            api_url = api_url + '&reg_id=' + reg_id;
         }
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
