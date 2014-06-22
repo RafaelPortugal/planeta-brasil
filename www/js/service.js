@@ -5,27 +5,47 @@ var parse_json = function(raw_json){
 	return eval("(function(){return " + raw_json + ";})()");
 };
 
-
 function win(r) 
-{
-    alert("Foto enviada com sucesso!");
+{ 
+    hideLoading();
+    var language = window.localStorage.getItem('language');
+    messages = {
+        1: "Foto envianda com sucesso.",
+        2: "Photo sent successfully."
+      }
+    alert(messages[language]);
+    //alert("Sent = " + r.bytesSent); 
 };
 
 function fail(error) 
-{ 
+{   
+    var language = window.localStorage.getItem('language');
+    if (!language) {
+      language = 1;
+    }
     switch (error.code) 
     {  
-     case FileTransferError.FILE_NOT_FOUND_ERR: 
-      alert("Arquivo não encontrado"); 
-      break; 
-     case FileTransferError.INVALID_URL_ERR: 
-      alert("Url inválida"); 
+     case FileTransferError.FILE_NOT_FOUND_ERR:
+      messages = {
+        1: "Arquivo não encontrado, tente novamente.",
+        2: "Archive not found, try again."
+      };
+      alert(messages[language]); 
       break; 
      case FileTransferError.CONNECTION_ERR: 
-      alert("Erro na conexão"); 
-      break; 
-    }
-
+      messages = {
+        1: "Verifique sua conexão e tente novamente.",
+        2: "Verify your connection and try again."
+      };
+      alert(messages[language]);
+     default:
+      messages = {
+        1: "Algo inesperado aconteceu, tente novamente.",
+        2: "Something unexpected occurred, try again."
+      };
+      alert(messages[language]);
+    };
+    hideLoading();
 };
 
 var camera_onSuccess = function(imageURI) {
@@ -35,6 +55,7 @@ var camera_onSuccess = function(imageURI) {
     request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     request.send(data);
     */
+    loading();
     var options = new FileUploadOptions(); 
     options.chunkedMode = false;
     options.fileKey = "recFile"; 
@@ -44,17 +65,15 @@ var camera_onSuccess = function(imageURI) {
     var ft = new FileTransfer(); 
     //alert(API_ROOT_URL + '/api/photos/');
     ft.upload(imageURI, API_ROOT_URL + '/api/photos/', win, fail, options); 
-    hideLoading();
+
 }
 
 var camera_onFail = function(message) {
     alert('Ocorreu um erro: ' + message);
-    hideLoading();
 }
 
 
 var take_picture = function(){
-    loadingProgress();
     navigator.camera.getPicture(camera_onSuccess, camera_onFail, { 
         quality: 50,
         encodingType: Camera.EncodingType.JPEG,
