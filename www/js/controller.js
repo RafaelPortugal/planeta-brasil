@@ -945,11 +945,20 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             $scope.upcoming_matches = "Próximos jogos";
             $scope.guess_the_results = "Dê seu Palpite";
             $scope.score_chart = "Tabela de resultados";
+            $scope.latest_matches = "Últimas Partidas";
         }
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         reg_id = window.localStorage.getItem('reg_id');
         if (reg_id) {
             api_url = api_url + '&reg_id=' + reg_id;
+        }
+        email = window.localStorage.getItem('email');
+        full_name = window.localStorage.getItem('full_name');
+        if (email) {
+            api_url = api_url + '&email=' + email;
+        }
+        if (full_name) {
+            api_url = api_url + '&full_name=' + full_name;
         }
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
