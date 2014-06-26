@@ -86,6 +86,10 @@ planetaBrasilApp.config(['$routeProvider',
         templateUrl: 'templates/we_are.html',
         controller: 'WeAreCtrl'
       }).
+      when('/aguia-verde', {
+        templateUrl: 'templates/aguia_verde.html',
+        controller: 'AguiaVerdeCtrl'
+      }).
       when('/ranking-guess', {
         templateUrl: 'templates/ranking_guess.html',
         controller: 'RankingGuessCtrl'

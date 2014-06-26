@@ -60,8 +60,8 @@ planetaBrasilControllers.controller('LoginCtrl', ['$scope', '$http', '$location'
                 'email': 'Email inválido'
             },
             '3': {
-                'full_name_short': 'O nome precisa ter mais que 3 dígitos.',
-                'full_name_long': 'O nome precisa ter menos que 20 dígitos.',
+                'full_name_short': 'El nombre debe tener más de 3 dígitos.',
+                'full_name_long': 'El nombre debe ser inferior a 20 dígitos.',
                 'email': 'Email inválido'
             }
         }
@@ -101,10 +101,12 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
         $scope.$on('$viewContentLoaded', function() {
             var language = window.localStorage.getItem('language');
             $rootScope.items = menu[language];
+            navigator.geolocation.getCurrentPosition(getLocation, onError);
             setTimeout(function(){
                 window.location.href = "#home";
             },4000);
         });
+
     }]
 );
 
@@ -421,6 +423,8 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
         $scope.items = menu[language];
         if (language == 2) {
             $scope.send = "Send a picture";
+        }else if (language == 3){
+            $scope.send = "Subir una foto";
         }else {
             $scope.send = "Enviar foto";
         }
@@ -938,17 +942,31 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
             $scope.guess_the_results = "Guess the results";
             $scope.latest_matches = "Latest matches";
             $scope.score_chart = "Score Chart";
-        }else {
+        }else if (language == 3) {
+            $scope.cultural_programming = "Programación Cultural";
+            $scope.places = "Lugares de interés";
+            $scope.upcoming_matches = "Próximos juegos";
+            $scope.guess_the_results = "Adivinar Las Resulsts";
+            $scope.score_chart = "Tabla de resultados";
+            $scope.latest_matches = "Últimos juegos";
+        }
+        else {
             $scope.cultural_programming = "Programação Cultural";
             $scope.places = "Locais interessantes";
             $scope.upcoming_matches = "Próximos jogos";
             $scope.guess_the_results = "Dê seu Palpite";
             $scope.score_chart = "Tabela de resultados";
+            $scope.latest_matches = "Últimos jogos";
         }
         var api_url = API_ROOT_URL + '/api/home/' + '?lang=' + language;
         reg_id = window.localStorage.getItem('reg_id');
         if (reg_id) {
-            url = url + '&reg_id=' + reg_id;
+            api_url = api_url + '&reg_id=' + reg_id;
+        }
+        var lat = window.localStorage.getItem('lat');
+        var lng = window.localStorage.getItem('lng');
+        if (lat && lng) {
+            api_url = api_url + '&lat=' + lat + '&lng=' + lng;
         }
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
@@ -1128,6 +1146,50 @@ planetaBrasilControllers.controller('RankingGuessCtrl', ['$scope', '$http',
             }
             hideLoading();
         });
+
+    }]
+);
+planetaBrasilControllers.controller('AguiaVerdeCtrl', ['$scope', '$http',
+    function ($scope, $rootScope, $http ) {
+        $scope.url_local = "#/aguia-verde";
+        $http = $rootScope;
+        var language = window.localStorage.getItem('language');
+        $scope.items = menu[language];
+        
+        if (language == 2) {
+            $scope.title_page = "Give a good destination";
+            $scope.back = "Back";
+            $scope.buy = "Compre sua muda";
+        }else if (language == 3) {
+            $scope.title_page = "Dé un buen destino";
+            $scope.back = "Vuelta";
+            $scope.buy = "Compre sua muda";
+        }else {
+            $scope.title_page = "Dê um bom destino";
+            $scope.back = "Voltar";
+            $scope.buy = "Compre sua muda";
+        }
+        $scope.$on('$viewContentLoaded', function() {
+            // loading();
+            body = document.body;
+            menuAchor = document.getElementsByClassName('menu')[0];
+            menuAchor.addEventListener("click", function(e) {
+                e.preventDefault();
+                if (body.classList.length == 0) {
+                    body.className = "menu-active";
+                }else {
+                    body.className = "";
+                };
+            });
+        });
+
+        $scope.activeMenu = function(item) {
+            angular.forEach($rootScope.items, function(i) {
+                i.status = 'deactive';
+            });
+            item.status = 'active';
+            body.className = "";
+       };
 
     }]
 );

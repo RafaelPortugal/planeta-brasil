@@ -335,3 +335,22 @@ var hideLoading = function() {
     var el = document.querySelector('#overlay-spin');
     el.parentNode.removeChild( el );
 };
+
+var getLocation = function(position) {
+    var lat = position.coords.latitude;
+    var lng = position.coords.longitude;
+    window.localStorage.setItem('lat', lat);
+    window.localStorage.setItem('lng', lng);
+};
+
+// onError Callback receives a PositionError object
+//
+function onError(error) {
+    language = window.location.getItem('language');
+    messages = {
+        1: 'Não foi possível capturar as suas coordenadas, verifique se o GPS está ativado.',
+        2: 'Unable to capture their coordinates check if GPS is enabled.',
+        3: 'No es posible capturar sus coordenadas comprobar si el GPS está habilitada.'
+    }
+    alert(messages[language]);
+}
