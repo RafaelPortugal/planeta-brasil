@@ -767,7 +767,7 @@ menu = {
         {href: '#/we-are', title: 'Quem Somos', status: 'deactive'},
         {href: '#/photo-fans', title: 'Torcida que vibra', status: 'deactive'},
         {href: '#/facebook', title: 'Facebook', status: 'deactive'},
-        // {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: '#/aguia-verde', title: 'Aguia Verde', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
@@ -781,6 +781,7 @@ menu = {
         {href: '#/we-are', title: 'Who we are', status: 'deactive'},
         {href: '#/photo-fans', title: 'Cheering crowd', status: 'deactive'},
         {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/aguia-verde', title: 'Aguia Verde', status: 'deactive'},
         // {href: '#/planeta-game', title: 'Game', status: 'deactive'},
         {href: '#/world-championship', title: 'World Champions', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
@@ -795,6 +796,7 @@ menu = {
         {href: '#/we-are', title: 'Quiénes somos', status: 'deactive'},
         {href: '#/photo-fans', title: 'Torcida que Vibra', status: 'deactive'},
         {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/aguia-verde', title: 'Aguia Verde', status: 'deactive'},
         // {href: '#/planeta-game', title: 'Juego', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
@@ -854,9 +856,15 @@ curiosities = {
         },
         {
             'number': 99,
+<<<<<<< HEAD
             'type': 'Partidas',
             'player': 'Alemanha',
             'team': '17 participações'
+=======
+            'type': 'Jogos',
+            'player': 'Alemanha',
+            'team': ''
+>>>>>>> 16d16d20860f7ca02c367a11e57849463d9d97cd
         },
         {
             'number': 2217,
@@ -946,7 +954,11 @@ curiosities = {
             'number': 99,
             'type': 'More Matches',
             'player': 'Germany',
+<<<<<<< HEAD
             'team': '17 Participations'
+=======
+            'team': ''
+>>>>>>> 16d16d20860f7ca02c367a11e57849463d9d97cd
         },
          {
             'number': 2217,
@@ -1036,6 +1048,12 @@ curiosities = {
             'player': 'Oleg Salenko',
             'team': '(Rusia vs Camerún, 1994 )'
         },
+        {
+            'number': 99,
+            'type': 'Más Partidos',
+            'player': 'Alemania',
+            'team': ''
+        },
          {
             "number" : 2217,
             'type': 'minutos jugo', 
@@ -1069,12 +1087,15 @@ curiosities = {
             'player': '(Magyarország vs El Salvador, 1982)', 
             'team':''
         },
+<<<<<<< HEAD
         {
             'number': 99,
             'type': 'Más partidos',
             'player': 'Alemania',
             'team': '17 participaciones'
         },
+=======
+>>>>>>> 16d16d20860f7ca02c367a11e57849463d9d97cd
          {
             "number" : 5 ,
             'type' : 'La mayoría de las victorias',
