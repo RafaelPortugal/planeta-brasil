@@ -53,7 +53,7 @@
 
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
 
-    <gap:plugin name="org.apache.cordova.geolocation.GeoBroker" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
     
     <!--gap:plugin name="nl.x-services.plugins.socialsharing" version="4.0.8" /-->
 
