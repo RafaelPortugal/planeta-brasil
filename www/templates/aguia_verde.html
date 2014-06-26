@@ -1,0 +1,191 @@
+<style>
+	body {
+		background: #3d531b;
+		color: #d9d900;
+	}
+	.bg-internas {
+		padding-top: 52px;
+	}
+	h2 {
+		font-size: 5em;
+		line-height: 1em;
+		color: #59af00;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	h3 {
+		margin-top: 0px;
+		font-size: 5em;
+		font-weight: lighter;
+		line-height: 1.1em;
+		color: #fff;
+		margin-bottom: 25px;
+	}
+	h2 span {
+	    letter-spacing: 4px;
+	}
+	.relative {
+		top: 280px;
+		padding: 0 25px;
+	}
+	@media all and (min-width: 330px) {
+		.relative {
+			top: 320px;
+		}
+	}
+	@media all and (min-width: 360px) {
+		.relative {
+			top: 330px;
+		}
+	}
+	@media all and (min-width: 600px) {
+		.relative {
+			top: 630px;
+		}
+	}
+	.block_text h4 {
+		text-transform: uppercase;
+		background: #4eaf00;
+		color: #fff;
+		font-weight: bold;
+		font-size: 2em;
+		margin-left: -25px;
+		display: inline-block;
+		padding: 5px 10px;
+	}
+	.block_text p {
+		color: #fff;
+		font-size: 2em;
+		font-weight: lighter;
+	}
+	.block_text p.bold {
+		font-weight: bold;
+	}
+
+	.back {
+		padding-bottom: 60px;
+		text-align: center;
+	}
+	.back button {
+		display: inline-block;
+		background: #f9cb11;
+		border: 0;
+		border-radius: 15px;
+		padding: 5px 15px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.buy {
+		text-align: center;
+		margin-bottom: 25px;
+		margin-top: 25px;
+	}
+	.buy a {
+		font-weight: bold;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		font-size: 2.5em;
+		background: #5bc21b;
+		background: -webkit-linear-gradient(#5bc21b, #308300);
+		background: linear-gradient(#5bc21b, #308300);
+		display: inline-block;
+		padding: 20px;
+		border-radius: 15px;
+	}
+	.figure {
+		text-align: center;
+	}
+	.figure img {
+		width: 80%;
+	}
+</style>
+
+
+<menu id="nav-left">
+    <ul>
+        <li ng-repeat="item in items" class="{{item.status}}">
+        	<a ng-if="item.href != '#/facebook'" href="{{item.href}}" ng-click="activeMenu(item)">{{ item.title }}</a>
+        	<a ng-if="item.href == '#/facebook'" href="{{url_local}}" onclick="window.open('https://www.facebook.com/planetabrasiloficial', '_blank', 'location=yes');">{{ item.title }}</a>
+        </li>
+    </ul>
+</menu>
+<header>
+	<button class="menu"></button>
+	<h1>Menu</h1>
+	<div class="logo_header">
+		<img src="images/logo.png" alt="Logotipo">
+	</div>
+</header>
+<div class="bg-internas left-menu"><img src="images/aguia_verde.jpg" alt="Bacground"></div>
+<div id="wrapper">
+	<div class="relative page">
+		<h2>Dê um <br/>bom motivo</h2>
+		<h3>à sua <br/>viagem</h3>
+		<div class="block_text">
+			<h4>O que é o projeto</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+		</div>
+		<div class="block_text">
+			<h4>O que é o projeto</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<div class="figure">
+				<img src="images/aguia_verde_fig1.jpg">
+			</div>
+		</div>
+		<div class="block_text">
+			<h4>O que é o projeto</h4>
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+			<p class="bold">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			</p>
+		</div>
+		<div class="buy">
+			<a href="#/aguia-verde" onclick="window.open('http://www.iniciativaverde.org.br/programas-e-projetos-amigo-da-floresta-parceiros.php?p=P01', '_blank', 'location=yes');">{{buy}}</a>
+		</div>
+		<div class="back">
+			<button onclick="window.history.back()">{{back}}</button>
+		</div>
+	</div>
+</div>
+<div id="footer-fixed">
+	<span>BRASIL BEYOND BRAZIL</span>
+</div>

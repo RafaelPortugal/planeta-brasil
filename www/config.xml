@@ -54,6 +54,8 @@
     
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
 
+    <gap:plugin name="org.apache.cordova.geolocation.GeoBroker" />
+    
     <!--gap:plugin name="nl.x-services.plugins.socialsharing" version="4.0.8" /-->
 
     <gap:plugin name="org.apache.cordova.file-transfer" version="0.4.2" />

@@ -703,7 +703,7 @@ h1 img {
     height: 45px;
 }
 menu li a {
-    font-size: 1.3em;
+    padding: 14px 16px;
 }
 }
 
@@ -724,7 +724,9 @@ h1 span {
     display: block;
     margin-left: 15px;
 }
-
+menu li a {
+    padding: 
+}
 }
 
 

@@ -767,7 +767,7 @@ menu = {
         {href: '#/we-are', title: 'Quem Somos', status: 'deactive'},
         {href: '#/photo-fans', title: 'Torcida que vibra', status: 'deactive'},
         {href: '#/facebook', title: 'Facebook', status: 'deactive'},
-        // {href: '#/planeta-game', title: 'Game', status: 'deactive'},
+        {href: '#/aguia-verde', title: 'Aguia Verde', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeões Mundiais', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidade', status: 'deactive'},
         {href: '#/table-games', title: '1ª Fase', status: 'deactive'},
@@ -781,6 +781,7 @@ menu = {
         {href: '#/we-are', title: 'Who we are', status: 'deactive'},
         {href: '#/photo-fans', title: 'Cheering crowd', status: 'deactive'},
         {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/aguia-verde', title: 'Aguia Verde', status: 'deactive'},
         // {href: '#/planeta-game', title: 'Game', status: 'deactive'},
         {href: '#/world-championship', title: 'World Champions', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosity', status: 'deactive'},
@@ -795,6 +796,7 @@ menu = {
         {href: '#/we-are', title: 'Quiénes somos', status: 'deactive'},
         {href: '#/photo-fans', title: 'Torcida que Vibra', status: 'deactive'},
         {href: '#/facebook', title: 'Facebook', status: 'deactive'},
+        {href: '#/aguia-verde', title: 'Aguia Verde', status: 'deactive'},
         // {href: '#/planeta-game', title: 'Juego', status: 'deactive'},
         {href: '#/world-championship', title: 'Campeones del mundo', status: 'deactive'},
         {href: '#/curiosity', title: 'Curiosidad', status: 'deactive'},
@@ -853,10 +855,10 @@ curiosities = {
             'team': 'Camarões vs Russia, 1994'
         },
         {
-            'number': 15,
-            'type': 'Gols',
-            'player': 'Ronaldo',
-            'team': 'Brasil, 1998-2006'
+            'number': 99,
+            'type': 'Jogos',
+            'player': 'Alemanha',
+            'team': ''
         },
         {
             'number': 2217,
@@ -943,10 +945,10 @@ curiosities = {
             'team': '(Russia vs Cameroun, 1994)'
         },
         {
-            'number': 15,
-            'type': 'More Goals',
-            'player': 'Ronaldo',
-            'team': 'Brazil, 1998-2006'
+            'number': 99,
+            'type': 'More Matches',
+            'player': 'Germany',
+            'team': ''
         },
          {
             'number': 2217,
@@ -1036,6 +1038,12 @@ curiosities = {
             'player': 'Oleg Salenko',
             'team': '(Rusia vs Camerún, 1994 )'
         },
+        {
+            'number': 99,
+            'type': 'Más Partidos',
+            'player': 'Alemania',
+            'team': ''
+        },
          {
             "number" : 2217,
             'type': 'minutos jugo', 
@@ -1069,12 +1077,6 @@ curiosities = {
             'player': '(Magyarország vs El Salvador, 1982)', 
             'team':''
         },
-        {
-            'number': 15,
-            'type': 'Más gols',
-            'player': 'Ronaldo',
-            'team': 'Brasil, 1998-2006'
-        },
          {
             "number" : 5 ,
             'type' : 'La mayoría de las victorias',
