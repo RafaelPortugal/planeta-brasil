@@ -336,7 +336,7 @@ var hideLoading = function() {
     el.parentNode.removeChild( el );
 };
 
-var getLocation = function(position) {
+function onSuccess(position) {
     var lat = position.coords.latitude;
     var lng = position.coords.longitude;
     window.localStorage.setItem('lat', lat);
@@ -354,3 +354,5 @@ function onError(error) {
     }
     alert(messages[language]);
 }
+
+

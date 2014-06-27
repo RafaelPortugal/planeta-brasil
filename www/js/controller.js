@@ -101,7 +101,7 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
         $scope.$on('$viewContentLoaded', function() {
             var language = window.localStorage.getItem('language');
             $rootScope.items = menu[language];
-            navigator.geolocation.getCurrentPosition(getLocation, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
             setTimeout(function(){
                 window.location.href = "#home";
             },4000);
@@ -662,10 +662,7 @@ planetaBrasilControllers.controller('ShowNewsCtrl', ['$scope', '$http', '$locati
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
                 hideLoading();
-                $scope.show_news = data;
-                $scope.share = function(){
-                    window.plugins.socialsharing.share($scope.show_news.title, null, $scope.show_news.img, 'https://www.facebook.com/planetabrasiloficial');
-                }
+            $scope.show_news = data;
           }).
           error(function(data, status, headers, config) {
             hideLoading();
@@ -835,9 +832,6 @@ planetaBrasilControllers.controller('ProgrammingCtrl', ['$scope', '$http', '$loc
       $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $scope.programming = data;
-            $scope.share = function(){
-                window.plugins.socialsharing.share($scope.show_news.title, null, $scope.show_news.img, 'https://www.facebook.com/planetabrasiloficial');
-            }
           }).
           error(function(data, status, headers, config) {
             alert('Ocorreu um erro. Tente novamente.')
@@ -969,19 +963,20 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         if (reg_id) {
             api_url = api_url + '&reg_id=' + reg_id;
         }
-        email = window.localStorage.getItem('email');
-        full_name = window.localStorage.getItem('full_name');
-        if (email) {
-            api_url = api_url + '&email=' + email;
-        }
-        if (full_name) {
-            api_url = api_url + '&full_name=' + full_name;
-        }
         var lat = window.localStorage.getItem('lat');
         var lng = window.localStorage.getItem('lng');
         if (lat && lng) {
             api_url = api_url + '&lat=' + lat + '&lng=' + lng;
         }
+        var email = window.localStorage.getItem('email');
+        if (email) {
+            api_url = api_url + '&email=' + email;
+        }
+        var full_name = window.localStorage.getItem('full_name');
+        if (full_name) {
+            api_url = api_url + '&full_name=' + full_name;
+        }
+
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $http.home = data;
