@@ -101,7 +101,7 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
         $scope.$on('$viewContentLoaded', function() {
             var language = window.localStorage.getItem('language');
             $rootScope.items = menu[language];
-            navigator.geolocation.getCurrentPosition(getLocation, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
             setTimeout(function(){
                 window.location.href = "#home";
             },4000);
@@ -968,6 +968,15 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         if (lat && lng) {
             api_url = api_url + '&lat=' + lat + '&lng=' + lng;
         }
+        var email = window.localStorage.getItem('email');
+        if (email) {
+            api_url = api_url + '&email=' + email;
+        }
+        var full_name = window.localStorage.getItem('full_name');
+        if (full_name) {
+            api_url = api_url + '&full_name=' + full_name;
+        }
+
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $http.home = data;
