@@ -79,6 +79,12 @@
 		text-align: center;
 		margin-bottom: 25px;
 		margin-top: 25px;
+		position: relative;
+	}
+	.buy img {
+		position: absolute;
+		right: -25px;
+		top: -15px;
 	}
 	.buy a {
 		font-weight: bold;
@@ -92,6 +98,7 @@
 		display: inline-block;
 		padding: 20px;
 		border-radius: 15px;
+		min-width: 70%;
 	}
 	.figure {
 		text-align: center;
@@ -120,66 +127,147 @@
 <div class="bg-internas left-menu"><img src="images/aguia_verde.jpg" alt="Bacground"></div>
 <div id="wrapper">
 	<div class="relative page">
-		<h2>Dê um <br/>bom motivo</h2>
-		<h3>à sua <br/>viagem</h3>
-		<div class="block_text">
-			<h4>O que é o projeto</h4>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-		</div>
-		<div class="block_text">
-			<h4>O que é o projeto</h4>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<div class="figure">
-				<img src="images/aguia_verde_fig1.jpg">
+		<div ng-if="language == '1'">
+			<h2>Dê um <br/>bom motivo</h2>
+			<h3>à sua <br/>viagem</h3>
+			<div class="block_text">
+		
+				<h4>O QUE É O PROJETO?</h4>
+				<p>
+					O Grupo Águia, do qual a Planeta Brasil faz parte, nasceu do propósito de realizar sonhos e espalhar a felicidade pelo mundo.
+				</p>
+				<p>
+					Mas para que nosso objetivo seja atingido, é preciso antes de tudo cuidar daquilo que é mais importante: o mundo.
+				</p>
+				<p>	
+					Por isso criamos o Projeto Águia Verde: aqui você tem a chance de fazer a sua parte pela preservação do nosso Planeta, plantando uma ou mais mudas a cada viagem.
+				</p> 
+				<p>
+					E a Planeta Brasil já deu o pontapé inicial plantando quase 7mil mudas: uma para cada pessoa que está trabalhando conosco na operação desse grande evento.
+				</p>
+			</div>
+			<div class="block_text">
+				<h4>COMO FUNCIONA?</h4>
+				<p>
+					O ÁGUIA VERDE é uma parceria com a OSCIP INICIATIVA VERDE, que além de trabalhar no restauro florestal da Mata Atlântica, ainda ajuda diversas comunidades carentes que vivem desse plantio.
+				</p>
+				<p>
+					Para contribuir com um mundo mais verde, basta comprar o plantio de uma (gesto simbólico) ou mais mudas.
+				</p>
+
+				<div class="figure">
+					<img src="images/aguia_verde_fig1.jpg">
+				</div>
+			</div>
+			<div class="block_text">
+				<h4>COMO PARTICIPAR?</h4>
+				<p>
+					
+					Temos um propósito ambiental, social e o mais importante, um legado cultural: a missão de construir uma nova consciência e inspirar o crescimento sustentável de todos.
+				</p>
+				<p>
+					E para que esse sonho se torne realidade, a gente precisa de você.
+				</p>
 			</div>
 		</div>
-		<div class="block_text">
-			<h4>O que é o projeto</h4>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<p class="bold">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			</p>
+
+
+		<div ng-if="language == '2'">
+			<h2>Give a <br/>good destination</h2>
+			<h3>its <br/>trip.</h3>
+			<div class="block_text">
+		
+				<h4>WHAT IS PROJECT?</h4>
+				<p>
+					The Eagle Group, which is part of the Planeta Brazil, was born the aim of realizing dreams and spread happiness around the world. 
+				</p>
+				<p>
+					But our goal is reached, we must first of all take care of what is most important: the world. 
+				</p>
+				<p>	
+					So we created the Green Eagle Project: here you have the chance to do your part to preserve our planet by planting a seedling or more each trip. 
+				</p> 
+				<p>
+					And the Planet Brazil already kicked off nearly 7mil planting seedlings: one for each person who is working with us in the operation of this great event. 
+				</p>
+			</div>
+			<div class="block_text">
+				<h4>HOW IT WORKS?</h4>
+				<p>
+					GREEN EAGLE is a partnership with the institute GREEN INITIATIVE, who in addition to working in the reforestation of the Atlantic Forest still helps many poor communities living this planting. 
+				</p>
+				<p>
+					To contribute to a greener world, just buy the planting of a (symbolic gesture) or more seedlings. 
+				</p>
+
+				<div class="figure">
+					<img src="images/aguia_verde_fig1.jpg">
+				</div>
+			</div>
+			<div class="block_text">
+				<h4>HOW TO PARTICIPATE? </h4>
+				<p>
+					
+					We have an environmental, social and most important purpose, a cultural legacy: the quest to build a new awareness and inspire sustainable growth for all. 
+				</p>
+				<p>
+					And for that dream to become reality, we need you.
+				</p>
+			</div>
 		</div>
+
+
+
+
+
+		<div ng-if="language == '3'">
+			<h2>Dé una <br/>buen destino</h2>
+			<h3>su <br/>viaje</h3>
+			<div class="block_text">
+		
+				<h4>¿QUÉ ES EL PROYECTO?</h4>
+				<p>
+					El Grupo de Eagle, que es parte del Planeta Brasil, nació el objetivo de hacer realidad los sueños y la felicidad se extendió por todo el mundo. 
+				</p>
+				<p>
+					Pero se alcanza nuestra meta, debemos ante todo tener cuidado de lo que es más importante: el mundo. 
+				</p>
+				<p>	
+					Por eso creamos el Proyecto Águila Verde: aquí tienes la oportunidad de hacer su parte para preservar nuestro planeta mediante la plantación de una semilla o más de cada viaje.
+				</p> 
+				<p>
+					Y el Planeta Brasil ya inició casi 7 mil plantación de plantones: uno por cada persona que está trabajando con nosotros en el funcionamiento de este gran evento. 
+				</p>
+			</div>
+			<div class="block_text">
+				<h4>¿CÓMO FUNCIONA? </h4>
+				<p>
+					GREEN EAGLE es una asociación con el instituto VERDE INICIATIVA, que además de trabajar en la reforestación de la Mata Atlántica todavía ayuda a muchas comunidades pobres que viven esta plantación. 
+				</p>
+				<p>
+					Para contribuir a un mundo más verde, acaba de comprar la plantación de un (gesto simbólico) o más plántulas.
+				</p>
+
+				<div class="figure">
+					<img src="images/aguia_verde_fig1.jpg">
+				</div>
+			</div>
+			<div class="block_text">
+				<h4>CÓMO PARTICIPAR? </h4>
+				<p>
+					
+					Tenemos un objetivo medioambiental, social y más importante, un legado cultural: la búsqueda de construir una nueva conciencia e inspirar el crecimiento sostenible para todos. 
+				</p>
+				<p>
+					Y para que ese sueño se convierta en realidad, te necesitamos.
+				</p>
+			</div>
+		</div>
+
+
 		<div class="buy">
 			<a href="#/aguia-verde" onclick="window.open('http://www.iniciativaverde.org.br/programas-e-projetos-amigo-da-floresta-parceiros.php?p=P01', '_blank', 'location=yes');">{{buy}}</a>
+			<img src="images/aguia-verde-mao.png" alt="Planta">
 		</div>
 		<div class="back">
 			<button onclick="window.history.back()">{{back}}</button>

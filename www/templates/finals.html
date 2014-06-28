@@ -36,15 +36,30 @@
 		vertical-align: top;
 		font-size: 1.5em;
 	}
+	.dropdown table tr td img{
+		width: 32px;
+		margin-right: 10px;
+		float: left;
+	}
 	.dropdown table tr td .logo{
 		display: inline-block;
 		margin-right: 10px;
 		width: 32px;
 		height: 32px;
 		border-radius: 16px;
-		background: #eee
+		background: #eee;
+		float: left;
 	}
-
+	.result {
+		float: right;
+		margin-right: 10px;
+		line-height: 32px;
+	}
+	.team {
+		line-height: 32px;
+		display: inline-block;
+		float: left;
+	}
 	@media all and (max-height: 700px){
 		#wrapper {
 			padding-top: 28em;
@@ -100,15 +115,20 @@
 									<tr>
 										<td>
 											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
-											<span ng-if="g.img_home == ''" class="local">
-											{{g.home}}
+											<span ng-if="g.img_home == ''" class="logo"></span>
+											<span class="team">{{g.home}}</span>
+
+											<span ng-if="g.gols_home != 'false'" class="result">{{g.gols_home}}</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
-											<span ng-if="g.img_visited == ''" class="local">
-											{{g.visited}}
+											<span ng-if="g.img_visited == ''" class="logo"></span>
+
+											<span class="team">{{g.visited}}</span>
+											
+											<span ng-if="g.gols_visited != 'false'" class="result">{{g.gols_visited}}</span>
 										</td>
 									</tr>
 								</tbody>
@@ -133,15 +153,20 @@
 									<tr>
 										<td>
 											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
-											<span ng-if="g.img_home == ''" class="local">
-											{{g.home}}
+											<span ng-if="g.img_home == ''" class="logo"></span>
+											<span class="team">{{g.home}}</span>
+
+											<span ng-if="g.gols_home != 'false'" class="result">{{g.gols_home}}</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
-											<span ng-if="g.img_visited == ''" class="local">
-											{{g.visited}}
+											<span ng-if="g.img_visited == ''" class="logo"></span>
+
+											<span class="team">{{g.visited}}</span>
+											
+											<span ng-if="g.gols_visited != 'false'" class="result">{{g.gols_visited}}</span>
 										</td>
 									</tr>
 								</tbody>
@@ -166,15 +191,20 @@
 									<tr>
 										<td>
 											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
-											<span ng-if="g.img_home == ''" class="local">
-											{{g.home}}
+											<span ng-if="g.img_home == ''" class="logo"></span>
+											<span class="team">{{g.home}}</span>
+
+											<span ng-if="g.gols_home != 'false'" class="result">{{g.gols_home}}</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
-											<span ng-if="g.img_visited == ''" class="local">
-											{{g.visited}}
+											<span ng-if="g.img_visited == ''" class="logo"></span>
+
+											<span class="team">{{g.visited}}</span>
+											
+											<span ng-if="g.gols_visited != 'false'" class="result">{{g.gols_visited}}</span>
 										</td>
 									</tr>
 								</tbody>
@@ -199,15 +229,20 @@
 									<tr>
 										<td>
 											<img ng-if="g.img_home != ''" src="{{ g.img_home}}" alt="{{ g.home}}">
-											<span ng-if="g.img_home == ''" class="local">
-											{{g.home}}
+											<span ng-if="g.img_home == ''" class="logo"></span>
+											<span class="team">{{g.home}}</span>
+
+											<span ng-if="g.gols_home != 'false'" class="result">{{g.gols_home}}</span>
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<img ng-if="g.img_visited != ''" src="{{ g.img_visited}}" alt="{{ g.visited}}">
-											<span ng-if="g.img_visited == ''" class="local">
-											{{g.visited}}
+											<span ng-if="g.img_visited == ''" class="logo"></span>
+
+											<span class="team">{{g.visited}}</span>
+											
+											<span ng-if="g.gols_visited != 'false'" class="result">{{g.gols_visited}}</span>
 										</td>
 									</tr>
 								</tbody>
@@ -239,7 +274,7 @@
                     menu = el.querySelector('.dropdown-menu'),
                     arrow = button.querySelector('i.icon-arrow');
             button.addEventListener("click", function(e) {
-                alert('clique');
+                // alert('clique');
                 if(!menu.hasClass('show')) {
                     menu.classList.add('show');
                     menu.classList.remove('hide');

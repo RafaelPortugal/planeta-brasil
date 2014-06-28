@@ -1182,15 +1182,16 @@ planetaBrasilControllers.controller('AguiaVerdeCtrl', ['$scope', '$http',
         $http = $rootScope;
         var language = window.localStorage.getItem('language');
         $scope.items = menu[language];
+        $scope.language = language;
         
         if (language == 2) {
             $scope.title_page = "Give a good destination";
             $scope.back = "Back";
-            $scope.buy = "Compre sua muda";
+            $scope.buy = "Buy";
         }else if (language == 3) {
             $scope.title_page = "Dé un buen destino";
             $scope.back = "Vuelta";
-            $scope.buy = "Compre sua muda";
+            $scope.buy = "Comprar";
         }else {
             $scope.title_page = "Dê um bom destino";
             $scope.back = "Voltar";

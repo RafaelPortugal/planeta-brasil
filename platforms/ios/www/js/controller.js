@@ -327,7 +327,7 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
         }else if (language == 3) {
             $scope.group = "Grupo";
             $scope.bg_img = "interna-lista-jogadores_es.jpg";
-            $scope.back = "Back";
+            $scope.back = "Vuelta";
         }else {
             $scope.group = "Grupo";
             $scope.bg_img = "interna-lista-jogadores.jpg";
@@ -881,7 +881,7 @@ planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
             $scope.quater = "4ª de finais";
             $scope.back = "Voltar";
         }
-        //$scope.finals = finals[language];
+        $scope.finals = finals[language];
 
         var api_url = API_ROOT_URL + '/api/finals/' + '?lang=' + language;
         $http({method: 'GET', url: api_url}).
