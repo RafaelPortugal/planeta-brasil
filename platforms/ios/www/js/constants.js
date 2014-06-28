@@ -856,9 +856,9 @@ curiosities = {
         },
         {
             'number': 99,
-            'type': 'Jogos',
+            'type': 'Partidas',
             'player': 'Alemanha',
-            'team': ''
+            'team': '17 participações'
         },
         {
             'number': 2217,
@@ -1064,6 +1064,12 @@ curiosities = {
             'player': 'Brasil',
             'team ':''
         },
+        {
+            'number': 99,
+            'type': 'Más partidos',
+            'player': 'Alemania',
+            'team': '17 participaciones'
+        },
          {
             "number" : 12,
             'type': 'meta más anotados en un partido' ,
@@ -1075,12 +1081,6 @@ curiosities = {
             "number" : '10-1',
             'type' : 'La victoria más grande',
             'player': '(Magyarország vs El Salvador, 1982)', 
-            'team':''
-        },
-         {
-            "number" : 5 ,
-            'type' : 'La mayoría de las victorias',
-            'player': 'Brasil',
             'team':''
         }
 
