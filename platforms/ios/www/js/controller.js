@@ -99,7 +99,7 @@ planetaBrasilControllers.controller('LoadingCtrl', ['$scope', '$http',
         $scope.$on('$viewContentLoaded', function() {
             var language = window.localStorage.getItem('language');
             $rootScope.items = menu[language];
-            navigator.geolocation.getCurrentPosition(getLocation, onError);
+            navigator.geolocation.getCurrentPosition(onSuccess, onError);
             setTimeout(function(){
                 window.location.href = "#home";
             },4000);
@@ -116,10 +116,13 @@ planetaBrasilControllers.controller('CuriosityCtrl', ['$scope', '$http',
         $scope.url_local = "#/curiosity";
         if (language == 2) {
             $scope.bg_img = "curiosidades_en.jpg";
+            $scope.back = "back";
         }else if (language == 3) {
             $scope.bg_img = "curiosidades_es.jpg";
+            $scope.back = "Vuelta";
         }else {
             $scope.bg_img = "curiosidades.jpg";
+            $scope.back = "Voltar";
         }
         $scope.items = menu[language];
         $scope.curiosities = curiosities[language];
@@ -421,10 +424,13 @@ planetaBrasilControllers.controller('PhotoFansCtrl', ['$scope', '$http',
         $scope.items = menu[language];
         if (language == 2) {
             $scope.send = "Send a picture";
+            $scope.back = "Back";
         }else if (language == 3){
             $scope.send = "Subir una foto";
+            $scope.back = "Vuelta";
         }else {
             $scope.send = "Enviar foto";
+            $scope.back = "Voltar";
         }
 
         $scope.language = window.localStorage.getItem('language');
@@ -536,7 +542,13 @@ planetaBrasilControllers.controller('WeAreCtrl', ['$scope', '$http',
         var language = window.localStorage.getItem('language');
         $scope.url_local = "#/we-are";
         $scope.items = menu[language];
-
+        if (language == 2) {
+            $scope.back = "Back";
+        }else if (language == 3) {
+            $scope.back = "Vuelta";
+        }else {
+            $scope.back = "Voltar";
+        }
         $scope.$on('$viewContentLoaded', function() {
             loading();
             body = document.body;
@@ -684,12 +696,15 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
         if (language == 2) {
             $scope.th_match = "Day of the game";
             $scope.bg_img = "tabela-de-jogos_en.jpg"
+            $scope.back = "Back";
         }else if (language == 3) {
             $scope.th_match = "DÍA DEL JUEGO";
             $scope.bg_img = "tabela-de-jogos_es.jpg"
+            $scope.back = "Vuelta";
         }else {
             $scope.th_match = "DIA DO JOGO";
             $scope.bg_img = "tabela-de-jogos.jpg"
+            $scope.back = "Voltar";
         }
         $scope.items = menu[language];
         
@@ -857,14 +872,17 @@ planetaBrasilControllers.controller('FinalsCtrl', ['$scope', '$http',
             $scope.bg_img = "fases-finais_en.jpg";
             $scope.second = "Second stage";
             $scope.quater = "Quater-final";
+            $scope.back = "Back";
         }else if (language == 3) {
             $scope.bg_img = "fases-finais_es.jpg";
             $scope.quater = "4ª de finais";
             $scope.second = "8ª de finais";
+            $scope.back = "Vuelta";
         }else {
             $scope.bg_img = "fases-finais.jpg";
             $scope.second = "8ª de finais";
             $scope.quater = "4ª de finais";
+            $scope.back = "Voltar";
         }
         //$scope.finals = finals[language];
 
@@ -977,6 +995,7 @@ planetaBrasilControllers.controller('HomeCtrl', ['$scope', '$http',
         if (lat && lng) {
             api_url = api_url + '&lat=' + lat + '&lng=' + lng;
         }
+
         $http({method: 'GET', url: api_url}).
             success(function(data, status, headers, config) {
             $http.home = data;

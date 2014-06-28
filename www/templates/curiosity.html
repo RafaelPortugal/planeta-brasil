@@ -12,7 +12,7 @@
 	    margin: 0 auto;
 	    padding: 0;
 	    position: absolute;
-	    bottom: 80px;
+	    bottom: 120px;
 	}
 	#curiositys .element_banner h2 {
 		font-size: 5em;
@@ -188,7 +188,12 @@
 	    -webkit-transition: all 1s ease-out 0.6s;
 	    transition: all 1s ease-out 0.6s;
 	}
-
+	.back_footer {
+		padding-bottom: 60px;
+		position: absolute;
+		bottom: 20px;
+		width: 100%;
+	}
 </style>
 
 <menu id="nav-left">
@@ -280,6 +285,11 @@
 
 		    </div>
 		</article>
+
+		<div class="back_footer">
+		    <button onclick="window.history.back()">{{back}}</button>
+		</div>
+
 	<div id="footer-fixed">
 		<span>BRASIL BEYOND BRAZIL</span>
 	</div>

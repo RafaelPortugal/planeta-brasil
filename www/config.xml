@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget 
     id="com.phonegap.planetabrasil"
-    version="1.0.7"
-    versionCode="12" 
+    version="1.0.8"
+    versionCode="13" 
     xmlns="http://www.w3.org/ns/widgets"
     xmlns:gap="http://phonegap.com/ns/1.0">
     
@@ -18,18 +18,17 @@
 
     <feature name="http://api.phonegap.com/1.0/device" />
 
-    <feature name="Geolocation">
+<!--     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
     
     <feature name="Geolocation">
         <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
     </feature>
-
+ -->
     <!-- Camera -->
-    <gap:plugin name="org.apache.cordova.core.camera" />
     
-    <feature name="Camera">
+<!--     <feature name="Camera">
         <param name="ios-package" value="CDVCamera" />
     </feature>
 
@@ -43,30 +42,26 @@
 
     <feature name="InAppBrowser">
         <param name="android-package" value="org.apache.cordova.InAppBrowser" />
-    </feature>
-    
+
+    </feature> -->
+
+    <gap:plugin name="org.apache.cordova.core.camera" />
+    <gap:plugin name="org.apache.cordova.geolocation" version="0.3.7" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.8" />
-    
     <gap:plugin name="com.phonegap.plugin.statusbar" />
-    <preference name="StatusBarOverlaysWebView" value="false" />
-
-    
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
-
-    <gap:plugin name="org.apache.cordova.geolocation.GeoBroker" />
-    
-    <!--gap:plugin name="nl.x-services.plugins.socialsharing" version="4.0.8" /-->
-
     <gap:plugin name="org.apache.cordova.file-transfer" version="0.4.2" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
-    
+
+
     <!--preference name="permissions" value="none" / -->
 
     <access origin="*" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="true" />
+    <preference name="fullscreen" value="false" />
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
