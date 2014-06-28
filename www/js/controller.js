@@ -327,7 +327,7 @@ planetaBrasilControllers.controller('PlayersByTeamCtrl', ['$scope', '$http', '$r
         }else if (language == 3) {
             $scope.group = "Grupo";
             $scope.bg_img = "interna-lista-jogadores_es.jpg";
-            $scope.back = "Back";
+            $scope.back = "Vuelta";
         }else {
             $scope.group = "Grupo";
             $scope.bg_img = "interna-lista-jogadores.jpg";
