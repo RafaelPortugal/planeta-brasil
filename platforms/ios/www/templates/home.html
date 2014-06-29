@@ -477,9 +477,9 @@
 														<b ng-click="guess($event)">{{guess_the_results}}</b>
 														<a href="#/ranking-guess">Ranking</a>
 													</div>
-													<i class="home"><span>{{match.abbr_home}}</span> <img src="{{match.img_home}}" alt="Brasil"><input type="number" name="home" min=0 max=9 step=1></i>
+													<i class="home"><span>{{match.abbr_home}}</span> <img ng-if="match.img_home != ''" src="{{match.img_home}}" alt="{{match.home}}"><input type="number" name="home" min=0 max=9 step=1></i>
 													<span class="vs">X</span>
-													<i class="visited"><img src="{{match.img_visited}}" alt="{{match.visited}}"><input type="number" name="visited" min=0 max=9 step=1><span>{{match.abbr_visited}}</span></i>
+													<i class="visited"><img ng-if="match.img_visited != ''" src="{{match.img_visited}}" alt="{{match.visited}}"><input type="number" name="visited" min=0 max=9 step=1><span>{{match.abbr_visited}}</span></i>
 													<div class="submit">
 														<input type="submit" value="Confirmar" ng-click="guessSubmit($event)">
 													</div>

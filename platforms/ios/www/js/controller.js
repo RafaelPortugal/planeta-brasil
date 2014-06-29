@@ -480,7 +480,7 @@ planetaBrasilControllers.controller('WorldChampionshipCtrl', ['$scope', '$http',
         }else if (language == 3){
             $scope.bg_img = "campeoes-mundiais_es.jpg";
             $scope.guess_result = "Partial guess result";
-            $scope.back = "Back";
+            $scope.back = "Vuelta";
         }else {
             $scope.bg_img = "campeoes-mundiais.jpg";
             $scope.guess_result = "Resultado Parcial do Palpite";
@@ -699,7 +699,7 @@ planetaBrasilControllers.controller('TableGamesCtrl', ['$scope', '$http',
             $scope.back = "Back";
         }else if (language == 3) {
             $scope.th_match = "DÍA DEL JUEGO";
-            $scope.bg_img = "tabela-de-jogos_es.jpg"
+            $scope.bg_img = "tabela-de-jogos.jpg"
             $scope.back = "Vuelta";
         }else {
             $scope.th_match = "DIA DO JOGO";
